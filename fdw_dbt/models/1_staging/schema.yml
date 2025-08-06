@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: stg_dim_transactions
+    description: ""
+    tests: 
+      - dbt_utils.unique_combination_of_columns:
+            combination_of_columns:
+              - transaction_type
+              - label
+    columns:
+      - name: label
+        data_type: character varying
+        description: ""
+        tests:
+          - not_null
+

@@ -1,0 +1,74 @@
+ticker,taxable_currency,category
+ALZR11,BRL,FII
+AMZO34,BRL,BDR
+AVAX,BRL,Crypto
+BNB,BRL,Crypto
+BTC,BRL,Crypto
+CDB CDI 118 2025 12 25 B,BRL,Fixed income
+CDB CDI 120 2025 2 5 B,BRL,Fixed income
+CDB CDI 120 2025 B,BRL,Fixed income
+CDB CDI 121 2028 B,BRL,Fixed income
+CDB CDI 125 2023 10 7 B,BRL,Fixed income
+CDB CDI 125 2023 12 12 B,BRL,Fixed income
+CDB CDI 125 2024 10 10 B,BRL,Fixed income
+CDB CDI 125 2024 10 3 B,BRL,Fixed income
+CDB CDI 125 2024 9 3 B,BRL,Fixed income
+CDB CDI 125 2025 1 28 B,BRL,Fixed income
+CDB CDI 125 2025 2 5 B,BRL,Fixed income
+CDB CDI 125 2025 4 14 B,BRL,Fixed income
+CDB CDI 125 2027 B,BRL,Fixed income
+CDB CDI 127 2025 B,BRL,Fixed income
+CDB IPCA 75 2026 B,BRL,Fixed income
+CDB IPCA 813 2024 B,BRL,Fixed income
+CDB IPCA 814 2024 B,BRL,Fixed income
+CDB IPCA 817 2024 B,BRL,Fixed income
+CDB Prefix 1345 2025 B,BRL,Fixed income
+CDB Prefix 1413 2027 B,BRL,Fixed income
+CDB Prefix 1440 2026 B,BRL,Fixed income
+CDB Prefix 1446 2023 B,BRL,Fixed income
+CDB Prefix 1465 2024 B,BRL,Fixed income
+CDB Prefix 1478 2025 B,BRL,Fixed income
+CDB Prefix 15 2024 B,BRL,Fixed income
+CDB Prefix 1509 2025 B,BRL,Fixed income
+CDB Prefix 158 2028 B,BRL,Fixed income
+CPTS11,BRL,FII
+DISB34,BRL,BDR
+DWD,EUR,Stock
+ETH,BRL,Crypto
+FBOK34,BRL,BDR
+GOGL34,BRL,BDR
+HDV,BRL,Stock
+IRDM11,BRL,FII
+IVVB11,BRL,BDR
+JPM,BRL,Stock
+JPMC34,BRL,BDR
+KO,BRL,Stock
+MATIC,BRL,Crypto
+MS,BRL,Stock
+MSBR34,BRL,BDR
+MSF,EUR,Stock
+MSFT,BRL,Stock
+MSFT34,BRL,BDR
+NVD,EUR,Stock
+O,BRL,Stock
+RBHY11,BRL,FII
+SPY,BRL,Stock
+SXR8,EUR,Stock
+SXRV,EUR,Stock
+TD IPCA 2026 B,BRL,Fixed income
+TD IPCA 2029 B,BRL,Fixed income
+TD IPCA 2032 B,BRL,Fixed income
+TD IPCA 2035 B,BRL,Fixed income
+TD IPCA 2040 B,BRL,Fixed income
+TD IPCA 2045 B,BRL,Fixed income
+TD Prefix 2025 B,BRL,Fixed income
+TD Prefix 2026 B,BRL,Fixed income
+TD Prefix 2029 B,BRL,Fixed income
+TD SELIC 2026 B,BRL,Fixed income
+TD SELIC 2027 B,BRL,Fixed income
+TD SELIC 2027 E,BRL,Fixed income
+TD SELIC 2029 B,BRL,Fixed income
+TSLA,BRL,Stock
+TSLA34,BRL,BDR
+V,BRL,Stock
+VNQ,BRL,Stock

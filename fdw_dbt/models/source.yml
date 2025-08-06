@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: balances
+        identifier: balances
+      - name: exchanges
+        identifier: exchanges
+      - name: prices
+        identifier: prices
+      - name: external_transactions
+        identifier: external_transactions
+      - name: transfers
+        identifier: transfers
+      - name: projections
+        identifier: projections
+  - name: silver
+    schema: silver
+    tables:
+      - name: taxes_avg_price_raw
+        identifier: taxes_avg_price_raw
+      - name: taxes_pnl_raw
+        identifier: taxes_pnl_raw
+      - name: balance_projections
+        identifier: balance_projections
+  - name: gold
+    schema: gold
+    tables:
+      - name: allocation_simulations
+        identifier: allocation_simulations
+        

@@ -1,0 +1,15 @@
+.vscode/
+fdw/
+venv/
+local/
+**/local/
+.env
+**/__pycache__/
+**/debug_query.sql
+*.pbix
+*.pyc
+*.log
+dags/lib/__pycache__/constants.cpython-311.pyc
+dags/lib/__pycache__/google_lib.cpython-311.pyc
+dags/lib/__pycache__/postgresql_lib.cpython-311.pyc
+dags\lib\client_secret_*

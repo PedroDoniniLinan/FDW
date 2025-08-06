@@ -1,0 +1,57 @@
+set,asset_set,level_2,allocation
+1,1,Volatile (Cash),0
+1,1,Stable (Cash),0.05
+1,1,Bonds BR,0.15
+1,1,Bonds EU,0.15
+1,1,Real state,0.0225
+1,1,Value stocks,0.1275
+1,1,Growth stocks,0.3975
+1,1,Crypto,0.1025
+2,3,Volatile (Cash),0
+2,3,Stable (Cash),0
+2,3,Bonds BR,0
+2,3,Bonds EU,0
+2,3,Real state,0
+2,3,Value stocks,0.25
+2,3,Growth stocks,0.5
+2,3,Crypto,0.25
+3,3,Volatile (Cash),0
+3,3,Stable (Cash),0
+3,3,Bonds BR,0
+3,3,Bonds EU,0
+3,3,Real state,0
+3,3,Value stocks,0.3
+3,3,Growth stocks,0.5
+3,3,Crypto,0.2
+4,3,Volatile (Cash),0
+4,3,Stable (Cash),0.025
+4,3,Bonds BR,0.05
+4,3,Bonds EU,0.1
+4,3,Real state,0
+4,3,Value stocks,0.25
+4,3,Growth stocks,0.425
+4,3,Crypto,0.15
+5,2,Volatile (Cash),0
+5,2,Stable (Cash),0.025
+5,2,Bonds BR,0.1
+5,2,Bonds EU,0.15
+5,2,Real state,0
+5,2,Value stocks,0.225
+5,2,Growth stocks,0.375
+5,2,Crypto,0.125
+6,3,Volatile (Cash),0
+6,3,Stable (Cash),0.01
+6,3,Bonds BR,0.1
+6,3,Bonds EU,0.165
+6,3,Real state,0
+6,3,Value stocks,0.225
+6,3,Growth stocks,0.375
+6,3,Crypto,0.125
+7,4,Volatile (Cash),0
+7,4,Stable (Cash),0.01
+7,4,Bonds BR,0.1
+7,4,Bonds EU,0.165
+7,4,Real state,0
+7,4,Value stocks,0.225
+7,4,Growth stocks,0.375
+7,4,Crypto,0.125

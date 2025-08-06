@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: transactions_mart
+    description: ""
+    tests: 
+    - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - transaction_id
+            - currency
+    columns:
+      - name: transaction_id
+        data_type: character varying
+        description: ""
+        tests:
+          - not_null
+      - name: level_1
+        data_type: character varying
+        description: ""
+        tests:
+          - not_null
