@@ -74,7 +74,7 @@ def create_service(api_name, creds):
     return service
 
 
-def read_spreadsheet(spreadsheet_id, range_name):
+def read_spreadsheet(spreadsheet_id, range_name, debug=False):
     """Get data from a Google Sheets spreadsheet.
     
     Args:
@@ -89,12 +89,23 @@ def read_spreadsheet(spreadsheet_id, range_name):
         Exception: If no data is found in the specified range
     """
     creds = get_credentials()
-    service = create_service('sheets', creds)
+    
+    if debug:
+        print('Credentials: SUCCESS')
 
+    service = create_service('sheets', creds)
     sheet = service.spreadsheets()
+
+    if debug:
+        print('Service: SUCCESS')
+
     result = sheet.values().get(
         spreadsheetId=spreadsheet_id,
         range=range_name).execute()
+    
+    if debug:
+        print('Sheets read: SUCCESS')
+    
     values = result.get('values', [])
     if not values:
         raise Exception('No data found')

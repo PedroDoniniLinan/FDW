@@ -1,5 +1,7 @@
 import pandas as pd
 import datetime as dt
+from pathlib import Path
+import platform
 from time import time
 from dbt.cli.main import dbtRunner, dbtRunnerResult
 
@@ -8,11 +10,16 @@ from lib.constants import *
 
 from projections import run_projections
 
+SCRIPT_DIR = Path(__file__).resolve().parent.parent
 
 def format_amounts(df, column):
     if column in df.columns:
-        # df[column] = df[column].apply(lambda x: float(x)*1e9)
-        df[column] = df[column].astype(float)
+        try:
+            # df[column] = df[column].apply(lambda x: float(x)*1e9)
+            df[column] = df[column].astype(float)
+        except:
+            print(column)
+            print(df[column])
     return df
 
 
@@ -67,7 +74,7 @@ def update_source_from_sheets(target_db):
     start_time = time()
     for s in sheets:
         print(s)
-        df = google_lib.read_spreadsheet(sheets[s]['id'], sheets[s]['range'])
+        df = google_lib.read_spreadsheet(sheets[s]['id'], sheets[s]['range'], debug=False)
         update_source(s, df, target_db)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
@@ -79,7 +86,7 @@ def run_validation_dbt():
     dbt = dbtRunner()
     # cli_args = ["seed", "--select", "income_mapping"]
     # res: dbtRunnerResult = dbt.invoke(cli_args)
-    cli_args = ["run", "--project-dir", "F:\Backup\Projects\FDW\\fdw_dbt", "--select", "+balance_discrepancies"]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+balance_discrepancies"]
     res: dbtRunnerResult = dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
@@ -103,17 +110,19 @@ def run_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
     dbt = dbtRunner()
-    cli_args = ["seed", "--project-dir", "F:\Backup\Projects\FDW\\fdw_dbt", "--full-refresh"]
+    cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--full-refresh"]
     res: dbtRunnerResult = dbt.invoke(cli_args)
     dbt = dbtRunner()
-    cli_args = ["run", "--project-dir", "F:\Backup\Projects\FDW\\fdw_dbt"]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt')]
     res: dbtRunnerResult = dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
 
 
 if __name__ == '__main__':
+    print('start')
     run_time = 0
+    # print(SCRIPT_DIR / 'fdw_dbt')
     run_time += update_source_from_sheets('prod')
     run_time += run_validation_dbt()
     validated, run_time_ = validate_balances()
@@ -121,4 +130,4 @@ if __name__ == '__main__':
         run_time += run_time_
         run_time += run_dbt()
         run_projections()
-
+    print('end')

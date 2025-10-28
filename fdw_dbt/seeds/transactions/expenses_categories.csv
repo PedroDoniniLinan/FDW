@@ -46,9 +46,11 @@ Shared,Travel,Travel Transport,Transport (Travel),Yearly,Transport
 Shared,Travel,Travel Transport,Transport (Travel),Yearly,Transport (Travel)
 Shared,Travel,Tours,Tours,Yearly,Tour
 Shared,Travel,Tours,Tours,Yearly,Small trip
+Free D,Clothes,Clothes D,Other D,Yearly,Other D
 Free D,Clothes,Clothes D,Other D,Yearly,Accessory D
 Free D,Clothes,Clothes D,Clothes D,Yearly,Clothes D
 Free D,Clothes,Clothes D,Shoes D,Yearly,Shoes D
+Free P,Clothes,Clothes P,Other P,Yearly,Other P
 Free P,Clothes,Clothes P,Other P,Yearly,Accessory P
 Free P,Clothes,Clothes P,Clothes P,Yearly,Clothes P
 Free P,Clothes,Clothes P,Clothes P,Yearly,Clothes D+P
@@ -89,6 +91,7 @@ Shared,Products & Services,Work related,Office supplies,Yearly,Office materials
 Shared,Products & Services,Work related,Office supplies,Yearly,Printing
 Shared,Products & Services,Work related,Education,Yearly,Education
 Shared,Health,Routine,Other doctors,Yearly,Doctor
+Shared,Health,Routine,Dentist rountine,Yearly,Dentist rountine
 Shared,Health,Routine,Dentist rountine,Yearly,Dental cleaning
 Essentials,Health,Routine,Routine exams,Yearly,Exams
 Essentials,Health,Routine,Routine exams,Yearly,Exam

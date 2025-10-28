@@ -1,5 +1,5 @@
 account,account_country,budget_level
-AB,EU,Cash reserve P
+AB,PT,Cash reserve P
 Alelo,BR,Cash reserve P
 Avenue,US,Investments
 BB,BR,Cash reserve P
@@ -7,19 +7,21 @@ BNB,BR,Investments
 BT,BR,Investments
 BlockFi,US,Investments
 Caju,BR,Cash reserve P
-Coverflex,EU,Cash reserve P
+Coverflex,PT,Cash reserve P
 Dasha,BR,Cash reserve D
 Nubank D,BR,Cash reserve D
-Degiro,EU,Investments
+Degiro,FR,Investments
 Easy,BR,Investments
-Kraken,EU,Investments
+IBKR,US,Investments
+Kraken,DE,Investments
+Klarna,SE,Investments
 Ledger,US,Investments
 MetaMask,US,Investments
-N26,EU,Cash reserve P
+N26,DE,Cash reserve P
 Nu,BR,Investments
 Payoneer,US,Cash reserve D
 Phantom,US,Investments
 Ronin,US,Investments
-T212,EU,Investments
-Wise,EU,Cash reserve P
-Wise D,EU,Cash reserve D
+T212,DE,Investments
+Wise,PT,Cash reserve P
+Wise D,PT,Cash reserve D

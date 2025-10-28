@@ -19,7 +19,8 @@ def execute_query(query_name, code=False, mode='select', target_db='prod'):
         host=os.getenv('DB_HOST'),
         user=os.getenv('DB_USER'),
         password=os.getenv('DB_PASSWORD'),
-        database=os.getenv('DB_DATABASE') if target_db == 'prod' else os.getenv('DB_DATABASE_DEV')
+        database=os.getenv('DB_DATABASE') if target_db == 'prod' else os.getenv('DB_DATABASE_DEV'),
+        port=5433
     )
 
     if not code:

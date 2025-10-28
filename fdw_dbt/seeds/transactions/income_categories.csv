@@ -13,6 +13,7 @@ Investments,Bonds BR,TD Prefix,Investments,TD Prefix L
 Investments,Bonds BR,TD SELIC,Investments,TD SELIC L
 Investments,Bonds BR,TD SELIC,Investments,TD SELIC E
 Investments,Bonds EU,EUR212,Investments,EUR212
+Investments,Bonds EU,EUR K,Investments,EUR K
 Investments,Bonds EU,EUR W,Investments,EUR W
 Investments,Bonds EU,USD W,Investments,USD W
 Cash,Stable (Cash),EUR,Cash,EUR
@@ -101,4 +102,4 @@ Other sources,Cash,Cash,Other sources,Cash
 Other sources,Parents,Support,Other sources,Support
 Other sources,Parents,Support,Other sources,Void
 Other sources,Taxes,Tax refund,Other sources,Taxes
-
+Other sources,Taxes,Tax refund,Other sources,Tax refund
