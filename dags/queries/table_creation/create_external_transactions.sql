@@ -1,4 +1,4 @@
-create table bronze.external_transactions (
+create table if not exists bronze.external_transactions (
     id serial primary key,
     transaction_type varchar(255) not null,
     tag varchar(511) not null,

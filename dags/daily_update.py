@@ -129,5 +129,5 @@ if __name__ == '__main__':
     if validated:
         run_time += run_time_
         run_time += run_dbt()
-        run_projections()
+        # run_projections()
     print('end')

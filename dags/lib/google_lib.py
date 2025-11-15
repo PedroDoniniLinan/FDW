@@ -1,5 +1,6 @@
 import numpy as np
 import os
+from pathlib import Path
 import pandas as pd
 import pickle
 import re
@@ -16,10 +17,11 @@ def get_refresh_token():
     Returns:
         str: The refresh token obtained from running local OAuth2 flow
     """
-    json_path = 'dags/lib/client_secret_619439483398-j65rb51rmvlrvkm6rlrtfim7ecu3qa38.apps.googleusercontent.com.json'
+    script_dir = Path(__file__).resolve().parent
+    json_path = script_dir / 'client_secret_619439483398-j65rb51rmvlrvkm6rlrtfim7ecu3qa38.apps.googleusercontent.com.json'
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/spreadsheets.readonly']
 
-    flow = InstalledAppFlow.from_client_secrets_file(json_path, SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file(str(json_path), SCOPES)
     creds = flow.run_local_server(port=0)
 
     print("Your refresh token:", creds.refresh_token)

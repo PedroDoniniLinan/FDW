@@ -1,4 +1,4 @@
-create table bronze.exchanges (
+create table if not exists bronze.exchanges (
     id serial primary key,
     ticker varchar(255) not null,
     account varchar(255) not null,

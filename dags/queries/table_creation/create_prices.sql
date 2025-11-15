@@ -1,4 +1,4 @@
-create table bronze.prices (
+create table if not exists bronze.prices (
     id serial primary key,
     ticker varchar(255) not null,
     currency varchar(255) not null,

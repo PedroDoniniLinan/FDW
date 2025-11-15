@@ -1,4 +1,4 @@
-create table bronze.projections (
+create table if not exists bronze.projections (
     id serial primary key,
     calendar_date date not null,
     simulation_set integer not null,
