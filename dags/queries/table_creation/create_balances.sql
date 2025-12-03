@@ -1,4 +1,4 @@
-create table bronze.balances (
+create table if not exists bronze.balances (
     id serial primary key,
     account varchar(255) not null,
     calendar_date date not null,

@@ -1,5 +1,6 @@
 import psycopg2
 import pandas as pd
+from pathlib import Path
 from dotenv import load_dotenv
 import os
 
@@ -19,7 +20,8 @@ def execute_query(query_name, code=False, mode='select', target_db='prod'):
         host=os.getenv('DB_HOST'),
         user=os.getenv('DB_USER'),
         password=os.getenv('DB_PASSWORD'),
-        database=os.getenv('DB_DATABASE') if target_db == 'prod' else os.getenv('DB_DATABASE_DEV')
+        database=os.getenv('DB_DATABASE') if target_db == 'prod' else os.getenv('DB_DATABASE_DEV'),
+        port=5433
     )
 
     if not code:
@@ -115,8 +117,9 @@ def insert_df(df, table, keys=[], merge=True, target_db='prod'):
         merge (bool, optional): If True, performs UPSERT instead of INSERT. Defaults to True.
     """
     query = generate_insert_query(df, table, keys, merge)
-    os.makedirs('queries', exist_ok=True)
-    with open('queries/debug_query.sql', 'w+') as f:
+    query_dir = Path('queries')
+    query_dir.mkdir(exist_ok=True)
+    with open(query_dir / 'debug_query.sql', 'w+') as f:
         f.write(query)
     execute_query(query, code=True, mode='write', target_db=target_db)
 
@@ -124,13 +127,14 @@ def insert_df(df, table, keys=[], merge=True, target_db='prod'):
 def recreate_tables():
     """Recreate all bronze tables in both main and dev databases."""
     tables = ['external_transactions', 'exchanges', 'balances', 'prices', 'transfers']
+    script_dir = Path(__file__).resolve().parent.parent
     for table in tables:
-        query_path = f'dags/queries/table_creation/create_{table}.sql'
+        query_path = script_dir / 'queries' / 'table_creation' / f'create_{table}.sql'
         # for target_db in ['dev']:
         for target_db in ['prod', 'dev']:
             print(f"Recreating table {table} in {target_db} database")
             execute_query(f"DROP TABLE IF EXISTS bronze.{table} CASCADE", code=True, mode='write', target_db=target_db)
-            execute_query(query_path, code=False, mode='write', target_db=target_db)
+            execute_query(str(query_path), code=False, mode='write', target_db=target_db)
 
 
 if __name__ == '__main__':

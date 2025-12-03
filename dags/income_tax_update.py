@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 import numpy as np
 import pandas as pd
 from dbt.cli.main import dbtRunner, dbtRunnerResult
@@ -6,12 +7,14 @@ from dbt.cli.main import dbtRunner, dbtRunnerResult
 from lib import postgresql_lib, utils
 from lib.constants import *
 
+SCRIPT_DIR = Path(__file__).resolve().parent.parent
+
 
 def update_dbt_models():
     dbt = dbtRunner()
-    cli_args = ["seed", "--project-dir", "F:\Backup\Projects\FDW\\fdw_dbt"]
+    cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt')]
     res: dbtRunnerResult = dbt.invoke(cli_args)
-    cli_args = ["run", "--project-dir", "F:\Backup\Projects\FDW\\fdw_dbt", "--select", "+int_fiat_exchanges"]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+int_fiat_exchanges"]
     res: dbtRunnerResult = dbt.invoke(cli_args)
 
 

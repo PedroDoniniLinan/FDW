@@ -1,4 +1,4 @@
-create table bronze.transfers (
+create table if not exists bronze.transfers (
     id serial primary key,
     source_acc varchar(255) not null,
     destination_acc varchar(255) not null,

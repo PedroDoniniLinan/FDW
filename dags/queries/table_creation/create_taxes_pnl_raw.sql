@@ -1,4 +1,4 @@
-create table silver.taxes_pnl_raw (
+create table if not exists silver.taxes_pnl_raw (
     ticker varchar(255) not null,
     currency varchar(255) not null,
     calendar_date date not null,

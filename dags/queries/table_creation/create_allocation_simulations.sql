@@ -1,4 +1,4 @@
-create table gold.allocation_simulations (
+create table if not exists gold.allocation_simulations (
     id serial primary key,
     set integer not null,
     method varchar(255) not null,
