@@ -10,3 +10,13 @@ create table if not exists silver.int_fiat_balances_daily (
 );
 
 
+
+
+
+
+
+
+
+
+
+

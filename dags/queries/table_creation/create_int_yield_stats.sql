@@ -8,3 +8,13 @@ create table if not exists silver.int_yield_stats (
 );
 
 
+
+
+
+
+
+
+
+
+
+
