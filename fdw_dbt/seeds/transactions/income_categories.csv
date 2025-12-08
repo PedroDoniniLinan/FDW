@@ -20,6 +20,7 @@ Cash,Stable (Cash),EUR,Cash,EUR
 Cash,Stable (Cash),USD,Cash,USD
 Cash,Volatile (Cash),BRL,Cash,Rivalry
 Cash,Volatile (Cash),BRL,Cash,BRL
+Cash,Volatile (Cash),C,Cash,C
 Cash,Volatile (Cash),Nubank,Investments,Nubank
 Cash,Volatile (Cash),Nubank,Investments,Savings
 Investments,Crypto,ADA,Investments,ADA
