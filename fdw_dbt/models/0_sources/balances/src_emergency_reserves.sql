@@ -26,7 +26,7 @@ with
             sum(balance) as emergency_reserves
         from {{ ref("int_fiat_balances_daily") }}
         where currency = 'EUR'
-            and account in ('Nubank D', 'Wise D', 'Payoneer')
+            and account in ('Wise D', 'Payoneer', 'Nubank C', 'Coverflex', 'Klarna')
             and calendar_date = (select max(calendar_date) from {{ ref("int_fiat_balances_daily") }})
         group by level_3
     )

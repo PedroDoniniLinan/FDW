@@ -34,20 +34,26 @@ with
             inner join target_assets t on (i.level_3 = t.level_3)
         where currency = 'EUR'
         group by 1, 2, 3, 4
+    ),
+
+    final as (
+        select
+            d.currency,
+            d.calendar_date,
+            d.level_3,
+            d.ticker,
+            d.amount,
+            a.balance,
+            (d.amount/a.balance) as performance
+            {# round((d.amount/a.balance)::numeric, 5) as performance #}
+        from dividends d
+            left join avg_balances a on (
+                d.calendar_date = a.calendar_date
+                and d.ticker = a.ticker
+            )
+        where balance is not null
     )
 
-select
-    d.currency,
-    d.calendar_date,
-    d.level_3,
-    d.ticker,
-    d.amount,
-    a.balance,
-    (d.amount/a.balance) as performance
-    {# round((d.amount/a.balance)::numeric, 5) as performance #}
-from dividends d
-    left join avg_balances a on (
-        d.calendar_date = a.calendar_date
-        and d.ticker = a.ticker
-    )
-where balance is not null
+select *
+from final
+
