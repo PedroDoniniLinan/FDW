@@ -21,8 +21,9 @@ with
             'Yearly' as source,
             'Income' as transaction_type,
             'Investments' as level_1,
-            interest as amount
+            sum(interest) as amount
         from {{ source('silver', 'balance_projections') }}
+        group by calendar_date, simulation_set
     ),
 
     actuals as (

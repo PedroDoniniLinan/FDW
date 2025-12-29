@@ -25,6 +25,7 @@ select
     a.avg_pos_yield,
     coalesce(a.avg_neg_yield, 1) as avg_neg_yield,
     a.pos_year_pct,
+    target_allocation,
     a.avg_pos_yield * target_allocation as allocation_pos_yield,
     coalesce(a.avg_neg_yield, 1) * target_allocation as allocation_neg_yield
 from asset_performance a

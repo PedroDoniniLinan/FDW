@@ -18,6 +18,10 @@ select
     simulation_set,
     'Income' as transaction_type,
     'Investments' as level_1,
-    interest as amount,
-    interest as abs_amount
+    sum(interest) as amount,
+    sum(interest) as abs_amount
 from {{ source('silver', 'balance_projections') }}
+group by
+    calendar_date,
+    is_end_of_period,
+    simulation_set
