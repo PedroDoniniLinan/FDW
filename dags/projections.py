@@ -47,19 +47,20 @@ def extract_data():
     return df_projections, df_balance.iat[0, 0], df_yields
 
 
-def _calculate_projections(df_projections, balance, df_yields, 
-                           pos_iteration_init=0, 
-                           rate_i_init=None,
-                           update_yearly=False):
+def _calculate_projections(
+    df_projections, balance, df_yields, 
+    pos_iteration_init=0, 
+    rate_i_init=None,
+    update_period=1,
+    pos_year_pct_modifier=0
+):
     """
     Unified projection calculation function.
     
     Parameters:
     - pos_iteration_init: Initial value for pos_iteration (0 for method_1, 1 for method_2)
     - rate_i_init: Initial value for rate_i (None/0 for method_1, 'avg_pos_yield' for method_2)
-    - update_yearly: If True, only update yields every 12 months (method_2), else every period (method_1)
-    - use_allocation_yields: If True, use allocation_pos_yield/allocation_neg_yield (method_2),
-                            else use avg_pos_yield/avg_neg_yield (method_1)
+    - update_period: Integer, how frequently to update yields (1 for method_1, 12 for method_2, etc)
     """
     # Initialize simulation columns
     df_yields['iteration'] = 0                # Count of periods simulated per asset
@@ -73,30 +74,37 @@ def _calculate_projections(df_projections, balance, df_yields,
     # Initialize balance per asset based on target_allocation
     for _, asset_row in df_yields.iterrows():
         asset_name = asset_row['level_3']
-        df_projections[f'balance_{asset_name}'] = balance * asset_row['target_allocation']
+        df_projections[f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
         df_projections[f'interest_{asset_name}'] = 0.0
     
     # Initialize total columns
     df_projections['interest'] = 0.0
     df_projections['balance'] = balance
+    df_projections = df_projections.reset_index(drop=True)
 
     for index, row in df_projections.iterrows():
+        # Initialize balance per asset based on target_allocation
+        for _, asset_row in df_yields.iterrows():
+            asset_name = asset_row['level_3']
+            df_projections.at[index,f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
+
         # Increment period counter for each asset
         df_yields.loc[:, 'iteration'] += 1
 
         # Determine if we should update yields this period
-        should_update = True
-        update_period = 12 if update_yearly else 1
-        if update_yearly:
-            should_update = df_yields['iteration'].max() % 12 == 0
+        if update_period <= 1:
+            should_update = True
+        elif rate_i_init is not None:
+            should_update = False
+        else:
+            should_update = df_yields['iteration'].max() % update_period == 0
 
         if should_update:
             # Calculate for each asset: realized positive period ratio so far
             df_yields.loc[:, 'cond'] = df_yields.apply(
-                lambda x: float(x['pos_iteration']) / (max(x['iteration'] - 1, 1) / update_period) <= x['pos_year_pct'],
+                lambda x: float(x['pos_iteration']) / (max(x['iteration'] - 1, 1) / update_period) <= (float(x['pos_year_pct']) * (1 + pos_year_pct_modifier)),
                 axis=1
             )
-
 
             # Pick yield of this asset for this period: positive or negative
             pos_yield_col = 'avg_pos_yield'
@@ -106,8 +114,6 @@ def _calculate_projections(df_projections, balance, df_yields,
                 lambda x: x[pos_yield_col] if x['cond'] else x[neg_yield_col],
                 axis=1
             )
-
-            # Update positive period counter if it was a positive period in this draw
             df_yields.loc[:, 'pos_iteration'] += df_yields.apply(
                 lambda x: 1 if x['cond'] else 0,
                 axis=1
@@ -137,7 +143,7 @@ def _calculate_projections(df_projections, balance, df_yields,
         balance = balance + interest + apport
         for _, asset_row in df_yields.iterrows():
             asset_name = asset_row['level_3']
-            df_projections.at[index, f'balance_{asset_name}'] = balance * asset_row['target_allocation']
+            df_projections.at[index, f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
         df_projections.at[index, 'interest'] = interest
         df_projections.at[index, 'balance'] = balance
 
@@ -177,45 +183,62 @@ def _calculate_projections(df_projections, balance, df_yields,
             'balance',
         ]
     ]
-    print(df_long)
 
     return df_long
 
 
 def method_1(df_projections, balance, df_yields):
-    """Method 1: Updates yields every period"""
     return _calculate_projections(
         df_projections, balance, df_yields,
         pos_iteration_init=0,
-        rate_i_init=None,
-        update_yearly=False
+        rate_i_init=1.08,
+        update_period=1   # every period
     )
 
 
 def method_2(df_projections, balance, df_yields):
-    """Method 2: Updates yields every 12 months"""
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        pos_iteration_init=1,
+        rate_i_init=None,
+        update_period=12   # every 12 months
+    )
+
+
+def method_3(df_projections, balance, df_yields):
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        pos_iteration_init=1,
+        rate_i_init=None,
+        pos_year_pct_modifier=-0.1,
+        update_period=12   # every 4 months
+    )
+
+
+def method_4(df_projections, balance, df_yields):
     return _calculate_projections(
         df_projections, balance, df_yields,
         pos_iteration_init=1,
         rate_i_init='avg_pos_yield',
-        update_yearly=True
+        pos_year_pct_modifier=-0.05,
+        update_period=12   # every 4 months
     )
 
 
-def project_set(df_projections, balance, df_yields, yield_method=0):
-    if yield_method == 1:
-        df_projections = method_1(df_projections, balance, df_yields)
-    else:
-        df_projections = method_2(df_projections, balance, df_yields)
+def project_set(df_projections, balance, df_yields, yield_method=2):
+    method_func = globals().get(f'method_{yield_method}')
+    if method_func is None:
+        raise ValueError(f"No method implemented for yield_method={yield_method}")
+    df_projections = method_func(df_projections, balance, df_yields)
     return df_projections
 
 
-def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[1, 2, 2]):
+def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[1, 2, 2, 3, 4]):
     balance = float(extracted_balance) 
     df_results = None
-    for i in range(1):
+    # for i in range(1):
         # i = 15
-    # for i in range(df_projections['simulation_set'].max() + 1):
+    for i in range(df_projections['simulation_set'].max() + 1):
         print(f'Processing simulation set {i}...')
         df_i = project_set(df_projections[df_projections['simulation_set'] == i].copy(), balance, df_yields.copy(), yield_methods[i])
         df_i['simulation_set'] = i
@@ -242,12 +265,12 @@ def run_projections():
 
 
 if __name__ == '__main__':
-    # print('--')
-    # update_dbt_models()
+    print('--')
+    update_dbt_models()
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
     df = calculate_projections(df_projections, balance, df_yields)    
     print('-- Insert')
     update_tables(df, 'prod')
-    # print('--')
-    # update_target_dbt_models()
+    print('--')
+    update_target_dbt_models()

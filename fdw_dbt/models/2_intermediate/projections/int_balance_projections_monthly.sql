@@ -7,7 +7,7 @@ with
             calendar_date,
             is_end_of_period,
             'Projection '||simulation_set::text as label,
-            sum(balance)
+            sum(balance) as balance
         from {{ source('silver', 'balance_projections') }}
         group by calendar_date, is_end_of_period, label
     ),

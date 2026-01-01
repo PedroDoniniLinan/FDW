@@ -102,4 +102,6 @@ select
     case when performance < 0 then 1 else performance end as performance
 from unite_filler
 
-
+{# select *
+from monthly_performance
+where level_3 = 'TD SELIC' #}
