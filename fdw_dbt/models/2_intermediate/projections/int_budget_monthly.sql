@@ -10,8 +10,8 @@ with
             transaction_type,
             budget_level,
             level_1,
-            level_2,
-            level_3,
+            level_1 as level_2,
+            level_1 as level_3,
             sum(amount) as amount
         from {{ ref("int_transaction_projections_monthly") }}
         where level_1 is not null
@@ -21,9 +21,7 @@ with
             frequency,
             transaction_type,
             budget_level,
-            level_1,
-            level_2,
-            level_3
+            level_1
     ),
 
     interest_projections as (
@@ -77,7 +75,7 @@ with
         where transaction_type in ('Income', 'Expenses')
             and currency = 'EUR'
             and calendar_date >= '2024-01-01'
-        group by 1, 2, 3, 4, 5
+        group by 1, 2, 3, 4, 5, 6, 7, 8
     )
 
 select *
