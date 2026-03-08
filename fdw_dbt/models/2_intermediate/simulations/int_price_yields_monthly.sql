@@ -19,7 +19,7 @@ with
             ) i on (p.ticker = i.label and i.transaction_type = 'Income')
             inner join (
                 select distinct level_3
-                from {{ref("target_allocation")}}
+                from {{ref("int_allocation_targets")}}
             ) t on (i.level_3 = t.level_3)
         where is_end_of_period ~* 'month'
             -- and currency = 'BRL'
@@ -41,7 +41,7 @@ with
                 and date_trunc('month', u.calendar_date) = d.calendar_date
             )
         where not(
-            u.ticker != u.currency
+            (u.ticker != u.currency and u.ticker not in ('EUR W', 'USD W'))
             and (u.performance + coalesce(d.performance, 0)) = 0
         )
     ),
@@ -101,7 +101,9 @@ select
     date_trunc('month', calendar_date)::date as calendar_date,
     case when performance < 0 then 1 else performance end as performance
 from unite_filler
+{# where level_3 = 'EUR W' #}
 
-{# select *
-from monthly_performance
-where level_3 = 'TD SELIC' #}
+
+{# 
+select distinct level_3
+from dividends #}

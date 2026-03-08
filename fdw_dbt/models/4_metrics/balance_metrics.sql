@@ -1,6 +1,9 @@
 {{ config(schema='gold', materialized='table') }}
 {% set time_grain = ['day', 'week', 'month', 'quarter', 'year'] %}
 
+-- THIS MODEL DOESNOT MATCH THE UPSTREAM
+-- PLEASE CHECK NEGATIVE BAALNCES
+
 {% for t in time_grain %}
 select
     {% if t in ['day', 'week', 'month', 'year'] %}
