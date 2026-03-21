@@ -38,8 +38,10 @@ def extract_data():
 
     df_balance = postgresql_lib.execute_query("""
         select sum(balance) as balance
-        from silver.int_fiat_balances_daily 
-        where currency = 'EUR' and calendar_date = '2023-12-31'
+        from gold.balance_metrics 
+        where currency = 'EUR' 
+            and calendar_date = '2023-12-31'
+            and time_grain = 'day'
         """, code=True)
     
     df_yields = postgresql_lib.execute_query('select * from silver.int_yield_stats', code=True)
@@ -47,157 +49,205 @@ def extract_data():
     return df_projections, df_balance.iat[0, 0], df_yields
 
 
-def method_1(df_projections, balance, df_yields):
+def _calculate_projections(
+    df_projections, balance, df_yields, 
+    pos_iteration_init=0, 
+    rate_i_init=None,
+    update_period=1,
+    pos_year_pct_modifier=0
+):
     """
-    Simulate yearly yield application to a monthly projection using a stochastic method.
-
-    For each row (month) in df_projections:
-    - For each asset in df_yields, update how many periods/years ('iterations') and 'positive' periods it has seen.
-    - Calculate the probability of seeing a positive yield so far.
-    - Assign either the positive or negative yield to this cycle, based on whether the realized positive ratio is below or at the expected probability (pos_year_pct).
-    - Track whether the current simulation period is a positive year for this asset, and increment accordingly.
-    - Sum all asset returns to get overall portfolio rate for this period.
-    - If the projection date is after 2040, dampen the rate (simulate uncertainty/caution).
-    - Calculate interest for the period based on current balance and rate.
-    - If the projection is still year 2023 (baseline year), set interest to 0 and leave balance unchanged.
-    - Otherwise, update balance by applying yield and this month's apport (contribution).
-    - Store the results back into df_projections as 'interest' and 'balance'.
+    Unified projection calculation function.
+    
+    Parameters:
+    - pos_iteration_init: Initial value for pos_iteration
+    - rate_i_init: Initial value for rate_i
+    - update_period: Integer, how frequently to update yields
     """
     # Initialize simulation columns
-    df_yields['iteration'] = 0                # Count of periods simulated per asset
-    df_yields['pos_iteration'] = 0            # How many of those periods were 'positive'
-    df_yields['rate_i'] = 0                   # Per-asset rate applied each cycle
-    df_yields['rate_i'] = df_yields['rate_i'].astype(float)
-    interest = 0.0
+    df_yields['iteration'] = -1                # Count of periods simulated per asset
+    df_yields['pos_iteration'] = pos_iteration_init
+    if rate_i_init is None:
+        df_yields['rate_i'] = df_yields['avg_pos_yield']
+    else:
+        df_yields['rate_i'] = rate_i_init
+    df_yields['rate_i'] = df_yields['rate_i'].astype(np.float64)
+    
+    # Initialize balance per asset based on target_allocation
+    for _, asset_row in df_yields.iterrows():
+        asset_name = asset_row['level_3']
+        df_projections[f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
+        df_projections[f'interest_{asset_name}'] = 0.0
+    
+    # Initialize total columns
+    df_projections['interest'] = 0.0
+    df_projections['balance'] = balance
+    df_projections = df_projections.reset_index(drop=True)
 
     for index, row in df_projections.iterrows():
+
+        # Initialize balance per asset based on target_allocation
+        for _, asset_row in df_yields.iterrows():
+            asset_name = asset_row['level_3']
+            df_projections.at[index,f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
+
         # Increment period counter for each asset
         df_yields.loc[:, 'iteration'] += 1
 
-        # Calculate for each asset: realized positive period ratio so far
-        df_yields.loc[:, 'cond'] = df_yields.apply(
-            lambda x: float(x['pos_iteration']) / (max(x['iteration'] - 1, 1)),
-            axis=1
-        )
+        # Determine if we should update yields this period
+        if rate_i_init is not None:
+            should_update = False
+        elif update_period <= 1:
+            should_update = True
+        else:
+            should_update = df_yields['iteration'].max() % update_period == 0
 
-        # Pick yearly yield of this asset for this period: positive or negative
-        df_yields.loc[:, 'rate_i'] = df_yields.apply(
-            lambda x: x['allocation_pos_yield'] 
-                if float(x['pos_iteration']) / (max(x['iteration'] - 1, 1)) <= x['pos_year_pct']
-                else x['allocation_neg_yield'],
-            axis=1
-        )
+        if should_update:
+            # Calculate for each asset: realized positive period ratio so far
+            df_yields.loc[:, 'cond'] = df_yields.apply(
+                lambda x: float(x['pos_iteration']) / (max(x['iteration'] - 1, 1) / update_period) <= (float(x['pos_year_pct']) * (1 + pos_year_pct_modifier)),
+                axis=1
+            )
 
-        # Update positive period counter if it was a positive year in this draw
-        df_yields.loc[:, 'pos_iteration'] += df_yields.apply(
-            lambda x: 1 
-                if float(x['pos_iteration']) / (max(x['iteration'] - 1, 1)) <= x['pos_year_pct']
-                else 0,
-            axis=1
-        )
+            # Pick yield of this asset for this period: positive or negative
+            pos_yield_col = 'avg_pos_yield'
+            neg_yield_col = 'avg_neg_yield'
 
-        # The overall period return is the sum of all asset returns
-        rate = df_yields['rate_i'].sum()
+            df_yields.loc[:, 'rate_i'] = df_yields.apply(
+                lambda x: x[pos_yield_col] if x['cond'] else x[neg_yield_col],
+                axis=1
+            )
+            df_yields.loc[:, 'pos_iteration'] += df_yields.apply(
+                lambda x: 1 if x['cond'] else 0,
+                axis=1
+            )
 
-        # If the projection year is after 2040, dampen (shrink) the returns
-        if row['calendar_date'].year > 2040:
-            rate = (rate - 1) * 0.75 + 1
-
-        # Calculate period's interest
-        interest = balance * (rate - 1)
 
         # First year is baseline: set 0 interest, skip updating balance
         if row['calendar_date'].year == 2023:
-            df_projections.at[index, 'interest'] = 0
-            df_projections.at[index, 'balance'] = balance
             continue
+        
 
-        # Update the portfolio: apply rate & new apport
-        balance = balance * rate + df_projections.at[index, 'apport']
+        # Calculate per-asset interest and update balances
+        interest = 0.0
+        temp_balance = 0.0
+        for _, asset_row in df_yields.iterrows():
+            asset_name = asset_row['level_3']
+            asset_rate = asset_row['rate_i']
+            
+            # If the projection year is after 2040, dampen (shrink) the returns for this asset
+            if row['calendar_date'].year >= 2040:
+                asset_rate = (asset_rate - 1) * (0.5 + 0.5 *(2070 - row['calendar_date'].year) / 30) + 1
+            
+            # Calculate interest for this asset
+            asset_interest = df_projections.at[index, f'balance_{asset_name}'] * (asset_rate - 1)
+            df_projections.at[index, f'interest_{asset_name}'] = asset_interest
+
+            temp_balance += df_projections.at[index, f'balance_{asset_name}']
+            interest += asset_interest
+        
+        apport = df_projections.at[index, 'apport']
+        # print(f'{row["calendar_date"]} - balance: {balance} + ({apport}) (interest: {interest:.2f} / {interest / balance * 100:.2f}%)')
+        # print(f' - asset_balance: {temp_balance}')
+        balance = balance + interest + apport
+
+        for _, asset_row in df_yields.iterrows():
+            asset_name = asset_row['level_3']
+            df_projections.at[index, f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
         df_projections.at[index, 'interest'] = interest
         df_projections.at[index, 'balance'] = balance
 
-    print(df_projections)
-    return df_projections
+    # Transform to long format
+    cols_to_drop = ['balance', 'interest']
+    # print(df_projections[['calendar_date', 'balance', 'apport', 'interest']])
+    df_assets = df_projections.drop(columns=cols_to_drop).copy()
+    
+    balance_cols = [col for col in df_assets.columns if col.startswith('balance_')]
+
+    asset_rows = []
+    for balance_col in balance_cols:
+        asset_name = balance_col.replace('balance_', '')
+        interest_col = f"interest_{asset_name}"
+        df_asset = df_assets.copy()
+        columns_needed = [
+            'calendar_date',
+            'is_end_of_period',
+            'simulation_set',
+            balance_col,
+            interest_col,
+            'apport'
+        ]
+        df_asset = df_asset[columns_needed]
+        df_asset = df_asset.rename(columns={balance_col: 'balance', interest_col: 'interest'})
+        df_asset['level_3'] = asset_name
+        asset_rows.append(df_asset)
+
+    df_long = pd.concat(asset_rows, ignore_index=True)
+    df_long = df_long[
+        [
+            'calendar_date',
+            'is_end_of_period',
+            'simulation_set',
+            'level_3',
+            'interest',
+            'apport',
+            'balance',
+        ]
+    ]
+
+    return df_long
+
+
+def method_1(df_projections, balance, df_yields):
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        rate_i_init=1.007974 #10%
+    )
 
 
 def method_2(df_projections, balance, df_yields):
-    """
-    Simulates asset yields and portfolio balance evolution using a monthly-to-yearly aggregation approach.
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        rate_i_init=1.011715 #15%
+    )
 
-    This method increments an 'iteration' counter for each asset monthly. Every 12 periods (i.e., yearly),
-    it evaluates, for each asset, whether the simulated ratio of positive periods matches the expected positive
-    year percentage (`pos_year_pct`). Based on this, it assigns either the positive or negative yield for the
-    coming year, updates the positive-period counter, and computes the resulting portfolio growth.
 
-    Args:
-        df_projections (pd.DataFrame): DataFrame with dates, apport, and initial portfolio projections per period.
-        balance (float): Starting balance for the projection.
-        df_yields (pd.DataFrame): DataFrame summarizing assets' yields and allocation splits.
+def method_3(df_projections, balance, df_yields):
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        rate_i_init=1.015379 #20%
+    )
 
-    Returns:
-        pd.DataFrame: The input df_projections with updated 'interest' and 'balance' columns.
-    """
-    df_yields['iteration'] = 0
-    df_yields['pos_iteration'] = 1
-    df_yields['rate_i'] = df_yields['allocation_pos_yield']
-    df_yields['rate_i'] = df_yields['rate_i'].astype(float)
-    interest = 0.0
-    for index, row in df_projections.iterrows():
-        # Increment the period (month) counter for all assets
-        df_yields.loc[:, 'iteration'] += 1
 
-        # Each 12 iterations (yearly), pick yearly return: positive or negative for each asset
-        if df_yields['iteration'].max() % 12 == 0:
-            # Check if positive periods so far match expected ratio
-            df_yields.loc[:, 'cond'] = df_yields.apply(
-                lambda x: float(x['pos_iteration']) / (max(x['iteration'] - 1, 1) / 12) <= x['pos_year_pct'],
-                axis=1
-            )
-            # Assign yearly yield (positive/negative) based on the check
-            df_yields.loc[:, 'rate_i'] = df_yields.apply(
-                lambda x: x['allocation_pos_yield'] if x['cond'] else x['allocation_neg_yield'],
-                axis=1
-            )
-            # Increment positive year counter only if positive year assigned
-            df_yields.loc[:, 'pos_iteration'] += df_yields.apply(
-                lambda x: 1 if x['cond'] else 0, axis=1
-            )
+def method_4(df_projections, balance, df_yields):
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        pos_iteration_init=0,
+        rate_i_init=None,
+        pos_year_pct_modifier=-0.05,
+        update_period=12 
+    )
 
-        # Calculate portfolio rate as sum of asset-weighted rates
-        rate = df_yields['rate_i'].sum()
 
-        # Dampen returns after year 2040
-        if row['calendar_date'].year > 2040:
-            rate = (rate - 1) * 0.75 + 1
+def method_5(df_projections, balance, df_yields):
+    return _calculate_projections(
+        df_projections, balance, df_yields,
+        pos_iteration_init=0,
+        rate_i_init=None,
+        pos_year_pct_modifier=-0.1,
+        update_period=12   
+    )
 
-        # Calculate interest for this period
-        interest = balance * (rate - 1)
 
-        # If baseline year (2023), set interest to 0 and do not update balance
-        if row['calendar_date'].year == 2023:
-            df_projections.at[index, 'interest'] = 0
-            df_projections.at[index, 'balance'] = balance
-            continue
-
-        # Update portfolio balance with interest and new apport
-        balance = balance * rate + df_projections.at[index, 'apport']
-        df_projections.at[index, 'interest'] = interest
-        df_projections.at[index, 'balance'] = balance
-
-    print(df_projections)
+def project_set(df_projections, balance, df_yields, yield_method=2):
+    method_func = globals().get(f'method_{yield_method}')
+    if method_func is None:
+        raise ValueError(f"No method implemented for yield_method={yield_method}")
+    df_projections = method_func(df_projections, balance, df_yields)
     return df_projections
 
 
-def project_set(df_projections, balance, df_yields, yield_method=0):
-    if yield_method == 1:
-        df_projections = method_1(df_projections, balance, df_yields)
-    else:
-        df_projections = method_2(df_projections, balance, df_yields)
-    return df_projections
-
-
-def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[1, 2, 2]):
+def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[3, 2, 4, 5, 1]):
     balance = float(extracted_balance) 
     df_results = None
     # for i in range(1):
@@ -229,11 +279,11 @@ def run_projections():
 
 
 if __name__ == '__main__':
-    print('--')
-    update_dbt_models()
+    # print('--')
+    # update_dbt_models()
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
-    df = calculate_projections(df_projections, balance, df_yields)
+    df = calculate_projections(df_projections, balance, df_yields)    
     print('-- Insert')
     update_tables(df, 'prod')
     print('--')

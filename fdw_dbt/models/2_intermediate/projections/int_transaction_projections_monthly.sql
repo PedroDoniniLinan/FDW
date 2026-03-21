@@ -7,6 +7,7 @@ select
     frequency,
     source,
     transaction_type,
+    budget_level,
     level_1,
     sum(amount) as amount
 from (
@@ -17,6 +18,7 @@ from (
         coalesce(ec.frequency, case when ic.source = 'Investment' then 'Yearly' else 'Monthly' end) as frequency,
         ic.source,
         t.transaction_type,
+        t.budget_level,
         t.level_1,
         coalesce(t.amount, 0) as amount
     from {{ ref("src_projection_grid") }} g
@@ -30,4 +32,12 @@ from (
         t.level_1 = ec.level_2
     )
 )
-group by 1, 2, 3, 4, 5, 6, 7
+group by
+    calendar_date,
+    is_end_of_period,
+    simulation_set,
+    frequency,
+    source,
+    transaction_type,
+    budget_level,
+    level_1

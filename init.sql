@@ -18,6 +18,7 @@ create table if not exists silver.balance_projections (
     calendar_date date not null,
     is_end_of_period varchar(255) not null,
     simulation_set integer not null,
+    level_3 varchar(255) not null,
     interest float not null,
     apport float not null,
     balance float not null
@@ -71,6 +72,7 @@ create table if not exists bronze.projections (
     calendar_date date not null,
     simulation_set integer not null,
     transaction_type varchar(255) not null,
+    budget_level varchar(255) not null,
     level_2 varchar(255) not null,
     amount float not null
 );
