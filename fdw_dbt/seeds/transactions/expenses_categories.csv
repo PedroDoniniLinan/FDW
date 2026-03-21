@@ -1,7 +1,7 @@
 budget_level,level_1,level_2,level_3,frequency,label
 Essentials,Home,House bills,Rent,Monthly,Rent
+Essentials,Home,House bills,House insurance,Monthly,House insurance
 Essentials,Home,House bills,Internet,Monthly,Internet
-Essentials,Home,House bills,Insurance,Monthly,Insurance
 Essentials,Home,House bills,Electricity,Monthly,Electricity
 Essentials,Home,House bills,Water,Monthly,Water
 Essentials,Home,House bills,Gas,Monthly,Gas
@@ -67,6 +67,7 @@ Free D,Products & Services,Hobbies & Interests D,Peripherals D,Yearly,Peripheral
 Free D,Products & Services,Hobbies & Interests D,Beauty tools,Yearly,Beauty tools
 Free D,Products & Services,Hobbies & Interests D,Plushies,Yearly,Plushies
 Free D,Products & Services,Hobbies & Interests D,Books,Yearly,Books
+Free D,Products & Services,Hobbies & Interests D,Gardening,Yearly,Gardening
 Free D,Products & Services,Hobbies & Interests D,Cosmetics,Yearly,Cosmetics
 Shared,Products & Services,Hobbies & Interests B,Leisure,Yearly,Leisure
 Shared,Products & Services,Hobbies & Interests B,Subscriptions,Yearly,Subscriptions
@@ -95,14 +96,16 @@ Shared,Health,Routine,Dentist rountine,Yearly,Dentist rountine
 Shared,Health,Routine,Dentist rountine,Yearly,Dental cleaning
 Essentials,Health,Routine,Routine exams,Yearly,Exams
 Essentials,Health,Routine,Routine exams,Yearly,Exam
+Essentials,Health,Routine,Health insurance,Yearly,Health insurance
+Essentials,Health,Routine,Health insurance,Yearly,Insurance
 Essentials,Health,Routine,Gynecologist routine,Yearly,Gynecologist
-Shared,Health,Emergencial,Glasses,Yearly,Glasses
-Shared,Health,Emergencial,Physio injury,Yearly,Physio injury
-Essentials,Health,Emergencial,Operation,Yearly,Operation
-Essentials,Health,Emergencial,Deficiency,Yearly,Deficiency
-Essentials,Health,Emergencial,Doctor (issue),Yearly,Doctor (issue)
-Essentials,Health,Emergencial,Gynecologist issue,Yearly,Gynecologist issue
-Essentials,Health,Emergencial,Dentist ops & exams,Yearly,Dentist ops
+Shared,Health,Unexpected,Glasses,Yearly,Glasses
+Shared,Health,Unexpected,Physio injury,Yearly,Physio injury
+Essentials,Health,Unexpected,Operation,Yearly,Operation
+Essentials,Health,Unexpected,Deficiency,Yearly,Deficiency
+Essentials,Health,Unexpected,Doctor (issue),Yearly,Doctor (issue)
+Essentials,Health,Unexpected,Gynecologist issue,Yearly,Gynecologist issue
+Essentials,Health,Unexpected,Dentist ops & exams,Yearly,Dentist ops
 Essentials,Self-care,Variable care,Pharmacy,Monthly,Pharmacy
 Free D,Self-care,Variable care,Pharmacy,Monthly,Pharmacy D
 Free D,Self-care,Variable care,Pharmacy,Monthly,Health D
