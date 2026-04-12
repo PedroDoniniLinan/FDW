@@ -80,6 +80,7 @@ with
         where transaction_type in ('Income', 'Expenses')
             and currency = 'EUR'
             and calendar_date >= '2024-01-01'
+            and account != 'Nubank C'
         group by 1, 2, 3, 4, 5, 6, 7, 8
     )
 

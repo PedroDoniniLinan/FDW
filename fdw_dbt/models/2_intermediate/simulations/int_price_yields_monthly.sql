@@ -101,7 +101,7 @@ select
     date_trunc('month', calendar_date)::date as calendar_date,
     case when performance < 0 then 1 else performance end as performance
 from unite_filler
-{# where level_3 = 'EUR W' #}
+{# where level_3 = 'GOLD' #}
 
 
 {# 

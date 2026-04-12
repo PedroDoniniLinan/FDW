@@ -30,7 +30,7 @@ def simulate_set(set_num, start_date, df_balance, df_performance):
         df_year_balance = df_balance[(df_balance['calendar_date'] == start_date)&(df_balance['set'] == set_num)].copy()
         results.append({'set': set_num, 'method': method, 'start_date': start_date, 'calendar_date': utils.date_add(start_date, -1, 'month').strftime('%Y-%m-%d'), 'balance': float(round(df_year_balance['allocated_balance'].sum(), 2)), 'capital_gain': 0})
         month = datetime.fromisoformat(start_date)
-        while month < datetime.fromisoformat('2025-05-01'):
+        while month < datetime.fromisoformat('2026-04-01'):
             # print(month)
             df_month_performance = df_performance[df_performance['calendar_date'] == month].copy()
             df_year_balance.loc[:, 'performance'] = df_year_balance.apply(lambda row: apply_performance(row, df_month_performance, month), axis=1)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     print('-- Simulation')
     for sn in range(7):
         # for sd in ['2022-01-01']:
-        for sd in ['2022-01-01', '2023-01-01', '2024-01-01']:
+        for sd in ['2022-01-01', '2023-01-01', '2024-01-01', '2025-01-01']:
             if df is None:
                 df = simulate_set(sn+1, sd, df_balance, df_performance)
             else:

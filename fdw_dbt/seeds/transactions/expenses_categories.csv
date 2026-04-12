@@ -5,13 +5,15 @@ Essentials,Home,House bills,Internet,Monthly,Internet
 Essentials,Home,House bills,Electricity,Monthly,Electricity
 Essentials,Home,House bills,Water,Monthly,Water
 Essentials,Home,House bills,Gas,Monthly,Gas
-Shared,Domestic Goods,Minor goods,Minor goods,Yearly,Minor goods
-Shared,Domestic Goods,Minor goods,Minor goods,Yearly,Infra
-Shared,Domestic Goods,Major goods,Furniture,Yearly,Comfort
-Shared,Domestic Goods,Major goods,Furniture,Yearly,Furniture
-Shared,Domestic Goods,Major goods,Eletrodomestics,Yearly,Eletrodomestics
-Shared,Domestic Goods,Major goods,Other major goods,Yearly,Domestic Goods
-Shared,Domestic Goods,Major goods,Other major goods,Yearly,Other goods
+Shared,Domestic Goods & Services,Minor goods,House maintenance,Yearly,House maintenance
+Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Minor goods
+Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Infra
+Shared,Domestic Goods & Services,Major goods,Furniture,Yearly,Comfort
+Shared,Domestic Goods & Services,Major goods,Furniture,Yearly,Furniture
+Shared,Domestic Goods & Services,Major goods,Eletrodomestics,Yearly,Eletrodomestics
+Shared,Domestic Goods & Services,Major goods,Other major goods,Yearly,Domestic Goods
+Shared,Domestic Goods & Services,Major goods,Other major goods,Yearly,Other goods
+Shared,Domestic Goods & Services,Major services,Move,Yearly,Move
 Shared,Food,Event food,Travel food,Monthly,Travel food
 Free D,Food,Event food,Travel food,Monthly,Travel food D
 Free P,Food,Event food,Travel food,Monthly,Travel food P
@@ -69,10 +71,16 @@ Free D,Products & Services,Hobbies & Interests D,Plushies,Yearly,Plushies
 Free D,Products & Services,Hobbies & Interests D,Books,Yearly,Books
 Free D,Products & Services,Hobbies & Interests D,Gardening,Yearly,Gardening
 Free D,Products & Services,Hobbies & Interests D,Cosmetics,Yearly,Cosmetics
+Shared,Products & Services,Hobbies & Interests D,Games D,Yearly,Games D
+Shared,Products & Services,Hobbies & Interests B,Peripherals B,Yearly,Peripherals B
 Shared,Products & Services,Hobbies & Interests B,Leisure,Yearly,Leisure
 Shared,Products & Services,Hobbies & Interests B,Subscriptions,Yearly,Subscriptions
 Shared,Products & Services,Gifts D,Gifts D,Yearly,Dasha
+Shared,Products & Services,Gifts D,Gifts D,Yearly,Gifts D
+Shared,Products & Services,Gifts D,Gifts D,Yearly,Gift D
 Shared,Products & Services,Gifts P,Gifts P,Yearly,Pedro
+Shared,Products & Services,Gifts P,Gifts P,Yearly,Gifts P
+Shared,Products & Services,Gifts P,Gifts P,Yearly,Gift P
 Shared,Products & Services,Gifts (famiy & friends),Parents,Yearly,Parents
 Shared,Products & Services,Gifts (famiy & friends),Family,Yearly,Other people
 Shared,Products & Services,Gifts (famiy & friends),Family,Yearly,Family
