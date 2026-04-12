@@ -34,21 +34,21 @@ with
             a.level_2,
             a.level_3,
             a.source,
-            a.balance,
-            (a.balance - coalesce(e.emergency_reserves, 0)) as available_balance,
-            round(((a.balance - coalesce(e.emergency_reserves, 0))
-                /sum((a.balance - coalesce(e.emergency_reserves, 0))) over ())::numeric, 7) as allocation,
+            coalesce(a.balance, 0) as balance,
+            (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) as available_balance,
+            round(((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
+                /sum((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))) over ())::numeric, 7) as allocation,
             t.target_allocation,
             (t.target_allocation 
-                - round(((a.balance - coalesce(e.emergency_reserves, 0))
+                - round(((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
                     /sum((a.balance - coalesce(e.emergency_reserves, 0))) over ())::numeric, 7)) as allocation_delta,
-            sum((a.balance - coalesce(e.emergency_reserves, 0))) over ()
+            sum((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))) over ()
                 *(t.target_allocation 
-                    - round(((a.balance - coalesce(e.emergency_reserves, 0))
-                        /sum((a.balance - coalesce(e.emergency_reserves, 0))) over ())::numeric, 7)) as balance_delta
+                    - round(((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
+                        /sum((coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))) over ())::numeric, 7)) as balance_delta
         from agg_balance a
             left join {{ref("src_emergency_reserves")}} e on (a.level_3 = e.level_3)
-            left join {{ref("int_allocation_targets")}} t on (a.level_3 = t.level_3)
+            full outer join {{ref("int_allocation_targets")}} t on (a.level_3 = t.level_3)
     ),
 
     convert_currencies as (

@@ -67,7 +67,6 @@ select
 from all_fiat_currencies p
 where rn = 1
 and calendar_date is not null
--- and ticker = 'NVD'
 group by
     p.ticker,
     -- p.currency,

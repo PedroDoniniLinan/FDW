@@ -42,6 +42,7 @@ def extract_data():
         where currency = 'EUR' 
             and calendar_date = '2023-12-31'
             and time_grain = 'day'
+            and account != 'Nubank C'
         """, code=True)
     
     df_yields = postgresql_lib.execute_query('select * from silver.int_yield_stats', code=True)

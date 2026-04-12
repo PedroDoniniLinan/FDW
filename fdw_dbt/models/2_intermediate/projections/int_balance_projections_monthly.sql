@@ -21,6 +21,7 @@ with
         from {{ ref("balance_metrics") }} 
         where currency = 'EUR'
             and time_grain = 'month'
+            and account != 'Nubank C'
         group by calendar_date, time_grain
     )
 
