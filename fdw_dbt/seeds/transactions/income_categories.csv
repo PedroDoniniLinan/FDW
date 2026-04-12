@@ -1,21 +1,21 @@
 level_1,level_2,level_3,source,label
-Investments,Bonds BR,CDB CDI,Investments,CDB CDI B
-Investments,Bonds BR,CDB IPCA,Investments,CDB IPCA B
-Investments,Bonds BR,CDB Prefix,Investments,CDB Prefix B
-Investments,Bonds BR,TD IPCA,Investments,TD IPCA B
-Investments,Bonds BR,TD Prefix,Investments,TD Prefix B
-Investments,Bonds BR,TD SELIC,Investments,TD SELIC B
-Investments,Bonds BR,CDB CDI,Investments,CDB CDI L
-Investments,Bonds BR,CDB IPCA,Investments,CDB IPCA L
-Investments,Bonds BR,CDB Prefix,Investments,CDB Prefix L
-Investments,Bonds BR,TD IPCA,Investments,TD IPCA L
-Investments,Bonds BR,TD Prefix,Investments,TD Prefix L
-Investments,Bonds BR,TD SELIC,Investments,TD SELIC L
-Investments,Bonds BR,TD SELIC,Investments,TD SELIC E
-Investments,Bonds EU,EUR212,Investments,EUR212
-Investments,Bonds EU,EUR K,Investments,EUR K
-Investments,Bonds EU,EUR W,Investments,EUR W
-Investments,Bonds EU,USD W,Investments,USD W
+Bonds,Bonds BR,CDB CDI,Investments,CDB CDI B
+Bonds,Bonds BR,CDB IPCA,Investments,CDB IPCA B
+Bonds,Bonds BR,CDB Prefix,Investments,CDB Prefix B
+Bonds,Bonds BR,TD IPCA,Investments,TD IPCA B
+Bonds,Bonds BR,TD Prefix,Investments,TD Prefix B
+Bonds,Bonds BR,TD SELIC,Investments,TD SELIC B
+Bonds,Bonds BR,CDB CDI,Investments,CDB CDI L
+Bonds,Bonds BR,CDB IPCA,Investments,CDB IPCA L
+Bonds,Bonds BR,CDB Prefix,Investments,CDB Prefix L
+Bonds,Bonds BR,TD IPCA,Investments,TD IPCA L
+Bonds,Bonds BR,TD Prefix,Investments,TD Prefix L
+Bonds,Bonds BR,TD SELIC,Investments,TD SELIC L
+Bonds,Bonds BR,TD SELIC,Investments,TD SELIC E
+Bonds,Bonds EU,EUR212,Investments,EUR212
+Bonds,Bonds EU,EUR K,Investments,EUR K
+Bonds,Bonds EU,EUR W,Investments,EUR W
+Bonds,Bonds EU,USD W,Investments,USD W
 Cash,Stable (Cash),EUR,Cash,EUR
 Cash,Stable (Cash),USD,Cash,USD
 Cash,Volatile (Cash),BRL,Cash,Rivalry
@@ -93,6 +93,7 @@ Investments,Value stocks,MTD,Investments,MTD
 Investments,Value stocks,MTF,Investments,MTF
 Investments,Value stocks,SXLU,Investments,SXLU
 Investments,Value stocks,V,Investments,V
+Investments,Gold,GOLD,Investments,GOLD
 Work,Salary,Bonus,Work,13th
 Work,Salary,Bonus,Work,Complement
 Work,Salary,Salary,Work,Salary

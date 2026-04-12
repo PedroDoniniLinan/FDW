@@ -1,7 +1,7 @@
 {{ config(schema='silver', materialized='view') }}
 {% set agg = ['level_3', 'level_2', 'portfolio'] %}
 {# {% set benchmarks = ['SPY'] %} #}
-{% set benchmarks = ['SPY', 'TD SELIC', 'EUR212', 'BTC', 'MS'] %}
+{% set benchmarks = ['SPY', 'TD SELIC', 'EUR212', 'BTC', 'MS', 'GOLD'] %}
 
 {% for a in agg %}
 select 
