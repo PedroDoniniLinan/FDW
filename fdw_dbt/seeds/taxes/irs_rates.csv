@@ -1,0 +1,10 @@
+irs_category,holding_period_lower,holding_period_upper,rate
+Foreign bonds,0,,0
+Cash,0,,0
+Crypto,365,,0
+Crypto,0,364,0.2
+Foreign stocks,0,729,0.2
+Foreign stocks,730,1824,0.2
+Foreign stocks,1825,2919,0.2
+Foreign stocks,2920,,0.2
+
