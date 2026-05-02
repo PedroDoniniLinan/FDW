@@ -1,0 +1,73 @@
+irs_category,ticker
+Foreign bonds,CDB CDI B
+Foreign bonds,CDB IPCA B
+Foreign bonds,CDB Prefix B
+Foreign bonds,TD IPCA B
+Foreign bonds,TD Prefix B
+Foreign bonds,TD SELIC B
+Foreign bonds,CDB CDI L
+Foreign bonds,CDB IPCA L
+Foreign bonds,CDB Prefix L
+Foreign bonds,TD IPCA L
+Foreign bonds,TD Prefix L
+Foreign bonds,TD SELIC L
+Foreign bonds,TD SELIC E
+Cash,EUR212
+Cash,EUR K
+Cash,EUR W
+Cash,USD W
+Cash,EUR
+Cash,USD
+Cash,Rivalry
+Cash,BRL
+Cash,C
+Cash,Nubank
+Cash,Savings
+Crypto,ADA
+Crypto,AVAX
+Crypto,BNB
+Crypto,BTC
+Crypto,DOT
+Crypto,ETH
+Crypto,LTC
+Crypto,LUNA
+Crypto,LUNA2
+Crypto,MATIC
+Crypto,SHIB
+Crypto,SOL
+Foreign stocks,AMZO34
+Foreign stocks,AMZN
+Foreign stocks,BBSD11
+Foreign stocks,BRAX11
+Foreign stocks,DISB34
+Foreign stocks,GOGL34
+Foreign stocks,FBOK34
+Foreign stocks,MSFT34
+Foreign stocks,MSFT
+Foreign stocks,MSF
+Foreign stocks,PHPD
+Foreign stocks,RUS
+Foreign stocks,IVVB11
+Foreign stocks,SPY
+Foreign stocks,SXR8
+Foreign stocks,NVD
+Foreign stocks,TSLA34
+Foreign stocks,TSLA
+Foreign stocks,UST
+Foreign stocks,SXRV
+Crypto,BUSD
+Crypto,GUSD
+Crypto,USDC
+Crypto,USDT
+Foreign stocks,HDV
+Foreign stocks,JPMC34
+Foreign stocks,JPM
+Foreign stocks,KO
+Foreign stocks,MSBR34
+Foreign stocks,MS
+Foreign stocks,DWD
+Foreign stocks,MTD
+Foreign stocks,MTF
+Foreign stocks,SXLU
+Foreign stocks,V
+Foreign stocks,GOLD

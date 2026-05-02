@@ -1,5 +1,9 @@
 {{ config(schema='silver', materialized='view') }}
 
+/*
+    Classify exchanges into IRPF categories, based on how they are taxed
+*/
+
 with
 
     exchange_types as (

@@ -1,4 +1,4 @@
-{{ config(schema='silver', materialized='table') }}
+{{ config(schema='silver', materialized='view') }}
 
 with
 
@@ -9,13 +9,14 @@ with
             e.exchange_direction,
             e.ticker,
             dp.currency as currency,
+            case 
+                when ic.irs_category is not null then ic.irs_category 
+                when e.ticker ~* '^(td|cdb|lci|lca|cri|cra|deb)' then 'Foreign bonds'
+                else 'Other' 
+            end as irs_category,
             e.price * dp.price as price,
             abs(e.amount) as abs_amount,
             amount as net_amount,
-            -- case 
-            --     when tax_currency = e.ticker then amount - tax_amount 
-            --     else amount
-            -- end as net_amount,
             case 
                 when tax_currency = dp.currency then e.price * dp.price * e.amount + e.tax_amount * dpt.price
                 else e.price * dp.price * e.amount
@@ -32,7 +33,8 @@ with
             e.tax_currency,
             e.tax_amount,
             dpt.price as tax_fiat_price,
-            dpt.currency as tax_fiat_currency
+            dpt.currency as tax_fiat_currency,
+            (CURRENT_DATE - e.calendar_date) as purchase_age
         from {{ref("stg_exchange_classifications")}} e
             left join {{ref("int_prices_daily")}} dp on (
                 e.exchange_currency = dp.ticker
@@ -46,6 +48,9 @@ with
                 and dpt.currency = dp.currency
                 and e.exchange_type = 'Taxable exchange'
             )
+            left join {{ref("irs_category")}} ic on (
+                e.ticker = ic.ticker
+            )
     ),
 
     total_amounts as (
@@ -55,16 +60,20 @@ with
             exchange_direction,
             ticker,
             currency,
+            irs_category,
             price,
             abs_amount,
             net_amount,
             exchange_value,
             coalesce(tax, 0) as tax,
-            sum(net_amount) over (partition by ticker, currency order by calendar_date, abs_amount) as total_amount
+            sum(net_amount) over (partition by ticker, currency order by calendar_date, abs_amount) as total_amount,
+            purchase_age,
+            sum(abs_amount) over (partition by ticker, currency, exchange_direction order by calendar_date, abs_amount) as cumulative_amount
         from fiat_conversion
     )
 
-select *
+select *,
+    coalesce(lag(cumulative_amount) over (partition by ticker, currency, exchange_direction order by calendar_date, abs_amount), 0) as previous_cumulative_amount
 from total_amounts
 where ticker not in (
     'AXS', 'SLP', 'ATLAS', 'BUSD', 'THC', 'THG', 'SAND', 'LTC', 'FINA', 
