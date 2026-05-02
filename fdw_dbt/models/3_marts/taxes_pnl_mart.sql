@@ -1,4 +1,4 @@
-{# {{ config(schema='gold', materialized='view') }}
+{{ config(schema='gold', materialized='view', enabled=false) }}
 
 select 
     t.*,
@@ -7,4 +7,4 @@ select
 from {{source('silver', 'taxes_pnl_raw')}} t
     inner join {{ref("taxes_categories")}} tc on (t.ticker = tc.ticker)
 where date_trunc('year', calendar_date) = '2024-01-01'
-order by ticker, calendar_date, net_amount, currency #}
+order by ticker, calendar_date, net_amount, currency

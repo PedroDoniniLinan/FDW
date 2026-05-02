@@ -1,4 +1,4 @@
-{# {{ config(schema='gold', materialized='view') }}
+{{ config(schema='gold', materialized='view', enabled=false) }}
 
 select 
     category,
@@ -22,4 +22,4 @@ where currency != 'BRL'
 -- and category = 'Fixed income'
 -- and category in ('BDR')
 and abs(pnl) > 80
-order by category, calendar_date, ticker #}
+order by category, calendar_date, ticker

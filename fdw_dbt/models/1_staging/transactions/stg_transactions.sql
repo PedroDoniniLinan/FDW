@@ -1,5 +1,8 @@
 {{ config(schema='silver', materialized='view') }}
 
+/*
+    Unifies transactions from exchange, transfer and external sources
+*/
 
 select
     transaction_id,
