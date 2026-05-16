@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_investing__prices
+    description: ""
+    columns:
+      - name: quote_id
+        data_type: text
+        description: ""
+
+      - name: ticker
+        data_type: character varying
+        description: ""
+
+      - name: currency
+        data_type: character varying
+        description: ""
+
+      - name: calendar_date
+        data_type: date
+        description: ""
+
+      - name: price
+        data_type: numeric
+        description: ""
+

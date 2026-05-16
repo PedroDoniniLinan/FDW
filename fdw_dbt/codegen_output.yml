@@ -1,0 +1,26 @@
+09:28:02  Running with dbt=1.9.0-rc2
+09:28:02  Registered adapter: postgres=1.8.2
+09:28:02  Unable to do partial parsing because config vars, config profile, or config target have changed
+09:28:04  Found 69 models, 2 analyses, 11 seeds, 10 data tests, 10 sources, 579 macros
+version: 2
+
+models:
+  - name: stg_investing__prices
+    description: ""
+    columns:
+      - name: ticker
+        data_type: character varying
+        description: ""
+
+      - name: currency
+        data_type: character varying
+        description: ""
+
+      - name: calendar_date
+        data_type: date
+        description: ""
+
+      - name: price
+        data_type: numeric
+        description: ""
+

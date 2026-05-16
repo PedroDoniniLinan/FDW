@@ -1,4 +1,87 @@
+-- dev database (prod is already created by POSTGRES_DB)
+CREATE DATABASE dev;
+
 -- Create schemas if they don't exist
+\c dev
+CREATE SCHEMA IF NOT EXISTS seeds;
+CREATE SCHEMA IF NOT EXISTS snapshots;
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS gold;
+
+create table if not exists bronze.balances (
+    id serial primary key,
+    account varchar(255) not null,
+    calendar_date date not null,
+    currency varchar(255) not null,
+    amount float,
+    _etl_loaded_at timestamp not null default now()
+);
+
+create table if not exists bronze.exchanges (
+    id serial primary key,
+    ticker varchar(255) not null,
+    account varchar(255) not null,
+    calendar_date date not null,
+    price float not null,
+    units float not null,
+    tax float not null,
+    exchange_type varchar(255) not null,
+    currency varchar(255) not null,
+    tax_currency varchar(255) not null,
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
+);
+
+create table if not exists bronze.external_transactions (
+    id serial primary key,
+    transaction_type varchar(255) not null,
+    tag varchar(511) not null,
+    amount float not null,
+    account varchar(255) not null,
+    calendar_date date not null,
+    subcategory varchar(255) not null,
+    currency varchar(255) not null,
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
+);
+
+
+create table if not exists bronze.prices (
+    id serial primary key,
+    ticker varchar(255) not null,
+    currency varchar(255) not null,
+    calendar_date date not null,
+    price float not null,
+    _etl_loaded_at timestamp not null default now()
+);
+
+create table if not exists bronze.projections (
+    id serial primary key,
+    calendar_date date not null,
+    simulation_set integer not null,
+    transaction_type varchar(255) not null,
+    budget_level varchar(255) not null,
+    level_2 varchar(255) not null,
+    amount float not null,
+    _etl_loaded_at timestamp not null default now()
+);
+
+create table if not exists bronze.transfers (
+    id serial primary key,
+    source_acc varchar(255) not null,
+    destination_acc varchar(255) not null,
+    calendar_date date not null,
+    amount float not null,
+    currency varchar(255) not null,
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
+);
+
+-- Create schemas if they don't exist
+\c prod
+CREATE SCHEMA IF NOT EXISTS seeds;
+CREATE SCHEMA IF NOT EXISTS snapshots;
 CREATE SCHEMA IF NOT EXISTS bronze;
 CREATE SCHEMA IF NOT EXISTS silver;
 CREATE SCHEMA IF NOT EXISTS gold;
@@ -29,7 +112,8 @@ create table if not exists bronze.balances (
     account varchar(255) not null,
     calendar_date date not null,
     currency varchar(255) not null,
-    amount float
+    amount float,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists bronze.exchanges (
@@ -43,7 +127,8 @@ create table if not exists bronze.exchanges (
     exchange_type varchar(255) not null,
     currency varchar(255) not null,
     tax_currency varchar(255) not null,
-    count_to_balance boolean not null
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists bronze.external_transactions (
@@ -55,7 +140,8 @@ create table if not exists bronze.external_transactions (
     calendar_date date not null,
     subcategory varchar(255) not null,
     currency varchar(255) not null,
-    count_to_balance boolean not null
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 
@@ -64,7 +150,8 @@ create table if not exists bronze.prices (
     ticker varchar(255) not null,
     currency varchar(255) not null,
     calendar_date date not null,
-    price float not null
+    price float not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists bronze.projections (
@@ -74,7 +161,8 @@ create table if not exists bronze.projections (
     transaction_type varchar(255) not null,
     budget_level varchar(255) not null,
     level_2 varchar(255) not null,
-    amount float not null
+    amount float not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists silver.taxes_avg_price_raw (
@@ -83,7 +171,8 @@ create table if not exists silver.taxes_avg_price_raw (
     calendar_date date not null,
     avg_price float not null,
     units float not null,
-    position float not null
+    position float not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists silver.taxes_pnl_raw (
@@ -100,7 +189,8 @@ create table if not exists bronze.transfers (
     calendar_date date not null,
     amount float not null,
     currency varchar(255) not null,
-    count_to_balance boolean not null
+    count_to_balance boolean not null,
+    _etl_loaded_at timestamp not null default now()
 );
 
 create table if not exists gold.balance_discrepancies (

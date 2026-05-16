@@ -1,0 +1,146 @@
+version: 2
+
+sources:
+  - name: bronze
+    tables:
+      - name: balances
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: account
+            data_type: character varying
+          - name: calendar_date
+            data_type: date
+          - name: currency
+            data_type: character varying
+          - name: amount
+            data_type: double precision
+          - name: _etl_loaded_at
+            data_type: timestamp
+
+      - name: exchanges
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: ticker
+            data_type: character varying
+          - name: account
+            data_type: character varying
+          - name: calendar_date
+            data_type: date
+          - name: price
+            data_type: double precision
+          - name: units
+            data_type: double precision
+          - name: tax
+            data_type: double precision
+          - name: exchange_type
+            data_type: character varying
+          - name: currency
+            data_type: character varying
+          - name: tax_currency
+            data_type: character varying
+          - name: count_to_balance
+            data_type: boolean
+          - name: _etl_loaded_at
+            data_type: timestamp
+
+      - name: external_transactions
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: transaction_type
+            data_type: character varying
+          - name: tag
+            data_type: character varying
+          - name: amount
+            data_type: double precision
+          - name: account
+            data_type: character varying
+          - name: calendar_date
+            data_type: date
+          - name: subcategory
+            data_type: character varying
+          - name: currency
+            data_type: character varying
+          - name: count_to_balance
+            data_type: boolean
+          - name: _etl_loaded_at
+            data_type: timestamp
+
+      - name: prices
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: ticker
+            data_type: character varying
+          - name: currency
+            data_type: character varying
+          - name: calendar_date
+            data_type: date
+          - name: price
+            data_type: double precision
+          - name: _etl_loaded_at
+            data_type: timestamp
+
+      - name: projections
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: calendar_date
+            data_type: date
+          - name: simulation_set
+            data_type: integer
+          - name: transaction_type
+            data_type: character varying
+          - name: budget_level
+            data_type: character varying
+          - name: level_2
+            data_type: character varying
+          - name: amount
+            data_type: double precision
+          - name: _etl_loaded_at
+            data_type: timestamp
+
+      - name: transfers
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 30, period: day}
+          error_after: {count: 90, period: day}
+        columns:
+          - name: id
+            data_type: integer
+          - name: source_acc
+            data_type: character varying
+          - name: destination_acc
+            data_type: character varying
+          - name: calendar_date
+            data_type: date
+          - name: amount
+            data_type: double precision
+          - name: currency
+            data_type: character varying
+          - name: count_to_balance
+            data_type: boolean
+          - name: _etl_loaded_at
+            data_type: timestamp
