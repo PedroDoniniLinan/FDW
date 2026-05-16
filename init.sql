@@ -10,7 +10,7 @@ CREATE SCHEMA IF NOT EXISTS silver;
 CREATE SCHEMA IF NOT EXISTS gold;
 
 create table if not exists bronze.balances (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     account varchar(255) not null,
     calendar_date date not null,
     currency varchar(255) not null,
@@ -19,7 +19,7 @@ create table if not exists bronze.balances (
 );
 
 create table if not exists bronze.exchanges (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     ticker varchar(255) not null,
     account varchar(255) not null,
     calendar_date date not null,
@@ -34,7 +34,7 @@ create table if not exists bronze.exchanges (
 );
 
 create table if not exists bronze.external_transactions (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     transaction_type varchar(255) not null,
     tag varchar(511) not null,
     amount float not null,
@@ -48,7 +48,7 @@ create table if not exists bronze.external_transactions (
 
 
 create table if not exists bronze.prices (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     ticker varchar(255) not null,
     currency varchar(255) not null,
     calendar_date date not null,
@@ -57,7 +57,7 @@ create table if not exists bronze.prices (
 );
 
 create table if not exists bronze.projections (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     calendar_date date not null,
     simulation_set integer not null,
     transaction_type varchar(255) not null,
@@ -68,7 +68,7 @@ create table if not exists bronze.projections (
 );
 
 create table if not exists bronze.transfers (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     source_acc varchar(255) not null,
     destination_acc varchar(255) not null,
     calendar_date date not null,
@@ -88,7 +88,7 @@ CREATE SCHEMA IF NOT EXISTS gold;
 
 -- Create tables
 create table if not exists gold.allocation_simulations (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     set integer not null,
     method varchar(255) not null,
     start_date date not null,
@@ -108,7 +108,7 @@ create table if not exists silver.balance_projections (
 );
 
 create table if not exists bronze.balances (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     account varchar(255) not null,
     calendar_date date not null,
     currency varchar(255) not null,
@@ -117,7 +117,7 @@ create table if not exists bronze.balances (
 );
 
 create table if not exists bronze.exchanges (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     ticker varchar(255) not null,
     account varchar(255) not null,
     calendar_date date not null,
@@ -132,7 +132,7 @@ create table if not exists bronze.exchanges (
 );
 
 create table if not exists bronze.external_transactions (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     transaction_type varchar(255) not null,
     tag varchar(511) not null,
     amount float not null,
@@ -146,7 +146,7 @@ create table if not exists bronze.external_transactions (
 
 
 create table if not exists bronze.prices (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     ticker varchar(255) not null,
     currency varchar(255) not null,
     calendar_date date not null,
@@ -155,7 +155,7 @@ create table if not exists bronze.prices (
 );
 
 create table if not exists bronze.projections (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     calendar_date date not null,
     simulation_set integer not null,
     transaction_type varchar(255) not null,
@@ -183,7 +183,7 @@ create table if not exists silver.taxes_pnl_raw (
 );
 
 create table if not exists bronze.transfers (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     source_acc varchar(255) not null,
     destination_acc varchar(255) not null,
     calendar_date date not null,
