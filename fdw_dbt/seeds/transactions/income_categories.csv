@@ -12,6 +12,12 @@ Bonds,Bonds BR,TD IPCA,Investments,TD IPCA L
 Bonds,Bonds BR,TD Prefix,Investments,TD Prefix L
 Bonds,Bonds BR,TD SELIC,Investments,TD SELIC L
 Bonds,Bonds BR,TD SELIC,Investments,TD SELIC E
+Bonds,Bonds BR,CRA IPCA,Investments,CRA IPCA L
+Bonds,Bonds BR,CRA Prefix,Investments,CRA Prefix L
+Bonds,Bonds BR,CRA CDI,Investments,CRA CDI L
+Bonds,Bonds BR,LCI IPCA,Investments,LCI IPCA L
+Bonds,Bonds BR,LCI Prefix,Investments,LCI Prefix L
+Bonds,Bonds BR,LCI CDI,Investments,LCI CDI L
 Bonds,Bonds EU,EUR212,Investments,EUR212
 Bonds,Bonds EU,EUR K,Investments,EUR K
 Bonds,Bonds EU,EUR W,Investments,EUR W
@@ -21,6 +27,7 @@ Cash,Stable (Cash),USD,Cash,USD
 Cash,Volatile (Cash),BRL,Cash,Rivalry
 Cash,Volatile (Cash),BRL,Cash,BRL
 Cash,Volatile (Cash),C,Cash,C
+Cash,Volatile (Cash),BTG,Investments,BTG
 Cash,Volatile (Cash),Nubank,Investments,Nubank
 Cash,Volatile (Cash),Nubank,Investments,Savings
 Investments,Crypto,ADA,Investments,ADA
@@ -94,6 +101,7 @@ Investments,Value stocks,MTF,Investments,MTF
 Investments,Value stocks,SXLU,Investments,SXLU
 Investments,Value stocks,V,Investments,V
 Investments,Gold,GOLD,Investments,GOLD
+Investments,Gold,PAXG,Investments,PAXG
 Work,Salary,Bonus,Work,13th
 Work,Salary,Bonus,Work,Complement
 Work,Salary,Salary,Work,Salary
