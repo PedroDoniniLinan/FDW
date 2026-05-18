@@ -285,6 +285,7 @@ if __name__ == '__main__':
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
     df = calculate_projections(df_projections, balance, df_yields)    
+    print(df)
     print('-- Insert')
     update_tables(df, 'prod')
     print('--')
