@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_shared__daily_grid
+    description: ""
+    columns:
+      - name: calendar_date
+        data_type: date
+        description: ""
+
+      - name: is_end_of_period
+        data_type: text
+        description: ""
+

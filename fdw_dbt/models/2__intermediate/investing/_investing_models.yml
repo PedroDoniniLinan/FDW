@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_prices__fiat_combinations
+    description: ""
+    columns:
+      - name: price_id
+        data_type: text
+        description: ""
+
+      - name: ticker
+        data_type: character varying
+        description: ""
+
+      - name: currency
+        data_type: character varying
+        description: ""
+
+      - name: calendar_date
+        data_type: date
+        description: ""
+
+      - name: price
+        data_type: numeric
+        description: ""
+
