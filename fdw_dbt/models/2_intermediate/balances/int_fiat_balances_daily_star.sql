@@ -17,5 +17,5 @@ select
     ad.balance
 from {{ref("int_fiat_balances_daily")}} ad
     left join {{ref("stg_dim_transactions")}} tc on (ad.original_currency = tc.label and tc.transaction_type = 'Income')
-    left join {{ref("account_categories")}} ac on (ad.account = ac.account)
+    left join {{ref("dim_account")}} ac on (ad.account = ac.account)
 {# where ad.balance > 0 #}

@@ -25,10 +25,10 @@ from (
     left join {{ ref("src_projections") }} t on (
         g.calendar_date = t.calendar_date
     )
-    left join {{ ref('expenses_categories') }} ec on (
+    left join {{ ref('dim_expenses') }} ec on (
         t.level_1 = ec.level_1
     )
-    left join {{ ref('income_categories') }} ic on (
+    left join {{ ref('dim_income') }} ic on (
         t.level_1 = ec.level_2
     )
 )

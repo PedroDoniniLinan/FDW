@@ -3,6 +3,7 @@
 
 {% for c in currencies %}
 select
+    md5(ad.account || ad.currency || '{{c}}' || ad.calendar_date) as id,
     ad.account,
     ad.currency as original_currency,
     '{{c}}' as currency,
@@ -20,5 +21,4 @@ from {{ref("int_balances__daily")}} ad
         and ad.currency = p.ticker
         and p.currency = '{{c}}'
     )
-{# where balance > 0 #}
 {% if not loop.last %}union all{% endif %}{% endfor %}

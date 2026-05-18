@@ -2,9 +2,9 @@
 
 with
 
-    income_categories as (
+    dim_income as (
         select distinct level_2, level_3
-        from {{ ref("income_categories") }}
+        from {{ ref("dim_income") }}
     ),
 
     final as (
@@ -35,7 +35,7 @@ with
             sum(interest) as amount,
             sum(interest) as abs_amount
         from {{ source('silver', 'balance_projections') }} b
-            left join income_categories i on (b.level_3 = i.level_3)
+            left join dim_income i on (b.level_3 = i.level_3)
         group by
             calendar_date,
             is_end_of_period,

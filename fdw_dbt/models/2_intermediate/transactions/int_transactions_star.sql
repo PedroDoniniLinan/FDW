@@ -22,4 +22,4 @@ select
     t.amount
 from {{ref("int_transactions_and_gains")}} t
     left join {{ref("stg_dim_transactions")}} tc on (t.label = tc.label and t.transaction_type = tc.transaction_type)
-    left join {{ref("account_categories")}} ac on (t.account = ac.account)
+    left join {{ref("dim_account")}} ac on (t.account = ac.account)

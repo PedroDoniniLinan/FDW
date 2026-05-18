@@ -22,7 +22,7 @@ select * from (
             frequency as source,
             label,
             'Expenses' as transaction_type
-        from {{ref('expenses_categories')}}
+        from {{ref('dim_expenses')}}
         union all
         select
             source as budget_level,
@@ -32,7 +32,7 @@ select * from (
             source,
             label,
             'Income' as transaction_type
-        from {{ref('income_categories')}}
+        from {{ref('dim_income')}}
         union all
         select
             ic.source as budget_level,
@@ -53,7 +53,7 @@ select * from (
             from {{ref("src_balance_checks")}}
             where currency ~* '(cdb|td|cra|lci)'
         ) t
-        inner join {{ref('income_categories')}} ic on (ic.level_3 = t.level_3)
+        inner join {{ref('dim_income')}} ic on (ic.level_3 = t.level_3)
     ) t
     where label is not null
 )

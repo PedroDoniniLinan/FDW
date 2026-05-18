@@ -2,9 +2,9 @@
 
 with
 
-    income_categories as (
+    dim_income as (
         select distinct level_2, level_3
-        from {{ ref("income_categories") }}
+        from {{ ref("dim_income") }}
     ),
 
     projections as (
@@ -41,7 +41,7 @@ with
             b.level_3,
             sum(interest) as amount
         from {{ source('silver', 'balance_projections') }} b
-            left join income_categories i on (b.level_3 = i.level_3)
+            left join dim_income i on (b.level_3 = i.level_3)
         group by b.calendar_date, b.simulation_set, i.level_2, b.level_3
     ),
 

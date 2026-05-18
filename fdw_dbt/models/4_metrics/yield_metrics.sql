@@ -19,5 +19,5 @@ select
 from {{ ref("yields_mart") }} y
     left join (
         select distinct level_2, level_3 
-        from {{ ref("income_categories") }}
+        from {{ ref("dim_income") }}
     ) ic on (y.breakdown = ic.level_3)

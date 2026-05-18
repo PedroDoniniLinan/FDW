@@ -16,7 +16,7 @@ from (
         ic.level_3,
         asa.allocation as level_3_allocation
     from {{ ref("asset_simulated_allocations") }} asa
-    left join {{ ref("income_categories") }} ic on (asa.currency = ic.level_3)
+    left join {{ ref("dim_income") }} ic on (asa.currency = ic.level_3)
 ) t
 inner join {{ ref("simulated_allocations") }} sa on (t.asset_set = sa.asset_set and t.level_2 = sa.level_2)
 where sa.set = 7
