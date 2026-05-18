@@ -5,7 +5,7 @@ Essentials,Home,House bills,Internet,Monthly,Internet
 Essentials,Home,House bills,Electricity,Monthly,Electricity
 Essentials,Home,House bills,Water,Monthly,Water
 Essentials,Home,House bills,Gas,Monthly,Gas
-Shared,Domestic Goods & Services,Minor goods,House maintenance,Yearly,House maintenance
+Essentials,Domestic Goods & Services,Minor goods,House maintenance,Yearly,House maintenance
 Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Minor goods
 Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Infra
 Shared,Domestic Goods & Services,Major goods,Furniture,Yearly,Comfort
@@ -29,9 +29,9 @@ Free P,Food,Eat out,Restaurant,Monthly,Restaurant P
 Free P,Food,Eat out,Delivery,Monthly,Delivery P
 Shared,Food,Eat out,Cafe,Monthly,Cafe
 Shared,Food,Eat out,Cafe,Monthly,Snack
-Essentials,Food,Eat out,Restaurant,Monthly,Eat out
+Shared,Food,Eat out,Restaurant,Monthly,Eat out
 Essentials,Food,Eat out,Restaurant,Monthly,Restaurant
-Essentials,Food,Eat out,Delivery,Monthly,Delivery
+Shared,Food,Eat out,Delivery,Monthly,Delivery
 Essentials,Food,Supermarket,Supermarket,Monthly,Supermarket
 Essentials,Food,Supermarket,Carbs,Monthly,Carbs
 Essentials,Food,Supermarket,Water,Monthly,Water
