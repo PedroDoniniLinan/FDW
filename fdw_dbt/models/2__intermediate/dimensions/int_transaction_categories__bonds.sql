@@ -19,7 +19,7 @@ from (
             {% endfor %}{% endfor %}{% endfor %}
         end as level_3,
         currency
-    from {{ref("stg_balances__actuals")}}
+    from {{ref("stg_balances__currencies")}}
     where currency ~* '(cdb|td|cra|lci)'
 ) t
 inner join {{ref('dim_income')}} ic on (ic.level_3 = t.level_3)

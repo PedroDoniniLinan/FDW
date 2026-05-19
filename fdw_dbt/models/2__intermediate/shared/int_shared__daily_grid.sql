@@ -11,7 +11,7 @@ with
 
     last_update as (
         select max(calendar_date) as last_update 
-        from {{ ref("stg_balances__actuals") }}
+        from {{ ref("stg_balances__last_update") }}
     ),
 
     final as (
