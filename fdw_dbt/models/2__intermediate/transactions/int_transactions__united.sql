@@ -11,8 +11,8 @@ select
     amount,
     account,
     calendar_date,
-    subcategory,
-    currency,
+    category,
+    asset,
     count_to_balance
 from {{ ref("stg_transactions__exchanges") }}
 union all

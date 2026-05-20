@@ -1,14 +1,14 @@
 {%- set src = source('bronze', 'external_transactions') -%}
 
 select
-    id::text||'_'||lower(transaction_type) as transaction_id,
+    md5(id::text||'_'||lower(transaction_type))::uuid as transaction_id,
     transaction_type,
     tag,
     amount,
     account,
     calendar_date,
-    subcategory,
-    currency,
+    subcategory as category,
+    currency as asset,
     count_to_balance
 from {{ src }}
 where amount != 0

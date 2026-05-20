@@ -5,7 +5,7 @@ models:
     description: ""
     columns:
       - name: balance_id
-        data_type: text
+        data_type: uuid
         description: ""
 
       - name: account
@@ -23,4 +23,22 @@ models:
       - name: balance
         data_type: double precision
         description: ""
+
+  - name: stg_balances__assets
+    description: "Distinct assets owned at any time"
+    columns:
+      - name: asset_id
+        data_type: uuid
+        description: ""
+
+      - name: asset
+        data_type: character varying
+        description: ""
+
+  - name: stg_balances__last_update
+    description: "Support model to track last update date for balances data, indicating last manual input"
+    columns:
+      - name: last_update
+        data_type: date
+        description: "Last update date for balances data, indicating last manual input"
 

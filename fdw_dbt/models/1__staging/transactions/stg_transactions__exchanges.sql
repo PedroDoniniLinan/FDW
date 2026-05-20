@@ -1,7 +1,7 @@
 {%- set src = source('bronze', 'exchanges') -%}
 
 select
-    id::text||'_ext' as transaction_id,
+    md5(id::text||'_ext')::uuid as transaction_id,
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker
@@ -11,17 +11,17 @@ select
     end as amount,
     account,
     calendar_date,
-    exchange_type as subcategory,
-    ticker as currency,
+    exchange_type as category,
+    ticker as asset,
     true as count_to_balance,
-    currency as exchange_currency,
-    price,
-    tax as tax_amount,
-    tax_currency
+    currency as exchange_asset,
+    price as exchange_rate,
+    tax_currency as tax_asset,
+    tax as tax_amount
 from {{ src }}
 union all
 select
-    id::text||'_exc' as transaction_id,
+    md5(id::text||'_exc')::uuid as transaction_id,
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker
@@ -33,11 +33,11 @@ select
     calendar_date,
     case when exchange_type = 'Purchase' then 'Sale' 
         else 'Purchase'
-    end as subcategory,
-    currency,
+    end as category,
+    currency as asset,
     true as count_to_balance,
-    ticker as exchange_currency,
-    1/nullif(price, 0) as price,
-    tax as tax_amount,        
-    tax_currency
+    ticker as exchange_asset,
+    1/nullif(price, 0) as exchange_rate,
+    tax_currency as tax_asset,
+    tax as tax_amount        
 from {{ src }}

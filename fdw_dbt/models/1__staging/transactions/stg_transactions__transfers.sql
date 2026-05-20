@@ -1,25 +1,25 @@
 {%- set src = source('bronze', 'transfers') -%}
 
 select
-    id::text||'_tfo' as transaction_id,
+    md5(id::text||'_tfo')::uuid as transaction_id,
     'Transfer' as transaction_type,
     source_acc||'->'||destination_acc as tag,
     -amount as amount,
     source_acc as account,
     calendar_date,
-    'Transfer out' as subcategory,
-    currency,
+    'Transfer out' as category,
+    currency as asset,
     true as count_to_balance
 from {{ src }}
 union all
 select
-    id::text||'_tfi' as transaction_id,
+    md5(id::text||'_tfi')::uuid as transaction_id,
     'Transfer' as transaction_type,
     destination_acc||'<-'||source_acc as tag,
     amount,
     destination_acc as account,
     calendar_date,
-    'Transfer in' as subcategory,
-    currency,
+    'Transfer in' as category,
+    currency as asset,
     true as count_to_balance
 from {{ src }}

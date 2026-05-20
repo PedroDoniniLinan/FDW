@@ -9,11 +9,6 @@ with
         {{ date_spine("day", start_dt, end_dt) }}
     ),   
 
-    last_update as (
-        select max(calendar_date) as last_update 
-        from {{ ref("stg_balances__last_update") }}
-    ),
-
     final as (
         select
             s.date_day::date as calendar_date,
@@ -27,7 +22,7 @@ with
             || case when s.date_day = (date_trunc('year', s.date_day) + interval '1 year' - interval '1 day')::date
                         or s.date_day = lu.last_update then 'year' else '' end as is_end_of_period
         from spine s
-            inner join last_update lu on (s.date_day <= lu.last_update)
+            inner join {{ ref("stg_balances__last_update") }} lu on (s.date_day <= lu.last_update)
     )
 
 select * from final

@@ -1,6 +1,6 @@
 {%- set src = source('bronze', 'balances') -%}
 
 select distinct
-    md5(currency) as currency_id,
-    currency
+    md5(currency)::uuid as asset_id,
+    currency as asset
 from {{ src }}

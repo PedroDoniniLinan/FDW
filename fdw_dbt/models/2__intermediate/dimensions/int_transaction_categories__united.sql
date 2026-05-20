@@ -2,8 +2,8 @@ with
 
     dim_expenses as (
         select
-            md5(label) as id,
-            label as name,
+            md5(label)::uuid as category_id,
+            label as category,
             'Expenses' as transaction_type,
             budget_level,
             level_1,
@@ -15,8 +15,8 @@ with
 
     dim_income as (
         select
-            md5(label) as id,
-            label as name,
+            md5(label)::uuid as category_id,
+            label as category,
             'Income' as transaction_type,
             source as budget_level,
             level_1,
@@ -37,17 +37,17 @@ with
     deduped_categories as (
         select * from (
             select
-                id,
-                name,
+                category_id,
+                category,
                 transaction_type,
                 budget_level,
                 level_1,
                 level_2,
                 level_3,
                 source,
-                row_number() over (partition by name, transaction_type order by level_1) as rn
+                row_number() over (partition by category, transaction_type order by level_1) as rn
             from unioned_categories
-            where name is not null
+            where category is not null
         )
         where rn = 1
     )
