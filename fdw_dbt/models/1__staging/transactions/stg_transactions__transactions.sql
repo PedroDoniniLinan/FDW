@@ -3,7 +3,7 @@
 select
     md5(id::text||'_'||lower(transaction_type))::uuid as transaction_id,
     transaction_type,
-    tag,
+    tag as transaction_description,
     amount,
     account,
     calendar_date,

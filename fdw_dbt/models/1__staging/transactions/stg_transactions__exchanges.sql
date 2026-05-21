@@ -5,7 +5,7 @@ select
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker
-    end as tag,
+    end as transaction_description,
     case when exchange_type = 'Purchase' then units
         else -units
     end as amount,
@@ -25,7 +25,7 @@ select
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker
-    end as tag,
+    end as transaction_description,
     case when exchange_type = 'Purchase' then -price*units
         else price*units
     end as amount,

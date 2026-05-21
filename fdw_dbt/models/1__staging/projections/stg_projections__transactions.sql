@@ -1,7 +1,7 @@
 {%- set src = source('bronze', 'projections') -%}
 
 select
-    id as transaction_id,
+    md5(id::text||'_'||lower(transaction_type)||'_proj')::uuid as transaction_id,
     calendar_date,
     simulation_set,
     transaction_type,
