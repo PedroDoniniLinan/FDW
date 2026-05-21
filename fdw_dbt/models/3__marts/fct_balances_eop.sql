@@ -11,7 +11,6 @@ select
     (date_trunc('{{t}}', ad.calendar_date) + interval '3 month' - interval '1 day')::date as calendar_date,{% endif %}
     '{{t}}' as time_grain,
     ad.currency,
-    ad.original_currency,
     ad.account,
     ad.account_country,
     ad.account_budget_level,

@@ -1,42 +1,45 @@
 version: 2
 
 models:
-  - name: stg_balances__actuals
-    description: ""
+  - name: stg_balances__extracts
+    description: "Extracts taken periodically from accounts for validation purposes with units for each asset."
+    tags: ['balance_validation']
     columns:
-      - name: balance_id
+      - name: extract_id
         data_type: uuid
-        description: ""
+        description: "{{ doc('extract_id') }}"
 
       - name: account
         data_type: character varying
-        description: ""
-
-      - name: currency
-        data_type: character varying
-        description: ""
-
-      - name: calendar_date
-        data_type: date
-        description: ""
-
-      - name: balance
-        data_type: double precision
-        description: ""
-
-  - name: stg_balances__assets
-    description: "Distinct assets owned at any time"
-    columns:
-      - name: asset_id
-        data_type: uuid
-        description: ""
+        description: "{{ doc('account') }}"
 
       - name: asset
         data_type: character varying
-        description: ""
+        description: "{{ doc('asset') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: units
+        data_type: double precision
+        description: "{{ doc('units') }}"
+
+  - name: stg_balances__assets
+    description: "Distinct assets owned at any time"
+    tags: ['balance_validation']
+    columns:
+      - name: asset_id
+        data_type: uuid
+        description: "{{ doc('asset_id') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
 
   - name: stg_balances__last_update
     description: "Support model to track last update date for balances data, indicating last manual input"
+    tags: ['balance_validation']
     columns:
       - name: last_update
         data_type: date

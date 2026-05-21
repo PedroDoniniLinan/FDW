@@ -12,6 +12,6 @@ select
     tc.level_3,
     tc.source,
     ad.balance
-from {{ref("int_balances__fiat_converted_daily")}} ad
+from {{ref("int_balances__daily")}} ad
     left join {{ref("int_transaction_categories__united")}} tc on (ad.asset = tc.category and tc.transaction_type = 'Income')
     left join {{ref("dim_account")}} ac on (ad.account = ac.account)
