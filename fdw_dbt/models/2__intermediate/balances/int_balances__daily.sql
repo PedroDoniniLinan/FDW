@@ -2,7 +2,7 @@
 
 {% for c in currencies %}
 select
-    md5(ad.account || ad.asset || '{{c}}' || ad.calendar_date) as balance_id,
+    md5(ad.account || ad.asset || '{{c}}' || ad.calendar_date)::uuid as balance_id,
     ad.account,
     ad.asset,
     '{{c}}' as currency,

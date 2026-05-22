@@ -29,6 +29,5 @@ with
     )
 
 
-select *,
-    units - lag(units) over (partition by account, asset order by calendar_date) as day_change
+select *
 from holding_history

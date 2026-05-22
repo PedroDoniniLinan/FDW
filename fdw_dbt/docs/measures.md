@@ -4,11 +4,20 @@ Rate of exchange between to assets in a given date defined as "`exchange rate = 
 {% enddocs %}
 
 {% docs units %}
-Units of an asset held or transactioned (including fiat currency).
+Quantity of the asset held in the account on the given date. Represents the raw number of units before any monetary conversion, such as number of shares, BTC, or bond units or the monetary value itself for fiat currencies.
 {% enddocs %}
 
 <!-- balance related fields -->
 {% docs balance %}
-Monetary value of a balance in a specific fiat currency.
+Monetary value of the asset holding in the target currency on the given date. Calculated as units multiplied by the exchange rate. Represents the fiat value of the position.
 {% enddocs %}
 
+<!-- transaction related fields -->
+
+{% docs amount %}
+Value of the transaction or projection in units of the asset transacted. Positive values represent inflows and negative values represent outflows.
+{% enddocs %}
+
+{% docs tax_amount %}
+Monetary value of taxes paid on the exchange transaction, denominated in the tax_asset. Used for capital gains tracking and tax reporting.
+{% enddocs %}
