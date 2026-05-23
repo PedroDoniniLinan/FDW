@@ -8,7 +8,7 @@ select
     end as transaction_description,
     case when exchange_type = 'Purchase' then units
         else -units
-    end as amount,
+    end as units,
     account,
     calendar_date,
     exchange_type as category,
@@ -17,7 +17,7 @@ select
     currency as exchange_asset,
     price as exchange_rate,
     tax_currency as tax_asset,
-    tax as tax_amount
+    tax as tax_units
 from {{ src }}
 union all
 select
@@ -28,7 +28,7 @@ select
     end as transaction_description,
     case when exchange_type = 'Purchase' then -price*units
         else price*units
-    end as amount,
+    end as units,
     account,
     calendar_date,
     case when exchange_type = 'Purchase' then 'Sale' 
@@ -39,5 +39,5 @@ select
     ticker as exchange_asset,
     1/nullif(price, 0) as exchange_rate,
     tax_currency as tax_asset,
-    tax as tax_amount        
+    tax as tax_units        
 from {{ src }}

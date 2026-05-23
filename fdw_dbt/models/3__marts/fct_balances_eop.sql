@@ -14,10 +14,11 @@ select
     ad.account,
     ad.account_country,
     ad.account_budget_level,
-    ad.level_1,
-    ad.level_2,
-    ad.level_3,
-    ad.source,
+    ad.financial_level_1,
+    ad.financial_level_2,
+    ad.budget_level_1,
+    ad.budget_level_2,
+    ad.budget_level_3,
     ad.balance
 from {{ref("fct_balances_enriched")}} ad
 where is_end_of_period ~* '{{t}}'

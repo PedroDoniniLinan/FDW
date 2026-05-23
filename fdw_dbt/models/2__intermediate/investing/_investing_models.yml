@@ -1,26 +1,102 @@
 version: 2
 
 models:
-  - name: int_prices__fiat_combinations
-    description: ""
+  - name: int_rates__united
+    description: "Intermediate model that combines and unifies staging exchange rate data with all possible fiat exchange rate combinations (USD, EUR and BRL)."
     columns:
-      - name: price_id
-        data_type: text
-        description: ""
+      - name: rate_id
+        data_type: uuid
+        description: "{{ doc('rate_id') }}"
 
-      - name: ticker
+      - name: asset
         data_type: character varying
-        description: ""
+        description: "{{ doc('asset') }}"
 
-      - name: currency
+      - name: exchange_asset
         data_type: character varying
-        description: ""
+        description: "{{ doc('exchange_asset') }}"
 
       - name: calendar_date
         data_type: date
-        description: ""
+        description: "{{ doc('calendar_date') }}"
 
-      - name: price
+      - name: exchange_rate
         data_type: numeric
-        description: ""
+        description: "{{ doc('exchange_rate') }}"
 
+  - name: int_rates__fiat_combinations
+    description: "Intermediate model that generates all necessary pairs and permutations of fiat currency exchange rates to ensure full cross-rate coverage."
+    columns:
+      - name: rate_id
+        data_type: uuid
+        description: "{{ doc('rate_id') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: exchange_asset
+        data_type: character varying
+        description: "{{ doc('exchange_asset') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+
+  - name: int_rates__interpolated_daily
+    description: "Intermediate model that fills in missing dates for exchange rates (such as weekends or holidays) using forward-filling or interpolation logic to guarantee a continuous daily time series."
+    columns:
+      - name: rate_id
+        data_type: uuid
+        description: "{{ doc('rate_id') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: exchange_asset
+        data_type: character varying
+        description: "{{ doc('exchange_asset') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+
+  - name: int_rates__fiat_converted_daily
+    description: "Intermediate model that converts non-fiat asset prices or alternative currency rates into standardized daily fiat equivalents based on unified exchange rate calculations."
+    columns:
+      - name: rate_id
+        data_type: uuid
+        description: "{{ doc('rate_id') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: currency
+        data_type: character varying
+        description: "{{ doc('currency') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"

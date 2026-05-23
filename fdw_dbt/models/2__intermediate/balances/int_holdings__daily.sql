@@ -6,7 +6,7 @@ with
             g.asset,
             g.calendar_date,
             g.is_end_of_period,
-            coalesce(sum(t.amount), 0) as units
+            coalesce(sum(t.units), 0) as units
         from {{ ref("int_shared__account_daily_grid") }} g
         left join {{ ref("int_transactions__united") }} t on (
             g.account = t.account

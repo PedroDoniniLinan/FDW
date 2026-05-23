@@ -5,11 +5,11 @@ with
             md5(label)::uuid as category_id,
             label as category,
             'Expenses' as transaction_type,
-            budget_level,
-            level_1,
-            level_2,
-            level_3,
-            frequency as source
+            financial_level_1,
+            financial_level_2,
+            budget_level_1,
+            budget_level_2,
+            budget_level_3
         from {{ref('dim_expenses')}}
     ),
 
@@ -18,11 +18,11 @@ with
             md5(label)::uuid as category_id,
             label as category,
             'Income' as transaction_type,
-            source as budget_level,
-            level_1,
-            level_2,
-            level_3,
-            source
+            financial_level_1,
+            financial_level_2,
+            budget_level_1,
+            budget_level_2,
+            budget_level_3
         from {{ref('dim_income')}}
     ),
 
@@ -40,12 +40,12 @@ with
                 category_id,
                 category,
                 transaction_type,
-                budget_level,
-                level_1,
-                level_2,
-                level_3,
-                source,
-                row_number() over (partition by category, transaction_type order by level_1) as rn
+                financial_level_1,
+                financial_level_2,
+                budget_level_1,
+                budget_level_2,
+                budget_level_3,
+                row_number() over (partition by category, transaction_type order by budget_level_1) as rn
             from unioned_categories
             where category is not null
         )
@@ -53,4 +53,13 @@ with
     )
 
 
-select * from deduped_categories
+select
+    category_id,
+    category,
+    transaction_type,
+    financial_level_1,
+    financial_level_2,
+    budget_level_1,
+    budget_level_2,
+    budget_level_3
+from deduped_categories

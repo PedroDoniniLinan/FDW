@@ -77,24 +77,94 @@ Unique identifier for the category record, generated as a deterministic UUID bas
 Business category manually assigned to the transaction, used for budget tracking and reporting. Maps to the category hierarchy defined in the categories seed.
 {% enddocs %}
 
-{% docs source %}
-Origin or frequency context of the category. Indicates how the category is sourced or how often it applies, such as Fixed, Variable, or Monthly.
+{% docs financial_level_1 %}
+
+Top-level financial classification representing the primary economic nature
+of a transaction or holding.
+
+Examples include:
+- Essentials
+- Discretionary
+- Invested
+- Uninvested
+
+This level separates broad financial behavior such as spending,
+capital allocation, and liquidity status.
+
 {% enddocs %}
 
-{% docs budget_level %}
-Top level budget classification for the transaction or transaction projection. Used to organize financial planning across different ownerships.
+
+{% docs financial_level_2 %}
+
+Secondary financial classification providing a more detailed breakdown
+within the top-level financial category.
+
+Examples include:
+- Discretionary P
+- Discretionary D
+- Bonds
+- Stocks & Crypto
+- Cash
+- Work
+- Other sources
+
+Typically used to distinguish ownership, investment allocation type,
+or source grouping.
+
 {% enddocs %}
 
-{% docs level_1%}
-First level of the category hierarchy. Provides a broad grouping of transactions or projections, such as Income source (Salary, Growth stocks, etc) or Expense category (Home, Food, etc).
+
+{% docs budget_level_1 %}
+
+Top-level budgeting category representing the broad domain or area
+associated with a transaction or holding.
+
+Examples include:
+- Food
+- Health
+- Home
+- Transport
+- Bonds
+- Stocks & Crypto
+- Work
+
+Used for high-level reporting and aggregation.
+
 {% enddocs %}
 
-{% docs level_2 %}
-Second level of the category hierarchy below level_1. Provides further granularity within a category grouping, such as a specific expense subcategory or investment product type.
+
+{% docs budget_level_2 %}
+
+Intermediate budgeting category used to further segment transactions
+within a broader budgeting domain.
+
+Examples include:
+- Supermarket
+- House bills
+- Growth stocks
+- Salary
+- NFT games
+
+Represents a functional or thematic grouping within a budget category.
+
 {% enddocs %}
 
-{% docs level_3 %}
-Third and most granular level of the category hierarchy. Represents the most specific classification within the budget structure, such as a specific bond type like TD CDI or CDB IPCA and very specific expense types.
+
+{% docs budget_level_3 %}
+
+Most granular budgeting category representing the specific transaction,
+asset, product, service, or sub-classification.
+
+Examples include:
+- Restaurant
+- Rent
+- BTC
+- USDT
+- Salary
+- Fuel
+
+Typically used for detailed analysis, reporting, and transaction tagging.
+
 {% enddocs %}
 
 <!-- projection related fields -->

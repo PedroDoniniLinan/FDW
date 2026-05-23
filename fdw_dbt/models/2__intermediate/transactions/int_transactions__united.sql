@@ -7,8 +7,8 @@
 select
     transaction_id,
     transaction_type,
-    tag,
-    amount,
+    transaction_description,
+    units,
     account,
     calendar_date,
     category,
