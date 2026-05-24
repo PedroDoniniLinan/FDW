@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_investing__rates
+    tags: ['refactored', 'main']
     description: "Exchange rates between assets and fiat currencies (non-exhaustive combinations) taken periodically"
     columns:
       - name: rate_id

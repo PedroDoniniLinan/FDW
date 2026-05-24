@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: int_balances__daily
+    tags: ['refactored', 'main']
     description: "Daily monetary value of asset holdings per account, expressed in fiat currency. Combines holding units with exchange rates to produce balance values across all target currencies."
     columns:
       - name: balance_id
@@ -33,6 +34,7 @@ models:
         description: "{{ doc('balance') }}"
 
   - name: int_holdings__daily
+    tags: ['refactored', 'main', 'balance_validation']
     description: "Daily quantity of each asset held per account. Represents the raw unit position before any monetary conversion, used as the upstream input for balance calculations."
     columns:
       - name: holding_id

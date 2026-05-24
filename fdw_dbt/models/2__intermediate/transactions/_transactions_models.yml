@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: int_transactions__united
+    tags: ['refactored', 'main', 'balance_validation']
     description: "Intermediate model that unifies historical transactions across all sources (income, expenses, exchanges and internal transfers) into a single, standardized schema for downstream financial and accounting workflows."
     columns:
       - name: transaction_id

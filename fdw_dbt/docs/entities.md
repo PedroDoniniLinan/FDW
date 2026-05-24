@@ -172,3 +172,13 @@ Typically used for detailed analysis, reporting, and transaction tagging.
 {% docs simulation_set %}
 Identifier for a group of projection scenarios run together. Each simulation set represents a distinct set of assumptions used to model future financial outcomes, allowing comparison between different projection runs.
 {% enddocs %}
+
+<!-- dimension related fields -->
+
+{% docs time_grain %}
+Period granularity of the aggregated balance snapshot. Indicates whether the record represents a day, week, month, quarter, or year-end balance, allowing analysis at different time scales.
+{% enddocs %}
+
+{% docs account_country %}
+Country where the financial account is domiciled. Represents the regulatory jurisdiction and currency context of the account, such as BR for Brazilian accounts or US for American accounts.
+{% enddocs %}

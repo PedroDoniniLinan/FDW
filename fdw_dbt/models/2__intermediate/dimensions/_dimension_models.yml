@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: int_transaction_categories__bonds
+    tags: ['refactored', 'main', 'categories']
     description: >
       Model containing transaction category mappings related to
       bond investments and fixed-income holdings. Standardizes financial and
@@ -33,6 +34,7 @@ models:
         description: "{{ doc('budget_level_3') }}"
 
   - name: int_transaction_categories__united
+    tags: ['refactored', 'main', 'categories']
     description: >
       Consolidated intermediate transaction category model combining all
       category mappings across income, expenses, investments, and other

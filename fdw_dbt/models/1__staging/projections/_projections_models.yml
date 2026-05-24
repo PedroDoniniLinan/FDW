@@ -2,7 +2,12 @@ version: 2
 
 models:
   - name: stg_projections__transactions
-    description: ""
+    tags: ['refactored', 'projections']
+    description: >
+      Staging model containing projected future transactions used for financial
+      forecasting and planning scenarios. Includes multiple sets of expected
+      future income, expenses, investments, and recurring financial events
+      normalized into a standardized transaction structure.
     columns:
       - name: transaction_id
         data_type: uuid
@@ -22,11 +27,11 @@ models:
 
       - name: budget_level
         data_type: character varying
-        description: "{{ doc ('budget_level') }}"
+        description: "{{ doc ('financial_level_1') }}"
 
-      - name: level_1
+      - name: budget_level_1
         data_type: character varying
-        description: "{{ doc ('level_1') }}"
+        description: "{{ doc ('budget_level_1') }}"
 
       - name: amount
         data_type: double precision

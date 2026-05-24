@@ -1,0 +1,88 @@
+version: 2
+
+models:
+  - name: fct_balances_enriched
+    description: "Daily balances enriched with account attributes and hierarchical classifications. Provides the foundation for detailed balance analysis across accounts, currencies, and budget categories with full dimensional context."
+    columns:
+      - name: balance_id
+        data_type: uuid
+        description: "{{ doc('balance_id') }}"
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+      - name: account_country
+        data_type: text
+        description: "{{ doc('account_country') }}"
+      - name: account_budget_level
+        data_type: text
+        description: "{{ doc('account_budget_level') }}"
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+      - name: balance
+        data_type: double precision
+        description: "{{ doc('balance') }}"
+
+  - name: fct_balances_eop
+    description: "Period-end balance snapshots aggregated across multiple time grains. Filters daily balances to end-of-period dates and supports analysis at day, week, month, quarter, and year levels."
+    columns:
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+      - name: time_grain
+        data_type: text
+        description: "{{ doc('time_grain') }}"
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+      - name: account_country
+        data_type: text
+        description: "{{ doc('account_country') }}"
+      - name: account_budget_level
+        data_type: text
+        description: "{{ doc('account_budget_level') }}"
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+      - name: balance
+        data_type: double precision
+        description: "{{ doc('balance') }}"
