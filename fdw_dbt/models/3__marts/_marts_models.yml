@@ -25,9 +25,9 @@ models:
       - name: account_country
         data_type: text
         description: "{{ doc('account_country') }}"
-      - name: account_budget_level
+      - name: account_ownership
         data_type: text
-        description: "{{ doc('account_budget_level') }}"
+        description: "{{ doc('account_ownership') }}"
       - name: financial_level_1
         data_type: text
         description: "{{ doc('financial_level_1') }}"
@@ -65,9 +65,9 @@ models:
       - name: account_country
         data_type: text
         description: "{{ doc('account_country') }}"
-      - name: account_budget_level
+      - name: account_ownership
         data_type: text
-        description: "{{ doc('account_budget_level') }}"
+        description: "{{ doc('account_ownership') }}"
       - name: financial_level_1
         data_type: text
         description: "{{ doc('financial_level_1') }}"

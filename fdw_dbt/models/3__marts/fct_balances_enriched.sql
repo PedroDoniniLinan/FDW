@@ -6,7 +6,7 @@ select
     ad.currency,
     ad.account,
     ac.account_country,
-    ac.budget_level as account_budget_level,
+    ac.budget_level as account_ownership,
     tc.financial_level_1,
     tc.financial_level_2,
     tc.budget_level_1,

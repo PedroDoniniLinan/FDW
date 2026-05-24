@@ -67,7 +67,7 @@ General description of what was the transaction, the merchant or similar informa
 Flag indicating whether this transaction should be included in balance calculations. When false, the transaction is recorded for temporarily validation purposes only and does not affect reports.
 {% enddocs %}
 
-<!-- transaction category related fields -->
+<!-- transaction dimension related fields -->
 
 {% docs category_id %}
 Unique identifier for the category record, generated as a deterministic UUID based on the category label. Ensures consistent referencing across models.
@@ -173,7 +173,7 @@ Typically used for detailed analysis, reporting, and transaction tagging.
 Identifier for a group of projection scenarios run together. Each simulation set represents a distinct set of assumptions used to model future financial outcomes, allowing comparison between different projection runs.
 {% enddocs %}
 
-<!-- dimension related fields -->
+<!-- other dimension related fields -->
 
 {% docs time_grain %}
 Period granularity of the aggregated balance snapshot. Indicates whether the record represents a day, week, month, quarter, or year-end balance, allowing analysis at different time scales.
@@ -181,4 +181,8 @@ Period granularity of the aggregated balance snapshot. Indicates whether the rec
 
 {% docs account_country %}
 Country where the financial account is domiciled. Represents the regulatory jurisdiction and currency context of the account, such as BR for Brazilian accounts or US for American accounts.
+{% enddocs %}
+
+{% docs account_ownership %}
+Budget ownership level of the account. Distinguishes between Personal accounts (single owner) and Shared accounts (joint ownership), determining how balances are allocated across individual and household budgets.
 {% enddocs %}
