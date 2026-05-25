@@ -2,8 +2,9 @@ version: 2
 
 models:
   - name: int_shared__daily_grid
-    tags: ['refactored', 'main']
     description: "Intermediate calendar spine model that generates a continuous, unbroken sequence of daily dates (from 2019-08-01 until the last day of data). This serves as a central reference dimension used to scaffold downstream time-series metrics and join sparse datasets across shared dates." 
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: calendar_date
         data_type: date
@@ -14,8 +15,9 @@ models:
         description: "{{ doc('is_end_of_period') }}"
 
   - name: int_shared__account_daily_grid
-    tags: ['refactored', 'main']
     description: "Intermediate spine model that generates a continuous date scaffold for every active account. This forces a row for every account-day combination, ensuring metrics (like daily balances or activity) can be fully tracked without gaps on days with zero transactions."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: account
         data_type: character varying

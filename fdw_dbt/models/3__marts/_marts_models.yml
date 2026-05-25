@@ -3,6 +3,8 @@ version: 2
 models:
   - name: fct_balances_enriched
     description: "Daily balances enriched with account attributes and hierarchical classifications. Provides the foundation for detailed balance analysis across accounts, currencies, and budget categories with full dimensional context."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: balance_id
         data_type: uuid
@@ -49,6 +51,8 @@ models:
 
   - name: fct_balances_eop
     description: "Period-end balance snapshots aggregated across multiple time grains. Filters daily balances to end-of-period dates and supports analysis at day, week, month, quarter, and year levels."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: calendar_date
         data_type: date

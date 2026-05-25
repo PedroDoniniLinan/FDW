@@ -2,8 +2,9 @@ version: 2
 
 models:
   - name: int_rates__united
-    tags: ['refactored', 'main']
     description: "Intermediate model that combines and unifies staging exchange rate data with all possible fiat exchange rate combinations (USD, EUR and BRL)."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: rate_id
         data_type: uuid
@@ -26,8 +27,9 @@ models:
         description: "{{ doc('exchange_rate') }}"
 
   - name: int_rates__fiat_combinations
-    tags: ['refactored', 'main']
     description: "Intermediate model that generates all necessary pairs and permutations of fiat currency exchange rates to ensure full cross-rate coverage."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: rate_id
         data_type: uuid
@@ -50,8 +52,9 @@ models:
         description: "{{ doc('exchange_rate') }}"
 
   - name: int_rates__interpolated_daily
-    tags: ['refactored', 'main']
     description: "Intermediate model that fills in missing dates for exchange rates (such as weekends or holidays) using forward-filling or interpolation logic to guarantee a continuous daily time series."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: rate_id
         data_type: uuid
@@ -78,8 +81,9 @@ models:
         description: "{{ doc('exchange_rate') }}"
 
   - name: int_rates__fiat_converted_daily
-    tags: ['refactored', 'main']
     description: "Intermediate model that converts non-fiat asset prices or alternative currency rates into standardized daily fiat equivalents based on unified exchange rate calculations."
+    config:
+      tags: ['refactored', 'main']
     columns:
       - name: rate_id
         data_type: uuid

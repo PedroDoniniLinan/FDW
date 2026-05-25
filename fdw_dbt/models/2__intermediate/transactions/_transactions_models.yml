@@ -2,8 +2,9 @@ version: 2
 
 models:
   - name: int_transactions__united
-    tags: ['refactored', 'main', 'balance_validation']
     description: "Intermediate model that unifies historical transactions across all sources (income, expenses, exchanges and internal transfers) into a single, standardized schema for downstream financial and accounting workflows."
+    config:
+      tags: ['refactored', 'main', 'balance_validation']
     columns:
       - name: transaction_id
         data_type: uuid
@@ -17,9 +18,9 @@ models:
         data_type: text
         description: "{{ doc('transaction_description') }}"
 
-      - name: amount
+      - name: units
         data_type: double precision
-        description: "{{ doc('amount') }}"
+        description: "{{ doc('units') }}"
 
       - name: account
         data_type: character varying

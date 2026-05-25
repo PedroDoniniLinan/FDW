@@ -3,20 +3,38 @@
 /*
     Unifies transactions from exchange, transfer and external sources
 */
+with
+
+    unioned_transactions as (
+        select
+            transaction_id,
+            transaction_type,
+            transaction_description,
+            units,
+            account,
+            calendar_date,
+            category,
+            asset,
+            count_to_balance
+        from {{ ref("stg_transactions__exchanges") }}
+        union all
+        select * from {{ ref("stg_transactions__transfers") }}
+        union all
+        select * from {{ ref("stg_transactions__transactions") }}
+    )
 
 select
-    transaction_id,
-    transaction_type,
-    transaction_description,
-    units,
-    account,
-    calendar_date,
-    category,
-    asset,
-    count_to_balance
-from {{ ref("stg_transactions__exchanges") }}
-union all
-select * from {{ ref("stg_transactions__transfers") }}
-union all
-select * from {{ ref("stg_transactions__transactions") }}
-
+    l.transaction_id,
+    l.transaction_type,
+    l.transaction_description,
+    round(
+        l.units::numeric,
+        r.round_num
+    ) as units,
+    l.account,
+    l.calendar_date,
+    l.category,
+    l.asset,
+    l.count_to_balance
+from unioned_transactions l
+    left join {{ ref('int_shared__asset_rounding') }} r on (r.rounding_asset = l.asset)
