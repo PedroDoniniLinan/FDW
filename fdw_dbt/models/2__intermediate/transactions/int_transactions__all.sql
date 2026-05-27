@@ -8,6 +8,7 @@ with
     unioned_transactions as (
         select
             transaction_id,
+            source_id,
             transaction_type,
             transaction_description,
             units,
@@ -18,13 +19,14 @@ with
             count_to_balance
         from {{ ref("stg_transactions__exchanges") }}
         union all
-        select * from {{ ref("stg_transactions__transfers") }}
+        select * from {{ ref("stg_transactions__internal") }}
         union all
-        select * from {{ ref("stg_transactions__transactions") }}
+        select * from {{ ref("stg_transactions__external") }}
     )
 
 select
     l.transaction_id,
+    l.source_id,
     l.transaction_type,
     l.transaction_description,
     round(

@@ -67,6 +67,18 @@ General description of what was the transaction, the merchant or similar informa
 Flag indicating whether this transaction should be included in balance calculations. When false, the transaction is recorded for temporarily validation purposes only and does not affect reports.
 {% enddocs %}
 
+{% docs source_id %}
+Unique identifier for the originating source record for a transaction. Used to trace canonical transactions back to the original event, file, or system row that generated the record.
+{% enddocs %}
+
+{% docs prev_units %}
+Quantity of the asset held in the previous period. Used to compare current and prior holdings when calculating day-over-day or period-over-period gains.
+{% enddocs %}
+
+{% docs exchange_rate_delta %}
+Change in the exchange rate between the current and previous period. Represents how much the exchange rate moved over the comparison window.
+{% enddocs %}
+
 <!-- transaction dimension related fields -->
 
 {% docs category_id %}

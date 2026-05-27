@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_transactions__united
+  - name: int_transactions__all
     description: "Intermediate model that unifies historical transactions across all sources (income, expenses, exchanges and internal transfers) into a single, standardized schema for downstream financial and accounting workflows."
     config:
       tags: ['refactored', 'main', 'balance_validation']
@@ -9,6 +9,10 @@ models:
       - name: transaction_id
         data_type: uuid
         description: "{{ doc('transaction_id') }}"
+
+      - name: source_id
+        data_type: uuid
+        description: "{{ doc('source_id') }}"
 
       - name: transaction_type
         data_type: text
@@ -41,3 +45,170 @@ models:
       - name: count_to_balance
         data_type: boolean
         description: "{{ doc('count_to_balance') }}"
+
+  - name: int_transactions__fiat_converted
+    description: "This table contains fiat currency converted transactions with some relevant details/dimensions."
+    columns:
+      - name: transaction_id
+        data_type: uuid
+        description: "{{ doc('transaction_id') }}"
+      - name: source_id
+        data_type: uuid
+        description: "{{ doc('source_id') }}"
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+      - name: transaction_description
+        data_type: text
+        description: "{{ doc('transaction_description') }}"
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+      - name: category
+        data_type: character varying
+        description: "{{ doc('category') }}"
+
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+
+  - name: int_transactions__all_with_gains
+    description: Intermediate transactions model that includes both transaction details and gain metrics, supporting full transaction-level gain analysis and reconciliation.
+    columns:
+      - name: transaction_id
+        data_type: uuid
+        description: "{{ doc('transaction_id') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+
+      - name: transaction_description
+        data_type: text
+        description: "{{ doc('transaction_description') }}"
+
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+
+      - name: category
+        data_type: character varying
+        description: "{{ doc('category') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+
+  - name: int_transactions__intraday_gains
+    description: Intraday gains model capturing end-of-day transaction value movements, used for short-term trading and intra-period performance analysis.
+    columns:
+      - name: transaction_id
+        data_type: uuid
+        description: "{{ doc('transaction_id') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+
+      - name: asset
+        data_type: text
+        description: "{{ doc('asset') }}"
+
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+
+  - name: int_transactions__dod_gains
+    description: Day-over-day gains model tracking asset and currency value changes between consecutive periods, useful for daily PnL and exchange rate movement analysis.
+    columns:
+      - name: transaction_id
+        data_type: uuid
+        description: "{{ doc('transaction_id') }}"
+
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+
+      - name: prev_units
+        data_type: numeric
+        description: "{{ doc('prev_units') }}"
+
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
+
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+
+      - name: exchange_rate_delta
+        data_type: numeric
+        description: "{{ doc('exchange_rate_delta') }}"
+
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+

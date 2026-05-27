@@ -2,6 +2,7 @@
 
 select
     md5(id::text||'_'||lower(transaction_type))::uuid as transaction_id,
+    id as source_id,
     transaction_type,
     tag as transaction_description,
     amount as units,

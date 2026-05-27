@@ -91,14 +91,14 @@ models:
         data_type: date
         description: "{{ doc('calendar_date') }}"
       - name: units_actual
-        data_type: numeric
-        description: "{{ doc('units_actual') }}"
+        data_type: double precision
+        description: "Actual units value extracted from accounts for each asset."
       - name: units_calculated
         data_type: numeric
-        description: "{{ doc('units_calculated') }}"
+        description: "Calcualted units value from transactions extracted."
       - name: delta
-        data_type: numeric
-        description: "{{ doc('delta') }}"
+        data_type: double precision
+        description: "Difference betwee units_actual and units_calculated."
 
   - name: int_holdings__reconciliation
     description: "Compares extracted holdings with calculated holdings for all calendar dates to identify discrepancies."
@@ -116,13 +116,13 @@ models:
         description: "{{ doc('calendar_date') }}"
       - name: units_actual
         data_type: double precision
-        description: "{{ doc('units_actual') }}"
+        description: "Actual units value extracted from accounts for each asset."
       - name: units_calculated
         data_type: numeric
-        description: "{{ doc('units_calculated') }}"
+        description: "Calcualted units value from transactions extracted."
       - name: delta
         data_type: double precision
-        description: "{{ doc('delta') }}"
+        description: "Difference betwee units_actual and units_calculated."
 
   - name: int_holdings__unfiltered
     description: "Unfiltered view of daily holdings with cumulative units (Includes also transactions that are not reported on)."

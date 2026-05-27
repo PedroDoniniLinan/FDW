@@ -8,5 +8,5 @@ from {{ ref("int_shared__daily_grid") }} g
         select distinct 
             account, 
             asset 
-        from {{ ref("int_transactions__united") }}
+        from {{ ref("int_transactions__all") }}
     ) t
