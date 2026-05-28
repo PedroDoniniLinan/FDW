@@ -5,6 +5,7 @@
 
 {% for t in time_grain %}
 select
+    ad.balance_id,
     {% if t in ['day', 'week', 'month', 'year'] %}
     (date_trunc('{{t}}', ad.calendar_date) + interval '1 {{t}}' - interval '1 day')::date as calendar_date,{% endif %}
     {% if t in ['quarter'] %}

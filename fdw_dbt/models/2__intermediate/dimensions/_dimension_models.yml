@@ -12,6 +12,9 @@ models:
       - name: category_id
         data_type: uuid
         description: "{{ doc('category_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: category
         data_type: character varying
         description: "{{ doc('category') }}"
@@ -45,6 +48,9 @@ models:
       - name: category_id
         data_type: uuid
         description: "{{ doc('category_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: category
         data_type: text
         description: "{{ doc('category') }}"

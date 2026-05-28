@@ -5,6 +5,7 @@ with
 
     last_extract as (
         select
+            extract_id,
             account,
             asset,
             calendar_date,
@@ -23,6 +24,7 @@ with
     )
 
 select
+    cb.extract_id,
     coalesce(cb.account, ab.account) as account,
     coalesce(cb.asset, ab.asset) as asset,
     coalesce(cb.calendar_date, ab.calendar_date) as calendar_date,

@@ -198,3 +198,7 @@ Country where the financial account is domiciled. Represents the regulatory juri
 {% docs account_ownership %}
 Budget ownership level of the account. Distinguishes between Personal accounts (single owner) and Shared accounts (joint ownership), determining how balances are allocated across individual and household budgets.
 {% enddocs %}
+
+{% docs unique_id %}
+Deterministic surrogate key generated from the model’s grain columns, used exclusively to enforce uniqueness and detect duplicate rows in aggregated models. It does not represent a business identifier and should not be used for joins or downstream logic.
+{% enddocs %}

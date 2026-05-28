@@ -9,6 +9,9 @@ models:
       - name: transaction_id
         data_type: uuid
         description: "{{ doc('transaction_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: transaction_type
         data_type: text
         description: "{{ doc('transaction_type') }}"
@@ -54,6 +57,9 @@ models:
       - name: transaction_id
         data_type: uuid
         description: "{{ doc('transaction_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: transaction_type
         data_type: character varying
         description: "{{ doc('transaction_type') }}"
@@ -87,6 +93,9 @@ models:
       - name: transaction_id
         data_type: uuid
         description: "{{ doc('transaction_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: transaction_type
         data_type: text
         description: "{{ doc('transaction_type') }}"

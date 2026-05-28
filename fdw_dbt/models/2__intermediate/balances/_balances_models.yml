@@ -9,6 +9,9 @@ models:
       - name: balance_id
         data_type: uuid
         description: "{{ doc('balance_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
@@ -42,6 +45,9 @@ models:
       - name: holding_id
         data_type: uuid
         description: "{{ doc('holding_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
@@ -63,6 +69,12 @@ models:
     config:
       tags: ['refactored', 'balance_validation']
     columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
@@ -81,6 +93,12 @@ models:
     config:
       tags: ['refactored', 'balance_validation']
     columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
@@ -105,6 +123,12 @@ models:
     config:
       tags: ['refactored', 'balance_validation']
     columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
@@ -132,6 +156,9 @@ models:
       - name: holding_id
         data_type: uuid
         description: "{{ doc('holding_id') }}"
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"

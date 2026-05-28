@@ -9,19 +9,18 @@ models:
       - name: rate_id
         data_type: uuid
         description: "{{ doc('rate_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
-
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -34,19 +33,18 @@ models:
       - name: rate_id
         data_type: uuid
         description: "{{ doc('rate_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
-
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -59,23 +57,21 @@ models:
       - name: rate_id
         data_type: uuid
         description: "{{ doc('rate_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
-
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
-
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -88,23 +84,21 @@ models:
       - name: rate_id
         data_type: uuid
         description: "{{ doc('rate_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
-
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: currency
         data_type: character varying
         description: "{{ doc('currency') }}"
-
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"

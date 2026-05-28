@@ -13,27 +13,24 @@ models:
       - name: transaction_id
         data_type: uuid
         description: "{{ doc ('transaction_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: calendar_date
         data_type: date
         description: "{{ doc ('calendar_date') }}"
-
       - name: simulation_set
         data_type: integer
         description: "{{ doc ('simulation_set') }}"
-
       - name: transaction_type
         data_type: character varying
         description: "{{ doc ('transaction_type') }}"
-
       - name: budget_level
         data_type: character varying
         description: "{{ doc ('financial_level_1') }}"
-
       - name: budget_level_1
         data_type: character varying
         description: "{{ doc ('budget_level_1') }}"
-
       - name: amount
         data_type: double precision
         description: "{{ doc ('amount') }}"

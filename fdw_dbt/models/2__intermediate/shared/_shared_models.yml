@@ -9,7 +9,9 @@ models:
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
@@ -22,15 +24,12 @@ models:
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
-
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"

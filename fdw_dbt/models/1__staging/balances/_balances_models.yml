@@ -9,19 +9,18 @@ models:
       - name: extract_id
         data_type: uuid
         description: "{{ doc('extract_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
-
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
-
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
-
       - name: units
         data_type: double precision
         description: "{{ doc('units') }}"
@@ -34,7 +33,9 @@ models:
       - name: asset_id
         data_type: uuid
         description: "{{ doc('asset_id') }}"
-
+        tests:
+          - not_null
+          - unique
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
@@ -47,4 +48,7 @@ models:
       - name: last_update
         data_type: date
         description: "Last update date for balances data, indicating last manual input"
+        tests:
+          - not_null
+          - unique
 
