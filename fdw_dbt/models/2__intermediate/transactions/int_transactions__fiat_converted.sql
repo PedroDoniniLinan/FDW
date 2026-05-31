@@ -2,8 +2,9 @@
 
 {% for c in currencies %}
 select
+    md5(t.transaction_id::text || '{{c}}')::uuid as fiat_transaction_id,
     t.transaction_id,
-    t.source_id,
+    t.source_transaction_id,
     t.calendar_date,
     t.transaction_description,
     t.asset,
@@ -12,7 +13,10 @@ select
     t.category,
     t.account,
     t.units,
-    p.exchange_rate,
+    coalesce(
+        p.exchange_rate,
+        case when '{{c}}' = 'Original' then 1 else 0 end
+    ) as exchange_rate,
     case when '{{c}}' = 'Original' then t.units*coalesce(p.exchange_rate, 1)
         else (t.units*coalesce(p.exchange_rate, 0))
     end as amount

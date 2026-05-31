@@ -15,36 +15,54 @@ models:
       - name: transaction_type
         data_type: text
         description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
       - name: transaction_description
         data_type: text
         description: "{{ doc('transaction_description') }}"
+        tests:
+          - not_null
       - name: units
         data_type: double precision
         description: "{{ doc('units') }}"
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: category
         data_type: character varying
         description: "{{ doc('category') }}"
+        tests:
+          - not_null
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: count_to_balance
         data_type: boolean
         description: "{{ doc('count_to_balance') }}"
+        tests:
+          - not_null
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: double precision
         description: "{{ doc('exchange_rate') }}"
       - name: tax_asset
         data_type: character varying
         description: "{{ doc('tax_asset') }}"
+        tests:
+          - not_null
       - name: tax_units
         data_type: double precision
         description: "{{ doc('tax_units') }}"
@@ -63,27 +81,41 @@ models:
       - name: transaction_type
         data_type: character varying
         description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
       - name: transaction_description
         data_type: character varying
         description: "{{ doc('transaction_description') }}"
+        tests:
+          - not_null
       - name: units
         data_type: double precision
         description: "{{ doc('units') }}"
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: category
         data_type: character varying
         description: "{{ doc('category') }}"
+        tests:
+          - not_null
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: count_to_balance
         data_type: boolean
         description: "{{ doc('count_to_balance') }}"
+        tests:
+          - not_null
 
   - name: stg_transactions__internal
     description: "Staged transfer transactions representing movements of funds between accounts."
@@ -99,24 +131,38 @@ models:
       - name: transaction_type
         data_type: text
         description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
       - name: transaction_description
         data_type: text
         description: "{{ doc('transaction_description') }}"
+        tests:
+          - not_null
       - name: units
         data_type: double precision
         description: "{{ doc('units') }}"
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: category
         data_type: text
         description: "{{ doc('category') }}"
+        tests:
+          - not_null
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: count_to_balance
         data_type: boolean
         description: "{{ doc('count_to_balance') }}"
+        tests:
+          - not_null

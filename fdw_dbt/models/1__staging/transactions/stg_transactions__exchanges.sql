@@ -2,7 +2,7 @@
 
 select
     md5(id::text||'_ext')::uuid as transaction_id,
-    id as source_id,
+    id as source_transaction_id,
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker
@@ -23,7 +23,7 @@ from {{ src }}
 union all
 select
     md5(id::text||'_exc')::uuid as transaction_id,
-    id as source_id,
+    id as source_transaction_id,
     'Exchange' as transaction_type,
     case when exchange_type = 'Purchase' then ticker||'<-'||currency
         else currency||'<-'||ticker

@@ -15,6 +15,8 @@ models:
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
 
   - name: int_shared__account_daily_grid
     description: "Intermediate spine model that generates a continuous date scaffold for every active account. This forces a row for every account-day combination, ensuring metrics (like daily balances or activity) can be fully tracked without gaps on days with zero transactions."
@@ -24,13 +26,21 @@ models:
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
+        tests:
+          - not_null
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
 

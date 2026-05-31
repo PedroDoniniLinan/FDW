@@ -15,13 +15,22 @@ models:
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
+        tests:
+          - dbt_utils.expression_is_true:
+                expression: ">= 0"
 

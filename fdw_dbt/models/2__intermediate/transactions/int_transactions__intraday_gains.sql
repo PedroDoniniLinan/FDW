@@ -7,7 +7,7 @@ select
     sum(amount) as amount
 from (
     select
-        source_id,
+        source_transaction_id,
         account,
         calendar_date,
         currency,

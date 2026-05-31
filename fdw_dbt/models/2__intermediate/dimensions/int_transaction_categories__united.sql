@@ -2,7 +2,7 @@ with
 
     dim_expenses as (
         select
-            md5(label)::uuid as category_id,
+            md5(label || 'Expenses')::uuid as category_id,
             label as category,
             'Expenses' as transaction_type,
             financial_level_1,
@@ -15,7 +15,7 @@ with
 
     dim_income as (
         select
-            md5(label)::uuid as category_id,
+            md5(label || 'Income')::uuid as category_id,
             label as category,
             'Income' as transaction_type,
             financial_level_1,

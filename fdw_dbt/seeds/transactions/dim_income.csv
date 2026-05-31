@@ -1,17 +1,10 @@
 financial_level_1,financial_level_2,budget_level_1,budget_level_2,budget_level_3,label
-Invested,Bonds,Bonds,Bonds BR,CDB CDI,CDB CDI B
-Invested,Bonds,Bonds,Bonds BR,CDB IPCA,CDB IPCA B
-Invested,Bonds,Bonds,Bonds BR,CDB Prefix,CDB Prefix B
-Invested,Bonds,Bonds,Bonds BR,TD IPCA,TD IPCA B
-Invested,Bonds,Bonds,Bonds BR,TD Prefix,TD Prefix B
-Invested,Bonds,Bonds,Bonds BR,TD SELIC,TD SELIC B
 Invested,Bonds,Bonds,Bonds BR,CDB CDI,CDB CDI L
 Invested,Bonds,Bonds,Bonds BR,CDB IPCA,CDB IPCA L
 Invested,Bonds,Bonds,Bonds BR,CDB Prefix,CDB Prefix L
 Invested,Bonds,Bonds,Bonds BR,TD IPCA,TD IPCA L
 Invested,Bonds,Bonds,Bonds BR,TD Prefix,TD Prefix L
 Invested,Bonds,Bonds,Bonds BR,TD SELIC,TD SELIC L
-Invested,Bonds,Bonds,Bonds BR,TD SELIC,TD SELIC E
 Invested,Bonds,Bonds,Bonds BR,CRA IPCA,CRA IPCA L
 Invested,Bonds,Bonds,Bonds BR,CRA Prefix,CRA Prefix L
 Invested,Bonds,Bonds,Bonds BR,CRA CDI,CRA CDI L
@@ -27,6 +20,10 @@ Uninvested,Cash,Cash,Stable (Cash),USD,USD
 Uninvested,Cash,Cash,Volatile (Cash),BRL,Rivalry
 Uninvested,Cash,Cash,Volatile (Cash),BRL,BRL
 Uninvested,Cash,Cash,Volatile (Cash),C,C
+Invested,Cash,Cash,Internal,Purchase,Purchase
+Invested,Cash,Cash,Internal,Sale,Sale
+Uninvested,Cash,Cash,Internal,Transfer in,Transfer in
+Uninvested,Cash,Cash,Internal,Transfer out,Transfer out
 Invested,Bonds,Cash,Volatile (Cash),BTG,BTG
 Invested,Bonds,Cash,Volatile (Cash),Nubank,Nubank
 Invested,Bonds,Cash,Volatile (Cash),Nubank,Savings

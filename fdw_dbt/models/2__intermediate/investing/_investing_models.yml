@@ -15,12 +15,18 @@ models:
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -39,12 +45,18 @@ models:
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -63,15 +75,23 @@ models:
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: exchange_asset
         data_type: character varying
         description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
@@ -90,15 +110,23 @@ models:
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
       - name: is_end_of_period
         data_type: text
         description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
       - name: asset
         data_type: character varying
         description: "{{ doc('asset') }}"
+        tests:
+          - not_null
       - name: currency
         data_type: character varying
         description: "{{ doc('currency') }}"
+        tests:
+          - not_null
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"

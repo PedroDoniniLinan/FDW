@@ -2,7 +2,7 @@
 
 select
     md5(id::text||'_'||lower(transaction_type))::uuid as transaction_id,
-    id as source_id,
+    id as source_transaction_id,
     transaction_type,
     tag as transaction_description,
     amount as units,
@@ -13,3 +13,4 @@ select
     count_to_balance
 from {{ src }}
 where amount != 0
+{# and currency = 'TD Prefix 2026 L' #}

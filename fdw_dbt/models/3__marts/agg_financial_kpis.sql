@@ -1,7 +1,7 @@
 {%- set time_grain = ['month', 'quarter', 'year'] -%}
 
 select
-    md5(calendar_date::text || time_grain || currency) as unique_id,
+    md5(calendar_date::text || time_grain || currency) as grain_id,
     *,
     (income_work - abs(expenses)) / nullif(income_work, 0) as savings_rate,
     (abs(expenses_essentials)) / nullif(income_work, 0) as essentials_burden_rate,

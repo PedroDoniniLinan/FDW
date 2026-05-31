@@ -67,7 +67,7 @@ General description of what was the transaction, the merchant or similar informa
 Flag indicating whether this transaction should be included in balance calculations. When false, the transaction is recorded for temporarily validation purposes only and does not affect reports.
 {% enddocs %}
 
-{% docs source_id %}
+{% docs source_transaction_id %}
 Unique identifier for the originating source record for a transaction. Used to trace canonical transactions back to the original event, file, or system row that generated the record.
 {% enddocs %}
 
@@ -199,6 +199,10 @@ Country where the financial account is domiciled. Represents the regulatory juri
 Budget ownership level of the account. Distinguishes between Personal accounts (single owner) and Shared accounts (joint ownership), determining how balances are allocated across individual and household budgets.
 {% enddocs %}
 
-{% docs unique_id %}
+{% docs grain_id %}
 Deterministic surrogate key generated from the model’s grain columns, used exclusively to enforce uniqueness and detect duplicate rows in aggregated models. It does not represent a business identifier and should not be used for joins or downstream logic.
+{% enddocs %}
+
+{% docs fiat_transaction_id %}
+A unique identifier for each fiat transaction record, derived from the original transaction ID and the currency to which the amount was converted.
 {% enddocs %}

@@ -2,6 +2,7 @@ with
 
     fiat_converted_transactions as (
         select
+            fiat_transaction_id,
             transaction_id,
             calendar_date,
             transaction_type,
@@ -18,6 +19,7 @@ with
 
     dod_gains_transactions as (
         select
+            transaction_id as fiat_transaction_id,
             transaction_id,
             calendar_date,
             'Income' as transaction_type,
@@ -34,6 +36,7 @@ with
 
     intraday_gains_transactions as (
         select
+            transaction_id as fiat_transaction_id,
             transaction_id,
             calendar_date,
             'Income' as transaction_type,

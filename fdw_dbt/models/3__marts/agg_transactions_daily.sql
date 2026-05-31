@@ -1,6 +1,6 @@
 select
     md5(calendar_date::text || currency || transaction_type || financial_level_1 || financial_level_2 || budget_level_1 
-        || budget_level_2 || budget_level_3 || account || account_country) as unique_id,
+        || budget_level_2 || budget_level_3 || account || account_country) as grain_id,
     calendar_date,
     currency,
     transaction_type,
@@ -16,7 +16,7 @@ select
 from {{ref('fct_transactions_enriched')}}
 where transaction_type in ('Income', 'Expenses')
 group by
-    generic_id,
+    grain_id,
     calendar_date,
     currency,
     transaction_type,
