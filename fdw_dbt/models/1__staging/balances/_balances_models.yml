@@ -3,8 +3,6 @@ version: 2
 models:
   - name: stg_balances__extracts
     description: "Extracts taken periodically from accounts for validation purposes with units for each asset."
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: extract_id
         data_type: uuid
@@ -38,8 +36,6 @@ models:
 
   - name: stg_balances__assets
     description: "Distinct assets owned at any time"
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: asset_id
         data_type: uuid
@@ -55,8 +51,6 @@ models:
 
   - name: stg_balances__last_update
     description: "Support model to track last update date for balances data, indicating last manual input"
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: last_update
         data_type: date

@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main']
+) }}
+
 {%- set src = source('bronze', 'prices') -%}
 
 select

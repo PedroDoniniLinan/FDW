@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'balance_validation']
+) }}
+
 {%- set src = source('bronze', 'balances') -%}
 
 select 

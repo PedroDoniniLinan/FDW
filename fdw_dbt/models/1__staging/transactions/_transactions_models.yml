@@ -3,8 +3,6 @@ version: 2
 models:
   - name: stg_transactions__exchanges
     description: "Staged exchange transactions representing asset trades, including the exchanged asset, rate, and any taxes paid."
-    config:
-      tags: ['refactored', 'main', 'balance_validation']
     columns:
       - name: transaction_id
         data_type: uuid
@@ -69,8 +67,6 @@ models:
 
   - name: stg_transactions__external
     description: "Staged income and expense transactions representing cash inflows and outflows across accounts."
-    config:
-      tags: ['refactored', 'main', 'balance_validation']
     columns:
       - name: transaction_id
         data_type: uuid
@@ -119,8 +115,6 @@ models:
 
   - name: stg_transactions__internal
     description: "Staged transfer transactions representing movements of funds between accounts."
-    config:
-      tags: ['refactored', 'main', 'balance_validation'] 
     columns:
       - name: transaction_id
         data_type: uuid

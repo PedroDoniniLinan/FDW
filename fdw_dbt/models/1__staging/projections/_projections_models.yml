@@ -7,8 +7,6 @@ models:
       forecasting and planning scenarios. Includes multiple sets of expected
       future income, expenses, investments, and recurring financial events
       normalized into a standardized transaction structure.
-    config:
-      tags: ['refactored', 'projections']
     columns:
       - name: transaction_id
         data_type: uuid

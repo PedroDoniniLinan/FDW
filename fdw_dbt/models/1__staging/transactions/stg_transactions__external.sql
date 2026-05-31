@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
 {%- set src = source('bronze', 'external_transactions') -%}
 
 select
