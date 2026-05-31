@@ -6,8 +6,6 @@ models:
       Model containing transaction category mappings related to
       bond investments and fixed-income holdings. Standardizes financial and
       budgeting classification fields into a shared transaction category structure.
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: category_id
         data_type: uuid
@@ -56,8 +54,6 @@ models:
       Consolidated intermediate transaction category model combining all
       category mappings across income, expenses, investments, and other
       financial transaction types into a unified classification structure.
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: category_id
         data_type: uuid

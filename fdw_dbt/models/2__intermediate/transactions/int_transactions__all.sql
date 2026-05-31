@@ -1,6 +1,7 @@
-/*
-    Unifies transactions from exchange, transfer and external sources
-*/
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
 with
 
     unioned_transactions as (

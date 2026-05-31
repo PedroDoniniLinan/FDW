@@ -1,4 +1,7 @@
-{{ config(materialized='table') }}
+{{ config(
+    materialized='table',
+    tags=['refactored', 'main', 'rated']
+) }}
 
 {%- set src = ref("int_rates__interpolated_daily") -%}
 

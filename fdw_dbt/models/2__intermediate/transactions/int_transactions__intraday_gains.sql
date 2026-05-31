@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
+
 select
     md5(account || calendar_date || currency || asset || 'intraday')::uuid as transaction_id,
     calendar_date,

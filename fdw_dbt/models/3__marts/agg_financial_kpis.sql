@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }}
+
 {%- set time_grain = ['month', 'quarter', 'year'] -%}
 
 select

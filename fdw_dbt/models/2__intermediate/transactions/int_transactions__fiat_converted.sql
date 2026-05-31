@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
+
 {% set currencies = ['BRL', 'USD', 'EUR', 'Original'] %}
 
 {% for c in currencies %}

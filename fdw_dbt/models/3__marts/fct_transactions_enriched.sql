@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }}
+
 select
     t.fiat_transaction_id,
     t.transaction_id,

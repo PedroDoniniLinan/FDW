@@ -1,4 +1,7 @@
-{{ config( materialized='table') }}
+{{ config(
+    materialized='table',
+    tags=['refactored', 'balance_validation', 'main']
+) }}
 
 select 
     asset as rounding_asset,

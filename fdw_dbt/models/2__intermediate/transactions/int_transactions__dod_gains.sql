@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
+
 with
 
     exchange_rate_change as (

@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main']
+) }}
+
 {% set br_bonds = ['TD', 'CDB', 'CRA', 'LCI'] %}
 {% set bond_types = ['CDI', 'SELIC', 'IPCA', 'Prefix'] %}
 {% set bond_term = ['B', 'L', 'E', ''] %}

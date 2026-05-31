@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
 {% set src_actual = ref("int_holdings__extract_latest") %}
 {% set src_calculated = ref("int_holdings__unfiltered") %}
 

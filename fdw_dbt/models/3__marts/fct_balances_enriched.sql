@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }}
+
 select
     ad.balance_id,
     ad.calendar_date,

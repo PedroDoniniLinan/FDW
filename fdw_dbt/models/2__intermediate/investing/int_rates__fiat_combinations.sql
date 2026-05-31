@@ -1,4 +1,6 @@
-{{ config(materialized='table') }}
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
 
 {%- set src = ref('stg_investing__rates') -%}
 {%- set fiat_currencies = fiat_currencies() -%}

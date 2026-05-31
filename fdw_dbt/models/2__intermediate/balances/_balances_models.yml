@@ -3,8 +3,6 @@ version: 2
 models:
   - name: int_balances__daily
     description: "Daily monetary value of asset holdings per account, expressed in fiat currency. Combines holding units with exchange rates to produce balance values across all target currencies."
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: balance_id
         data_type: uuid
@@ -49,8 +47,6 @@ models:
 
   - name: int_holdings__daily
     description: "Daily quantity of each asset held per account. Represents the raw unit position before any monetary conversion, used as the upstream input for balance calculations."
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: holding_id
         data_type: uuid
@@ -84,8 +80,6 @@ models:
 
   - name: int_holdings__extract_latest
     description: "Extracts the latest holdings for each account and asset."
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: extract_id
         data_type: uuid
@@ -114,8 +108,6 @@ models:
 
   - name: int_holdings__reconciliation_latest
     description: "Compares the latest extracted holdings with the current calculated holdings to identify discrepancies."
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: extract_id
         data_type: uuid
@@ -150,8 +142,6 @@ models:
 
   - name: int_holdings__reconciliation
     description: "Compares extracted holdings with calculated holdings for all calendar dates to identify discrepancies."
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: extract_id
         data_type: uuid
@@ -186,8 +176,6 @@ models:
 
   - name: int_holdings__unfiltered
     description: "Unfiltered view of daily holdings with cumulative units (Includes also transactions that are not reported on)."
-    config:
-      tags: ['refactored', 'balance_validation']
     columns:
       - name: holding_id
         data_type: uuid

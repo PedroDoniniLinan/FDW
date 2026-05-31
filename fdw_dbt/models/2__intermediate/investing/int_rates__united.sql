@@ -1,4 +1,6 @@
--- Prices + Conversions between fiats
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
 
 select
     p.rate_id,

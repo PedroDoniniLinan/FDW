@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
 select 
     t.account, 
     t.asset, 

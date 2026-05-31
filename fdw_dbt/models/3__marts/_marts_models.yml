@@ -3,8 +3,6 @@ version: 2
 models:
   - name: fct_balances_enriched
     description: "Daily balances enriched with account attributes and hierarchical classifications. Provides the foundation for detailed balance analysis across accounts, currencies, and budget categories with full dimensional context."
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: balance_id
         data_type: uuid
@@ -80,8 +78,6 @@ models:
 
   - name: fct_balances_eop
     description: "Period-end balance snapshots aggregated across multiple time grains. Filters daily balances to end-of-period dates and supports analysis at day, week, month, quarter, and year levels."
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: grain_id
         data_type: uuid
@@ -157,8 +153,6 @@ models:
 
   - name: fct_transactions_enriched
     description: "Enriched transactions fact model combining transaction details with account and category dimensions (budget and financial hierarchies), suitable for reporting and analytics."
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: fiat_transaction_id
         data_type: uuid
@@ -259,8 +253,6 @@ models:
 
   - name: agg_transactions_daily
     description: "Daily aggregated financial transactions across income and expenses, grouped by financial, budget, account, and currency dimensions."
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: grain_id
         data_type: text
@@ -327,8 +319,6 @@ models:
 
   - name: agg_financial_kpis
     description: "Aggregated financial KPIs by time grain and currency, including income, expenses, savings, and financial burden metrics."
-    config:
-      tags: ['refactored', 'main', 'categories']
     columns:
       - name: grain_id
         data_type: text

@@ -3,8 +3,6 @@ version: 2
 models:
   - name: int_transactions__all
     description: "Intermediate model that unifies historical transactions across all sources (income, expenses, exchanges and internal transfers) into a single, standardized schema for downstream financial and accounting workflows."
-    config:
-      tags: ['refactored', 'main', 'balance_validation']
     columns:
       - name: transaction_id
         data_type: uuid
@@ -63,8 +61,6 @@ models:
 
   - name: int_transactions__fiat_converted
     description: "This table contains fiat currency converted transactions with some relevant details/dimensions."
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: fiat_transaction_id
         data_type: uuid
@@ -135,8 +131,6 @@ models:
 
   - name: int_transactions__all_with_gains
     description: Intermediate transactions model that includes both transaction details and gain metrics, supporting full transaction-level gain analysis and reconciliation.
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: fiat_transaction_id
         data_type: uuid
@@ -202,8 +196,6 @@ models:
 
   - name: int_transactions__intraday_gains
     description: Intraday gains model capturing end-of-day transaction value movements, used for short-term trading and intra-period performance analysis.
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: transaction_id
         data_type: uuid
@@ -237,8 +229,6 @@ models:
 
   - name: int_transactions__dod_gains
     description: Day-over-day gains model tracking asset and currency value changes between consecutive periods, useful for daily PnL and exchange rate movement analysis.
-    config:
-      tags: ['refactored', 'main']
     columns:
       - name: transaction_id
         data_type: uuid

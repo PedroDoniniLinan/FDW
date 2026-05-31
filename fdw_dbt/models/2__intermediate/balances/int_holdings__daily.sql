@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main']
+) }}
+
 with
 
     holdings_changes as (

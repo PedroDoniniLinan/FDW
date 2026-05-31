@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
+
 with 
 
     fiat_converted_transactions as (

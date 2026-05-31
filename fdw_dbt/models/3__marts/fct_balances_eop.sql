@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }}
+
 {% set time_grain = ['day', 'week', 'month', 'quarter', 'year'] %}
 
 -- THIS MODEL DOESNOT MATCH THE UPSTREAM

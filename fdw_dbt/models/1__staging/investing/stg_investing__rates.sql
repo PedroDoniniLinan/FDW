@@ -1,5 +1,5 @@
 {{ config(
-    tags=['refactored', 'main']
+    tags=['refactored', 'balance_validation', 'main', 'rated']
 ) }}
 
 {%- set src = source('bronze', 'prices') -%}

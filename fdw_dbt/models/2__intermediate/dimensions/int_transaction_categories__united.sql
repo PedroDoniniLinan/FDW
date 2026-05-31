@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main']
+) }}
+
 with
 
     dim_expenses as (

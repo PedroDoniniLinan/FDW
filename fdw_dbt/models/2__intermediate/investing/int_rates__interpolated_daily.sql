@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'main', 'rated']
+) }}
+
 with
 
     linear_regression as (

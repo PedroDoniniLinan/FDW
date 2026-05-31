@@ -1,7 +1,9 @@
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
 {%- set start_dt = "'2019-08-01'::date" -%}
 {%- set end_dt = "cast(date_trunc('year', current_date) + interval '1 year' as date)" -%}
-
-{{ config(materialized='table') }}
 
 with
 

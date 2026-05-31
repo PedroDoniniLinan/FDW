@@ -1,3 +1,7 @@
+{{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }}
+
 select
     md5(calendar_date::text || currency || transaction_type || financial_level_1 || financial_level_2 || budget_level_1 
         || budget_level_2 || budget_level_3 || account || account_country) as grain_id,
