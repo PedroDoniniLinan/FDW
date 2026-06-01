@@ -206,3 +206,9 @@ Deterministic surrogate key generated from the model’s grain columns, used exc
 {% docs fiat_transaction_id %}
 A unique identifier for each fiat transaction record, derived from the original transaction ID and the currency to which the amount was converted.
 {% enddocs %}
+
+{% docs dbt_loaded_at %}
+Timestamp of when this row was last processed and written by dbt, set using `current_timestamp` at run time. 
+
+This column reflects dbt pipeline execution time, not when the event occurred in the source. Use this column to audit data freshness, debug late-arriving records, or identify when a specific row was last touched by a dbt run.
+{% enddocs %}

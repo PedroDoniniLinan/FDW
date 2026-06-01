@@ -1,6 +1,11 @@
 {{ config(
+    materialized='incremental',
+    unique_key='balance_id',
+    incremental_strategy='merge',
     tags=['refactored', 'categories', 'main', 'mart', 'rated']
 ) }}
+
+{%- set lookback_days = var('lookback_days', 30) -%}
 
 select
     ad.balance_id,
@@ -20,3 +25,6 @@ select
 from {{ref("int_balances__daily")}} ad
     left join {{ref("int_transaction_categories__united")}} tc on (ad.asset = tc.category and tc.transaction_type = 'Income')
     left join {{ref("dim_account")}} ac on (ad.account = ac.account)
+{% if is_incremental() -%}
+where ad.calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+{% endif %}

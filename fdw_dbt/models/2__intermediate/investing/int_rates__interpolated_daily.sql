@@ -1,5 +1,10 @@
 {{ config(
-    tags=['refactored', 'main', 'rated']
+    materialized='table',
+    tags=['refactored', 'main', 'rated'],
+    post_hook=[
+        "create unique index if not exists idx_rate_id on {{ this }} (rate_id)",
+        "create index if not exists idx_calendar_date on {{ this }} (calendar_date)"
+        ]
 ) }}
 
 with

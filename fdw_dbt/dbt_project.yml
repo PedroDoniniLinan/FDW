@@ -28,6 +28,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   fdw_dbt:
+    +store_failures: true
     +schema: silver
     +materialized: view
     3__marts:
@@ -39,4 +40,5 @@ seeds:
     +schema: seeds
 
 vars:
-  days_lookback: 90
+  lookback_days: 90
+  lookback_days_eop: 365

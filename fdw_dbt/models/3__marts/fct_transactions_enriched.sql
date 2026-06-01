@@ -1,6 +1,15 @@
+{# {{ config(
+    tags=['refactored', 'categories', 'main', 'mart', 'rated']
+) }} #}
+
 {{ config(
+    materialized='incremental',
+    unique_key='fiat_transaction_id',
+    incremental_strategy='merge',
     tags=['refactored', 'categories', 'main', 'mart', 'rated']
 ) }}
+
+{%- set lookback_days = var('lookback_days', 30) -%}
 
 select
     t.fiat_transaction_id,
@@ -28,3 +37,6 @@ from {{ref("int_transactions__all_with_gains")}} t
         and (t.transaction_type = tc.transaction_type or t.transaction_type in ('Exchange', 'Transfer'))
         )
     left join {{ref("dim_account")}} ac on (t.account = ac.account)
+{% if is_incremental() -%}
+where calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+{% endif %}

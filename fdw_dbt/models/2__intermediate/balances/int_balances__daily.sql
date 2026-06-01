@@ -1,8 +1,12 @@
 {{ config(
+    materialized='incremental',
+    unique_key='balance_id',
+    incremental_strategy='merge',
     tags=['refactored', 'main', 'rated']
 ) }}
 
-{% set currencies = ['BRL', 'USD', 'EUR', 'Original'] %}
+{%- set currencies = ['BRL', 'USD', 'EUR', 'Original'] -%}
+{%- set lookback_days = var('lookback_days', 30) -%}
 
 {% for c in currencies %}
 select
@@ -23,4 +27,7 @@ from {{ref("int_holdings__daily")}} ad
         and ad.asset = p.asset
         and p.currency = '{{c}}'
     )
+{%- if is_incremental() -%}
+where ad.calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+{% endif %}
 {% if not loop.last %}union all{% endif %}{% endfor %}

@@ -1,8 +1,12 @@
 {{ config(
+    materialized='incremental',
+    unique_key='grain_id',
+    incremental_strategy='merge',
     tags=['refactored', 'categories', 'main', 'mart', 'rated']
 ) }}
 
-{% set time_grain = ['day', 'week', 'month', 'quarter', 'year'] %}
+{%- set time_grain = ['day', 'week', 'month', 'quarter', 'year'] -%}
+{%- set lookback_days = var('lookback_days_eop', 365) -%}
 
 -- THIS MODEL DOESNOT MATCH THE UPSTREAM
 -- PLEASE CHECK NEGATIVE BAALNCES
@@ -11,9 +15,9 @@
 select
     md5(ad.balance_id::text || '{{t}}')::uuid as grain_id,
     ad.balance_id,
-    {% if t in ['day', 'week', 'month', 'year'] %}
+    {%- if t in ['day', 'week', 'month', 'year'] %}
     (date_trunc('{{t}}', ad.calendar_date) + interval '1 {{t}}' - interval '1 day')::date as calendar_date,{% endif %}
-    {% if t in ['quarter'] %}
+    {%- if t in ['quarter'] %}
     (date_trunc('{{t}}', ad.calendar_date) + interval '3 month' - interval '1 day')::date as calendar_date,{% endif %}
     '{{t}}' as time_grain,
     ad.currency,
@@ -29,4 +33,7 @@ select
 from {{ref("fct_balances_enriched")}} ad
 where is_end_of_period ~* '{{t}}'
 and balance > 0
-{% if not loop.last %}union all{% endif %}{% endfor %}
+{% if is_incremental() -%}
+and ad.calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+{% endif %}
+{%- if not loop.last %}union all{% endif %}{% endfor %}

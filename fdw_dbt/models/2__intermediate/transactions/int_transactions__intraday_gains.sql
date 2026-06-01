@@ -3,7 +3,7 @@
 ) }}
 
 select
-    md5(account || calendar_date || currency || asset || 'intraday')::uuid as transaction_id,
+    md5(account || calendar_date || currency || asset || 'intraday')::uuid as fiat_transaction_id,
     calendar_date,
     account,
     currency,

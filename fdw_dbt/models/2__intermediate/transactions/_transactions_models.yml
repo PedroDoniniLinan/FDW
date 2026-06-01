@@ -197,9 +197,9 @@ models:
   - name: int_transactions__intraday_gains
     description: Intraday gains model capturing end-of-day transaction value movements, used for short-term trading and intra-period performance analysis.
     columns:
-      - name: transaction_id
+      - name: fiat_transaction_id
         data_type: uuid
-        description: "{{ doc('transaction_id') }}"
+        description: "{{ doc('fiat_transaction_id') }}"
         tests:
           - not_null
           - unique
@@ -230,9 +230,9 @@ models:
   - name: int_transactions__dod_gains
     description: Day-over-day gains model tracking asset and currency value changes between consecutive periods, useful for daily PnL and exchange rate movement analysis.
     columns:
-      - name: transaction_id
+      - name: fiat_transaction_id
         data_type: uuid
-        description: "{{ doc('transaction_id') }}"
+        description: "{{ doc('fiat_transaction_id') }}"
         tests:
           - not_null
           - unique
