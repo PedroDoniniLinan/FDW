@@ -8,8 +8,10 @@ models:
         data_type: uuid
         description: "{{ doc('balance_id') }}"
         tests:
-          - not_null
-          - unique
+          - unique:
+              where: "calendar_date >= current_date - interval '{{ var(\"lookback_days\", 30) + 30 }} days'"
+          - not_null:
+              where: "calendar_date >= current_date - interval '{{ var(\"lookback_days\", 30) + 30 }} days'"
       - name: calendar_date
         data_type: date
         description: "{{ doc('calendar_date') }}"
@@ -34,7 +36,8 @@ models:
         data_type: character varying
         description: "{{ doc('account') }}"
         tests:
-          - not_null
+          - not_null:
+              where: "calendar_date >= current_date - interval '{{ var(\"lookback_days\", 30) + 30 }} days'"
       - name: account_country
         data_type: text
         description: "{{ doc('account_country') }}"

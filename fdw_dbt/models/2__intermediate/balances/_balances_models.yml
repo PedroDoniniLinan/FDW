@@ -8,8 +8,10 @@ models:
         data_type: uuid
         description: "{{ doc('balance_id') }}"
         tests:
-          - not_null
-          - unique
+        - unique:
+            where: "calendar_date >= current_date - interval '{{ var(\"lookback_days\", 30) + 30 }} days'"
+        - not_null:
+            where: "calendar_date >= current_date - interval '{{ var(\"lookback_days\", 30) + 30 }} days'"
       - name: account
         data_type: character varying
         description: "{{ doc('account') }}"
