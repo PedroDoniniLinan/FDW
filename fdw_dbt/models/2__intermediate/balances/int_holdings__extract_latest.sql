@@ -15,4 +15,4 @@ select
     ) as units
 from {{ src }} l
     left join {{ ref('int_shared__asset_rounding') }} r on (r.rounding_asset = l.asset)
-where calendar_date = {{ latest_date(src, "calendar_date") }}
+where calendar_date = {{ get_latest_date(src, "calendar_date") }}

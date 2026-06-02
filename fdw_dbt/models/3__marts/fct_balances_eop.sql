@@ -1,12 +1,21 @@
-{{ config(
-    materialized='incremental',
-    unique_key='grain_id',
-    incremental_strategy='merge',
-    tags=['refactored', 'categories', 'main', 'mart', 'rated']
-) }}
+{%- set lookback_days = var('lookback_days_eop', 30) -%}
+
+{%- set config_dict = {
+    'materialized': 'incremental',
+    'unique_key': 'grain_id',
+    'incremental_strategy': 'merge',
+    'tags': ['refactored', 'categories', 'main', 'mart', 'rated']
+} -%}
+
+{%- if is_incremental() -%}
+    {%- do config_dict.update({'incremental_predicates': [
+        "DBT_INTERNAL_DEST.calendar_date > " ~ get_latest_date(this, 'calendar_date', lookback_days, 'day')
+    ]}) -%}
+{%- endif -%}
+
+{{ config(**config_dict) }}
 
 {%- set time_grain = ['day', 'week', 'month', 'quarter', 'year'] -%}
-{%- set lookback_days = var('lookback_days_eop', 365) -%}
 
 -- THIS MODEL DOESNOT MATCH THE UPSTREAM
 -- PLEASE CHECK NEGATIVE BAALNCES
@@ -34,6 +43,6 @@ from {{ref("fct_balances_enriched")}} ad
 where is_end_of_period ~* '{{t}}'
 and balance > 0
 {% if is_incremental() -%}
-and ad.calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+and ad.calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
 {% endif %}
 {%- if not loop.last %}union all{% endif %}{% endfor %}

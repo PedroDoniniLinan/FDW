@@ -28,6 +28,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   fdw_dbt:
+    +on_schema_change: append_new_columns
     +store_failures: true
     +schema: silver
     +materialized: view
@@ -40,5 +41,6 @@ seeds:
     +schema: seeds
 
 vars:
-  lookback_days: 90
+  lookback_days: 30
+  lookback_days_: 900
   lookback_days_eop: 365

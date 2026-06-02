@@ -1,15 +1,19 @@
-{# {{ config(
-    tags=['refactored', 'categories', 'main', 'mart', 'rated']
-) }} #}
-
-{{ config(
-    materialized='incremental',
-    unique_key='fiat_transaction_id',
-    incremental_strategy='merge',
-    tags=['refactored', 'categories', 'main', 'mart', 'rated']
-) }}
-
 {%- set lookback_days = var('lookback_days', 30) -%}
+
+{%- set config_dict = {
+    'materialized': 'incremental',
+    'unique_key': 'fiat_transaction_id',
+    'incremental_strategy': 'merge',
+    'tags': ['refactored', 'categories', 'main', 'mart', 'rated']
+} -%}
+
+{%- if is_incremental() -%}
+    {%- do config_dict.update({'incremental_predicates': [
+        "DBT_INTERNAL_DEST.calendar_date > " ~ get_latest_date(this, 'calendar_date', lookback_days, 'day')
+    ]}) -%}
+{%- endif -%}
+
+{{ config(**config_dict) }}
 
 select
     t.fiat_transaction_id,
@@ -38,5 +42,5 @@ from {{ref("int_transactions__all_with_gains")}} t
         )
     left join {{ref("dim_account")}} ac on (t.account = ac.account)
 {% if is_incremental() -%}
-where calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+where calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
 {% endif %}

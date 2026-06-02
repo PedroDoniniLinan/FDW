@@ -24,7 +24,7 @@ with
             calendar_date,
             units
         from {{ src_calculated }}
-        where calendar_date = {{ latest_date(src_calculated, "calendar_date") }}
+        where calendar_date = {{ get_latest_date(src_calculated, "calendar_date") }}
     )
 
 select

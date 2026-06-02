@@ -1,16 +1,12 @@
+{%- set lookback_days = var('lookback_days', 30) -%}
 {{ config(
     materialized='incremental',
     unique_key='fiat_transaction_id',
     incremental_strategy='merge',
+    incremental_predicates=["DBT_INTERNAL_DEST.calendar_date > (select max(calendar_date) - interval '" ~ lookback_days ~ " days' from " ~ this ~ ")"],
+    on_schema_change=get_on_schema_change(),
     tags=['refactored', 'main', 'rated']
 ) }}
-{# {{ config(
-    materialized='table',
-    tags=['refactored', 'main', 'rated']
-) }} #}
-
-
-{%- set lookback_days = var('lookback_days', 30) -%}
 
 with 
 

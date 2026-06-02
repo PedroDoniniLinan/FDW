@@ -1,12 +1,16 @@
+{%- set lookback_days = var('lookback_days', 30) -%}
+
+
 {{ config(
     materialized='incremental',
     unique_key='balance_id',
     incremental_strategy='merge',
+    incremental_predicates=["DBT_INTERNAL_DEST.calendar_date > " ~ get_latest_date(this, 'calendar_date', lookback_days, 'day')],
+    on_schema_change=get_on_schema_change(),
     tags=['refactored', 'main', 'rated']
 ) }}
 
 {%- set currencies = ['BRL', 'USD', 'EUR', 'Original'] -%}
-{%- set lookback_days = var('lookback_days', 30) -%}
 
 {% for c in currencies %}
 select
@@ -28,6 +32,6 @@ from {{ref("int_holdings__daily")}} ad
         and p.currency = '{{c}}'
     )
 {%- if is_incremental() -%}
-where ad.calendar_date > (select max(calendar_date) - interval '{{ lookback_days }} days' from {{ this }})
+where ad.calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
 {% endif %}
 {% if not loop.last %}union all{% endif %}{% endfor %}

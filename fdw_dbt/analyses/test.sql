@@ -1,4 +1,5 @@
-{%- set lookback_days = var('lookback_days_eop', 365) -%}
-
-{# select max(calendar_date) - interval '{{ lookback_days }} days' from {{ ref("fct_balances_eop") }} #}
-select max(calendar_date) - interval '121 days' from {{ ref("fct_balances_enriched") }}
+select date_trunc('month', calendar_date) as calendar_date, count(1), count(distinct balance_id)
+from {{ ref("int_balances__daily") }}
+group by 1
+order by 1 desc
+;
