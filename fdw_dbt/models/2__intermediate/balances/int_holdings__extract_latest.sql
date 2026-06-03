@@ -13,6 +13,6 @@ select
         l.units::numeric,
         r.round_num
     ) as units
-from {{ src }} l
-    left join {{ ref('int_shared__asset_rounding') }} r on (r.rounding_asset = l.asset)
-where calendar_date = {{ get_latest_date(src, "calendar_date") }}
+from {{ src }} as l
+left join {{ ref('int_shared__asset_rounding') }} as r on (l.asset = r.rounding_asset)
+where l.calendar_date = {{ get_latest_date(src, "calendar_date") }}

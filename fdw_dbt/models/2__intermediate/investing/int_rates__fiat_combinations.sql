@@ -12,7 +12,8 @@ select
     calendar_date,
     exchange_rate
 from {{ src }}
-where asset in {{ fiat_currencies }}
+where
+    asset in {{ fiat_currencies }}
     and asset != exchange_asset
 union all
 select
@@ -20,9 +21,10 @@ select
     exchange_asset as asset,
     asset as exchange_asset,
     calendar_date,
-    round(1/exchange_rate::numeric, 7) as exchange_rate
+    round(1 / exchange_rate::numeric, 7) as exchange_rate
 from {{ src }}
-where asset in {{ fiat_currencies }}
+where
+    asset in {{ fiat_currencies }}
     and asset != exchange_asset
 union all
 select distinct
