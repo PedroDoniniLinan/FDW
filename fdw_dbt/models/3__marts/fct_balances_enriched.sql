@@ -24,9 +24,11 @@ select
     tc.budget_level_2,
     tc.budget_level_3,
     ad.balance
-from {{ref("int_balances__daily")}} ad
-    left join {{ref("int_transaction_categories__united")}} tc on (ad.asset = tc.category and tc.transaction_type = 'Income')
-    left join {{ref("dim_account")}} ac on (ad.account = ac.account)
+from {{ ref("int_balances__daily") }} as ad
+    left join
+        {{ ref("int_transaction_categories__united") }} as tc
+    on (ad.asset = tc.category and tc.transaction_type = 'Income')
+    left join {{ ref("dim_account") }} as ac on (ad.account = ac.account)
 {% if is_incremental() -%}
 where ad.calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
 {% endif %}

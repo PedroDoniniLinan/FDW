@@ -35,12 +35,12 @@ select
     t.units,
     t.exchange_rate,
     t.amount
-from {{ref("int_transactions__all_with_gains")}} t
-    left join {{ref("int_transaction_categories__united")}} tc on (
-        t.category = tc.category 
+from {{ ref("int_transactions__all_with_gains") }} as t
+    left join {{ ref("int_transaction_categories__united") }} as tc on (
+        t.category = tc.category
         and (t.transaction_type = tc.transaction_type or t.transaction_type in ('Exchange', 'Transfer'))
         )
-    left join {{ref("dim_account")}} ac on (t.account = ac.account)
+    left join {{ ref("dim_account") }} as ac on (t.account = ac.account)
 {% if is_incremental() -%}
-where calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
+where t.calendar_date > {{ get_latest_date(this, 'calendar_date', lookback_days, 'days') }}
 {% endif %}
