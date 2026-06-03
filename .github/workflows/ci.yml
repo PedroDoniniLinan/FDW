@@ -37,12 +37,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run init.sql
-        env:
-          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
-        run: |
-          psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_DATABASE }} -f init.sql
-
       - name: Install dbt packages
         working-directory: fdw_dbt
         env:
@@ -52,6 +46,23 @@ jobs:
           DB_DATABASE: ${{ secrets.DB_DATABASE }}
         run: dbt deps --profiles-dir .
 
+      - name: Run init.sql
+        env:
+          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_DATABASE }} -f init.sql
+
+      # PR: download master's manifest for state comparison
+      - name: Download master manifest
+        if: github.event_name == 'pull_request'
+        uses: dawidd6/action-download-artifact@v6
+        with:
+          name: dbt-manifest
+          branch: master
+          workflow: ci.yml
+          path: fdw_dbt/state
+        continue-on-error: true  # first run ever won't have a manifest yet
+
       - name: Run dbt build (PR)
         if: github.event_name == 'pull_request'
         working-directory: fdw_dbt
@@ -60,8 +71,15 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        run: dbt build --profiles-dir . --select state:modified+ --defer --state ./target
-        
+        run: |
+          if [ -f state/manifest.json ]; then
+            dbt build --profiles-dir . --select state:modified+ --defer --state ./state
+          else
+            echo "No master manifest found, running full build"
+            dbt build --profiles-dir .
+          fi
+
+      # Merge to master: full build then upload manifest
       - name: Run dbt build (merge to master)
         if: github.event_name == 'push'
         working-directory: fdw_dbt
@@ -71,3 +89,10 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_DATABASE: ${{ secrets.DB_DATABASE }}
         run: dbt build --profiles-dir .
+
+      - name: Upload manifest
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-manifest
+          path: fdw_dbt/target/manifest.json
