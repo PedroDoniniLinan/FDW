@@ -1,0 +1,64 @@
+name: dbt CI/CD
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+jobs:
+  dbt:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: ${{ secrets.DB_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.DB_DATABASE }}
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run init.sql
+        env:
+          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_DATABASE }} -f init.sql
+
+      - name: Run dbt build (PR)
+        if: github.event_name == 'pull_request'
+        working-directory: fdw_dbt
+        env:
+          DBT_TARGET: ci
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        run: dbt build --profiles-dir . --select state:modified+ --defer --state ./target
+        
+      - name: Run dbt build (merge to master)
+        if: github.event_name == 'push'
+        working-directory: fdw_dbt
+        env:
+          DBT_TARGET: ci
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        run: dbt build --profiles-dir .
