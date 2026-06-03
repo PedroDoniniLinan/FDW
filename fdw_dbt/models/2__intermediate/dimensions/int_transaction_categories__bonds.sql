@@ -35,12 +35,12 @@ all_dims as (
 )
 
 select
-    category_id
+    category_id,
     category,
     transaction_type,
     financial_level_1,
     financial_level_2,
     budget_level_1,
     budget_level_2,
-    budget_level_3,
+    budget_level_3
 from all_dims
