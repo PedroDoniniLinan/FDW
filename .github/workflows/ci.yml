@@ -32,7 +32,7 @@ jobs:
 
       - name: Lint SQL (sqlfluff)
         working-directory: fdw_dbt
-        run: sqlfluff lint models/ --format github-annotation --config .github/.sqlfluff
+        run: sqlfluff lint models/ --format github-annotation --config ${{ github.workspace }}/.github/.sqlfluff
 
   build:
     runs-on: ubuntu-latest
