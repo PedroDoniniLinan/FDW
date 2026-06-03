@@ -7,8 +7,8 @@ indent_unit = space
 exclude_rules = RF04, AM06, LT02
 
 [sqlfluff:templater:dbt]
-project_dir = fdw_dbt
-profiles_dir = fdw_dbt
+project_dir = .
+profiles_dir = .
 profile = fdw_dbt
 target = dev
 
