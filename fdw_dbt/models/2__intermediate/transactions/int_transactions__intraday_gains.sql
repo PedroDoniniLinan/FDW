@@ -27,8 +27,7 @@ exchange_transactions as (
         source_transaction_id,
         account,
         calendar_date,
-        currency,
-        5
+        currency
 ),
 
 final_agg as (
