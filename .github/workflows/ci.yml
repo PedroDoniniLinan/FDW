@@ -29,6 +29,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install dbt packages
+        working-directory: fdw_dbt
+        env:
+          DBT_TARGET: ci
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        run: dbt deps --profiles-dir .
+
       - name: Lint SQL (sqlfluff)
         working-directory: fdw_dbt
         env:
