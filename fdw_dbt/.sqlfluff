@@ -10,7 +10,6 @@ exclude_rules = RF04, AM06, LT02
 project_dir = .
 profiles_dir = .
 profile = fdw_dbt
-target = dev
 
 [sqlfluff:indentation]
 indent_using_tabs = False
