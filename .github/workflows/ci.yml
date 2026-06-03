@@ -43,6 +43,15 @@ jobs:
         run: |
           psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_DATABASE }} -f init.sql
 
+      - name: Install dbt packages
+        working-directory: fdw_dbt
+        env:
+          DBT_TARGET: ci
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+        run: dbt deps --profiles-dir .
+
       - name: Run dbt build (PR)
         if: github.event_name == 'pull_request'
         working-directory: fdw_dbt
