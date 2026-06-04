@@ -90,4 +90,5 @@ select
     essentials_burden_rate,
     non_essentials_burden_rate,
     investment_to_work_ratio
+    1 as test
 from kpis
