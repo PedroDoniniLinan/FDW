@@ -131,6 +131,7 @@ jobs:
           branch: master
           workflow: ci.yml
           path: fdw_dbt/state
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
 
       - name: Run dbt build (PR)
