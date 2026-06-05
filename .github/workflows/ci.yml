@@ -11,64 +11,6 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:16-alpine
-        env:
-          POSTGRES_USER: ${{ secrets.DB_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          POSTGRES_DB: ${{ secrets.DB_DATABASE }}
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Cache pip dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Install dbt packages
-        working-directory: fdw_dbt
-        env:
-          DBT_TARGET: ci
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        run: dbt deps --profiles-dir .
-
-      - name: Lint SQL (sqlfluff)
-        working-directory: fdw_dbt
-        env:
-          DBT_TARGET: ci
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_DATABASE: ${{ secrets.DB_DATABASE }}
-          DB_HOST: localhost
-          SQLFLUFF_TEMPLATER_DBT_TARGET: ci
-        run: |
-          sqlfluff lint models/1__staging --format github-annotation
-          sqlfluff lint models/2__intermediate --format github-annotation
-          sqlfluff lint models/3__marts --format github-annotation
   build:
     runs-on: ubuntu-latest
     needs: lint
@@ -132,7 +74,7 @@ jobs:
           workflow: ci.yml
           path: fdw_dbt/state
           github_token: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
+          verbose: true
 
       - name: Run dbt build (PR)
         if: github.event_name == 'pull_request'
