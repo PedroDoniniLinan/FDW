@@ -1,0 +1,55 @@
+version: 2
+
+macros:
+  - name: get_latest_date
+    description: |
+      Renders an inline scalar subquery that returns the maximum value of a date column from a given relation, optionally shifted back by a lookback window. Intended for use in incremental model WHERE clauses to define the reprocessing boundary. Must be wrapped in an is_incremental() guard by the caller if in a incremental model —  the macro itself has no context awareness and will fail on first run if the relation does not exist.
+    arguments:
+      - name: relation
+        type: relation
+        description: >
+          A dbt relation object (e.g. this or ref('model_name')) representing the table
+          to query the max date from.
+      - name: column
+        type: string
+        description: >
+          The name of the date or timestamp column to aggregate with max().
+      - name: lookback_window
+        type: number
+        description: >
+          Number of units to subtract from the max date. Defaults to 0 (no shift).
+      - name: lookback_unit
+        type: string
+        description: >
+          Interval unit for the lookback window (e.g. 'day', 'month', 'year').
+          Defaults to 'day'. Must be a valid SQL interval unit for the target warehouse.
+          
+  - name: window_truncate_pre_hook
+    description: |
+      Generates a pre-hook string that deletes rows from the incremental model's target
+      table within a lookback window, making them eligible for reprocessing on the next
+      run. The deletion only executes if the relation already exists, making it safe for
+      first runs. Intended to be passed to the pre_hook model config.
+      The hook deletes rows where the date column is greater than
+      (max(date_column) - N days), i.e. it truncates the trailing window rather than
+      a fixed date range.
+    arguments:
+      - name: date_column
+        type: string
+        description: >
+          The name of the date column used to identify the lookback boundary.
+          Must exist in the target relation.
+      - name: lookback_days
+        type: number
+        description: >
+          Number of days to subtract from the max date when computing the deletion
+          boundary. Rows more recent than (max(date_column) - lookback_days) are deleted
+          and reprocessed.
+
+  - name: get_on_schema_change
+    description: |
+      Returns the appropriate on_schema_change strategy based on the current target.
+      Returns 'append_new_columns' for prod targets and 'fail' for all others, ensuring
+      schema changes are caught explicitly in development while being handled gracefully
+      in production. Intended to be called inside a model's config() block.
+    arguments: []

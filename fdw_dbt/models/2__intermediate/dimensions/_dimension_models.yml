@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: int_transaction_categories__bonds
+    description: >
+      Model containing transaction category mappings related to
+      bond investments and fixed-income holdings. Standardizes financial and
+      budgeting classification fields into a shared transaction category structure.
+    columns:
+      - name: category_id
+        data_type: uuid
+        description: "{{ doc('category_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: category
+        data_type: character varying
+        description: "{{ doc('category') }}"
+        tests:
+          - not_null
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+        tests:
+          - not_null
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+        tests:
+          - not_null
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+        tests:
+          - not_null
+
+  - name: int_transaction_categories__united
+    description: >
+      Consolidated intermediate transaction category model combining all
+      category mappings across income, expenses, investments, and other
+      financial transaction types into a unified classification structure.
+    columns:
+      - name: category_id
+        data_type: uuid
+        description: "{{ doc('category_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: category
+        data_type: text
+        description: "{{ doc('category') }}"
+        tests:
+          - not_null
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+        tests:
+          - not_null
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+        tests:
+          - not_null
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+        tests:
+          - not_null

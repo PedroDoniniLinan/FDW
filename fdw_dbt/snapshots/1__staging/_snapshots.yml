@@ -1,0 +1,59 @@
+snapshots:
+  - name: sns_transactions__external_transactions
+    description: ""                # optional
+    relation: source('bronze', 'external_transactions')
+    config:
+      # database:                 # optional
+      schema: snapshots                   # optional
+      # alias:                    # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      # snapshot_meta_column_names: # optional
+      strategy: timestamp
+      # check_cols:
+      updated_at: _etl_loaded_at
+  - name: sns_transactions__exchanges
+    description: ""                # optional
+    relation: source('bronze', 'exchanges')
+    config:
+      schema: snapshots                   # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+  - name: sns_transactions__transfers
+    description: ""                # optional
+    relation: source('bronze', 'transfers')
+    config:
+      schema: snapshots                   # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      strategy: timestamp
+      updated_at: _etl_loaded_at
+  - name: sns_projections__transactions
+    description: ""                # optional
+    relation: source('bronze', 'projections')
+    config:
+      schema: snapshots                   # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      strategy: timestamp
+      updated_at: _etl_loaded_at      
+  - name: sns_balances__actuals
+    description: ""                # optional
+    relation: source('bronze', 'balances')
+    config:
+      schema: snapshots                   # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      strategy: timestamp
+      updated_at: _etl_loaded_at    
+  - name: sns_investing__prices
+    description: ""                # optional
+    relation: source('bronze', 'prices')
+    config:
+      schema: snapshots                   # optional
+      unique_key: id
+      hard_deletes: new_record            # optional
+      strategy: timestamp
+      updated_at: _etl_loaded_at  

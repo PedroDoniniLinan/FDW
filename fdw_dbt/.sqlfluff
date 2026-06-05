@@ -1,0 +1,50 @@
+[sqlfluff]
+templater = dbt
+dialect = postgres
+runaway_limit = 10
+max_line_length = 120
+indent_unit = space
+exclude_rules = RF04, AM06, LT02
+
+[sqlfluff:templater:dbt]
+project_dir = .
+profiles_dir = .
+profile = fdw_dbt
+
+[sqlfluff:indentation]
+indent_using_tabs = False
+tab_space_size = 4
+
+[sqlfluff:layout:type:comma]
+; No space before commas
+spacing_before = touch
+; Place commas at the end of lines
+line_position = trailing
+
+[sqlfluff:rules:capitalisation.keywords]
+; Keywords must be lowercase
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+; Identifiers must be lowercase
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+; Function names must be lowercase
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+; Literals like TRUE/FALSE must be lowercase
+capitalisation_policy = lower
+
+[sqlfluff:rules:aliasing.table]
+; Require explicit table aliases
+aliasing = explicit
+
+[sqlfluff:rules:aliasing.column]
+; Require explicit column aliases
+aliasing = explicit
+
+[sqlfluff:rules:aliasing.expression]
+; Disallow implicit scalar expression aliasing
+allow_scalar = False

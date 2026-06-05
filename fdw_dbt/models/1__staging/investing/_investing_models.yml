@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_investing__rates
+    description: "Exchange rates between assets and fiat currencies (non-exhaustive combinations) taken periodically"
+    columns:
+      - name: rate_id
+        data_type: uuid
+        description: "{{ doc('rate_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: exchange_asset
+        data_type: character varying
+        description: "{{ doc('exchange_asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+        tests:
+          - dbt_utils.expression_is_true:
+                expression: ">= 0"
+

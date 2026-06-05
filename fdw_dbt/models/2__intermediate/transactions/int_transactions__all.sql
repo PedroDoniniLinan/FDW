@@ -1,0 +1,47 @@
+{{ config(
+    tags=['refactored', 'balance_validation', 'main']
+) }}
+
+with
+
+unioned_transactions as (
+    select
+        transaction_id,
+        source_transaction_id,
+        transaction_type,
+        transaction_description,
+        units,
+        account,
+        calendar_date,
+        category,
+        asset,
+        count_to_balance
+    from {{ ref("stg_transactions__exchanges") }}
+    union all
+    select * from {{ ref("stg_transactions__internal") }}
+    union all
+    select * from {{ ref("stg_transactions__external") }}
+),
+
+rounding as (
+    select
+        l.transaction_id,
+        l.source_transaction_id,
+        l.transaction_type,
+        l.transaction_description,
+        l.account,
+        l.calendar_date,
+        l.category,
+        l.asset,
+        l.count_to_balance,
+        round(
+            l.units::numeric,
+            r.round_num
+        ) as units
+    from unioned_transactions as l
+    left join {{ ref('int_shared__asset_rounding') }} as r on (l.asset = r.rounding_asset)
+    where l.units is not null
+)
+
+select *
+from rounding
