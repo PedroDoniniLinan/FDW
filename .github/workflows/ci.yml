@@ -5,6 +5,9 @@ on:
     branches: [master]
   push:
     branches: [master]
+  permissions:
+    actions: read
+    contents: read
 
 jobs:
   lint:
