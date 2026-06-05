@@ -74,6 +74,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           check_artifacts: true
           search_artifacts: true
+          workflow_conclusion: success
 
       - name: Run dbt build (PR)
         if: github.event_name == 'pull_request'
