@@ -69,7 +69,6 @@ jobs:
         uses: dawidd6/action-download-artifact@v6
         with:
           name: dbt-manifest
-          branch: master
           workflow: ci.yml
           path: fdw_dbt/state
           github_token: ${{ secrets.GITHUB_TOKEN }}
