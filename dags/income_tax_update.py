@@ -1,10 +1,9 @@
-from datetime import datetime
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from dbt.cli.main import dbtRunner, dbtRunnerResult
-
-from lib import postgresql_lib, utils
+from lib import postgresql_lib
 from lib.constants import *
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -44,20 +43,20 @@ def calculate_taxes(df):
                         raise Exception
                 avg_price_list.append([
                     # row['id'] ,
-                    row['ticker'], 
+                    row['ticker'],
                     row['currency'],
-                    row['calendar_date'], 
-                    avg_price, row['total_amount'], 
+                    row['calendar_date'],
+                    avg_price, row['total_amount'],
                     avg_price * max(row['total_amount'], 0)])
                 if row['net_amount'] < 0:
                     sales.append([
-                        # row['security_type'], 
-                        row['ticker'], 
-                        row['currency'], 
-                        row['calendar_date'], 
-                        row['net_amount'], 
-                        avg_price, 
-                        row['price'], 
+                        # row['security_type'],
+                        row['ticker'],
+                        row['currency'],
+                        row['calendar_date'],
+                        row['net_amount'],
+                        avg_price,
+                        row['price'],
                         row['abs_amount'] * avg_price,
                         row['abs_amount'] * row['price'],
                         (avg_price - row['price']) * row['net_amount'] - row['tax']])
@@ -65,16 +64,16 @@ def calculate_taxes(df):
     print(df_pos)
 
     # if len(sales) > 0:
-    df_s = pd.DataFrame(np.array(sales), columns=['ticker', 'currency', 'calendar_date', 'net_amount', 'avg_price', 'sale_price', 
+    df_s = pd.DataFrame(np.array(sales), columns=['ticker', 'currency', 'calendar_date', 'net_amount', 'avg_price', 'sale_price',
                                                 'applied_value', 'sale_value', 'pnl'])
     print(df_s)
-    
+
     return df_pos, df_s
 
 
 def update_tables(df_pos, df_sales, target_db):
-    postgresql_lib.execute_query(f"TRUNCATE TABLE silver.taxes_avg_price_raw", code=True, mode='write', target_db=target_db)
-    postgresql_lib.execute_query(f"TRUNCATE TABLE silver.taxes_pnl_raw", code=True, mode='write', target_db=target_db)
+    postgresql_lib.execute_query("TRUNCATE TABLE silver.taxes_avg_price_raw", code=True, mode='write', target_db=target_db)
+    postgresql_lib.execute_query("TRUNCATE TABLE silver.taxes_pnl_raw", code=True, mode='write', target_db=target_db)
     postgresql_lib.insert_df(df_pos, 'silver.taxes_avg_price_raw', merge=False, target_db=target_db)
     postgresql_lib.insert_df(df_sales, 'silver.taxes_pnl_raw', merge=False, target_db=target_db)
 

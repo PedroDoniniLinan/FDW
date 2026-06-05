@@ -37,6 +37,7 @@ MarkupSafe==3.0.2
 mashumaro==3.14
 more-itertools==10.5.0
 msgpack==1.1.0
+mypy>=1.0.0
 networkx==3.4.2
 numpy==2.2.0
 oauthlib==3.3.1
@@ -68,6 +69,7 @@ requests==2.32.3
 requests-oauthlib==2.0.0
 rpds-py==0.22.3
 rsa==4.9
+ruff>=0.4.0
 six==1.17.0
 snowplow-tracker==1.0.4
 sqlfluff==4.2.1

@@ -1,9 +1,11 @@
 from datetime import datetime, timedelta
+from typing import Literal
+
 from dateutil.relativedelta import relativedelta
-from typing import Union, Literal
+
 
 def date_add(
-    date: Union[str, datetime],
+    date: str | datetime,
     amount: int,
     unit: Literal['day', 'week', 'month', 'year']
 ) -> datetime:
@@ -30,16 +32,16 @@ def date_add(
             date = datetime.fromisoformat(date.replace('Z', '+00:00'))
         except ValueError as e:
             raise ValueError(f"Invalid date format: {str(e)}")
-    
+
     if not isinstance(date, datetime):
         raise TypeError("date must be a string or datetime object")
-        
+
     if not isinstance(amount, int):
         raise TypeError("amount must be an integer")
-        
+
     if unit not in ['day', 'week', 'month', 'year']:
         raise ValueError("unit must be 'day', 'week', 'month', or 'year'")
-    
+
     # Handle each unit type
     if unit == 'day':
         return date + timedelta(days=amount)

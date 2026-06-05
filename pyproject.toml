@@ -1,0 +1,31 @@
+[project]
+name = "fdw_dbt"
+version = "0.1.0"
+description = "dbt project for ..."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade — modernise syntax automatically
+    "B",   # flake8-bugbear — catches likely bugs
+    "C4",  # flake8-comprehensions — cleaner list/dict comprehensions
+    "SIM", # flake8-simplify — simplifiable code patterns
+]
+ignore = [
+    "E501", # line too long — usually handled by formatter
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"] # unused imports fine in __init__
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

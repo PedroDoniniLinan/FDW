@@ -1,8 +1,10 @@
-import psycopg2
-import pandas as pd
-from pathlib import Path
-from dotenv import load_dotenv
 import os
+from pathlib import Path
+
+import pandas as pd
+import psycopg2
+from dotenv import load_dotenv
+
 
 def execute_query(query_name, code=False, mode='select', target_db='prod'):
     """Execute a SQL query against a PostgreSQL database.
@@ -25,7 +27,7 @@ def execute_query(query_name, code=False, mode='select', target_db='prod'):
     )
 
     if not code:
-        with open(query_name, 'r') as file:
+        with open(query_name) as file:
             query = file.read()
     else:
         query = query_name

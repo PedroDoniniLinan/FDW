@@ -1,10 +1,9 @@
-from datetime import datetime
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from dbt.cli.main import dbtRunner, dbtRunnerResult
-
-from lib import postgresql_lib, utils
+from lib import postgresql_lib
 from lib.constants import *
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -44,15 +43,15 @@ def extract_data():
             and time_grain = 'day'
             and account != 'Nubank C'
         """, code=True)
-    
+
     df_yields = postgresql_lib.execute_query('select * from silver.int_yield_stats', code=True)
 
     return df_projections, df_balance.iat[0, 0], df_yields
 
 
 def _calculate_projections(
-    df_projections, balance, df_yields, 
-    pos_iteration_init=0, 
+    df_projections, balance, df_yields,
+    pos_iteration_init=0,
     rate_i_init=None,
     update_period=1,
     pos_year_pct_modifier=0
@@ -73,13 +72,13 @@ def _calculate_projections(
     else:
         df_yields['rate_i'] = rate_i_init
     df_yields['rate_i'] = df_yields['rate_i'].astype(np.float64)
-    
+
     # Initialize balance per asset based on target_allocation
     for _, asset_row in df_yields.iterrows():
         asset_name = asset_row['level_3']
         df_projections[f'balance_{asset_name}'] = balance * float(asset_row['target_allocation'])
         df_projections[f'interest_{asset_name}'] = 0.0
-    
+
     # Initialize total columns
     df_projections['interest'] = 0.0
     df_projections['balance'] = balance
@@ -127,7 +126,7 @@ def _calculate_projections(
         # First year is baseline: set 0 interest, skip updating balance
         if row['calendar_date'].year == 2023:
             continue
-        
+
 
         # Calculate per-asset interest and update balances
         interest = 0.0
@@ -135,18 +134,18 @@ def _calculate_projections(
         for _, asset_row in df_yields.iterrows():
             asset_name = asset_row['level_3']
             asset_rate = asset_row['rate_i']
-            
+
             # If the projection year is after 2040, dampen (shrink) the returns for this asset
             if row['calendar_date'].year >= 2040:
                 asset_rate = (asset_rate - 1) * (0.5 + 0.5 *(2070 - row['calendar_date'].year) / 30) + 1
-            
+
             # Calculate interest for this asset
             asset_interest = df_projections.at[index, f'balance_{asset_name}'] * (asset_rate - 1)
             df_projections.at[index, f'interest_{asset_name}'] = asset_interest
 
             temp_balance += df_projections.at[index, f'balance_{asset_name}']
             interest += asset_interest
-        
+
         apport = df_projections.at[index, 'apport']
         # print(f'{row["calendar_date"]} - balance: {balance} + ({apport}) (interest: {interest:.2f} / {interest / balance * 100:.2f}%)')
         # print(f' - asset_balance: {temp_balance}')
@@ -162,7 +161,7 @@ def _calculate_projections(
     cols_to_drop = ['balance', 'interest']
     # print(df_projections[['calendar_date', 'balance', 'apport', 'interest']])
     df_assets = df_projections.drop(columns=cols_to_drop).copy()
-    
+
     balance_cols = [col for col in df_assets.columns if col.startswith('balance_')]
 
     asset_rows = []
@@ -226,7 +225,7 @@ def method_4(df_projections, balance, df_yields):
         pos_iteration_init=0,
         rate_i_init=None,
         pos_year_pct_modifier=-0.05,
-        update_period=12 
+        update_period=12
     )
 
 
@@ -236,7 +235,7 @@ def method_5(df_projections, balance, df_yields):
         pos_iteration_init=0,
         rate_i_init=None,
         pos_year_pct_modifier=-0.1,
-        update_period=12   
+        update_period=12
     )
 
 
@@ -249,7 +248,7 @@ def project_set(df_projections, balance, df_yields, yield_method=2):
 
 
 def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[3, 2, 4, 5, 1]):
-    balance = float(extracted_balance) 
+    balance = float(extracted_balance)
     df_results = None
     # for i in range(1):
         # i = 15
@@ -265,7 +264,7 @@ def calculate_projections(df_projections, extracted_balance, df_yields, yield_me
 
 
 def update_tables(df, target_db):
-    postgresql_lib.execute_query(f"TRUNCATE TABLE silver.balance_projections", code=True, mode='write', target_db=target_db)
+    postgresql_lib.execute_query("TRUNCATE TABLE silver.balance_projections", code=True, mode='write', target_db=target_db)
     postgresql_lib.insert_df(df, 'silver.balance_projections', merge=False, target_db=target_db)
 
 
@@ -284,7 +283,7 @@ if __name__ == '__main__':
     # update_dbt_models()
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
-    df = calculate_projections(df_projections, balance, df_yields)    
+    df = calculate_projections(df_projections, balance, df_yields)
     print(df)
     print('-- Insert')
     update_tables(df, 'prod')

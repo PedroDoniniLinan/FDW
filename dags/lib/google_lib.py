@@ -1,15 +1,14 @@
-import numpy as np
 import os
-from pathlib import Path
-import pandas as pd
-import pickle
 import re
-import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
 from dotenv.main import load_dotenv
-from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+
 
 def get_refresh_token():
     """Get refresh token for Google OAuth2 authentication.
@@ -91,7 +90,7 @@ def read_spreadsheet(spreadsheet_id, range_name, debug=False):
         Exception: If no data is found in the specified range
     """
     creds = get_credentials()
-    
+
     if debug:
         print('Credentials: SUCCESS')
 
@@ -104,10 +103,10 @@ def read_spreadsheet(spreadsheet_id, range_name, debug=False):
     result = sheet.values().get(
         spreadsheetId=spreadsheet_id,
         range=range_name).execute()
-    
+
     if debug:
         print('Sheets read: SUCCESS')
-    
+
     values = result.get('values', [])
     if not values:
         raise Exception('No data found')
@@ -188,7 +187,7 @@ def write_spreadsheet(spreadsheet_id, range_name, df, header=True):
     service = create_service('sheets', creds)
     sheet = service.spreadsheets()
 
-    tab_name, first_range_col, first_range_row, last_range = process_insert_range(range_name) 
+    tab_name, first_range_col, first_range_row, last_range = process_insert_range(range_name)
 
     if header:
         write_chunk(sheet, spreadsheet_id, tab_name, first_range_col, first_range_row, last_range, [df.columns.tolist()])

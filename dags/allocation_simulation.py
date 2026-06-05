@@ -1,8 +1,8 @@
 from datetime import datetime
 from pathlib import Path
+
 import pandas as pd
 from dbt.cli.main import dbtRunner, dbtRunnerResult
-
 from lib import postgresql_lib, utils
 from lib.constants import *
 
@@ -68,7 +68,6 @@ if __name__ == '__main__':
                 df = simulate_set(sn+1, sd, df_balance, df_performance)
             else:
                 df = pd.concat([df, simulate_set(sn+1, sd, df_balance, df_performance)])
-    postgresql_lib.execute_query(f"TRUNCATE TABLE gold.allocation_simulations", code=True, mode='write', target_db='prod')
+    postgresql_lib.execute_query("TRUNCATE TABLE gold.allocation_simulations", code=True, mode='write', target_db='prod')
     postgresql_lib.insert_df(df, 'gold.allocation_simulations', merge=False, target_db='prod')
     print('Simulation DONE')
-    

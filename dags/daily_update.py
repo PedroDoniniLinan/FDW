@@ -1,11 +1,11 @@
-import pandas as pd
 import datetime as dt
-from pathlib import Path
 import uuid
+from pathlib import Path
 from time import time
-from dbt.cli.main import dbtRunner, dbtRunnerResult
 
-from lib import postgresql_lib, google_lib
+import pandas as pd
+from dbt.cli.main import dbtRunner, dbtRunnerResult
+from lib import google_lib, postgresql_lib
 from lib.constants import *
 
 from projections import run_projections
@@ -15,14 +15,14 @@ NAMESPACE = uuid.UUID('12345678-1234-5678-1234-567812345678')
 
 
 def generate_ids(df, key_columns):
-    key_columns = list(key_columns) 
+    key_columns = list(key_columns)
     df = df.sort_values(key_columns).copy()
     df['_row_num'] = df.groupby(key_columns).cumcount()
 
     def make_id(row):
         natural_key = '|'.join(str(row[col]) for col in key_columns) + f"|{row['_row_num']}"
         return str(uuid.uuid5(NAMESPACE, natural_key))
-    
+
     df['id'] = df.apply(make_id, axis=1)
     df = df.drop(columns=['_row_num'])
     df = df[['id'] + [col for col in df.columns if col != 'id']]
@@ -64,19 +64,19 @@ def update_source(source_name, df, target_db):
 
     for column in ['amount', 'price', 'units', 'tax']:
         format_amounts(df, column)
-    
+
     if source_name in ['income', 'expenses']:
         df['transaction_type'] = source_name.capitalize()
         df['amount'] = -df['amount'] if source_name == 'expenses' else df['amount']
-    
+
     if 'calendar_date' in df.columns:
         df['calendar_date'] = df['calendar_date'].apply(lambda x : dt.datetime.strptime(str(x),'%d/%m/%Y'))
 
     df = generate_ids(df, key_columns=df.columns)
-    
+
     if source_name != 'expenses':
         postgresql_lib.execute_query(f"TRUNCATE TABLE {table_name}", code=True, mode='write', target_db=target_db)
-    
+
     postgresql_lib.insert_df(df, table_name, merge=False, target_db=target_db)
     print(f"Updated source {source_name} with {len(df)} records.")
 
@@ -144,7 +144,7 @@ if __name__ == '__main__':
     print('start')
     run_time = 0
     # print(SCRIPT_DIR / 'fdw_dbt')
-    run_time += update_source_from_sheets('prod')
+    run_time += update_source_from_sheets('dev')
     run_time += run_validation_dbt()
     validated, run_time_ = validate_balances()
     if validated:
