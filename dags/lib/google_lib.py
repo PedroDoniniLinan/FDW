@@ -48,14 +48,14 @@ def get_credentials():
         )
         return creds
     except Exception as e:
-        raise Exception(f'Failed to load Google API credentials from JSON file: {str(e)}')
+        raise Exception(f'Failed to load Google API credentials from JSON file: {str(e)}') from e
 
 
 def create_service(api_name, creds):
     """Create Google API service client.
     
     Args:
-        api_name (str): Name of the Google API service to create ('docs', 'drive', 
+        api_name (str): Name of the Google API service to create ('docs', 'drive',
             'webmasters', 'sheets', or 'androidpublisher')
         creds (Credentials): Google OAuth2 credentials object
         
@@ -83,7 +83,7 @@ def read_spreadsheet(spreadsheet_id, range_name, debug=False):
         range_name (str): Range to read in A1 notation (e.g. 'Sheet1!A1:D10')
         
     Returns:
-        DataFrame: Pandas DataFrame containing the spreadsheet data with lowercase 
+        DataFrame: Pandas DataFrame containing the spreadsheet data with lowercase
         column names
         
     Raises:
@@ -126,7 +126,7 @@ def process_insert_range(range):
         tuple: Contains:
             - tab_name (str): Name of the sheet
             - first_range_col (str): Starting column letter
-            - first_range_row (int): Starting row number  
+            - first_range_row (int): Starting row number
             - last_range (str): Ending cell reference
     """
     re_match = re.match("(.*)!(.*):(.*)", range)

@@ -4,10 +4,9 @@ from pathlib import Path
 from time import time
 
 import pandas as pd
-from dbt.cli.main import dbtRunner, dbtRunnerResult
+from dbt.cli.main import dbtRunner
 from lib import google_lib, postgresql_lib
-from lib.constants import *
-
+from lib.constants import db, sheets
 from projections import run_projections
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
@@ -35,9 +34,10 @@ def format_amounts(df, column):
         try:
             # df[column] = df[column].apply(lambda x: float(x)*1e9)
             df[column] = df[column].astype(float)
-        except:
+        except Exception as e:
             print(column)
             print(df[column])
+            print(e)
     return df
 
 
@@ -105,10 +105,8 @@ def run_validation_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
     dbt = dbtRunner()
-    # cli_args = ["seed", "--select", "income_mapping"]
-    # res: dbtRunnerResult = dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+balance_discrepancies"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
 
@@ -132,10 +130,10 @@ def run_dbt():
     start_time = time()
     dbt = dbtRunner()
     cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--full-refresh"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     dbt = dbtRunner()
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt')]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
 

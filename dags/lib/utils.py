@@ -31,7 +31,7 @@ def date_add(
         try:
             date = datetime.fromisoformat(date.replace('Z', '+00:00'))
         except ValueError as e:
-            raise ValueError(f"Invalid date format: {str(e)}")
+            raise ValueError(f"Invalid date format: {str(e)}") from e
 
     if not isinstance(date, datetime):
         raise TypeError("date must be a string or datetime object")

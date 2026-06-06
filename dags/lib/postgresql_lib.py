@@ -79,19 +79,19 @@ def generate_insert_query(df, table, keys, merge=True):
     """
     if merge:
         merge_clause = """
-        ON CONFLICT ({keys}) DO UPDATE SET 
+        ON CONFLICT ({keys}) DO UPDATE SET
         {update_sets}
         """
     else:
         merge_clause = ''
 
     query = """
-    INSERT INTO {table} 
+    INSERT INTO {table}
     {columns} VALUES {values}
     """ + merge_clause + ";"
 
     rows = []
-    for i, row in df.iterrows():
+    for _, row in df.iterrows():
         row_values = "\n(" + ", ".join(list_row_values(row)) + ")"
         rows.append(row_values)
     values_string = ", ".join(rows)
@@ -109,7 +109,7 @@ def generate_insert_query(df, table, keys, merge=True):
     return query
 
 
-def insert_df(df, table, keys=[], merge=True, target_db='prod'):
+def insert_df(df, table, keys=None, merge=True, target_db='prod'):
     """Insert a DataFrame into a PostgreSQL table.
     
     Args:
@@ -118,6 +118,7 @@ def insert_df(df, table, keys=[], merge=True, target_db='prod'):
         keys (list): List of column names that form the unique key
         merge (bool, optional): If True, performs UPSERT instead of INSERT. Defaults to True.
     """
+    keys = [] if keys is None else keys
     query = generate_insert_query(df, table, keys, merge)
     query_dir = Path('queries')
     query_dir.mkdir(exist_ok=True)

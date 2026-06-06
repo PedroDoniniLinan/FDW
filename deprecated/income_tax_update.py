@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from dbt.cli.main import dbtRunner, dbtRunnerResult
 from lib import postgresql_lib
-from lib.constants import *
+from lib.constants import sheets, db
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,9 +12,9 @@ SCRIPT_DIR = Path(__file__).resolve().parent.parent
 def update_dbt_models():
     dbt = dbtRunner()
     cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt')]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+int_fiat_exchanges"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
 
 
 def extract_data():
@@ -38,7 +38,7 @@ def calculate_taxes(df):
                 elif row['net_amount'] > 0:
                     try:
                         avg_price = (avg_price * (row['total_amount'] - row['net_amount']) + row['exchange_value']) / row['total_amount']
-                    except:
+                    except Exception as e:
                         print(row)
                         raise Exception
                 avg_price_list.append([

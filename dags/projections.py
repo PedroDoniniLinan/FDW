@@ -2,33 +2,32 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from dbt.cli.main import dbtRunner, dbtRunnerResult
+from dbt.cli.main import dbtRunner
 from lib import postgresql_lib
-from lib.constants import *
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
-
+YIELD_METHODS=[3, 2, 4, 5, 1]
 
 def update_dbt_models():
     dbt = dbtRunner()
     cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt')]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+int_apport_projections_monthly"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+int_fiat_balances_daily"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "+int_yield_stats"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
 
 
 def update_target_dbt_models():
     dbt = dbtRunner()
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "int_budget_monthly+"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "transaction_projections_mart"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
     cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'fdw_dbt'), "--select", "int_balance_projections_monthly+"]
-    res: dbtRunnerResult = dbt.invoke(cli_args)
+    dbt.invoke(cli_args)
 
 
 def extract_data():
@@ -37,8 +36,8 @@ def extract_data():
 
     df_balance = postgresql_lib.execute_query("""
         select sum(balance) as balance
-        from gold.balance_metrics 
-        where currency = 'EUR' 
+        from gold.balance_metrics
+        where currency = 'EUR'
             and calendar_date = '2023-12-31'
             and time_grain = 'day'
             and account != 'Nubank C'
@@ -114,7 +113,7 @@ def _calculate_projections(
             neg_yield_col = 'avg_neg_yield'
 
             df_yields.loc[:, 'rate_i'] = df_yields.apply(
-                lambda x: x[pos_yield_col] if x['cond'] else x[neg_yield_col],
+                lambda x, p=pos_yield_col, n=neg_yield_col: x[p] if x['cond'] else x[n],
                 axis=1
             )
             df_yields.loc[:, 'pos_iteration'] += df_yields.apply(
@@ -247,9 +246,10 @@ def project_set(df_projections, balance, df_yields, yield_method=2):
     return df_projections
 
 
-def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[3, 2, 4, 5, 1]):
+def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=None):
     balance = float(extracted_balance)
     df_results = None
+    yield_methods = YIELD_METHODS if yield_methods is None else yield_methods
     # for i in range(1):
         # i = 15
     for i in range(df_projections['simulation_set'].max() + 1):
@@ -271,7 +271,7 @@ def update_tables(df, target_db):
 def run_projections():
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
-    df = calculate_projections(df_projections, balance, df_yields)
+    df = calculate_projections(df_projections, balance, df_yields, yield_methods=YIELD_METHODS)
     print('-- Insert')
     update_tables(df, 'prod')
     print('--')
@@ -283,7 +283,7 @@ if __name__ == '__main__':
     # update_dbt_models()
     print('-- Data')
     df_projections, balance, df_yields = extract_data()
-    df = calculate_projections(df_projections, balance, df_yields)
+    df = calculate_projections(df_projections, balance, df_yields, yield_methods=YIELD_METHODS)
     print(df)
     print('-- Insert')
     update_tables(df, 'prod')
