@@ -4,7 +4,6 @@ venv/
 local/
 **/local/
 .env
-.envrc
 **/__pycache__/
 **/debug_query.sql
 *.pbix

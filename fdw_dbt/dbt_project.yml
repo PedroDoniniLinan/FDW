@@ -7,7 +7,7 @@ version: '1.0.0'
 # This setting configures which "profile" dbt uses for this project.
 profile: 'fdw_dbt'
 
-# These configurations specifyDB_DATABASE where dbt should look for different types of files.
+# These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
@@ -16,7 +16,6 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-docs-paths: ["docs"]
 
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
@@ -28,19 +27,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   fdw_dbt:
-    +on_schema_change: append_new_columns
-    +store_failures: true
-    +schema: silver
-    +materialized: view
-    3__marts:
-      +schema: gold
-      +materialized: table
-
-seeds:
-  fdw_dbt:
-    +schema: seeds
-
-vars:
-  lookback_days: 30
-  lookback_days_: 900
-  lookback_days_eop: 365
+    +materialized: view'

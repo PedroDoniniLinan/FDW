@@ -1,6 +1,21 @@
 version: 2
 
 sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: balances
+        identifier: balances
+      - name: exchanges
+        identifier: exchanges
+      - name: prices
+        identifier: prices
+      - name: external_transactions
+        identifier: external_transactions
+      - name: transfers
+        identifier: transfers
+      - name: projections
+        identifier: projections
   - name: silver
     schema: silver
     tables:
