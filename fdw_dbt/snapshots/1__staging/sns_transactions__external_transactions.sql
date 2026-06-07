@@ -1,1 +1,0 @@
-select * from {{ source('bronze', 'external_transactions') }}

@@ -1,0 +1,175 @@
+budget_level,level_1,level_2,level_3,frequency,label
+Essentials,Home,House bills,Rent,Monthly,Rent
+Essentials,Home,House bills,House insurance,Monthly,House insurance
+Essentials,Home,House bills,Internet,Monthly,Internet
+Essentials,Home,House bills,Electricity,Monthly,Electricity
+Essentials,Home,House bills,Water,Monthly,Water
+Essentials,Home,House bills,Gas,Monthly,Gas
+Essentials,Domestic Goods & Services,Minor goods,House maintenance,Yearly,House maintenance
+Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Minor goods
+Shared,Domestic Goods & Services,Minor goods,Minor goods,Yearly,Infra
+Shared,Domestic Goods & Services,Major goods,Furniture,Yearly,Comfort
+Shared,Domestic Goods & Services,Major goods,Furniture,Yearly,Furniture
+Shared,Domestic Goods & Services,Major goods,Eletrodomestics,Yearly,Eletrodomestics
+Shared,Domestic Goods & Services,Major goods,Other major goods,Yearly,Domestic Goods
+Shared,Domestic Goods & Services,Major goods,Other major goods,Yearly,Other goods
+Shared,Domestic Goods & Services,Major services,Move,Yearly,Move
+Shared,Food,Event food,Travel food,Monthly,Travel food
+Free D,Food,Event food,Travel food,Monthly,Travel food D
+Free P,Food,Event food,Travel food,Monthly,Travel food P
+Shared,Food,Event food,Travel food,Monthly,Food
+Shared,Food,Event food,Travel food,Monthly,Food (Travel)
+Shared,Food,Event food,Travel food,Monthly,Supermarket (Travel)
+Shared,Food,Event food,Social meal,Monthly,Social meal
+Free D,Food,Event food,Social meal,Monthly,Social meal D
+Free P,Food,Event food,Social meal,Monthly,Social meal P
+Free D,Food,Eat out,Restaurant,Monthly,Restaurant D
+Free D,Food,Eat out,Delivery,Monthly,Delivery D
+Free P,Food,Eat out,Restaurant,Monthly,Restaurant P
+Free P,Food,Eat out,Delivery,Monthly,Delivery P
+Shared,Food,Eat out,Cafe,Monthly,Cafe
+Shared,Food,Eat out,Cafe,Monthly,Snack
+Shared,Food,Eat out,Restaurant,Monthly,Eat out
+Essentials,Food,Eat out,Restaurant,Monthly,Restaurant
+Shared,Food,Eat out,Delivery,Monthly,Delivery
+Essentials,Food,Supermarket,Supermarket,Monthly,Supermarket
+Essentials,Food,Supermarket,Carbs,Monthly,Carbs
+Essentials,Food,Supermarket,Water,Monthly,Water
+Essentials,Food,Supermarket,Beverages,Monthly,Beverages
+Essentials,Food,Supermarket,Frozen,Monthly,Frozen
+Essentials,Food,Supermarket,Seasoning,Monthly,Seasoning
+Essentials,Food,Supermarket,Baking,Monthly,Baking
+Essentials,Food,Supermarket,Kitchenware,Monthly,Kitchenware
+Essentials,Food,Supermarket,Fruits,Monthly,Fruits
+Essentials,Food,Supermarket,Vegetables,Monthly,Vegetables
+Essentials,Food,Supermarket,Meat,Monthly,Meat
+Essentials,Food,Supermarket,Breakfast,Monthly,Breakfast
+Essentials,Food,Supermarket,Cleaning,Monthly,Cleaning
+Essentials,Food,Supermarket,Toiletteries,Monthly,Toiletteries
+Essentials,Food,Supermarket,Snacks,Monthly,Snacks
+Shared,Travel,Tickets & Long Transport,Flight,Yearly,Flight
+Free D,Travel,Tickets & Long Transport,Flight,Yearly,Flight D
+Free P,Travel,Tickets & Long Transport,Flight,Yearly,Flight P
+Shared,Travel,Tickets & Long Transport,Flight,Yearly,Train
+Shared,Travel,Tickets & Long Transport,Flight,Yearly,Car rental
+Shared,Travel,Tickets & Long Transport,Flight,Yearly,Bus
+Shared,Travel,Stay,Hotel,Yearly,Hotel
+Shared,Travel,Souvenir,Souvenir,Yearly,Souvenir
+Free D,Travel,Souvenir,Souvenir,Yearly,Souvenir D
+Free P,Travel,Souvenir,Souvenir,Yearly,Souvenir P
+Shared,Travel,Souvenir,Souvenir,Yearly,Extra
+Shared,Travel,Travel Transport,Transport (Travel),Yearly,Transport
+Shared,Travel,Travel Transport,Transport (Travel),Yearly,Transport (Travel)
+Shared,Travel,Tours,Tours,Yearly,Tour
+Shared,Travel,Tours,Tours,Yearly,Small trip
+Free D,Clothes,Clothes D,Other D,Yearly,Other D
+Free D,Clothes,Clothes D,Other D,Yearly,Accessory D
+Free D,Clothes,Clothes D,Clothes D,Yearly,Clothes D
+Free D,Clothes,Clothes D,Shoes D,Yearly,Shoes D
+Free P,Clothes,Clothes P,Other P,Yearly,Other P
+Free P,Clothes,Clothes P,Other P,Yearly,Accessory P
+Free P,Clothes,Clothes P,Clothes P,Yearly,Clothes P
+Free P,Clothes,Clothes P,Clothes P,Yearly,Clothes D+P
+Free P,Clothes,Clothes P,Shoes P,Yearly,Shoes P
+Free P,Products & Services,Hobbies & Interests P,Figurines & Objects,Yearly,Objects
+Free P,Products & Services,Hobbies & Interests P,Figurines & Objects,Yearly,Figurines
+Free P,Products & Services,Hobbies & Interests P,Games,Yearly,Games
+Free P,Products & Services,Hobbies & Interests P,Peripherals P,Yearly,Peripherals
+Free P,Products & Services,Hobbies & Interests P,Hardware,Yearly,Hardware
+Free P,Products & Services,Hobbies & Interests P,Phone P,Yearly,Phone
+Free P,Products & Services,Hobbies & Interests P,Phone P,Yearly,Phone P
+Free D,Products & Services,Hobbies & Interests D,Phone D,Yearly,Phone D
+Free D,Products & Services,Hobbies & Interests D,Peripherals D,Yearly,Peripherals D
+Free D,Products & Services,Hobbies & Interests D,Beauty tools,Yearly,Beauty tools
+Free D,Products & Services,Hobbies & Interests D,Plushies,Yearly,Plushies
+Free D,Products & Services,Hobbies & Interests D,Books,Yearly,Books
+Free D,Products & Services,Hobbies & Interests D,Gardening,Yearly,Gardening
+Free D,Products & Services,Hobbies & Interests D,Cosmetics,Yearly,Cosmetics
+Shared,Products & Services,Hobbies & Interests D,Games D,Yearly,Games D
+Shared,Products & Services,Hobbies & Interests B,Peripherals B,Yearly,Peripherals B
+Shared,Products & Services,Hobbies & Interests B,Leisure,Yearly,Leisure
+Shared,Products & Services,Hobbies & Interests B,Subscriptions,Yearly,Subscriptions
+Shared,Products & Services,Gifts D,Gifts D,Yearly,Dasha
+Shared,Products & Services,Gifts D,Gifts D,Yearly,Gifts D
+Shared,Products & Services,Gifts D,Gifts D,Yearly,Gift D
+Shared,Products & Services,Gifts P,Gifts P,Yearly,Pedro
+Shared,Products & Services,Gifts P,Gifts P,Yearly,Gifts P
+Shared,Products & Services,Gifts P,Gifts P,Yearly,Gift P
+Shared,Products & Services,Gifts (famiy & friends),Parents,Yearly,Parents
+Shared,Products & Services,Gifts (famiy & friends),Family,Yearly,Other people
+Shared,Products & Services,Gifts (famiy & friends),Family,Yearly,Family
+Shared,Products & Services,Gifts (famiy & friends),Friends,Yearly,Friends
+Shared,Products & Services,Gifts (famiy & friends),Friends,Yearly,Others
+Free D,Products & Services,Gifts (famiy & friends),Parents,Yearly,Parents D
+Free D,Products & Services,Gifts (famiy & friends),Family,Yearly,Other people D
+Free D,Products & Services,Gifts (famiy & friends),Family,Yearly,Family D
+Free D,Products & Services,Gifts (famiy & friends),Friends,Yearly,Friends D
+Free D,Products & Services,Gifts (famiy & friends),Friends,Yearly,Others D
+Free P,Products & Services,Gifts (famiy & friends),Parents,Yearly,Parents P
+Free P,Products & Services,Gifts (famiy & friends),Family,Yearly,Other people P
+Free P,Products & Services,Gifts (famiy & friends),Family,Yearly,Family P
+Free P,Products & Services,Gifts (famiy & friends),Friends,Yearly,Friends P
+Free P,Products & Services,Gifts (famiy & friends),Friends,Yearly,Others P
+Shared,Products & Services,Work related,Office supplies,Yearly,Office materials
+Shared,Products & Services,Work related,Office supplies,Yearly,Printing
+Shared,Products & Services,Work related,Education,Yearly,Education
+Shared,Health,Routine,Other doctors,Yearly,Doctor
+Shared,Health,Routine,Dentist rountine,Yearly,Dentist rountine
+Shared,Health,Routine,Dentist rountine,Yearly,Dental cleaning
+Essentials,Health,Routine,Routine exams,Yearly,Exams
+Essentials,Health,Routine,Routine exams,Yearly,Exam
+Essentials,Health,Routine,Health insurance,Yearly,Health insurance
+Essentials,Health,Routine,Health insurance,Yearly,Insurance
+Essentials,Health,Routine,Gynecologist routine,Yearly,Gynecologist
+Shared,Health,Unexpected,Glasses,Yearly,Glasses
+Shared,Health,Unexpected,Physio injury,Yearly,Physio injury
+Essentials,Health,Unexpected,Operation,Yearly,Operation
+Essentials,Health,Unexpected,Deficiency,Yearly,Deficiency
+Essentials,Health,Unexpected,Doctor (issue),Yearly,Doctor (issue)
+Essentials,Health,Unexpected,Gynecologist issue,Yearly,Gynecologist issue
+Essentials,Health,Unexpected,Dentist ops & exams,Yearly,Dentist ops
+Essentials,Self-care,Variable care,Pharmacy,Monthly,Pharmacy
+Free D,Self-care,Variable care,Pharmacy,Monthly,Pharmacy D
+Free D,Self-care,Variable care,Pharmacy,Monthly,Health D
+Free D,Self-care,Regular care,Grooming,Monthly,Estetic D
+Free D,Self-care,Regular care,Grooming,Monthly,Grooming D
+Free P,Self-care,Variable care,Pharmacy,Monthly,Pharmacy P
+Free P,Self-care,Variable care,Pharmacy,Monthly,Health P
+Free P,Self-care,Regular care,Grooming,Monthly,Estetic P
+Free P,Self-care,Regular care,Grooming,Monthly,Grooming P
+Essentials,Self-care,Regular care,Physical activity,Monthly,Physical activity
+Shared,Transport,Uber,Uber,Monthly,Uber
+Shared,Transport,Car,Parking,Monthly,Parking
+Shared,Transport,Car,Fuel,Monthly,Fuel
+Essentials,Transport,Public transport,Public transport,Monthly,Public transport
+Essentials,Transport,Public transport,Public transport,Monthly,Public
+Essentials,Taxes & Fees,Gov. Taxes,Income tax,Yearly,Government
+Essentials,Taxes & Fees,Gov. Taxes,Income tax,Yearly,Income tax
+Essentials,Taxes & Fees,Gov. Taxes,Legal fees,Yearly,Legal
+Essentials,Taxes & Fees,Gov. Taxes,Legal fees,Yearly,Documents
+Shared,Taxes & Fees,Transaction Fees,Gas fee,Yearly,Gas fee
+Shared,Taxes & Fees,Transaction Fees,Transaction fee,Yearly,Transaction fee
+Shared,Taxes & Fees,Transaction Fees,Transaction fee,Yearly,Transaction
+Shared,Taxes & Fees,Transaction Fees,Exchange fee,Yearly,Buy tax
+Shared,Taxes & Fees,Transaction Fees,Exchange fee,Yearly,Buy tax other
+Shared,Non-actionable,Inconsistencies,Lost,Yearly,Lost
+Free P,Non-actionable,Inconsistencies,Autofix,Yearly,Autofix
+Free P,Non-actionable,Loan,Parents,Yearly,Bill
+Free P,Non-actionable,Loan,Parents,Yearly,Credit
+Free P,Non-actionable,Loan,Parents,Yearly,Debt
+Free P,Non-actionable,Loan,Parents,Yearly,Support
+Free P,Non-actionable,Loan,Parents,Yearly,Loan
+Free P,Non-actionable,Loan,Parents,Yearly,Void
+Shared,Non-actionable,Fraud,Fraud,Yearly,Fraud
+Free P,NFT,NFT games,Star atlas,Canceled,Star atlas
+Free P,NFT,NFT games,Axie,Canceled,Axie Breeding
+Free P,NFT,NFT games,Axie,Canceled,LP
+Free P,NFT,NFT games,Axie,Canceled,Axie
+Free P,NFT,NFT games,Defina,Canceled,Defina
+Free P,NFT,NFT games,Bomb,Canceled,Bomb
+Free P,NFT,NFT games,TRV,Canceled,TRV
+Free P,NFT,NFT games,Embersword,Canceled,Embersword
+Free P,NFT,NFT games,Thetan,Canceled,Thetan
+
+
+

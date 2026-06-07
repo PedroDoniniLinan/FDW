@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime as dt
 from pathlib import Path
-import uuid
+import platform
 from time import time
 from dbt.cli.main import dbtRunner, dbtRunnerResult
 
@@ -11,24 +11,6 @@ from lib.constants import *
 from projections import run_projections
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
-NAMESPACE = uuid.UUID('12345678-1234-5678-1234-567812345678')
-
-
-def generate_ids(df, key_columns):
-    key_columns = list(key_columns) 
-    df = df.sort_values(key_columns).copy()
-    df['_row_num'] = df.groupby(key_columns).cumcount()
-
-    def make_id(row):
-        natural_key = '|'.join(str(row[col]) for col in key_columns) + f"|{row['_row_num']}"
-        return str(uuid.uuid5(NAMESPACE, natural_key))
-    
-    df['id'] = df.apply(make_id, axis=1)
-    df = df.drop(columns=['_row_num'])
-    df = df[['id'] + [col for col in df.columns if col != 'id']]
-
-    return df
-
 
 def format_amounts(df, column):
     if column in df.columns:
@@ -71,14 +53,11 @@ def update_source(source_name, df, target_db):
     
     if 'calendar_date' in df.columns:
         df['calendar_date'] = df['calendar_date'].apply(lambda x : dt.datetime.strptime(str(x),'%d/%m/%Y'))
-
-    df = generate_ids(df, key_columns=df.columns)
     
     if source_name != 'expenses':
         postgresql_lib.execute_query(f"TRUNCATE TABLE {table_name}", code=True, mode='write', target_db=target_db)
     
     postgresql_lib.insert_df(df, table_name, merge=False, target_db=target_db)
-    print(f"Updated source {source_name} with {len(df)} records.")
 
 
 def update_source_from_sheets(target_db):
