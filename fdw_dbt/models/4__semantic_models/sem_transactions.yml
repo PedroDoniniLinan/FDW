@@ -1,0 +1,48 @@
+semantic_models:
+  - name: transactions
+    model: ref('fct_transactions_enriched')
+    description: "One row per fiat transaction with enriched category and account dimensions"
+
+    defaults:
+      agg_time_dimension: calendar_date
+
+    entities:
+      - name: fiat_transaction
+        type: primary
+        expr: fiat_transaction_id
+
+    dimensions:
+      - name: calendar_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: currency
+        type: categorical
+      - name: transaction_type
+        type: categorical
+      - name: category
+        type: categorical
+      - name: financial_level_1
+        type: categorical
+      - name: financial_level_2
+        type: categorical
+      - name: budget_level_1
+        type: categorical
+      - name: budget_level_2
+        type: categorical
+      - name: budget_level_3
+        type: categorical
+      - name: account
+        type: categorical
+      - name: account_country
+        type: categorical
+      - name: account_budget_level
+        type: categorical
+
+    measures:
+      - name: amount
+        agg: sum
+        expr: amount
+      - name: transaction_count
+        agg: count_distinct
+        expr: fiat_transaction_id

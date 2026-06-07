@@ -1,0 +1,23 @@
+metrics:
+  - name: total_income
+    type: simple
+    label: "Total Income"
+    type_params:
+      measure: amount
+    filter: "{{ Dimension('transactions__transaction_type') }} = 'Income'"
+
+  - name: total_expenses
+    type: simple
+    label: "Total Expenses"
+    type_params:
+      measure: amount
+    filter: "{{ Dimension('transactions__transaction_type') }} = 'Expenses'"
+
+  - name: net_cashflow
+    type: derived
+    label: "Net Cashflow"
+    type_params:
+      expr: total_income - total_expenses
+      metrics:
+        - total_income
+        - total_expenses
