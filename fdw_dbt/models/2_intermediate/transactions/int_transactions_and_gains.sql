@@ -1,6 +1,17 @@
 {{ config(schema='silver', materialized='view') }}
 
-select *
+select
+    transaction_id,
+    calendar_date,
+    tag,
+    original_currency,
+    currency,
+    transaction_type,
+    label,
+    account,
+    original_amount,
+    price,
+    amount
 from {{ref("int_fiat_transactions")}}
 where amount != 0
 union all

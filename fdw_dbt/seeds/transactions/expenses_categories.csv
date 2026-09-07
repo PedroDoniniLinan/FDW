@@ -30,11 +30,11 @@ Free P,Food,Eat out,Delivery,Monthly,Delivery P
 Shared,Food,Eat out,Cafe,Monthly,Cafe
 Shared,Food,Eat out,Cafe,Monthly,Snack
 Shared,Food,Eat out,Restaurant,Monthly,Eat out
-Essentials,Food,Eat out,Restaurant,Monthly,Restaurant
+Shared,Food,Eat out,Restaurant,Monthly,Restaurant
 Shared,Food,Eat out,Delivery,Monthly,Delivery
 Essentials,Food,Supermarket,Supermarket,Monthly,Supermarket
 Essentials,Food,Supermarket,Carbs,Monthly,Carbs
-Essentials,Food,Supermarket,Water,Monthly,Water
+Essentials,Food,Supermarket,Water,Monthly,Bottled water
 Essentials,Food,Supermarket,Beverages,Monthly,Beverages
 Essentials,Food,Supermarket,Frozen,Monthly,Frozen
 Essentials,Food,Supermarket,Seasoning,Monthly,Seasoning
@@ -79,6 +79,7 @@ Free P,Products & Services,Hobbies & Interests P,Hardware,Yearly,Hardware
 Free P,Products & Services,Hobbies & Interests P,Phone P,Yearly,Phone
 Free P,Products & Services,Hobbies & Interests P,Phone P,Yearly,Phone P
 Free D,Products & Services,Hobbies & Interests D,Phone D,Yearly,Phone D
+Free D,Products & Services,Hobbies & Interests D,Objects D,Yearly,Objects D
 Free D,Products & Services,Hobbies & Interests D,Peripherals D,Yearly,Peripherals D
 Free D,Products & Services,Hobbies & Interests D,Beauty tools,Yearly,Beauty tools
 Free D,Products & Services,Hobbies & Interests D,Plushies,Yearly,Plushies
@@ -121,13 +122,13 @@ Essentials,Health,Routine,Routine exams,Yearly,Exam
 Essentials,Health,Routine,Health insurance,Yearly,Health insurance
 Essentials,Health,Routine,Health insurance,Yearly,Insurance
 Essentials,Health,Routine,Gynecologist routine,Yearly,Gynecologist
-Shared,Health,Unexpected,Glasses,Yearly,Glasses
-Shared,Health,Unexpected,Physio injury,Yearly,Physio injury
-Essentials,Health,Unexpected,Operation,Yearly,Operation
-Essentials,Health,Unexpected,Deficiency,Yearly,Deficiency
-Essentials,Health,Unexpected,Doctor (issue),Yearly,Doctor (issue)
-Essentials,Health,Unexpected,Gynecologist issue,Yearly,Gynecologist issue
-Essentials,Health,Unexpected,Dentist ops & exams,Yearly,Dentist ops
+Shared,Health,Non-routine,Glasses,Yearly,Glasses
+Shared,Health,Non-routine,Physio injury,Yearly,Physio injury
+Essentials,Health,Non-routine,Operation,Yearly,Operation
+Essentials,Health,Non-routine,Deficiency,Yearly,Deficiency
+Essentials,Health,Non-routine,Doctor (issue),Yearly,Doctor (issue)
+Essentials,Health,Non-routine,Gynecologist issue,Yearly,Gynecologist issue
+Essentials,Health,Non-routine,Dentist ops & exams,Yearly,Dentist ops
 Essentials,Self-care,Variable care,Pharmacy,Monthly,Pharmacy
 Free D,Self-care,Variable care,Pharmacy,Monthly,Pharmacy D
 Free D,Self-care,Variable care,Pharmacy,Monthly,Health D

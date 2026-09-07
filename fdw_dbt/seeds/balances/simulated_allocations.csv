@@ -55,10 +55,10 @@ set,asset_set,level_2,allocation
 6,3,Gold,0.05
 7,4,Volatile (Cash),0
 7,4,Stable (Cash),0
-7,4,Bonds BR,0.08
-7,4,Bonds EU,0.16
+7,4,Bonds BR,0.15
+7,4,Bonds EU,0.08
 7,4,Real state,0
-7,4,Value stocks,0.195
-7,4,Growth stocks,0.39
-7,4,Crypto,0.125
-7,4,Gold,0.05
+7,4,Value stocks,0.22
+7,4,Growth stocks,0.4
+7,4,Crypto,0.12
+7,4,Gold,0.03
