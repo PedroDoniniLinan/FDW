@@ -1,26 +1,14 @@
 {{ config(schema='silver', materialized='view') }}
 
+with
 
-select
-    account,
-    calendar_date,
-    currency,
-    original_currency,
-    sum(capital_gain) as capital_gain
-from (
+currency_calc as (
     select
         split_part(transaction_id, '_', 1) as transaction_id,
         account,
         calendar_date,
         currency,
-        max(case 
-            when currency = 'Original' then original_currency 
-            when label != 'Sale' then null 
-            when original_currency = currency then split_part(tag, '<-', 1) 
-            when split_part(tag, '<-', 1) = currency then original_currency
-            when original_currency in {{ fiat_currencies_ext() }} then split_part(tag, '<-', 1) 
-            else original_currency
-        end) as original_currency,
+        max(exchange_curency) as original_currency,
         sum(amount) as capital_gain
     from {{ ref("int_fiat_transactions") }}
     where amount != 0
@@ -30,9 +18,21 @@ from (
         account,
         calendar_date,
         currency
-) t
-group by
-    account,
-    calendar_date,
-    currency,
-    original_currency
+),
+
+final as (
+    select
+        account,
+        calendar_date,
+        currency,
+        original_currency,
+        sum(capital_gain) as capital_gain
+    from currency_calc
+    group by
+        account,
+        calendar_date,
+        currency,
+        original_currency
+    )
+
+select * from final

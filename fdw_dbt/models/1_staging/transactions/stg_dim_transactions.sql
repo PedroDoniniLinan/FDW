@@ -1,5 +1,5 @@
 {{ config(schema='silver', materialized='view') }}
-{% set br_bonds = ['TD', 'CDB'] %}
+{% set br_bonds = ['TD', 'CDB', 'CRA', 'LCI', 'CRI', 'LCA', 'LF'] %}
 {% set bond_types = ['CDI', 'SELIC', 'IPCA', 'Prefix'] %}
 {% set bond_term = ['B', 'L', 'E'] %}
 
@@ -51,7 +51,7 @@ select * from (
                 end as level_3,
                 currency
             from {{ref("src_balance_checks")}}
-            where currency ~* '(cdb|td)'
+            where currency ~* '(cdb|td|cra|lci|cri|lca|lf)'
         ) t
         inner join {{ref('income_categories')}} ic on (ic.level_3 = t.level_3)
     ) t
