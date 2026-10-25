@@ -1,13 +1,14 @@
 emergency_tier,account,level_3,target_balance
 1,T212,EUR212,10750
-1,Wise D,USD W,8000
+1,Wise D,USD W,9000
+1,Wise D,USD,1000
 1,Wise D,EUR,500
 1,Wise,USD W,7500
-1,Wise,EUR W,10650
+1,Wise,EUR W,9650
 1,Wise,EUR,100
 1,N26,EUR,100
 1,AB,EUR,400
 2,Nu,Nubank,0
 2,Nubank D,Nubank,1000
-2,BTG,BRL,150
+2,BTG,BRL,500
 2,Degiro,EUR,2

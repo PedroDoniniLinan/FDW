@@ -46,7 +46,7 @@ select * from (
             select distinct 
                 case
                     {% for bb in br_bonds %}{% for bt in bond_types %}{% for btt in bond_term %}
-                    when currency ~* '{{bb}}.*{{bt}}.*{{btt}}' then '{{bb}} {{bt}}'
+                    when currency ~* '{{bb}}.*{{bt}}.*{{btt}}' then '{{bt}}'
                     {% endfor %}{% endfor %}{% endfor %}
                 end as level_3,
                 currency

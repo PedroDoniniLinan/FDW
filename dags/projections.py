@@ -248,7 +248,7 @@ def project_set(df_projections, balance, df_yields, yield_method=2):
     return df_projections
 
 
-def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[3, 2, 4, 5, 1]):
+def calculate_projections(df_projections, extracted_balance, df_yields, yield_methods=[3, 2, 3, 2, 2]):
     balance = float(extracted_balance) 
     df_results = None
     # for i in range(1):
