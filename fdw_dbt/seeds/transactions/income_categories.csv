@@ -1,34 +1,34 @@
 level_1,level_2,level_3,source,label
-Bonds,Bonds BR,CDB CDI,Investments,CDB CDI B
-Bonds,Bonds BR,CDB IPCA,Investments,CDB IPCA B
-Bonds,Bonds BR,CDB Prefix,Investments,CDB Prefix B
-Bonds,Bonds BR,CRA CDI,Investments,CRA CDI B
-Bonds,Bonds BR,CRA IPCA,Investments,CRA IPCA B
-Bonds,Bonds BR,CRA Prefix,Investments,CRA Prefix B
-Bonds,Bonds BR,LCI CDI,Investments,LCI CDI B
-Bonds,Bonds BR,LCI IPCA,Investments,LCI IPCA B
-Bonds,Bonds BR,LCI Prefix,Investments,LCI Prefix B
-Bonds,Bonds BR,CRI CDI,Investments,CRI CDI B
-Bonds,Bonds BR,CRI IPCA,Investments,CRI IPCA B
-Bonds,Bonds BR,CRI Prefix,Investments,CRI Prefix B
-Bonds,Bonds BR,LCA CDI,Investments,LCA CDI B
-Bonds,Bonds BR,LCA IPCA,Investments,LCA IPCA B
-Bonds,Bonds BR,LCA Prefix,Investments,LCA Prefix B
-Bonds,Bonds BR,LF CDI,Investments,LF CDI B
-Bonds,Bonds BR,LF IPCA,Investments,LF IPCA B
-Bonds,Bonds BR,LF Prefix,Investments,LF Prefix B
-Bonds,Bonds BR,TD IPCA,Investments,TD IPCA B
-Bonds,Bonds BR,TD Prefix,Investments,TD Prefix B
-Bonds,Bonds BR,TD SELIC,Investments,TD SELIC B
-Bonds,Bonds BR,CDB CDI,Investments,CDB CDI L
-Bonds,Bonds BR,CDB IPCA,Investments,CDB IPCA L
-Bonds,Bonds BR,CDB Prefix,Investments,CDB Prefix L
-Bonds,Bonds BR,TD IPCA,Investments,TD IPCA L
-Bonds,Bonds BR,TD Prefix,Investments,TD Prefix L
-Bonds,Bonds BR,TD SELIC,Investments,TD SELIC L
-Bonds,Bonds BR,TD SELIC,Investments,TD SELIC E
+Bonds,Bonds BR,CDI,Investments,CDB CDI B
+Bonds,Bonds BR,IPCA,Investments,CDB IPCA B
+Bonds,Bonds BR,Prefix,Investments,CDB Prefix B
+Bonds,Bonds BR,CDI,Investments,CRA CDI B
+Bonds,Bonds BR,IPCA,Investments,CRA IPCA B
+Bonds,Bonds BR,Prefix,Investments,CRA Prefix B
+Bonds,Bonds BR,CDI,Investments,LCI CDI B
+Bonds,Bonds BR,IPCA,Investments,LCI IPCA B
+Bonds,Bonds BR,Prefix,Investments,LCI Prefix B
+Bonds,Bonds BR,CDI,Investments,CRI CDI B
+Bonds,Bonds BR,IPCA,Investments,CRI IPCA B
+Bonds,Bonds BR,Prefix,Investments,CRI Prefix B
+Bonds,Bonds BR,CDI,Investments,LCA CDI B
+Bonds,Bonds BR,IPCA,Investments,LCA IPCA B
+Bonds,Bonds BR,Prefix,Investments,LCA Prefix B
+Bonds,Bonds BR,CDI,Investments,LF CDI B
+Bonds,Bonds BR,IPCA,Investments,LF IPCA B
+Bonds,Bonds BR,Prefix,Investments,LF Prefix B
+Bonds,Bonds BR,IPCA,Investments,TD IPCA B
+Bonds,Bonds BR,Prefix,Investments,TD Prefix B
+Bonds,Bonds BR,SELIC,Investments,TD SELIC B
+Bonds,Bonds BR,CDI,Investments,CDB CDI L
+Bonds,Bonds BR,IPCA,Investments,CDB IPCA L
+Bonds,Bonds BR,Prefix,Investments,CDB Prefix L
+Bonds,Bonds BR,IPCA,Investments,TD IPCA L
+Bonds,Bonds BR,Prefix,Investments,TD Prefix L
+Bonds,Bonds BR,SELIC,Investments,TD SELIC L
+Bonds,Bonds BR,SELIC,Investments,TD SELIC E
 Bonds,Bonds BR,BTG,Investments,BTG
-Bonds,Bonds BR,TD SELIC,Investments,SELIC
+Bonds,Bonds BR,SELIC,Investments,SELIC
 Bonds,Bonds EU,EUR212,Investments,EUR212
 Bonds,Bonds EU,EUR K,Investments,EUR K
 Bonds,Bonds EU,EUR W,Investments,EUR W
@@ -104,6 +104,7 @@ Investments,Stablecoin,USDT,Investments,USDT
 Investments,Value stocks,HDV,Investments,HDV
 Investments,Value stocks,JPMC,Investments,JPMC34
 Investments,Value stocks,JPMC,Investments,JPM
+Investments,Value stocks,JPMC,Investments,CMC
 Investments,Value stocks,KO,Investments,KO
 Investments,Value stocks,MS,Investments,MSBR34
 Investments,Value stocks,MS,Investments,MS
