@@ -1,0 +1,38 @@
+extends: default
+
+ignore:
+  - dbt/dbt_packages
+  - dbt/dbt_project.yml
+  - dbt/package-lock.yml
+  - .venv
+  - venv
+
+rules:
+  braces:
+    forbid: false
+    min-spaces-inside: 1
+    max-spaces-inside: 3
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+  comments:
+    min-spaces-from-content: 1
+  document-start: disable
+  empty-lines:
+    max: 1
+  empty-values:
+    forbid-in-block-mappings: true
+    forbid-in-flow-mappings: true
+  float-values:
+    require-numeral-before-decimal: true
+  line-length:
+    level: warning
+    max: 120
+  new-lines:
+    type: platform
+  quoted-strings:
+    quote-type: double
+    required: false
+    allow-quoted-quotes: true
+  truthy:
+    allowed-values: ["true", "false", "True", "False"]
+    level: warning

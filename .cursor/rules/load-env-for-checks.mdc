@@ -1,0 +1,19 @@
+---
+description: Load repository .env variables for small local validation and dbt checks without exposing secret values
+alwaysApply: true
+---
+
+# Environment-backed checks
+
+For small local validation commands, especially dbt parse, compile, and test
+checks, load variables from the repository `.env` file when required variables
+are missing from the process environment.
+
+- Scope the variables to the command or process being run; do not persist or
+  overwrite the user's shell environment.
+- Never print `.env` contents or secret values. Only report whether the command
+  passed or which variable is missing.
+- Prefer the repository's existing dotenv loader or shell convention when one
+  is present. Otherwise parse simple `KEY=VALUE` entries safely.
+- Do not load `.env` for external deployments, commits, or commands that send
+  credentials elsewhere unless explicitly requested.

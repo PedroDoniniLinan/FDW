@@ -1,0 +1,352 @@
+version: 1
+
+# Inventory of legacy models under dbt_/models/deprecated and their replacements
+# in the active dbt_/models tree.  A model can map to more than one replacement
+# when the refactor split one legacy relation into several grains or layers.
+source_root: dbt_/models/deprecated
+target_root: dbt_/models
+
+status_definitions:
+  migrated: An active replacement was found by lineage and/or Git rename history.
+  partial: Some responsibilities moved, but no one-to-one replacement was found.
+  not_migrated: No active replacement was found in the current model tree.
+
+models:
+  # Sources and staging
+  - deprecated: 0_sources/transactions/src_transfer_transactions.sql
+    replacement:
+      - 1_staging/transactions/stg_transactions__internal.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/transactions/src_external_transactions.sql
+    replacement:
+      - 1_staging/transactions/stg_transactions__external.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/transactions/src_exchange_transactions.sql
+    replacement:
+      - 1_staging/transactions/stg_transactions__exchanges.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/projections/src_projections.sql
+    replacement:
+      - 1_staging/projections/stg_projections__transactions.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/general/src_daily_grid.sql
+    replacement:
+      - 2_intermediate/shared/int_com__calendar_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/prices/src_fiat_to_fiat_prices.sql
+    replacement:
+      - 2_intermediate/investing/int_inv__rates_fiat_combinations_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/prices/src_currency_rounding_decimals.sql
+    replacement:
+      - 2_intermediate/shared/int_com__asset_rounding.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/balances/src_emergency_reserves.sql
+    replacement:
+      - 2_intermediate/balances/dim_blc__emergency_reserves.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/balance_validation/src_balance_checks.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_unfiltered_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/balance_validation/src_current_balance.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_extract_latest_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 0_sources/general/src_projection_grid.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 1_staging/transactions/stg_transactions.sql
+    replacement:
+      - 2_intermediate/transactions/fct_trx__cashflow_daily.sql
+    status: migrated
+    confidence: high
+    note: Split into source-specific staging models.
+  - deprecated: 1_staging/transactions/stg_dim_transactions.sql
+    replacement:
+      - 2_intermediate/dimensions/dim_trx__categories.sql
+    status: migrated
+    confidence: high
+  - deprecated: 1_staging/prices/stg_prices.sql
+    replacement:
+      - 1_staging/investing/stg_investing__rates.sql
+      - 2_intermediate/investing/int_inv__rates_fiat_combinations_daily.sql
+      - 2_intermediate/investing/fct_inv__rates_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 1_staging/taxes/stg_exchange_classifications.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+
+  # Transactions and balances lineage
+  - deprecated: 2_intermediate/transactions/int_fiat_transactions.sql
+    replacement:
+      - 2_intermediate/transactions/fct_trx__cashflow_fiat_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/transactions/int_exchange_gains.sql
+    replacement:
+      - 2_intermediate/transactions/int_trx__gains_intraday.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/transactions/int_gains_daily.sql
+    replacement:
+      - 2_intermediate/transactions/int_trx__gains_intraday.sql
+      - 2_intermediate/transactions/int_trx__gains_dod.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/transactions/int_transactions_and_gains.sql
+    replacement:
+      - 2_intermediate/transactions/fct_trx__transactions_fiat_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/transactions/int_transactions_star.sql
+    replacement:
+      - 3_marts/transactions/fct_trx__transactions_enriched_daily.sql
+    status: migrated
+    confidence: high
+    note: The legacy star model is now split between the transaction fact and enriched mart lineage.
+  - deprecated: 2_intermediate/balances/int_balances_daily.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/balances/int_fiat_balances_daily.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__balances_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/balances/int_fiat_balances_daily_star.sql
+    replacement:
+      - 3_marts/balances/fct_blc__balances_enriched_daily.sql
+    status: migrated
+    confidence: high
+    note: This is the balances_mart lineage hint; daily and end-of-period outputs now replace the legacy star mart.
+  - deprecated: 2_intermediate/prices/int_prices_daily.sql
+    replacement:
+      - 2_intermediate/investing/fct_inv__rates_daily.sql
+      - 2_intermediate/investing/fct_inv__rates_fiat_daily.sql
+    status: migrated
+    confidence: high
+    note: >
+      Split into unified daily exchange rates and daily rates converted to
+      supported fiat currencies; interpolation and legacy price semantics may
+      differ.
+  - deprecated: 2_intermediate/balance_validation/int_balances_daily_ext.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_unfiltered_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/balance_validation/int_current_balance_ext.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_reconciliation_latest_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 2_intermediate/balance_validation/int_balance_discrepancies_daily.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_reconciliation_daily.sql
+    status: migrated
+    confidence: high
+
+  # Projection, simulation, tax, and yield branches with no current active mart
+  - deprecated: 2_intermediate/projections/int_apport_projections_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projections/int_balance_projections_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projections/int_budget_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projections/int_transaction_projections_monthly.sql
+    replacement:
+      - 1_staging/projections/stg_projections__transactions.sql
+    status: partial
+    confidence: low
+  - deprecated: 2_intermediate/projections/int_yield_stats.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projection_target/int_avg_expenses_monthly_per_lvl2.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projection_target/int_expected_expenses.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projection_target/int_expected_yields.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/projection_target/int_fire_balance.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/simulations/int_allocation_targets.sql
+    replacement:
+      - 2_intermediate/balances/dim_blc__allocation_targets.sql
+    status: migrated
+    confidence: high
+    note: >
+      Simulation allocation seeds are combined with the active transaction
+      category dimension to preserve the legacy target-allocation contract.
+  - deprecated: 2_intermediate/simulations/int_balance_allocations_yearly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/simulations/int_dividend_yields_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/simulations/int_price_yields_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/taxes/int_fiat_exchanges.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/taxes/int_irs_fifo_exchanges.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/taxes/int_irs_sales.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_benchmark_yields_agg_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_yield_agg_cum.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_yields_agg_monthly.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_yields_agg_time_grains.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_yields_agg.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 2_intermediate/yields/int_yields_daily.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+
+  # Legacy marts: confirmed lineage hints and remaining areas
+  - deprecated: 3_marts/transactions_mart.sql
+    replacement:
+      - 3_marts/transactions/fct_trx__transactions_enriched_daily.sql
+    status: migrated
+    confidence: high
+    note: Confirmed from the transaction lineage and current mart split.
+  - deprecated: 3_marts/balances_mart.sql
+    replacement:
+      - 3_marts/balances/fct_blc__balances_enriched_daily.sql
+    status: migrated
+    confidence: high
+    note: Confirmed from the balances lineage and current daily/EOP mart split.
+  - deprecated: 3_marts/balance_discrepancies.sql
+    replacement:
+      - 2_intermediate/balances/fct_blc__holdings_reconciliation_latest_daily.sql
+    status: migrated
+    confidence: high
+  - deprecated: 3_marts/yields_mart.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 3_marts/transaction_projections_mart.sql
+    replacement:
+      - 1_staging/projections/stg_projections__transactions.sql
+    status: partial
+    confidence: low
+    note: Only the projection staging lineage exists; the mart output is not present.
+  - deprecated: 3_marts/budget_projections_mart.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 3_marts/balance_projections_mart.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 3_marts/taxes_assets_mart.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 3_marts/taxes_pnl_mart.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 3_marts/simulation_performance.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+
+  # Metrics dependent on legacy marts
+  - deprecated: 4_metrics/allocation_metrics.sql
+    replacement:
+      - 2_intermediate/balances/int_blc__allocation_balances_daily.sql
+      - 3_marts/balances/agg_blc__allocation_metrics.sql
+    status: partial
+    confidence: medium
+    note: >
+      Recreated the legacy balance classification and rate lookup contracts over
+      active balances, category seeds, and the active fiat-converted rate
+      model. This is a structurally migrated allocation metric; rate semantics
+      differ from the former interpolated price model and require output
+      comparison.
+  - deprecated: 4_metrics/balance_metrics.sql
+    replacement:
+      - 3_marts/balances/fct_blc__balances_enriched_eop.sql
+    status: partial
+    confidence: medium
+    note: Likely migrated into the end-of-period enriched balances model.
+  - deprecated: 4_metrics/cash_reserves_metrics.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 4_metrics/cashflow_agg_metrics.sql
+    replacement:
+      - 3_marts/transactions/agg_trx__transactions_enriched_daily.sql
+    status: partial
+    confidence: medium
+    note: Likely migrated into the enriched daily transactions aggregation.
+  - deprecated: 4_metrics/cashflow_metrics.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 4_metrics/irpf_assets_metrics.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 4_metrics/irpf_pnl_metrics.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+  - deprecated: 4_metrics/yield_metrics.sql
+    replacement: []
+    status: not_migrated
+    confidence: high
+

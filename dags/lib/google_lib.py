@@ -1,19 +1,18 @@
-import numpy as np
 import os
-from pathlib import Path
-import pandas as pd
-import pickle
 import re
-import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
 from dotenv.main import load_dotenv
-from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+
 
 def get_refresh_token():
     """Get refresh token for Google OAuth2 authentication.
-    
+
     Returns:
         str: The refresh token obtained from running local OAuth2 flow
     """
@@ -30,11 +29,11 @@ def get_refresh_token():
 
 def get_credentials():
     """Get credentials to connect to Google API.
-    
+
     Returns:
         Credentials: Google OAuth2 credentials object using client credentials
         from the JSON file.
-        
+
     Raises:
         Exception: If credentials file cannot be loaded or is invalid.
     """
@@ -49,17 +48,17 @@ def get_credentials():
         )
         return creds
     except Exception as e:
-        raise Exception(f'Failed to load Google API credentials from JSON file: {str(e)}')
+        raise Exception(f'Failed to load Google API credentials from JSON file: {str(e)}') from e
 
 
 def create_service(api_name, creds):
     """Create Google API service client.
-    
+
     Args:
-        api_name (str): Name of the Google API service to create ('docs', 'drive', 
+        api_name (str): Name of the Google API service to create ('docs', 'drive',
             'webmasters', 'sheets', or 'androidpublisher')
         creds (Credentials): Google OAuth2 credentials object
-        
+
     Returns:
         Resource: Google API service client object
     """
@@ -78,20 +77,20 @@ def create_service(api_name, creds):
 
 def read_spreadsheet(spreadsheet_id, range_name, debug=False):
     """Get data from a Google Sheets spreadsheet.
-    
+
     Args:
         spreadsheet_id (str): ID of the Google Sheets spreadsheet
         range_name (str): Range to read in A1 notation (e.g. 'Sheet1!A1:D10')
-        
+
     Returns:
-        DataFrame: Pandas DataFrame containing the spreadsheet data with lowercase 
+        DataFrame: Pandas DataFrame containing the spreadsheet data with lowercase
         column names
-        
+
     Raises:
         Exception: If no data is found in the specified range
     """
     creds = get_credentials()
-    
+
     if debug:
         print('Credentials: SUCCESS')
 
@@ -104,10 +103,10 @@ def read_spreadsheet(spreadsheet_id, range_name, debug=False):
     result = sheet.values().get(
         spreadsheetId=spreadsheet_id,
         range=range_name).execute()
-    
+
     if debug:
         print('Sheets read: SUCCESS')
-    
+
     values = result.get('values', [])
     if not values:
         raise Exception('No data found')
@@ -119,15 +118,15 @@ def read_spreadsheet(spreadsheet_id, range_name, debug=False):
 
 def process_insert_range(range):
     """Process Google Sheets range string into components.
-    
+
     Args:
         range (str): Range in A1 notation (e.g. 'Sheet1!A1:D10')
-        
+
     Returns:
         tuple: Contains:
             - tab_name (str): Name of the sheet
             - first_range_col (str): Starting column letter
-            - first_range_row (int): Starting row number  
+            - first_range_row (int): Starting row number
             - last_range (str): Ending cell reference
     """
     re_match = re.match("(.*)!(.*):(.*)", range)
@@ -141,7 +140,7 @@ def process_insert_range(range):
 
 def clear_spreadsheet(spreadsheet_id, range_name):
     """Clear data from a Google Sheets range.
-    
+
     Args:
         spreadsheet_id (str): ID of the Google Sheets spreadsheet
         range_name (str): Range to clear in A1 notation
@@ -155,7 +154,7 @@ def clear_spreadsheet(spreadsheet_id, range_name):
 
 def write_chunk(sheet, spreadsheet_id, tab_name, first_range_col, first_range_row, last_range, values):
     """Write a chunk of data to Google Sheets.
-    
+
     Args:
         sheet: Google Sheets API service object
         spreadsheet_id (str): ID of the spreadsheet
@@ -177,7 +176,7 @@ def write_chunk(sheet, spreadsheet_id, tab_name, first_range_col, first_range_ro
 
 def write_spreadsheet(spreadsheet_id, range_name, df, header=True):
     """Write DataFrame to Google Sheets, handling large datasets in chunks.
-    
+
     Args:
         spreadsheet_id (str): ID of the Google Sheets spreadsheet
         range_name (str): Range to write to in A1 notation
@@ -188,7 +187,7 @@ def write_spreadsheet(spreadsheet_id, range_name, df, header=True):
     service = create_service('sheets', creds)
     sheet = service.spreadsheets()
 
-    tab_name, first_range_col, first_range_row, last_range = process_insert_range(range_name) 
+    tab_name, first_range_col, first_range_row, last_range = process_insert_range(range_name)
 
     if header:
         write_chunk(sheet, spreadsheet_id, tab_name, first_range_col, first_range_row, last_range, [df.columns.tolist()])

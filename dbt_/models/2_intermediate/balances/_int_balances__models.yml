@@ -1,0 +1,292 @@
+---
+version: 2
+
+models:
+  - name: int_blc__allocation_balances_daily
+    description: >
+      Daily balances classified by income category for allocation metric
+      calculations.
+    columns:
+      - name: balance_id
+        data_type: uuid
+      - name: currency
+        data_type: text
+      - name: calendar_date
+        data_type: date
+      - name: level_1
+        data_type: text
+      - name: level_2
+        data_type: text
+      - name: level_3
+        data_type: text
+      - name: source
+        data_type: text
+      - name: balance
+        data_type: double precision
+
+  - name: dim_blc__allocation_targets
+    description: >
+      Target allocation by income category for simulation set 7, combining
+      level 2 portfolio targets with simulated asset allocations.
+    columns:
+      - name: simulation_set
+        data_type: integer
+      - name: asset_set
+        data_type: integer
+      - name: level_2
+        data_type: character varying
+      - name: level_3
+        data_type: character varying
+      - name: level_2_allocation
+        data_type: double precision
+      - name: level_3_allocation
+        data_type: double precision
+      - name: target_allocation
+        data_type: numeric
+
+  - name: dim_blc__emergency_reserves
+    description: >
+      Emergency reserve amounts by level 3 category, combining configured cash
+      reserve targets with balances held in excluded accounts on the latest
+      available balance date.
+    columns:
+      - name: level_3
+        data_type: character varying
+        description: Emergency reserve category.
+        tests:
+          - not_null
+      - name: emergency_reserves
+        data_type: double precision
+        description: Configured targets plus excluded latest EUR account balances.
+
+  - name: fct_blc__balances_daily
+    description: >
+      Daily monetary value of asset holdings per account, expressed in fiat
+      currency. Combines holding units with exchange rates to produce balance
+      values across all target currencies.
+      **Event time**: calendar_date
+    columns:
+      - name: balance_id
+        data_type: uuid
+        description: "{{ doc('balance_id') }}"
+        tests:
+          - unique:
+              config:
+                where: >
+                  calendar_date >= current_date -
+                  interval '{{ var("lookback_days", 30) + 30 }} days'
+          - not_null:
+              config:
+                where: >
+                  calendar_date >= current_date -
+                  interval '{{ var("lookback_days", 30) + 30 }} days'
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
+      - name: units
+        data_type: double precision
+        description: "{{ doc('units') }}"
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+      - name: balance
+        data_type: double precision
+        description: "{{ doc('balance') }}"
+
+  - name: fct_blc__holdings_daily
+    config:
+      event_time: calendar_date
+    description: >
+      Daily quantity of each asset held per account. Represents the raw unit
+      position before any monetary conversion, used as the upstream input for
+      balance calculations.
+      **Event time**: calendar_date
+    columns:
+      - name: holding_id
+        data_type: uuid
+        description: "{{ doc('holding_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
+      - name: units
+        data_type: double precision
+        description: "{{ doc('units') }}"
+
+  - name: fct_blc__holdings_extract_latest_daily
+    description: "Extracts the latest holdings for each account and asset."
+    columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
+
+  - name: fct_blc__holdings_reconciliation_latest_daily
+    description: >
+      Compares the latest extracted holdings with the current calculated
+      holdings to identify discrepancies.
+    columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: units_actual
+        data_type: double precision
+        description: >
+          Actual units value extracted from accounts for each asset.
+      - name: units_calculated
+        data_type: numeric
+        description: "Calcualted units value from transactions extracted."
+      - name: delta
+        data_type: double precision
+        description: "Difference betwee units_actual and units_calculated."
+
+  - name: fct_blc__holdings_reconciliation_daily
+    description: >
+      Compares extracted holdings with calculated holdings for all calendar
+      dates to identify discrepancies.
+    columns:
+      - name: extract_id
+        data_type: uuid
+        description: "{{ doc('extract_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: units_actual
+        data_type: double precision
+        description: >
+          Actual units value extracted from accounts for each asset.
+      - name: units_calculated
+        data_type: numeric
+        description: "Calcualted units value from transactions extracted."
+      - name: delta
+        data_type: double precision
+        description: "Difference betwee units_actual and units_calculated."
+
+  - name: fct_blc__holdings_unfiltered_daily
+    description: >
+      Unfiltered view of daily holdings with cumulative units (Includes also
+      transactions that are not reported on).
+    columns:
+      - name: holding_id
+        data_type: uuid
+        description: "{{ doc('holding_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: is_end_of_period
+        data_type: text
+        description: "{{ doc('is_end_of_period') }}"
+        tests:
+          - not_null
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
