@@ -35,11 +35,7 @@ exchange_transactions as (
         end) as asset,
         sum(amount) as amount
     from raw_fiat_transactions
-    group by
-        source_transaction_id,
-        account,
-        calendar_date,
-        currency
+    group by 1, 2, 3, 4
 ),
 
 final_agg as (
@@ -52,11 +48,7 @@ final_agg as (
         sum(amount) as amount
     from exchange_transactions
     where asset is not null
-    group by
-        account,
-        calendar_date,
-        currency,
-        asset
+    group by 1, 2, 3, 4
 ),
 
 final as (

@@ -64,8 +64,9 @@ models:
     status: migrated
     confidence: high
   - deprecated: 0_sources/general/src_projection_grid.sql
-    replacement: []
-    status: not_migrated
+    replacement:
+      - 2_intermediate/projections/int_prj__calendar_monthly.sql
+    status: migrated
     confidence: high
   - deprecated: 1_staging/transactions/stg_transactions.sql
     replacement:
@@ -162,22 +163,27 @@ models:
 
   # Projection, simulation, tax, and yield branches with no current active mart
   - deprecated: 2_intermediate/projections/int_apport_projections_monthly.sql
-    replacement: []
-    status: not_migrated
-    confidence: high
+    replacement:
+      - 2_intermediate/projections/fct_prj__apports_monthly.sql
+    status: migrated
+    confidence: medium
   - deprecated: 2_intermediate/projections/int_balance_projections_monthly.sql
-    replacement: []
-    status: not_migrated
+    replacement:
+      - 3_marts/projections/fct_prj__balances_projected_monthly.sql
+    status: partial
     confidence: high
+    note: >
+      Rebuilt as a gold monthly model combining active projected balances and
+      month-end EUR actual balances. Legacy retirement, house, and car goal
+      rows are not included in the requested replacement.
   - deprecated: 2_intermediate/projections/int_budget_monthly.sql
     replacement: []
     status: not_migrated
     confidence: high
   - deprecated: 2_intermediate/projections/int_transaction_projections_monthly.sql
-    replacement:
-      - 1_staging/projections/stg_projections__transactions.sql
-    status: partial
-    confidence: low
+    replacement: []
+    status: not_migrated
+    confidence: medihighum
   - deprecated: 2_intermediate/projections/int_yield_stats.sql
     replacement: []
     status: not_migrated
@@ -278,10 +284,9 @@ models:
     status: not_migrated
     confidence: high
   - deprecated: 3_marts/transaction_projections_mart.sql
-    replacement:
-      - 1_staging/projections/stg_projections__transactions.sql
-    status: partial
-    confidence: low
+    replacement: []
+    status: not_migrated
+    confidence: high
     note: Only the projection staging lineage exists; the mart output is not present.
   - deprecated: 3_marts/budget_projections_mart.sql
     replacement: []
@@ -307,8 +312,8 @@ models:
   # Metrics dependent on legacy marts
   - deprecated: 4_metrics/allocation_metrics.sql
     replacement:
-      - 2_intermediate/balances/int_blc__allocation_balances_daily.sql
-      - 3_marts/balances/agg_blc__allocation_metrics.sql
+      - 2_intermediate/balances/fct_blc__allocations_daily.sql
+      - 3_marts/balances/agg_blc__allocations_levels.sql
     status: partial
     confidence: medium
     note: >

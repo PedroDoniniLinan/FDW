@@ -29,6 +29,12 @@ models:
         description: "{{ doc ('transaction_type') }}"
         tests:
           - not_null
+      - name: budget_level
+        data_type: character varying
+      - name: level_1
+        data_type: character varying
+      - name: financial_level_1
+        data_type: character varying
       - name: budget_level_1
         data_type: character varying
         description: "{{ doc ('budget_level_1') }}"

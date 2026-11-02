@@ -6,7 +6,7 @@ with
 
 raw_targets as (
     select
-        level_3,
+        level_3 as budget_level_3,
         target_balance
     from {{ ref("target_cash_reserves") }}
 ),
@@ -23,11 +23,11 @@ raw_balances as (
 
 targets as (
     select
-        level_3,
+        budget_level_3,
         sum(target_balance) as emergency_reserves
     from raw_targets
-    where level_3 is not null
-    group by level_3
+    where budget_level_3 is not null
+    group by 1
 ),
 
 latest_balance_date as (
@@ -37,7 +37,7 @@ latest_balance_date as (
 
 excluded_balance as (
     select
-        b.asset as level_3,
+        b.asset as budget_level_3,
         sum(b.balance) as emergency_reserves
     from raw_balances as b
     cross join latest_balance_date as d
@@ -47,26 +47,26 @@ excluded_balance as (
             or (b.account = 'Wise D' and b.asset != 'USD W')
         )
         and b.calendar_date = d.calendar_date
-    group by b.asset
+    group by 1
 ),
 
 unioned_reserves as (
-    select level_3, emergency_reserves from excluded_balance
+    select budget_level_3, emergency_reserves from excluded_balance
     union all
-    select level_3, emergency_reserves from targets
+    select budget_level_3, emergency_reserves from targets
 ),
 
 aggregated_reserves as (
     select
-        level_3,
+        budget_level_3,
         sum(emergency_reserves) as emergency_reserves
     from unioned_reserves
-    group by level_3
+    group by 1
 ),
 
 final as (
     select
-        level_3,
+        budget_level_3,
         emergency_reserves
     from aggregated_reserves
 )

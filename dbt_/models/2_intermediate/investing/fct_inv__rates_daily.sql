@@ -39,7 +39,7 @@ aggregated_rates as (
         max(exchange_rate) as exchange_rate
     from unioned_rates
     where exchange_rate > 0
-    group by rate_id, asset, exchange_asset, calendar_date
+    group by 1, 2, 3, 4
 ),
 
 final as (

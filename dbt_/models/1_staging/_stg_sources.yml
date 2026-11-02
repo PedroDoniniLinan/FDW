@@ -137,3 +137,19 @@ sources:
             data_type: boolean
           - name: _etl_loaded_at
             data_type: timestamp
+
+  - name: silver
+    schema: silver
+    tables:
+      - name: balance_projections
+        identifier: balance_projections
+      - name: taxes_avg_price_raw
+        identifier: taxes_avg_price_raw
+      - name: taxes_pnl_raw
+        identifier: taxes_pnl_raw
+
+  - name: gold
+    schema: gold
+    tables:
+      - name: allocation_simulations
+        identifier: allocation_simulations

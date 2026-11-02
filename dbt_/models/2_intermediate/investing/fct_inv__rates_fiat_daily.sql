@@ -54,11 +54,7 @@ dedup as (
     where
         rn = 1
         and calendar_date is not null
-    group by
-        asset,
-        currency,
-        calendar_date,
-        is_end_of_period
+    group by 1, 2, 3, 4
 ),
 
 final as (

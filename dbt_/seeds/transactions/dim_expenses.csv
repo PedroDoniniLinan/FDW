@@ -69,7 +69,7 @@ Discretionary,Discretionary D,Clothes,Clothes D,Shoes D,Shoes D
 Discretionary,Discretionary P,Clothes,Clothes P,Other P,Other P
 Discretionary,Discretionary P,Clothes,Clothes P,Other P,Accessory P
 Discretionary,Discretionary P,Clothes,Clothes P,Clothes P,Clothes P
-Discretionary,Discretionary P,Clothes,Clothes P,Clothes P,Clothes D+P
+Discretionary,Discretionary,Clothes,Clothes,Clothes,Clothes
 Discretionary,Discretionary P,Clothes,Clothes P,Shoes P,Shoes P
 Discretionary,Discretionary P,Products & Services,Hobbies & Interests P,Figurines & Objects,Objects
 Discretionary,Discretionary P,Products & Services,Hobbies & Interests P,Figurines & Objects,Figurines
@@ -79,6 +79,7 @@ Discretionary,Discretionary P,Products & Services,Hobbies & Interests P,Hardware
 Discretionary,Discretionary P,Products & Services,Hobbies & Interests P,Phone P,Phone
 Discretionary,Discretionary P,Products & Services,Hobbies & Interests P,Phone P,Phone P
 Discretionary,Discretionary D,Products & Services,Hobbies & Interests D,Phone D,Phone D
+Discretionary,Discretionary D,Products & Services,Hobbies & Interests D,Objects D,Objects D
 Discretionary,Discretionary D,Products & Services,Hobbies & Interests D,Peripherals D,Peripherals D
 Discretionary,Discretionary D,Products & Services,Hobbies & Interests D,Beauty tools,Beauty tools
 Discretionary,Discretionary D,Products & Services,Hobbies & Interests D,Plushies,Plushies

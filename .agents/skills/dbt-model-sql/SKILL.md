@@ -47,6 +47,8 @@ change.
 - Write `ref()` and `source()` calls directly in the import CTE's `from` clause.
   Do not assign a relation to a Jinja variable and use that variable as the
   relation; keep dbt dependencies explicit in model SQL.
+- Use positional ordinals in `GROUP BY` clauses (for example, `group by 1, 2`)
+  to match this project's existing SQL convention.
 - Name the final CTE exactly `final`. It must only select the model's intended
   output columns explicitly and may apply filters; do not put transformations
   such as derived expressions, casts, joins, or aggregations in `final`. Keep

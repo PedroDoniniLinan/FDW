@@ -2,27 +2,25 @@
 version: 2
 
 models:
-  - name: int_blc__allocation_balances_daily
+  - name: agg_blc__yield_daily
     description: >
-      Daily balances classified by income category for allocation metric
-      calculations.
+      Daily balances and qualifying investment income classified by budget
+      levels 1, 2, and 3, per currency.
     columns:
-      - name: balance_id
-        data_type: uuid
-      - name: currency
-        data_type: text
       - name: calendar_date
         data_type: date
-      - name: level_1
+      - name: currency
         data_type: text
-      - name: level_2
+      - name: budget_level_1
         data_type: text
-      - name: level_3
+      - name: budget_level_2
         data_type: text
-      - name: source
+      - name: budget_level_3
         data_type: text
       - name: balance
         data_type: double precision
+      - name: interest
+        data_type: numeric
 
   - name: dim_blc__allocation_targets
     description: >
@@ -33,9 +31,9 @@ models:
         data_type: integer
       - name: asset_set
         data_type: integer
-      - name: level_2
+      - name: budget_level_2
         data_type: character varying
-      - name: level_3
+      - name: budget_level_3
         data_type: character varying
       - name: level_2_allocation
         data_type: double precision
@@ -46,11 +44,11 @@ models:
 
   - name: dim_blc__emergency_reserves
     description: >
-      Emergency reserve amounts by level 3 category, combining configured cash
+      Emergency reserve amounts by budget level 3 category, combining configured cash
       reserve targets with balances held in excluded accounts on the latest
       available balance date.
     columns:
-      - name: level_3
+      - name: budget_level_3
         data_type: character varying
         description: Emergency reserve category.
         tests:

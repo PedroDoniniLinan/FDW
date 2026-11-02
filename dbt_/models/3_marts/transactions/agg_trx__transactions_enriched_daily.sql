@@ -1,11 +1,5 @@
 {{ config(
-    materialized='incremental',
-    incremental_strategy='microbatch',
-    unique_key='grain_id',
-    event_time='calendar_date',
-    begin='2019-01-01',
-    batch_size='month',
-    lookback=2,
+    materialized='table',
     tags=['refactored', 'categories', 'main', 'mart', 'rated']
 ) }}
 
@@ -46,18 +40,7 @@ agg as (
         sum(amount) as amount,
         case when transaction_type = 'Expenses' then -sum(amount) else sum(amount) end as absolute_amount
     from transactions
-    group by
-        grain_id,
-        calendar_date,
-        currency,
-        transaction_type,
-        financial_level_1,
-        financial_level_2,
-        budget_level_1,
-        budget_level_2,
-        budget_level_3,
-        account,
-        account_country
+    group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 ),
 
 final as (

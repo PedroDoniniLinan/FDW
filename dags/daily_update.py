@@ -104,7 +104,7 @@ def run_validation_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
     dbt = dbtRunner()
-    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--select", "+balance_discrepancies"]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--select", "+fct_blc__holdings_reconciliation_latest_daily"]
     dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
@@ -113,7 +113,7 @@ def run_validation_dbt():
 def validate_balances():
     print('\n-------------- Validation block --------------')
     start_time = time()
-    df = postgresql_lib.execute_query('select * from gold.balance_discrepancies', code=True)
+    df = postgresql_lib.execute_query('select * from silver.fct_blc__holdings_reconciliation_latest_daily', code=True)
     validated = df.size == 0
     if not validated:
         print('====ERROR====')
@@ -147,5 +147,5 @@ if __name__ == '__main__':
     if validated:
         run_time += run_time_
         run_time += run_dbt()
-        run_projections()
+        # run_projections()
     print('end')

@@ -37,7 +37,7 @@ holdings_changes as (
             and g.asset = t.asset
             and g.calendar_date = t.calendar_date
         )
-    group by g.account, g.asset, g.calendar_date, g.is_end_of_period
+    group by 1, 2, 3, 4
 ),
 
 holding_history as (
@@ -49,7 +49,7 @@ holding_history as (
         md5(account || asset || calendar_date)::uuid as holding_id,
         sum(units) over (partition by account, asset order by calendar_date) as units
     from holdings_changes
-)
+),
 
 
 final as (

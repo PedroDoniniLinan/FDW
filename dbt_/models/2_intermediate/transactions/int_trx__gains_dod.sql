@@ -1,11 +1,5 @@
 {{ config(
-    materialized='incremental',
-    incremental_strategy='microbatch',
-    unique_key='fiat_transaction_id',
-    event_time='calendar_date',
-    begin='2019-01-01',
-    batch_size='month',
-    lookback=2,
+    materialized='table',
     tags=['refactored', 'main', 'rated']
 ) }}
 

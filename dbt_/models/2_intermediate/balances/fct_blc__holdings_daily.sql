@@ -39,7 +39,7 @@ holdings_changes as (
             and g.calendar_date = t.calendar_date
             and t.count_to_balance
         )
-    group by g.account, g.asset, g.calendar_date, g.is_end_of_period
+    group by 1, 2, 3, 4
 ),
 
 holding_history as (

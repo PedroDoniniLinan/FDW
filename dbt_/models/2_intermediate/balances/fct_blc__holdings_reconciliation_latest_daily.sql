@@ -21,7 +21,7 @@ current_holdings as (
         calendar_date,
         units
     from {{ ref("fct_blc__holdings_unfiltered_daily") }}
-    where calendar_date = {{ get_latest_date(src_calculated, "calendar_date") }}
+    where calendar_date = {{ get_latest_date(ref("fct_blc__holdings_unfiltered_daily"), "calendar_date") }}
 ),
 
 reconciliation as (

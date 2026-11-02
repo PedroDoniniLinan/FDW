@@ -1,12 +1,5 @@
 {{ config(
-    materialized='incremental',
-    incremental_strategy='microbatch',
-    unique_key='balance_id',
-    event_time='calendar_date',
-    begin='2019-01-01',
-    batch_size='month',
-    lookback=2,
-    on_schema_change=get_on_schema_change(),
+    materialized='table',
     tags=['refactored', 'main', 'rated']
 ) }}
 

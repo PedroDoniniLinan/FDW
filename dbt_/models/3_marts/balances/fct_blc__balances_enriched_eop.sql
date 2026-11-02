@@ -1,11 +1,5 @@
 {{ config(
-    materialized='incremental',
-    incremental_strategy='microbatch',
-    unique_key='grain_id',
-    event_time='calendar_date',
-    begin='2019-01-01',
-    batch_size='month',
-    lookback=2,
+    materialized='table',
     tags=['refactored', 'categories', 'main', 'mart', 'rated']
 ) }}
 

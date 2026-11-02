@@ -69,10 +69,7 @@ time_grain_agg as (
             end
         ) as expenses
     from transactions
-    group by
-        1,
-        time_grain,
-        currency
+    group by 1, 2, 3
     {% if not loop.last %}union all{% endif %}{% endfor %}
 ),
 

@@ -2,7 +2,53 @@
 version: 2
 
 models:
-  - name: agg_blc__allocation_metrics
+  - name: agg_blc__yield_periods
+    description: >
+      Monthly, quarterly, and yearly yield by budget levels 1, 2, and 3, plus
+      total yield. Yield is period interest divided by the average daily
+      balance for the corresponding grouping and is not annualized. Results
+      are provided by currency.
+    columns:
+      - name: calendar_date
+        data_type: date
+      - name: time_grain
+        data_type: text
+      - name: aggregation_level
+        data_type: text
+      - name: budget_level_3
+        data_type: text
+      - name: budget_level_1
+        data_type: text
+      - name: budget_level_2
+        data_type: text
+      - name: currency
+        data_type: text
+      - name: avg_balance
+        data_type: double precision
+      - name: interest
+        data_type: numeric
+      - name: yield
+        data_type: double precision
+
+  - name: fct_prj__balances_projected_monthly
+    description: >
+      Monthly EUR actual balances excluding Nubank C, combined with projected
+      balances by simulation set.
+    columns:
+      - name: calendar_date
+        data_type: date
+        tests:
+          - not_null
+      - name: label
+        data_type: text
+        tests:
+          - not_null
+      - name: simulation_set
+        data_type: integer
+      - name: balance
+        data_type: double precision
+
+  - name: agg_blc__allocations_levels
     description: >
       Current allocation by asset hierarchy, compared with target allocations
       after excluding emergency reserves, including actionable balance deltas.
@@ -11,9 +57,9 @@ models:
         data_type: character varying
       - name: asset_level
         data_type: text
-      - name: level_1
+      - name: budget_level_1
         data_type: text
-      - name: level_2
+      - name: budget_level_2
         data_type: text
       - name: asset
         data_type: text
