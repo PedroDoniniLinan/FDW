@@ -1,17 +1,19 @@
-import psycopg2
-import pandas as pd
-from pathlib import Path
-from dotenv import load_dotenv
 import os
+from pathlib import Path
+
+import pandas as pd
+import psycopg2
+from dotenv import load_dotenv
+
 
 def execute_query(query_name, code=False, mode='select', target_db='prod'):
     """Execute a SQL query against a PostgreSQL database.
-    
+
     Args:
         query_name (str): Either a SQL query string (if code=True) or path to SQL file
         code (bool, optional): If True, query_name contains SQL code. If False, query_name is a file path. Defaults to False.
         mode (str, optional): Query execution mode - 'select', 'update' or 'management'. Defaults to 'select'.
-    
+
     Returns:
         Union[pd.DataFrame, str]: For select queries, returns DataFrame with results. For other modes returns 'Success' or 'Failed'.
     """
@@ -25,7 +27,7 @@ def execute_query(query_name, code=False, mode='select', target_db='prod'):
     )
 
     if not code:
-        with open(query_name, 'r') as file:
+        with open(query_name) as file:
             query = file.read()
     else:
         query = query_name
@@ -47,10 +49,10 @@ def execute_query(query_name, code=False, mode='select', target_db='prod'):
 
 def list_row_values(row):
     """Convert row values to a list of SQL-safe strings.
-    
+
     Args:
         row (pd.Series): Row from a pandas DataFrame
-        
+
     Returns:
         list: List of values formatted as SQL strings, with NULL handling and quote escaping
     """
@@ -65,31 +67,31 @@ def list_row_values(row):
 
 def generate_insert_query(df, table, keys, merge=True):
     """Generate a PostgreSQL INSERT or UPSERT query from a DataFrame.
-    
+
     Args:
         df (pd.DataFrame): DataFrame containing data to insert
         table (str): Target table name
         keys (list): List of column names that form the unique key
         merge (bool, optional): If True, generates UPSERT query with ON CONFLICT clause. Defaults to True.
-    
+
     Returns:
         str: Generated SQL query string
     """
     if merge:
         merge_clause = """
-        ON CONFLICT ({keys}) DO UPDATE SET 
+        ON CONFLICT ({keys}) DO UPDATE SET
         {update_sets}
         """
     else:
         merge_clause = ''
 
     query = """
-    INSERT INTO {table} 
+    INSERT INTO {table}
     {columns} VALUES {values}
     """ + merge_clause + ";"
 
     rows = []
-    for i, row in df.iterrows():
+    for _, row in df.iterrows():
         row_values = "\n(" + ", ".join(list_row_values(row)) + ")"
         rows.append(row_values)
     values_string = ", ".join(rows)
@@ -107,15 +109,16 @@ def generate_insert_query(df, table, keys, merge=True):
     return query
 
 
-def insert_df(df, table, keys=[], merge=True, target_db='prod'):
+def insert_df(df, table, keys=None, merge=True, target_db='prod'):
     """Insert a DataFrame into a PostgreSQL table.
-    
+
     Args:
         df (pd.DataFrame): DataFrame to insert
         table (str): Target table name
         keys (list): List of column names that form the unique key
         merge (bool, optional): If True, performs UPSERT instead of INSERT. Defaults to True.
     """
+    keys = [] if keys is None else keys
     query = generate_insert_query(df, table, keys, merge)
     query_dir = Path('queries')
     query_dir.mkdir(exist_ok=True)

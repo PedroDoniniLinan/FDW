@@ -1,0 +1,25 @@
+# Prettier configuration matching .yamllint.yml preferences
+# Note: Keep this in sync with .yamllint.yml manually when making changes
+
+# Line length (matches yamllint line-length: max: 120 and MD013 line_length in .markdownlint.jsonc)
+printWidth: 120
+
+# Use double quotes (matches yamllint quoted-strings: quote-type: double)
+quoteProps: "consistent"
+
+# YAML-specific settings
+overrides:
+  - files: "*.{yml,yaml}"
+    options:
+      # Match yamllint braces: min-spaces-inside: 1
+      bracketSpacing: true
+
+      # Use 2 spaces for indentation (YAML standard)
+      tabWidth: 2
+
+      # Use spaces, not tabs
+      useTabs: false
+
+      # Single quote is prettier default for YAML, but we override to preserve
+      # double quotes when present (matches yamllint quote-type: double)
+      singleQuote: false

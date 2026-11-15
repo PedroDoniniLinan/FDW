@@ -1,5 +1,5 @@
 create table if not exists bronze.transfers (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     source_acc varchar(255) not null,
     destination_acc varchar(255) not null,
     calendar_date date not null,

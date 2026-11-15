@@ -1,0 +1,21 @@
+transaction_type,budget_level,level_2,manual_column
+Income,Work,Teaching,C
+Income,Work,Salary,B
+Income,Other,Other,D
+Expenses,Shared,Travel,H
+Expenses,Shared,Transport,T
+Expenses,Shared,Taxes & Fees,M
+Expenses,Free D,Self-care,R
+Expenses,Free P,Self-care,S
+Expenses,Shared,Self-care,Q
+Expenses,Free D,Products & Services,K
+Expenses,Free P,Products & Services,J
+Expenses,Shared,Products & Services,I
+Expenses,Shared,House,U
+Expenses,Shared,Home,E
+Expenses,Shared,Health,L
+Expenses,Shared,Food,F
+Expenses,Shared,Domestic Goods & Services,G
+Expenses,Free D,Clothes,P
+Expenses,Free P,Clothes,O
+Expenses,Shared,Clothes,N

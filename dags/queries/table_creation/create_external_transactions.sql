@@ -1,5 +1,5 @@
 create table if not exists bronze.external_transactions (
-    id serial primary key,
+    id uuid primary key default gen_random_uuid(),
     transaction_type varchar(255) not null,
     tag varchar(511) not null,
     amount float not null,

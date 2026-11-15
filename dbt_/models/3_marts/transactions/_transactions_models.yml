@@ -1,0 +1,178 @@
+version: 2
+
+models:
+  - name: fct_trx__transactions_enriched_daily
+    config:
+      event_time: calendar_date
+    description: >
+      Enriched transactions fact model combining transaction details with
+      account and category dimensions (budget and financial hierarchies),
+      suitable for reporting and analytics.
+      **Event time**: calendar_date
+    columns:
+      - name: fiat_transaction_id
+        data_type: uuid
+        description: "{{ doc('fiat_transaction_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: transaction_id
+        data_type: uuid
+        description: "{{ doc('transaction_id') }}"
+        tests:
+          - not_null
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: transaction_description
+        data_type: text
+        description: "{{ doc('transaction_description') }}"
+        tests:
+          - not_null
+      - name: asset
+        data_type: character varying
+        description: "{{ doc('asset') }}"
+        tests:
+          - not_null
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+        tests:
+          - not_null
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
+      - name: category
+        data_type: character varying
+        description: "{{ doc('category') }}"
+        tests:
+          - not_null
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+        tests:
+          - not_null
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+        tests:
+          - not_null
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+        tests:
+          - not_null
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: account_country
+        data_type: text
+        description: "{{ doc('account_country') }}"
+        tests:
+          - not_null
+      - name: account_budget_level
+        data_type: text
+        description: "{{ doc('account_ownership') }}"
+        tests:
+          - not_null
+      - name: units
+        data_type: numeric
+        description: "{{ doc('units') }}"
+        tests:
+          - not_null
+      - name: exchange_rate
+        data_type: numeric
+        description: "{{ doc('exchange_rate') }}"
+        tests:
+          - not_null
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+        tests:
+          - not_null
+
+  - name: agg_trx__transactions_enriched_daily
+    description: >
+      Daily aggregated financial transactions across income and expenses,
+      grouped by financial, budget, account, and currency dimensions.
+      **Event time**: calendar_date
+    columns:
+      - name: grain_id
+        data_type: text
+        description: "{{ doc('grain_id') }}"
+        tests:
+          - not_null
+          - unique
+      - name: calendar_date
+        data_type: date
+        description: "{{ doc('calendar_date') }}"
+        tests:
+          - not_null
+      - name: currency
+        data_type: text
+        description: "{{ doc('currency') }}"
+        tests:
+          - not_null
+      - name: transaction_type
+        data_type: text
+        description: "{{ doc('transaction_type') }}"
+        tests:
+          - not_null
+      - name: financial_level_1
+        data_type: text
+        description: "{{ doc('financial_level_1') }}"
+        tests:
+          - not_null
+      - name: financial_level_2
+        data_type: text
+        description: "{{ doc('financial_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_1
+        data_type: text
+        description: "{{ doc('budget_level_1') }}"
+        tests:
+          - not_null
+      - name: budget_level_2
+        data_type: text
+        description: "{{ doc('budget_level_2') }}"
+        tests:
+          - not_null
+      - name: budget_level_3
+        data_type: text
+        description: "{{ doc('budget_level_3') }}"
+        tests:
+          - not_null
+      - name: account
+        data_type: character varying
+        description: "{{ doc('account') }}"
+        tests:
+          - not_null
+      - name: account_country
+        data_type: text
+        description: "{{ doc('account_country') }}"
+        tests:
+          - not_null
+      - name: amount
+        data_type: numeric
+        description: "{{ doc('amount') }}"
+      - name: absolute_amount
+        data_type: numeric
+        description: "{{ doc('absolute_amount') }}"
+

@@ -1,0 +1,2012 @@
+# Open items
+
+Each line is one group that differs and has no explanation yet. The runner adds new differing groups and marks items that no longer differ, but it never ticks an item. Tick `[x]` and write the cause under the item only after an exploration has explained it.
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Actuals | mismatch (-11784.44) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Car goal | missing_in_current (-65000000.0) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=House goal | missing_in_current (-97500000.0) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Projection 0 | mismatch (-909933692.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Projection 1 | mismatch (671195237.63) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Projection 2 | mismatch (-492340443.3) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Projection 3 | mismatch (-135341331.53) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Projection 4 | mismatch (205770702.56) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_label_eur` | label=Retirement goal | missing_in_current (-227500000.0) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2022-01-01, currency=EUR | mismatch (-1788.32) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2024-01-01, currency=EUR | mismatch (-64181.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2025-01-01, currency=EUR | mismatch (-199177.22) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2026-01-01, currency=EUR | mismatch (-371376.26) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2027-01-01, currency=EUR | mismatch (-610988.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2028-01-01, currency=EUR | mismatch (-926640.76) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2029-01-01, currency=EUR | mismatch (-1334157.8) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2030-01-01, currency=EUR | mismatch (-1861579.75) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2031-01-01, currency=EUR | mismatch (-2493643.51) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2032-01-01, currency=EUR | mismatch (-3270971.11) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2033-01-01, currency=EUR | mismatch (-4254603.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2034-01-01, currency=EUR | mismatch (-5482418.14) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2035-01-01, currency=EUR | mismatch (-6995266.17) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2036-01-01, currency=EUR | mismatch (-8848021.7) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2037-01-01, currency=EUR | mismatch (-11113749.11) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2038-01-01, currency=EUR | mismatch (-13880212.83) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2039-01-01, currency=EUR | mismatch (-17252225.03) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2040-01-01, currency=EUR | mismatch (-21353058.35) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2041-01-01, currency=EUR | mismatch (-26156915.22) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2042-01-01, currency=EUR | mismatch (-31587900.99) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2043-01-01, currency=EUR | mismatch (-37644465.72) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2044-01-01, currency=EUR | mismatch (-44290149.62) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2045-01-01, currency=EUR | mismatch (-51450449.2) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2046-01-01, currency=EUR | mismatch (-58987297.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2047-01-01, currency=EUR | mismatch (-66710131.18) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2048-01-01, currency=EUR | mismatch (-74345477.34) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2049-01-01, currency=EUR | mismatch (-81506540.56) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_year_and_currency` | period=2050-01-01, currency=EUR | mismatch (-87667561.35) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-01-01, currency=EUR | mismatch (-1168.18) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-02-01, currency=EUR | mismatch (-190.34) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-03-01, currency=EUR | mismatch (-65.8) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-04-01, currency=EUR | mismatch (-61.29) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-05-01, currency=EUR | mismatch (-50.13) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-06-01, currency=EUR | mismatch (-39.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2022-07-01, currency=EUR | mismatch (-47.9) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-01-01, currency=EUR | mismatch (-1921.76) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-02-01, currency=EUR | mismatch (-2607.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-03-01, currency=EUR | mismatch (-3280.45) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-04-01, currency=EUR | mismatch (-3037.65) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-05-01, currency=EUR | mismatch (-3793.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-06-01, currency=EUR | mismatch (-4566.21) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-07-01, currency=EUR | mismatch (-5369.05) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-08-01, currency=EUR | mismatch (-6184.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-09-01, currency=EUR | mismatch (-7028.71) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-10-01, currency=EUR | mismatch (-7896.09) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-11-01, currency=EUR | mismatch (-8788.88) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2024-12-01, currency=EUR | mismatch (-9707.17) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-01-01, currency=EUR | mismatch (-10641.79) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-02-01, currency=EUR | mismatch (-11564.52) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-03-01, currency=EUR | mismatch (-12511.34) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-04-01, currency=EUR | mismatch (-13473.36) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-05-01, currency=EUR | mismatch (-14475.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-06-01, currency=EUR | mismatch (-15843.3) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-07-01, currency=EUR | mismatch (-16764.34) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-08-01, currency=EUR | mismatch (-17604.56) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-09-01, currency=EUR | mismatch (-18842.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-10-01, currency=EUR | mismatch (-24199.06) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-11-01, currency=EUR | mismatch (-20875.83) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2025-12-01, currency=EUR | mismatch (-22380.4) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-01-01, currency=EUR | mismatch (-23614.13) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-02-01, currency=EUR | mismatch (-24838.75) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-03-01, currency=EUR | mismatch (-26062.46) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-04-01, currency=EUR | mismatch (-27525.84) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-05-01, currency=EUR | mismatch (-28845.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-06-01, currency=EUR | mismatch (-30035.0) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-07-01, currency=EUR | mismatch (-31145.39) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-08-01, currency=EUR | mismatch (-32662.12) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-09-01, currency=EUR | mismatch (-34237.32) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-10-01, currency=EUR | mismatch (-35850.32) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-11-01, currency=EUR | mismatch (-37433.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2026-12-01, currency=EUR | mismatch (-39125.78) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-01-01, currency=EUR | mismatch (-40855.58) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-02-01, currency=EUR | mismatch (-42527.25) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-03-01, currency=EUR | mismatch (-44246.96) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-04-01, currency=EUR | mismatch (-46021.28) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-05-01, currency=EUR | mismatch (-47845.57) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-06-01, currency=EUR | mismatch (-49692.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-07-01, currency=EUR | mismatch (-51588.97) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-08-01, currency=EUR | mismatch (-53537.8) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-09-01, currency=EUR | mismatch (-55539.52) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-10-01, currency=EUR | mismatch (-57593.12) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-11-01, currency=EUR | mismatch (-59696.02) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2027-12-01, currency=EUR | mismatch (-61844.54) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-01-01, currency=EUR | mismatch (-64032.53) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-02-01, currency=EUR | mismatch (-66248.04) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-03-01, currency=EUR | mismatch (-68521.4) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-04-01, currency=EUR | mismatch (-70853.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-05-01, currency=EUR | mismatch (-73245.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-06-01, currency=EUR | mismatch (-75686.98) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-07-01, currency=EUR | mismatch (-78183.63) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-08-01, currency=EUR | mismatch (-80708.49) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-09-01, currency=EUR | mismatch (-83278.41) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-10-01, currency=EUR | mismatch (-85910.74) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-11-01, currency=EUR | mismatch (-88606.46) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2028-12-01, currency=EUR | mismatch (-91364.51) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-01-01, currency=EUR | mismatch (-94181.27) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-02-01, currency=EUR | mismatch (-97031.42) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-03-01, currency=EUR | mismatch (-99952.53) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-04-01, currency=EUR | mismatch (-102945.87) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-05-01, currency=EUR | mismatch (-106012.75) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-06-01, currency=EUR | mismatch (-109154.46) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-07-01, currency=EUR | mismatch (-112360.4) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-08-01, currency=EUR | mismatch (-115643.47) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-09-01, currency=EUR | mismatch (-118996.43) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-10-01, currency=EUR | mismatch (-122425.13) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-11-01, currency=EUR | mismatch (-125934.06) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2029-12-01, currency=EUR | mismatch (-129520.01) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-01-01, currency=EUR | mismatch (-133177.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-02-01, currency=EUR | mismatch (-136884.1) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-03-01, currency=EUR | mismatch (-140677.32) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-04-01, currency=EUR | mismatch (-144559.06) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-05-01, currency=EUR | mismatch (-148530.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-06-01, currency=EUR | mismatch (-152585.55) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-07-01, currency=EUR | mismatch (-156728.93) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-08-01, currency=EUR | mismatch (-160966.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-09-01, currency=EUR | mismatch (-165278.78) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-10-01, currency=EUR | mismatch (-169687.36) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-11-01, currency=EUR | mismatch (-174186.48) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2030-12-01, currency=EUR | mismatch (-178318.7) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-01-01, currency=EUR | mismatch (-182535.23) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-02-01, currency=EUR | mismatch (-186799.13) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-03-01, currency=EUR | mismatch (-191157.6) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-04-01, currency=EUR | mismatch (-195618.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-05-01, currency=EUR | mismatch (-200176.54) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-06-01, currency=EUR | mismatch (-204834.71) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-07-01, currency=EUR | mismatch (-209593.41) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-08-01, currency=EUR | mismatch (-214455.12) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-09-01, currency=EUR | mismatch (-219413.61) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-10-01, currency=EUR | mismatch (-224480.19) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-11-01, currency=EUR | mismatch (-229651.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2031-12-01, currency=EUR | mismatch (-234928.04) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-01-01, currency=EUR | mismatch (-240307.46) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-02-01, currency=EUR | mismatch (-245776.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-03-01, currency=EUR | mismatch (-251361.59) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-04-01, currency=EUR | mismatch (-257070.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-05-01, currency=EUR | mismatch (-262898.57) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-06-01, currency=EUR | mismatch (-268842.09) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-07-01, currency=EUR | mismatch (-274908.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-08-01, currency=EUR | mismatch (-281101.44) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-09-01, currency=EUR | mismatch (-287400.62) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-10-01, currency=EUR | mismatch (-293831.29) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-11-01, currency=EUR | mismatch (-300392.04) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2032-12-01, currency=EUR | mismatch (-307080.38) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-01-01, currency=EUR | mismatch (-313893.57) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-02-01, currency=EUR | mismatch (-320804.65) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-03-01, currency=EUR | mismatch (-327855.45) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-04-01, currency=EUR | mismatch (-335054.27) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-05-01, currency=EUR | mismatch (-342397.7) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-06-01, currency=EUR | mismatch (-349888.19) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-07-01, currency=EUR | mismatch (-357521.77) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-08-01, currency=EUR | mismatch (-365307.1) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-09-01, currency=EUR | mismatch (-373224.22) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-10-01, currency=EUR | mismatch (-381289.67) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-11-01, currency=EUR | mismatch (-389503.04) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2033-12-01, currency=EUR | mismatch (-397863.68) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-01-01, currency=EUR | mismatch (-406369.08) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-02-01, currency=EUR | mismatch (-415004.61) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-03-01, currency=EUR | mismatch (-423798.76) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-04-01, currency=EUR | mismatch (-432760.21) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-05-01, currency=EUR | mismatch (-441885.64) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-06-01, currency=EUR | mismatch (-451168.95) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-07-01, currency=EUR | mismatch (-460622.64) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-08-01, currency=EUR | mismatch (-470248.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-09-01, currency=EUR | mismatch (-480028.73) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-10-01, currency=EUR | mismatch (-489985.42) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-11-01, currency=EUR | mismatch (-500117.77) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2034-12-01, currency=EUR | mismatch (-510428.02) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-01-01, currency=EUR | mismatch (-520916.48) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-02-01, currency=EUR | mismatch (-531552.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-03-01, currency=EUR | mismatch (-542379.55) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-04-01, currency=EUR | mismatch (-553406.23) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-05-01, currency=EUR | mismatch (-564629.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-06-01, currency=EUR | mismatch (-576006.89) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-07-01, currency=EUR | mismatch (-587587.14) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-08-01, currency=EUR | mismatch (-599372.89) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-09-01, currency=EUR | mismatch (-611356.57) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-10-01, currency=EUR | mismatch (-623548.35) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-11-01, currency=EUR | mismatch (-635947.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2035-12-01, currency=EUR | mismatch (-648561.56) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-01-01, currency=EUR | mismatch (-661387.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-02-01, currency=EUR | mismatch (-674411.95) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-03-01, currency=EUR | mismatch (-687664.9) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-04-01, currency=EUR | mismatch (-701156.42) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-05-01, currency=EUR | mismatch (-714884.15) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-06-01, currency=EUR | mismatch (-728835.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-07-01, currency=EUR | mismatch (-743031.14) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-08-01, currency=EUR | mismatch (-757474.35) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-09-01, currency=EUR | mismatch (-772146.13) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-10-01, currency=EUR | mismatch (-787074.6) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-11-01, currency=EUR | mismatch (-802257.25) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2036-12-01, currency=EUR | mismatch (-817697.84) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-01-01, currency=EUR | mismatch (-833397.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-02-01, currency=EUR | mismatch (-849312.75) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-03-01, currency=EUR | mismatch (-865501.88) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-04-01, currency=EUR | mismatch (-881975.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-05-01, currency=EUR | mismatch (-898732.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-06-01, currency=EUR | mismatch (-915777.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-07-01, currency=EUR | mismatch (-933109.96) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-08-01, currency=EUR | mismatch (-950738.95) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-09-01, currency=EUR | mismatch (-968657.27) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-10-01, currency=EUR | mismatch (-986883.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-11-01, currency=EUR | mismatch (-1005410.96) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2037-12-01, currency=EUR | mismatch (-1024249.81) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-01-01, currency=EUR | mismatch (-1043399.57) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-02-01, currency=EUR | mismatch (-1062856.3) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-03-01, currency=EUR | mismatch (-1082643.64) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-04-01, currency=EUR | mismatch (-1102773.25) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-05-01, currency=EUR | mismatch (-1123244.19) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-06-01, currency=EUR | mismatch (-1144054.51) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-07-01, currency=EUR | mismatch (-1165218.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-08-01, currency=EUR | mismatch (-1186739.48) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-09-01, currency=EUR | mismatch (-1208600.86) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-10-01, currency=EUR | mismatch (-1230832.68) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-11-01, currency=EUR | mismatch (-1253436.86) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2038-12-01, currency=EUR | mismatch (-1276413.33) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-01-01, currency=EUR | mismatch (-1299768.05) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-02-01, currency=EUR | mismatch (-1323470.54) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-03-01, currency=EUR | mismatch (-1347570.24) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-04-01, currency=EUR | mismatch (-1372079.79) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-05-01, currency=EUR | mismatch (-1396999.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-06-01, currency=EUR | mismatch (-1422330.98) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-07-01, currency=EUR | mismatch (-1448086.59) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-08-01, currency=EUR | mismatch (-1474271.68) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-09-01, currency=EUR | mismatch (-1500882.0) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-10-01, currency=EUR | mismatch (-1527936.73) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-11-01, currency=EUR | mismatch (-1555439.79) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2039-12-01, currency=EUR | mismatch (-1583389.34) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-01-01, currency=EUR | mismatch (-1611792.63) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-02-01, currency=EUR | mismatch (-1640627.26) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-03-01, currency=EUR | mismatch (-1669939.59) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-04-01, currency=EUR | mismatch (-1699743.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-05-01, currency=EUR | mismatch (-1730040.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-06-01, currency=EUR | mismatch (-1760821.1) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-07-01, currency=EUR | mismatch (-1792110.99) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-08-01, currency=EUR | mismatch (-1823917.03) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-09-01, currency=EUR | mismatch (-1856223.32) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-10-01, currency=EUR | mismatch (-1889063.45) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-11-01, currency=EUR | mismatch (-1922432.94) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2040-12-01, currency=EUR | mismatch (-1956345.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-01-01, currency=EUR | mismatch (-1988815.47) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-02-01, currency=EUR | mismatch (-2021755.53) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-03-01, currency=EUR | mismatch (-2055207.02) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-04-01, currency=EUR | mismatch (-2089186.98) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-05-01, currency=EUR | mismatch (-2123697.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-06-01, currency=EUR | mismatch (-2158747.12) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-07-01, currency=EUR | mismatch (-2194338.06) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-08-01, currency=EUR | mismatch (-2230483.72) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-09-01, currency=EUR | mismatch (-2267182.86) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-10-01, currency=EUR | mismatch (-2304454.92) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-11-01, currency=EUR | mismatch (-2342305.79) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2041-12-01, currency=EUR | mismatch (-2380740.06) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-01-01, currency=EUR | mismatch (-2417406.02) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-02-01, currency=EUR | mismatch (-2454596.87) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-03-01, currency=EUR | mismatch (-2492334.99) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-04-01, currency=EUR | mismatch (-2530633.01) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-05-01, currency=EUR | mismatch (-2569494.03) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-06-01, currency=EUR | mismatch (-2608928.51) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-07-01, currency=EUR | mismatch (-2648940.77) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-08-01, currency=EUR | mismatch (-2689540.37) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-09-01, currency=EUR | mismatch (-2730718.99) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-10-01, currency=EUR | mismatch (-2772502.89) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-11-01, currency=EUR | mismatch (-2814897.6) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2042-12-01, currency=EUR | mismatch (-2857906.94) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-01-01, currency=EUR | mismatch (-2898767.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-02-01, currency=EUR | mismatch (-2940156.05) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-03-01, currency=EUR | mismatch (-2982112.41) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-04-01, currency=EUR | mismatch (-3024648.39) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-05-01, currency=EUR | mismatch (-3067767.7) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-06-01, currency=EUR | mismatch (-3111436.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-07-01, currency=EUR | mismatch (-3155699.71) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-08-01, currency=EUR | mismatch (-3200568.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-09-01, currency=EUR | mismatch (-3246046.88) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-10-01, currency=EUR | mismatch (-3292147.9) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-11-01, currency=EUR | mismatch (-3338876.69) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2043-12-01, currency=EUR | mismatch (-3386237.15) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-01-01, currency=EUR | mismatch (-3430979.8) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-02-01, currency=EUR | mismatch (-3476273.2) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-03-01, currency=EUR | mismatch (-3522139.23) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-04-01, currency=EUR | mismatch (-3568587.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-05-01, currency=EUR | mismatch (-3615623.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-06-01, currency=EUR | mismatch (-3663238.81) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-07-01, currency=EUR | mismatch (-3711450.61) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-08-01, currency=EUR | mismatch (-3760269.76) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-09-01, currency=EUR | mismatch (-3809695.49) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-10-01, currency=EUR | mismatch (-3859744.05) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-11-01, currency=EUR | mismatch (-3910420.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2044-12-01, currency=EUR | mismatch (-3961726.84) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-01-01, currency=EUR | mismatch (-4009847.41) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-02-01, currency=EUR | mismatch (-4058491.67) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-03-01, currency=EUR | mismatch (-4107676.86) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-04-01, currency=EUR | mismatch (-4157407.99) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-05-01, currency=EUR | mismatch (-4207691.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-06-01, currency=EUR | mismatch (-4258533.94) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-07-01, currency=EUR | mismatch (-4309938.29) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-08-01, currency=EUR | mismatch (-4361912.23) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-09-01, currency=EUR | mismatch (-4414459.7) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-10-01, currency=EUR | mismatch (-4467586.98) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-11-01, currency=EUR | mismatch (-4521298.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2045-12-01, currency=EUR | mismatch (-4575603.46) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-01-01, currency=EUR | mismatch (-4626078.97) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-02-01, currency=EUR | mismatch (-4677042.18) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-03-01, currency=EUR | mismatch (-4728500.24) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-04-01, currency=EUR | mismatch (-4780457.67) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-05-01, currency=EUR | mismatch (-4832918.29) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-06-01, currency=EUR | mismatch (-4885883.59) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-07-01, currency=EUR | mismatch (-4939359.67) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-08-01, currency=EUR | mismatch (-4993350.37) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-09-01, currency=EUR | mismatch (-5047857.15) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-10-01, currency=EUR | mismatch (-5102885.65) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-11-01, currency=EUR | mismatch (-5158439.9) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2046-12-01, currency=EUR | mismatch (-5214524.16) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-01-01, currency=EUR | mismatch (-5266031.25) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-02-01, currency=EUR | mismatch (-5317949.17) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-03-01, currency=EUR | mismatch (-5370277.8) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-04-01, currency=EUR | mismatch (-5423018.65) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-05-01, currency=EUR | mismatch (-5476172.84) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-06-01, currency=EUR | mismatch (-5529747.82) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-07-01, currency=EUR | mismatch (-5583738.73) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-08-01, currency=EUR | mismatch (-5638146.71) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-09-01, currency=EUR | mismatch (-5692972.98) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-10-01, currency=EUR | mismatch (-5748218.65) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-11-01, currency=EUR | mismatch (-5803884.68) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2047-12-01, currency=EUR | mismatch (-5859971.91) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-01-01, currency=EUR | mismatch (-5910586.44) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-02-01, currency=EUR | mismatch (-5961484.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-03-01, currency=EUR | mismatch (-6012656.63) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-04-01, currency=EUR | mismatch (-6064103.07) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-05-01, currency=EUR | mismatch (-6115820.1) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-06-01, currency=EUR | mismatch (-6167797.33) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-07-01, currency=EUR | mismatch (-6220040.15) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-08-01, currency=EUR | mismatch (-6272545.96) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-09-01, currency=EUR | mismatch (-6325315.18) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-10-01, currency=EUR | mismatch (-6378342.87) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-11-01, currency=EUR | mismatch (-6431625.63) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2048-12-01, currency=EUR | mismatch (-6485159.9) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-01-01, currency=EUR | mismatch (-6532151.55) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-02-01, currency=EUR | mismatch (-6579243.37) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-03-01, currency=EUR | mismatch (-6626408.08) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-04-01, currency=EUR | mismatch (-6673638.85) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-05-01, currency=EUR | mismatch (-6720931.14) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-06-01, currency=EUR | mismatch (-6768275.29) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-07-01, currency=EUR | mismatch (-6815665.56) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-08-01, currency=EUR | mismatch (-6863092.62) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-09-01, currency=EUR | mismatch (-6910550.72) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-10-01, currency=EUR | mismatch (-6958031.33) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-11-01, currency=EUR | mismatch (-7005526.44) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2049-12-01, currency=EUR | mismatch (-7053025.6) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-01-01, currency=EUR | mismatch (-7092712.94) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-02-01, currency=EUR | mismatch (-7132210.35) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-03-01, currency=EUR | mismatch (-7171493.66) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-04-01, currency=EUR | mismatch (-7210549.77) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-05-01, currency=EUR | mismatch (-7249368.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-06-01, currency=EUR | mismatch (-7287993.17) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-07-01, currency=EUR | mismatch (-7326351.24) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-08-01, currency=EUR | mismatch (-7364428.15) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-09-01, currency=EUR | mismatch (-7402217.86) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-10-01, currency=EUR | mismatch (-7439699.4) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-11-01, currency=EUR | mismatch (-7476859.17) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_currency` | period=2050-12-01, currency=EUR | mismatch (-7513677.31) | first seen 2026-11-07 | no longer differing on 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-01-01, label=Actuals, currency=EUR | mismatch (-1168.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-02-01, label=Actuals, currency=EUR | mismatch (-190.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-03-01, label=Actuals, currency=EUR | mismatch (-65.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-04-01, label=Actuals, currency=EUR | mismatch (-61.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-05-01, label=Actuals, currency=EUR | mismatch (-50.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-06-01, label=Actuals, currency=EUR | mismatch (-39.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2022-07-01, label=Actuals, currency=EUR | mismatch (-47.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Actuals, currency=EUR | mismatch (-1066.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Projection 0, currency=EUR | mismatch (-738.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Projection 1, currency=EUR | mismatch (318.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Projection 2, currency=EUR | mismatch (-378.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Projection 3, currency=EUR | mismatch (-240.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-01-01, label=Projection 4, currency=EUR | mismatch (182.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Actuals, currency=EUR | mismatch (-1022.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Projection 0, currency=EUR | mismatch (-1457.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Projection 1, currency=EUR | mismatch (668.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Projection 2, currency=EUR | mismatch (-734.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Projection 3, currency=EUR | mismatch (-455.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-02-01, label=Projection 4, currency=EUR | mismatch (392.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Actuals, currency=EUR | mismatch (-979.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Projection 0, currency=EUR | mismatch (-2164.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Projection 1, currency=EUR | mismatch (1014.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Projection 2, currency=EUR | mismatch (-1084.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Projection 3, currency=EUR | mismatch (-665.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-03-01, label=Projection 4, currency=EUR | mismatch (598.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-04-01, label=Projection 0, currency=EUR | mismatch (-2891.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-04-01, label=Projection 1, currency=EUR | mismatch (1370.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-04-01, label=Projection 2, currency=EUR | mismatch (-1442.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-04-01, label=Projection 3, currency=EUR | mismatch (-879.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-04-01, label=Projection 4, currency=EUR | mismatch (809.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-05-01, label=Projection 0, currency=EUR | mismatch (-3644.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-05-01, label=Projection 1, currency=EUR | mismatch (1740.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-05-01, label=Projection 2, currency=EUR | mismatch (-1813.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-05-01, label=Projection 3, currency=EUR | mismatch (-1099.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-05-01, label=Projection 4, currency=EUR | mismatch (1027.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-06-01, label=Projection 0, currency=EUR | mismatch (-4418.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-06-01, label=Projection 1, currency=EUR | mismatch (2122.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-06-01, label=Projection 2, currency=EUR | mismatch (-2193.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-06-01, label=Projection 3, currency=EUR | mismatch (-1324.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-06-01, label=Projection 4, currency=EUR | mismatch (1251.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-07-01, label=Projection 0, currency=EUR | mismatch (-5225.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-07-01, label=Projection 1, currency=EUR | mismatch (2521.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-07-01, label=Projection 2, currency=EUR | mismatch (-2589.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-07-01, label=Projection 3, currency=EUR | mismatch (-1556.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-07-01, label=Projection 4, currency=EUR | mismatch (1484.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-08-01, label=Projection 0, currency=EUR | mismatch (-6047.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-08-01, label=Projection 1, currency=EUR | mismatch (2929.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-08-01, label=Projection 2, currency=EUR | mismatch (-2991.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-08-01, label=Projection 3, currency=EUR | mismatch (-1791.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-08-01, label=Projection 4, currency=EUR | mismatch (1720.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-09-01, label=Projection 0, currency=EUR | mismatch (-6895.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-09-01, label=Projection 1, currency=EUR | mismatch (3352.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-09-01, label=Projection 2, currency=EUR | mismatch (-3408.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-09-01, label=Projection 3, currency=EUR | mismatch (-2034.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-09-01, label=Projection 4, currency=EUR | mismatch (1964.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-10-01, label=Projection 0, currency=EUR | mismatch (-7775.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-10-01, label=Projection 1, currency=EUR | mismatch (3791.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-10-01, label=Projection 2, currency=EUR | mismatch (-3838.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-10-01, label=Projection 3, currency=EUR | mismatch (-2282.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-10-01, label=Projection 4, currency=EUR | mismatch (2216.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-11-01, label=Projection 0, currency=EUR | mismatch (-8681.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-11-01, label=Projection 1, currency=EUR | mismatch (4245.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-11-01, label=Projection 2, currency=EUR | mismatch (-4281.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-11-01, label=Projection 3, currency=EUR | mismatch (-2538.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-11-01, label=Projection 4, currency=EUR | mismatch (2475.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-12-01, label=Projection 0, currency=EUR | mismatch (-9616.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-12-01, label=Projection 1, currency=EUR | mismatch (4714.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-12-01, label=Projection 2, currency=EUR | mismatch (-4739.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-12-01, label=Projection 3, currency=EUR | mismatch (-2800.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2024-12-01, label=Projection 4, currency=EUR | mismatch (2743.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-01-01, label=Projection 0, currency=EUR | mismatch (-10578.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-01-01, label=Projection 1, currency=EUR | mismatch (5198.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-01-01, label=Projection 2, currency=EUR | mismatch (-5208.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-01-01, label=Projection 3, currency=EUR | mismatch (-3067.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-01-01, label=Projection 4, currency=EUR | mismatch (3016.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-02-01, label=Projection 0, currency=EUR | mismatch (-11525.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-02-01, label=Projection 1, currency=EUR | mismatch (5678.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-02-01, label=Projection 2, currency=EUR | mismatch (-5670.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-02-01, label=Projection 3, currency=EUR | mismatch (-3328.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-02-01, label=Projection 4, currency=EUR | mismatch (3285.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-03-01, label=Projection 0, currency=EUR | mismatch (-12500.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-03-01, label=Projection 1, currency=EUR | mismatch (6172.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-03-01, label=Projection 2, currency=EUR | mismatch (-6146.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-03-01, label=Projection 3, currency=EUR | mismatch (-3596.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-03-01, label=Projection 4, currency=EUR | mismatch (3562.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-04-01, label=Projection 0, currency=EUR | mismatch (-13496.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-04-01, label=Projection 1, currency=EUR | mismatch (6679.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-04-01, label=Projection 2, currency=EUR | mismatch (-6632.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-04-01, label=Projection 3, currency=EUR | mismatch (-3868.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-04-01, label=Projection 4, currency=EUR | mismatch (3844.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-05-01, label=Projection 0, currency=EUR | mismatch (-14519.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-05-01, label=Projection 1, currency=EUR | mismatch (7201.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-05-01, label=Projection 2, currency=EUR | mismatch (-7133.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-05-01, label=Projection 3, currency=EUR | mismatch (-4147.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-05-01, label=Projection 4, currency=EUR | mismatch (4135.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Actuals, currency=EUR | mismatch (-362.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Projection 0, currency=EUR | mismatch (-15570.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Projection 1, currency=EUR | mismatch (7739.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Projection 2, currency=EUR | mismatch (-7648.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Projection 3, currency=EUR | mismatch (-4433.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-06-01, label=Projection 4, currency=EUR | mismatch (4433.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Actuals, currency=EUR | mismatch (-219.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Projection 0, currency=EUR | mismatch (-16672.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Projection 1, currency=EUR | mismatch (8304.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Projection 2, currency=EUR | mismatch (-8189.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Projection 3, currency=EUR | mismatch (-4733.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-07-01, label=Projection 4, currency=EUR | mismatch (4746.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-08-01, label=Projection 0, currency=EUR | mismatch (-17791.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-08-01, label=Projection 1, currency=EUR | mismatch (8879.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-08-01, label=Projection 2, currency=EUR | mismatch (-8739.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-08-01, label=Projection 3, currency=EUR | mismatch (-5035.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-08-01, label=Projection 4, currency=EUR | mismatch (5064.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-09-01, label=Projection 0, currency=EUR | mismatch (-18939.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-09-01, label=Projection 1, currency=EUR | mismatch (9471.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-09-01, label=Projection 2, currency=EUR | mismatch (-9306.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-09-01, label=Projection 3, currency=EUR | mismatch (-5346.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-09-01, label=Projection 4, currency=EUR | mismatch (5390.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Actuals, currency=EUR | mismatch (-4333.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Projection 0, currency=EUR | mismatch (-20121.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Projection 1, currency=EUR | mismatch (10081.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Projection 2, currency=EUR | mismatch (-9888.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Projection 3, currency=EUR | mismatch (-5663.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-10-01, label=Projection 4, currency=EUR | mismatch (5726.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Actuals, currency=EUR | mismatch (144.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Projection 0, currency=EUR | mismatch (-21325.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Projection 1, currency=EUR | mismatch (10705.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Projection 2, currency=EUR | mismatch (-10482.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Projection 3, currency=EUR | mismatch (-5985.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-11-01, label=Projection 4, currency=EUR | mismatch (6067.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Actuals, currency=EUR | mismatch (-156.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Projection 0, currency=EUR | mismatch (-22581.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Projection 1, currency=EUR | mismatch (11356.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Projection 2, currency=EUR | mismatch (-11102.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Projection 3, currency=EUR | mismatch (-6321.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2025-12-01, label=Projection 4, currency=EUR | mismatch (6424.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Actuals, currency=EUR | mismatch (-163.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Projection 0, currency=EUR | mismatch (-23865.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Projection 1, currency=EUR | mismatch (12024.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Projection 2, currency=EUR | mismatch (-11735.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Projection 3, currency=EUR | mismatch (-6662.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-01-01, label=Projection 4, currency=EUR | mismatch (6788.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Actuals, currency=EUR | mismatch (-168.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Projection 0, currency=EUR | mismatch (-25146.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Projection 1, currency=EUR | mismatch (12694.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Projection 2, currency=EUR | mismatch (-12367.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Projection 3, currency=EUR | mismatch (-7000.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-02-01, label=Projection 4, currency=EUR | mismatch (7150.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Actuals, currency=EUR | mismatch (-169.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Projection 0, currency=EUR | mismatch (-26434.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Projection 1, currency=EUR | mismatch (13369.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Projection 2, currency=EUR | mismatch (-13004.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Projection 3, currency=EUR | mismatch (-7338.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-03-01, label=Projection 4, currency=EUR | mismatch (7515.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Actuals, currency=EUR | mismatch (-366.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Projection 0, currency=EUR | mismatch (-27770.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Projection 1, currency=EUR | mismatch (14071.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Projection 2, currency=EUR | mismatch (-13664.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Projection 3, currency=EUR | mismatch (-7687.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-04-01, label=Projection 4, currency=EUR | mismatch (7892.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Actuals, currency=EUR | mismatch (-388.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Projection 0, currency=EUR | mismatch (-29140.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Projection 1, currency=EUR | mismatch (14792.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Projection 2, currency=EUR | mismatch (-14343.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Projection 3, currency=EUR | mismatch (-8045.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-05-01, label=Projection 4, currency=EUR | mismatch (8279.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Actuals, currency=EUR | mismatch (-242.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Projection 0, currency=EUR | mismatch (-30552.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Projection 1, currency=EUR | mismatch (15524.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Projection 2, currency=EUR | mismatch (-15028.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Projection 3, currency=EUR | mismatch (-8403.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-06-01, label=Projection 4, currency=EUR | mismatch (8667.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-07-01, label=Projection 0, currency=EUR | mismatch (-32004.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-07-01, label=Projection 1, currency=EUR | mismatch (16276.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-07-01, label=Projection 2, currency=EUR | mismatch (-15731.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-07-01, label=Projection 3, currency=EUR | mismatch (-8770.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-07-01, label=Projection 4, currency=EUR | mismatch (9070.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-08-01, label=Projection 0, currency=EUR | mismatch (-33581.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-08-01, label=Projection 1, currency=EUR | mismatch (17054.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-08-01, label=Projection 2, currency=EUR | mismatch (-16459.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-08-01, label=Projection 3, currency=EUR | mismatch (-9149.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-08-01, label=Projection 4, currency=EUR | mismatch (9482.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-09-01, label=Projection 0, currency=EUR | mismatch (-35208.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-09-01, label=Projection 1, currency=EUR | mismatch (17859.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-09-01, label=Projection 2, currency=EUR | mismatch (-17211.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-09-01, label=Projection 3, currency=EUR | mismatch (-9539.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-09-01, label=Projection 4, currency=EUR | mismatch (9906.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-10-01, label=Projection 0, currency=EUR | mismatch (-36891.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-10-01, label=Projection 1, currency=EUR | mismatch (18691.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-10-01, label=Projection 2, currency=EUR | mismatch (-17988.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-10-01, label=Projection 3, currency=EUR | mismatch (-9941.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-10-01, label=Projection 4, currency=EUR | mismatch (10340.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-11-01, label=Projection 0, currency=EUR | mismatch (-38624.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-11-01, label=Projection 1, currency=EUR | mismatch (19550.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-11-01, label=Projection 2, currency=EUR | mismatch (-18790.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-11-01, label=Projection 3, currency=EUR | mismatch (-10354.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-11-01, label=Projection 4, currency=EUR | mismatch (10785.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-12-01, label=Projection 0, currency=EUR | mismatch (-40411.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-12-01, label=Projection 1, currency=EUR | mismatch (20436.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-12-01, label=Projection 2, currency=EUR | mismatch (-19618.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-12-01, label=Projection 3, currency=EUR | mismatch (-10780.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2026-12-01, label=Projection 4, currency=EUR | mismatch (11247.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-01-01, label=Projection 0, currency=EUR | mismatch (-42250.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-01-01, label=Projection 1, currency=EUR | mismatch (21388.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-01-01, label=Projection 2, currency=EUR | mismatch (-20495.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-01-01, label=Projection 3, currency=EUR | mismatch (-11232.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-01-01, label=Projection 4, currency=EUR | mismatch (11734.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-02-01, label=Projection 0, currency=EUR | mismatch (-44036.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-02-01, label=Projection 1, currency=EUR | mismatch (22316.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-02-01, label=Projection 2, currency=EUR | mismatch (-21345.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-02-01, label=Projection 3, currency=EUR | mismatch (-11663.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-02-01, label=Projection 4, currency=EUR | mismatch (12201.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-03-01, label=Projection 0, currency=EUR | mismatch (-45870.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-03-01, label=Projection 1, currency=EUR | mismatch (23271.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-03-01, label=Projection 2, currency=EUR | mismatch (-22219.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-03-01, label=Projection 3, currency=EUR | mismatch (-12106.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-03-01, label=Projection 4, currency=EUR | mismatch (12678.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-04-01, label=Projection 0, currency=EUR | mismatch (-47762.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-04-01, label=Projection 1, currency=EUR | mismatch (24256.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-04-01, label=Projection 2, currency=EUR | mismatch (-23121.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-04-01, label=Projection 3, currency=EUR | mismatch (-12561.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-04-01, label=Projection 4, currency=EUR | mismatch (13166.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-05-01, label=Projection 0, currency=EUR | mismatch (-49705.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-05-01, label=Projection 1, currency=EUR | mismatch (25270.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-05-01, label=Projection 2, currency=EUR | mismatch (-24048.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-05-01, label=Projection 3, currency=EUR | mismatch (-13027.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-05-01, label=Projection 4, currency=EUR | mismatch (13665.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-06-01, label=Projection 0, currency=EUR | mismatch (-51674.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-06-01, label=Projection 1, currency=EUR | mismatch (26310.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-06-01, label=Projection 2, currency=EUR | mismatch (-24997.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-06-01, label=Projection 3, currency=EUR | mismatch (-13503.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-06-01, label=Projection 4, currency=EUR | mismatch (14174.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-07-01, label=Projection 0, currency=EUR | mismatch (-53704.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-07-01, label=Projection 1, currency=EUR | mismatch (27382.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-07-01, label=Projection 2, currency=EUR | mismatch (-25975.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-07-01, label=Projection 3, currency=EUR | mismatch (-13992.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-07-01, label=Projection 4, currency=EUR | mismatch (14700.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-08-01, label=Projection 0, currency=EUR | mismatch (-55787.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-08-01, label=Projection 1, currency=EUR | mismatch (28484.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-08-01, label=Projection 2, currency=EUR | mismatch (-26980.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-08-01, label=Projection 3, currency=EUR | mismatch (-14493.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-08-01, label=Projection 4, currency=EUR | mismatch (15239.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-09-01, label=Projection 0, currency=EUR | mismatch (-57924.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-09-01, label=Projection 1, currency=EUR | mismatch (29616.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-09-01, label=Projection 2, currency=EUR | mismatch (-28013.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-09-01, label=Projection 3, currency=EUR | mismatch (-15006.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-09-01, label=Projection 4, currency=EUR | mismatch (15789.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-10-01, label=Projection 0, currency=EUR | mismatch (-60118.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-10-01, label=Projection 1, currency=EUR | mismatch (30780.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-10-01, label=Projection 2, currency=EUR | mismatch (-29073.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-10-01, label=Projection 3, currency=EUR | mismatch (-15531.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-10-01, label=Projection 4, currency=EUR | mismatch (16349.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-11-01, label=Projection 0, currency=EUR | mismatch (-62363.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-11-01, label=Projection 1, currency=EUR | mismatch (31972.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-11-01, label=Projection 2, currency=EUR | mismatch (-30159.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-11-01, label=Projection 3, currency=EUR | mismatch (-16066.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-11-01, label=Projection 4, currency=EUR | mismatch (16921.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-12-01, label=Projection 0, currency=EUR | mismatch (-64662.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-12-01, label=Projection 1, currency=EUR | mismatch (33195.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-12-01, label=Projection 2, currency=EUR | mismatch (-31272.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-12-01, label=Projection 3, currency=EUR | mismatch (-16614.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2027-12-01, label=Projection 4, currency=EUR | mismatch (17509.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-01-01, label=Projection 0, currency=EUR | mismatch (-67005.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-01-01, label=Projection 1, currency=EUR | mismatch (34443.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-01-01, label=Projection 2, currency=EUR | mismatch (-32407.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-01-01, label=Projection 3, currency=EUR | mismatch (-17169.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-01-01, label=Projection 4, currency=EUR | mismatch (18105.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-02-01, label=Projection 0, currency=EUR | mismatch (-69379.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-02-01, label=Projection 1, currency=EUR | mismatch (35711.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-02-01, label=Projection 2, currency=EUR | mismatch (-33557.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-02-01, label=Projection 3, currency=EUR | mismatch (-17728.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-02-01, label=Projection 4, currency=EUR | mismatch (18705.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-03-01, label=Projection 0, currency=EUR | mismatch (-71814.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-03-01, label=Projection 1, currency=EUR | mismatch (37013.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-03-01, label=Projection 2, currency=EUR | mismatch (-34738.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-03-01, label=Projection 3, currency=EUR | mismatch (-18300.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-03-01, label=Projection 4, currency=EUR | mismatch (19318.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-04-01, label=Projection 0, currency=EUR | mismatch (-74310.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-04-01, label=Projection 1, currency=EUR | mismatch (38350.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-04-01, label=Projection 2, currency=EUR | mismatch (-35951.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-04-01, label=Projection 3, currency=EUR | mismatch (-18886.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-04-01, label=Projection 4, currency=EUR | mismatch (19944.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-05-01, label=Projection 0, currency=EUR | mismatch (-76868.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-05-01, label=Projection 1, currency=EUR | mismatch (39721.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-05-01, label=Projection 2, currency=EUR | mismatch (-37196.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-05-01, label=Projection 3, currency=EUR | mismatch (-19485.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-05-01, label=Projection 4, currency=EUR | mismatch (20583.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-06-01, label=Projection 0, currency=EUR | mismatch (-79481.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-06-01, label=Projection 1, currency=EUR | mismatch (41127.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-06-01, label=Projection 2, currency=EUR | mismatch (-38469.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-06-01, label=Projection 3, currency=EUR | mismatch (-20097.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-06-01, label=Projection 4, currency=EUR | mismatch (21234.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-07-01, label=Projection 0, currency=EUR | mismatch (-82159.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-07-01, label=Projection 1, currency=EUR | mismatch (42569.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-07-01, label=Projection 2, currency=EUR | mismatch (-39777.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-07-01, label=Projection 3, currency=EUR | mismatch (-20723.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-07-01, label=Projection 4, currency=EUR | mismatch (21906.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-08-01, label=Projection 0, currency=EUR | mismatch (-84869.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-08-01, label=Projection 1, currency=EUR | mismatch (44032.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-08-01, label=Projection 2, currency=EUR | mismatch (-41101.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-08-01, label=Projection 3, currency=EUR | mismatch (-21352.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-08-01, label=Projection 4, currency=EUR | mismatch (22582.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-09-01, label=Projection 0, currency=EUR | mismatch (-87627.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-09-01, label=Projection 1, currency=EUR | mismatch (45524.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-09-01, label=Projection 2, currency=EUR | mismatch (-42451.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-09-01, label=Projection 3, currency=EUR | mismatch (-21991.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-09-01, label=Projection 4, currency=EUR | mismatch (23266.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-10-01, label=Projection 0, currency=EUR | mismatch (-90451.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-10-01, label=Projection 1, currency=EUR | mismatch (47054.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-10-01, label=Projection 2, currency=EUR | mismatch (-43834.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-10-01, label=Projection 3, currency=EUR | mismatch (-22644.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-10-01, label=Projection 4, currency=EUR | mismatch (23965.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-11-01, label=Projection 0, currency=EUR | mismatch (-93343.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-11-01, label=Projection 1, currency=EUR | mismatch (48622.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-11-01, label=Projection 2, currency=EUR | mismatch (-45251.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-11-01, label=Projection 3, currency=EUR | mismatch (-23310.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-11-01, label=Projection 4, currency=EUR | mismatch (24677.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-12-01, label=Projection 0, currency=EUR | mismatch (-96308.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-12-01, label=Projection 1, currency=EUR | mismatch (50231.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-12-01, label=Projection 2, currency=EUR | mismatch (-46706.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-12-01, label=Projection 3, currency=EUR | mismatch (-23992.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2028-12-01, label=Projection 4, currency=EUR | mismatch (25411.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-01-01, label=Projection 0, currency=EUR | mismatch (-99336.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-01-01, label=Projection 1, currency=EUR | mismatch (51878.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-01-01, label=Projection 2, currency=EUR | mismatch (-48193.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-01-01, label=Projection 3, currency=EUR | mismatch (-24687.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-01-01, label=Projection 4, currency=EUR | mismatch (26157.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-02-01, label=Projection 0, currency=EUR | mismatch (-102403.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-02-01, label=Projection 1, currency=EUR | mismatch (53549.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-02-01, label=Projection 2, currency=EUR | mismatch (-49699.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-02-01, label=Projection 3, currency=EUR | mismatch (-25386.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-02-01, label=Projection 4, currency=EUR | mismatch (26908.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-03-01, label=Projection 0, currency=EUR | mismatch (-105545.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-03-01, label=Projection 1, currency=EUR | mismatch (55263.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-03-01, label=Projection 2, currency=EUR | mismatch (-51244.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-03-01, label=Projection 3, currency=EUR | mismatch (-26102.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-03-01, label=Projection 4, currency=EUR | mismatch (27675.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-04-01, label=Projection 0, currency=EUR | mismatch (-108763.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-04-01, label=Projection 1, currency=EUR | mismatch (57021.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-04-01, label=Projection 2, currency=EUR | mismatch (-52829.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-04-01, label=Projection 3, currency=EUR | mismatch (-26833.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-04-01, label=Projection 4, currency=EUR | mismatch (28459.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-05-01, label=Projection 0, currency=EUR | mismatch (-112059.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-05-01, label=Projection 1, currency=EUR | mismatch (58823.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-05-01, label=Projection 2, currency=EUR | mismatch (-54454.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-05-01, label=Projection 3, currency=EUR | mismatch (-27582.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-05-01, label=Projection 4, currency=EUR | mismatch (29259.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-06-01, label=Projection 0, currency=EUR | mismatch (-115434.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-06-01, label=Projection 1, currency=EUR | mismatch (60671.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-06-01, label=Projection 2, currency=EUR | mismatch (-56120.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-06-01, label=Projection 3, currency=EUR | mismatch (-28347.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-06-01, label=Projection 4, currency=EUR | mismatch (30076.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-07-01, label=Projection 0, currency=EUR | mismatch (-118884.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-07-01, label=Projection 1, currency=EUR | mismatch (62562.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-07-01, label=Projection 2, currency=EUR | mismatch (-57825.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-07-01, label=Projection 3, currency=EUR | mismatch (-29128.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-07-01, label=Projection 4, currency=EUR | mismatch (30915.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-08-01, label=Projection 0, currency=EUR | mismatch (-122415.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-08-01, label=Projection 1, currency=EUR | mismatch (64500.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-08-01, label=Projection 2, currency=EUR | mismatch (-59573.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-08-01, label=Projection 3, currency=EUR | mismatch (-29926.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-08-01, label=Projection 4, currency=EUR | mismatch (31772.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-09-01, label=Projection 0, currency=EUR | mismatch (-126022.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-09-01, label=Projection 1, currency=EUR | mismatch (66482.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-09-01, label=Projection 2, currency=EUR | mismatch (-61361.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-09-01, label=Projection 3, currency=EUR | mismatch (-30740.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-09-01, label=Projection 4, currency=EUR | mismatch (32645.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-10-01, label=Projection 0, currency=EUR | mismatch (-129709.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-10-01, label=Projection 1, currency=EUR | mismatch (68511.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-10-01, label=Projection 2, currency=EUR | mismatch (-63191.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-10-01, label=Projection 3, currency=EUR | mismatch (-31570.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-10-01, label=Projection 4, currency=EUR | mismatch (33535.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-11-01, label=Projection 0, currency=EUR | mismatch (-133482.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-11-01, label=Projection 1, currency=EUR | mismatch (70589.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-11-01, label=Projection 2, currency=EUR | mismatch (-65065.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-11-01, label=Projection 3, currency=EUR | mismatch (-32418.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-11-01, label=Projection 4, currency=EUR | mismatch (34443.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-12-01, label=Projection 0, currency=EUR | mismatch (-137344.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-12-01, label=Projection 1, currency=EUR | mismatch (72719.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-12-01, label=Projection 2, currency=EUR | mismatch (-66986.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-12-01, label=Projection 3, currency=EUR | mismatch (-33285.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2029-12-01, label=Projection 4, currency=EUR | mismatch (35377.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-01-01, label=Projection 0, currency=EUR | mismatch (-141284.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-01-01, label=Projection 1, currency=EUR | mismatch (74894.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-01-01, label=Projection 2, currency=EUR | mismatch (-68946.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-01-01, label=Projection 3, currency=EUR | mismatch (-34166.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-01-01, label=Projection 4, currency=EUR | mismatch (36325.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-02-01, label=Projection 0, currency=EUR | mismatch (-145281.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-02-01, label=Projection 1, currency=EUR | mismatch (77107.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-02-01, label=Projection 2, currency=EUR | mismatch (-70937.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-02-01, label=Projection 3, currency=EUR | mismatch (-35055.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-02-01, label=Projection 4, currency=EUR | mismatch (37283.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-03-01, label=Projection 0, currency=EUR | mismatch (-149370.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-03-01, label=Projection 1, currency=EUR | mismatch (79372.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-03-01, label=Projection 2, currency=EUR | mismatch (-72975.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-03-01, label=Projection 3, currency=EUR | mismatch (-35964.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-03-01, label=Projection 4, currency=EUR | mismatch (38260.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-04-01, label=Projection 0, currency=EUR | mismatch (-153553.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-04-01, label=Projection 1, currency=EUR | mismatch (81693.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-04-01, label=Projection 2, currency=EUR | mismatch (-75064.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-04-01, label=Projection 3, currency=EUR | mismatch (-36891.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-04-01, label=Projection 4, currency=EUR | mismatch (39257.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-05-01, label=Projection 0, currency=EUR | mismatch (-157832.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-05-01, label=Projection 1, currency=EUR | mismatch (84069.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-05-01, label=Projection 2, currency=EUR | mismatch (-77202.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-05-01, label=Projection 3, currency=EUR | mismatch (-37839.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-05-01, label=Projection 4, currency=EUR | mismatch (40275.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-06-01, label=Projection 0, currency=EUR | mismatch (-162204.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-06-01, label=Projection 1, currency=EUR | mismatch (86500.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-06-01, label=Projection 2, currency=EUR | mismatch (-79388.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-06-01, label=Projection 3, currency=EUR | mismatch (-38805.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-06-01, label=Projection 4, currency=EUR | mismatch (41312.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-07-01, label=Projection 0, currency=EUR | mismatch (-166678.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-07-01, label=Projection 1, currency=EUR | mismatch (88990.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-07-01, label=Projection 2, currency=EUR | mismatch (-81626.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-07-01, label=Projection 3, currency=EUR | mismatch (-39791.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-07-01, label=Projection 4, currency=EUR | mismatch (42377.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-08-01, label=Projection 0, currency=EUR | mismatch (-171252.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-08-01, label=Projection 1, currency=EUR | mismatch (91539.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-08-01, label=Projection 2, currency=EUR | mismatch (-83918.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-08-01, label=Projection 3, currency=EUR | mismatch (-40798.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-08-01, label=Projection 4, currency=EUR | mismatch (43464.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-09-01, label=Projection 0, currency=EUR | mismatch (-175909.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-09-01, label=Projection 1, currency=EUR | mismatch (94138.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-09-01, label=Projection 2, currency=EUR | mismatch (-86254.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-09-01, label=Projection 3, currency=EUR | mismatch (-41820.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-09-01, label=Projection 4, currency=EUR | mismatch (44566.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-10-01, label=Projection 0, currency=EUR | mismatch (-180670.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-10-01, label=Projection 1, currency=EUR | mismatch (96799.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-10-01, label=Projection 2, currency=EUR | mismatch (-88644.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-10-01, label=Projection 3, currency=EUR | mismatch (-42862.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-10-01, label=Projection 4, currency=EUR | mismatch (45691.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-11-01, label=Projection 0, currency=EUR | mismatch (-185529.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-11-01, label=Projection 1, currency=EUR | mismatch (99517.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-11-01, label=Projection 2, currency=EUR | mismatch (-91086.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-11-01, label=Projection 3, currency=EUR | mismatch (-43924.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-11-01, label=Projection 4, currency=EUR | mismatch (46836.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-12-01, label=Projection 0, currency=EUR | mismatch (-190043.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-12-01, label=Projection 1, currency=EUR | mismatch (102080.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-12-01, label=Projection 2, currency=EUR | mismatch (-93361.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-12-01, label=Projection 3, currency=EUR | mismatch (-44871.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2030-12-01, label=Projection 4, currency=EUR | mismatch (47877.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-01-01, label=Projection 0, currency=EUR | mismatch (-194651.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-01-01, label=Projection 1, currency=EUR | mismatch (104698.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-01-01, label=Projection 2, currency=EUR | mismatch (-95683.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-01-01, label=Projection 3, currency=EUR | mismatch (-45835.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-01-01, label=Projection 4, currency=EUR | mismatch (48935.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-02-01, label=Projection 0, currency=EUR | mismatch (-199316.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-02-01, label=Projection 1, currency=EUR | mismatch (107356.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-02-01, label=Projection 2, currency=EUR | mismatch (-98035.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-02-01, label=Projection 3, currency=EUR | mismatch (-46804.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-02-01, label=Projection 4, currency=EUR | mismatch (50000.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-03-01, label=Projection 0, currency=EUR | mismatch (-204083.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-03-01, label=Projection 1, currency=EUR | mismatch (110074.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-03-01, label=Projection 2, currency=EUR | mismatch (-100441.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-03-01, label=Projection 3, currency=EUR | mismatch (-47793.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-03-01, label=Projection 4, currency=EUR | mismatch (51087.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-04-01, label=Projection 0, currency=EUR | mismatch (-208962.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-04-01, label=Projection 1, currency=EUR | mismatch (112857.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-04-01, label=Projection 2, currency=EUR | mismatch (-102904.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-04-01, label=Projection 3, currency=EUR | mismatch (-48804.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-04-01, label=Projection 4, currency=EUR | mismatch (52195.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-05-01, label=Projection 0, currency=EUR | mismatch (-213947.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-05-01, label=Projection 1, currency=EUR | mismatch (115704.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-05-01, label=Projection 2, currency=EUR | mismatch (-105422.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-05-01, label=Projection 3, currency=EUR | mismatch (-49835.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-05-01, label=Projection 4, currency=EUR | mismatch (53325.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-06-01, label=Projection 0, currency=EUR | mismatch (-219040.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-06-01, label=Projection 1, currency=EUR | mismatch (118615.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-06-01, label=Projection 2, currency=EUR | mismatch (-107998.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-06-01, label=Projection 3, currency=EUR | mismatch (-50887.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-06-01, label=Projection 4, currency=EUR | mismatch (54476.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-07-01, label=Projection 0, currency=EUR | mismatch (-224251.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-07-01, label=Projection 1, currency=EUR | mismatch (121595.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-07-01, label=Projection 2, currency=EUR | mismatch (-110634.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-07-01, label=Projection 3, currency=EUR | mismatch (-51961.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-07-01, label=Projection 4, currency=EUR | mismatch (55658.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-08-01, label=Projection 0, currency=EUR | mismatch (-229574.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-08-01, label=Projection 1, currency=EUR | mismatch (124643.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-08-01, label=Projection 2, currency=EUR | mismatch (-113329.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-08-01, label=Projection 3, currency=EUR | mismatch (-53057.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-08-01, label=Projection 4, currency=EUR | mismatch (56862.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-09-01, label=Projection 0, currency=EUR | mismatch (-235003.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-09-01, label=Projection 1, currency=EUR | mismatch (127754.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-09-01, label=Projection 2, currency=EUR | mismatch (-116081.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-09-01, label=Projection 3, currency=EUR | mismatch (-54172.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-09-01, label=Projection 4, currency=EUR | mismatch (58088.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-10-01, label=Projection 0, currency=EUR | mismatch (-240551.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-10-01, label=Projection 1, currency=EUR | mismatch (130937.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-10-01, label=Projection 2, currency=EUR | mismatch (-118894.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-10-01, label=Projection 3, currency=EUR | mismatch (-55309.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-10-01, label=Projection 4, currency=EUR | mismatch (59337.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-11-01, label=Projection 0, currency=EUR | mismatch (-246216.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-11-01, label=Projection 1, currency=EUR | mismatch (134190.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-11-01, label=Projection 2, currency=EUR | mismatch (-121767.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-11-01, label=Projection 3, currency=EUR | mismatch (-56467.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-11-01, label=Projection 4, currency=EUR | mismatch (60609.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-12-01, label=Projection 0, currency=EUR | mismatch (-252001.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-12-01, label=Projection 1, currency=EUR | mismatch (137515.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-12-01, label=Projection 2, currency=EUR | mismatch (-124704.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-12-01, label=Projection 3, currency=EUR | mismatch (-57649.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2031-12-01, label=Projection 4, currency=EUR | mismatch (61911.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-01-01, label=Projection 0, currency=EUR | mismatch (-257903.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-01-01, label=Projection 1, currency=EUR | mismatch (140911.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-01-01, label=Projection 2, currency=EUR | mismatch (-127701.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-01-01, label=Projection 3, currency=EUR | mismatch (-58850.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-01-01, label=Projection 4, currency=EUR | mismatch (63235.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-02-01, label=Projection 0, currency=EUR | mismatch (-263907.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-02-01, label=Projection 1, currency=EUR | mismatch (144371.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-02-01, label=Projection 2, currency=EUR | mismatch (-130751.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-02-01, label=Projection 3, currency=EUR | mismatch (-60067.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-02-01, label=Projection 4, currency=EUR | mismatch (64577.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-03-01, label=Projection 0, currency=EUR | mismatch (-270037.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-03-01, label=Projection 1, currency=EUR | mismatch (147908.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-03-01, label=Projection 2, currency=EUR | mismatch (-133869.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-03-01, label=Projection 3, currency=EUR | mismatch (-61307.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-03-01, label=Projection 4, currency=EUR | mismatch (65944.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-04-01, label=Projection 0, currency=EUR | mismatch (-276304.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-04-01, label=Projection 1, currency=EUR | mismatch (151526.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-04-01, label=Projection 2, currency=EUR | mismatch (-137057.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-04-01, label=Projection 3, currency=EUR | mismatch (-62573.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-04-01, label=Projection 4, currency=EUR | mismatch (67339.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-05-01, label=Projection 0, currency=EUR | mismatch (-282702.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-05-01, label=Projection 1, currency=EUR | mismatch (155223.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-05-01, label=Projection 2, currency=EUR | mismatch (-140314.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-05-01, label=Projection 3, currency=EUR | mismatch (-63864.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-05-01, label=Projection 4, currency=EUR | mismatch (68759.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-06-01, label=Projection 0, currency=EUR | mismatch (-289229.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-06-01, label=Projection 1, currency=EUR | mismatch (158998.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-06-01, label=Projection 2, currency=EUR | mismatch (-143640.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-06-01, label=Projection 3, currency=EUR | mismatch (-65177.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-06-01, label=Projection 4, currency=EUR | mismatch (70206.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-07-01, label=Projection 0, currency=EUR | mismatch (-295900.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-07-01, label=Projection 1, currency=EUR | mismatch (162860.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-07-01, label=Projection 2, currency=EUR | mismatch (-147039.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-07-01, label=Projection 3, currency=EUR | mismatch (-66516.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-07-01, label=Projection 4, currency=EUR | mismatch (71687.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-08-01, label=Projection 0, currency=EUR | mismatch (-302709.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-08-01, label=Projection 1, currency=EUR | mismatch (166806.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-08-01, label=Projection 2, currency=EUR | mismatch (-150512.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-08-01, label=Projection 3, currency=EUR | mismatch (-67882.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-08-01, label=Projection 4, currency=EUR | mismatch (73197.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-09-01, label=Projection 0, currency=EUR | mismatch (-309638.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-09-01, label=Projection 1, currency=EUR | mismatch (170827.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-09-01, label=Projection 2, currency=EUR | mismatch (-154050.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-09-01, label=Projection 3, currency=EUR | mismatch (-69266.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-09-01, label=Projection 4, currency=EUR | mismatch (74728.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-10-01, label=Projection 0, currency=EUR | mismatch (-316713.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-10-01, label=Projection 1, currency=EUR | mismatch (174936.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-10-01, label=Projection 2, currency=EUR | mismatch (-157664.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-10-01, label=Projection 3, currency=EUR | mismatch (-70678.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-10-01, label=Projection 4, currency=EUR | mismatch (76288.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-11-01, label=Projection 0, currency=EUR | mismatch (-323932.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-11-01, label=Projection 1, currency=EUR | mismatch (179133.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-11-01, label=Projection 2, currency=EUR | mismatch (-161355.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-11-01, label=Projection 3, currency=EUR | mismatch (-72115.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-11-01, label=Projection 4, currency=EUR | mismatch (77877.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-12-01, label=Projection 0, currency=EUR | mismatch (-331298.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-12-01, label=Projection 1, currency=EUR | mismatch (183420.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-12-01, label=Projection 2, currency=EUR | mismatch (-165125.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-12-01, label=Projection 3, currency=EUR | mismatch (-73579.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2032-12-01, label=Projection 4, currency=EUR | mismatch (79502.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-01-01, label=Projection 0, currency=EUR | mismatch (-338806.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-01-01, label=Projection 1, currency=EUR | mismatch (187795.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-01-01, label=Projection 2, currency=EUR | mismatch (-168969.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-01-01, label=Projection 3, currency=EUR | mismatch (-75066.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-01-01, label=Projection 4, currency=EUR | mismatch (81153.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-02-01, label=Projection 0, currency=EUR | mismatch (-346429.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-02-01, label=Projection 1, currency=EUR | mismatch (192245.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-02-01, label=Projection 2, currency=EUR | mismatch (-172874.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-02-01, label=Projection 3, currency=EUR | mismatch (-76569.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-02-01, label=Projection 4, currency=EUR | mismatch (82823.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-03-01, label=Projection 0, currency=EUR | mismatch (-354206.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-03-01, label=Projection 1, currency=EUR | mismatch (196789.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-03-01, label=Projection 2, currency=EUR | mismatch (-176862.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-03-01, label=Projection 3, currency=EUR | mismatch (-78100.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-03-01, label=Projection 4, currency=EUR | mismatch (84524.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-04-01, label=Projection 0, currency=EUR | mismatch (-362147.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-04-01, label=Projection 1, currency=EUR | mismatch (201433.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-04-01, label=Projection 2, currency=EUR | mismatch (-180936.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-04-01, label=Projection 3, currency=EUR | mismatch (-79661.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-04-01, label=Projection 4, currency=EUR | mismatch (86257.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-05-01, label=Projection 0, currency=EUR | mismatch (-370249.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-05-01, label=Projection 1, currency=EUR | mismatch (206175.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-05-01, label=Projection 2, currency=EUR | mismatch (-185096.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-05-01, label=Projection 3, currency=EUR | mismatch (-81251.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-05-01, label=Projection 4, currency=EUR | mismatch (88023.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-06-01, label=Projection 0, currency=EUR | mismatch (-378513.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-06-01, label=Projection 1, currency=EUR | mismatch (211018.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-06-01, label=Projection 2, currency=EUR | mismatch (-189345.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-06-01, label=Projection 3, currency=EUR | mismatch (-82869.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-06-01, label=Projection 4, currency=EUR | mismatch (89821.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-07-01, label=Projection 0, currency=EUR | mismatch (-386944.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-07-01, label=Projection 1, currency=EUR | mismatch (215962.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-07-01, label=Projection 2, currency=EUR | mismatch (-193682.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-07-01, label=Projection 3, currency=EUR | mismatch (-84518.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-07-01, label=Projection 4, currency=EUR | mismatch (91659.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-08-01, label=Projection 0, currency=EUR | mismatch (-395543.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-08-01, label=Projection 1, currency=EUR | mismatch (221011.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-08-01, label=Projection 2, currency=EUR | mismatch (-198110.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-08-01, label=Projection 3, currency=EUR | mismatch (-86196.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-08-01, label=Projection 4, currency=EUR | mismatch (93531.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-09-01, label=Projection 0, currency=EUR | mismatch (-404292.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-09-01, label=Projection 1, currency=EUR | mismatch (226155.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-09-01, label=Projection 2, currency=EUR | mismatch (-202620.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-09-01, label=Projection 3, currency=EUR | mismatch (-87899.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-09-01, label=Projection 4, currency=EUR | mismatch (95432.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-10-01, label=Projection 0, currency=EUR | mismatch (-413210.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-10-01, label=Projection 1, currency=EUR | mismatch (231405.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-10-01, label=Projection 2, currency=EUR | mismatch (-207220.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-10-01, label=Projection 3, currency=EUR | mismatch (-89631.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-10-01, label=Projection 4, currency=EUR | mismatch (97367.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-11-01, label=Projection 0, currency=EUR | mismatch (-422294.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-11-01, label=Projection 1, currency=EUR | mismatch (236759.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-11-01, label=Projection 2, currency=EUR | mismatch (-211910.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-11-01, label=Projection 3, currency=EUR | mismatch (-91391.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-11-01, label=Projection 4, currency=EUR | mismatch (99334.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-12-01, label=Projection 0, currency=EUR | mismatch (-431550.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-12-01, label=Projection 1, currency=EUR | mismatch (242220.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-12-01, label=Projection 2, currency=EUR | mismatch (-216694.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-12-01, label=Projection 3, currency=EUR | mismatch (-93180.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2033-12-01, label=Projection 4, currency=EUR | mismatch (101341.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-01-01, label=Projection 0, currency=EUR | mismatch (-440973.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-01-01, label=Projection 1, currency=EUR | mismatch (247787.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-01-01, label=Projection 2, currency=EUR | mismatch (-221567.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-01-01, label=Projection 3, currency=EUR | mismatch (-94995.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-01-01, label=Projection 4, currency=EUR | mismatch (103379.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-02-01, label=Projection 0, currency=EUR | mismatch (-450548.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-02-01, label=Projection 1, currency=EUR | mismatch (253454.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-02-01, label=Projection 2, currency=EUR | mismatch (-226522.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-02-01, label=Projection 3, currency=EUR | mismatch (-96832.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-02-01, label=Projection 4, currency=EUR | mismatch (105444.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-03-01, label=Projection 0, currency=EUR | mismatch (-460302.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-03-01, label=Projection 1, currency=EUR | mismatch (259233.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-03-01, label=Projection 2, currency=EUR | mismatch (-231575.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-03-01, label=Projection 3, currency=EUR | mismatch (-98699.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-03-01, label=Projection 4, currency=EUR | mismatch (107545.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-04-01, label=Projection 0, currency=EUR | mismatch (-470246.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-04-01, label=Projection 1, currency=EUR | mismatch (265131.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-04-01, label=Projection 2, currency=EUR | mismatch (-236730.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-04-01, label=Projection 3, currency=EUR | mismatch (-100599.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-04-01, label=Projection 4, currency=EUR | mismatch (109684.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-05-01, label=Projection 0, currency=EUR | mismatch (-480375.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-05-01, label=Projection 1, currency=EUR | mismatch (271146.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-05-01, label=Projection 2, currency=EUR | mismatch (-241986.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-05-01, label=Projection 3, currency=EUR | mismatch (-102529.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-05-01, label=Projection 4, currency=EUR | mismatch (111859.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-06-01, label=Projection 0, currency=EUR | mismatch (-490688.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-06-01, label=Projection 1, currency=EUR | mismatch (277257.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-06-01, label=Projection 2, currency=EUR | mismatch (-247320.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-06-01, label=Projection 3, currency=EUR | mismatch (-104476.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-06-01, label=Projection 4, currency=EUR | mismatch (114058.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-07-01, label=Projection 0, currency=EUR | mismatch (-501200.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-07-01, label=Projection 1, currency=EUR | mismatch (283492.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-07-01, label=Projection 2, currency=EUR | mismatch (-252759.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-07-01, label=Projection 3, currency=EUR | mismatch (-106456.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-07-01, label=Projection 4, currency=EUR | mismatch (116301.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-08-01, label=Projection 0, currency=EUR | mismatch (-511907.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-08-01, label=Projection 1, currency=EUR | mismatch (289850.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-08-01, label=Projection 2, currency=EUR | mismatch (-258305.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-08-01, label=Projection 3, currency=EUR | mismatch (-108468.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-08-01, label=Projection 4, currency=EUR | mismatch (118582.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-09-01, label=Projection 0, currency=EUR | mismatch (-522793.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-09-01, label=Projection 1, currency=EUR | mismatch (296324.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-09-01, label=Projection 2, currency=EUR | mismatch (-263950.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-09-01, label=Projection 3, currency=EUR | mismatch (-110507.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-09-01, label=Projection 4, currency=EUR | mismatch (120897.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-10-01, label=Projection 0, currency=EUR | mismatch (-533881.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-10-01, label=Projection 1, currency=EUR | mismatch (302926.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-10-01, label=Projection 2, currency=EUR | mismatch (-269702.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-10-01, label=Projection 3, currency=EUR | mismatch (-112578.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-10-01, label=Projection 4, currency=EUR | mismatch (123250.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-11-01, label=Projection 0, currency=EUR | mismatch (-545170.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-11-01, label=Projection 1, currency=EUR | mismatch (309655.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-11-01, label=Projection 2, currency=EUR | mismatch (-275564.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-11-01, label=Projection 3, currency=EUR | mismatch (-114681.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-11-01, label=Projection 4, currency=EUR | mismatch (125642.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-12-01, label=Projection 0, currency=EUR | mismatch (-556666.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-12-01, label=Projection 1, currency=EUR | mismatch (316516.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-12-01, label=Projection 2, currency=EUR | mismatch (-281539.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-12-01, label=Projection 3, currency=EUR | mismatch (-116818.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2034-12-01, label=Projection 4, currency=EUR | mismatch (128080.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-01-01, label=Projection 0, currency=EUR | mismatch (-568370.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-01-01, label=Projection 1, currency=EUR | mismatch (323509.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-01-01, label=Projection 2, currency=EUR | mismatch (-287625.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-01-01, label=Projection 3, currency=EUR | mismatch (-118987.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-01-01, label=Projection 4, currency=EUR | mismatch (130556.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-02-01, label=Projection 0, currency=EUR | mismatch (-580250.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-02-01, label=Projection 1, currency=EUR | mismatch (330619.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-02-01, label=Projection 2, currency=EUR | mismatch (-293807.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-02-01, label=Projection 3, currency=EUR | mismatch (-121177.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-02-01, label=Projection 4, currency=EUR | mismatch (133063.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-03-01, label=Projection 0, currency=EUR | mismatch (-592346.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-03-01, label=Projection 1, currency=EUR | mismatch (337868.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-03-01, label=Projection 2, currency=EUR | mismatch (-300109.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-03-01, label=Projection 3, currency=EUR | mismatch (-123404.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-03-01, label=Projection 4, currency=EUR | mismatch (135612.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-04-01, label=Projection 0, currency=EUR | mismatch (-604672.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-04-01, label=Projection 1, currency=EUR | mismatch (345261.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-04-01, label=Projection 2, currency=EUR | mismatch (-306534.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-04-01, label=Projection 3, currency=EUR | mismatch (-125667.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-04-01, label=Projection 4, currency=EUR | mismatch (138205.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-05-01, label=Projection 0, currency=EUR | mismatch (-617222.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-05-01, label=Projection 1, currency=EUR | mismatch (352797.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-05-01, label=Projection 2, currency=EUR | mismatch (-313082.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-05-01, label=Projection 3, currency=EUR | mismatch (-127966.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-05-01, label=Projection 4, currency=EUR | mismatch (140843.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-06-01, label=Projection 0, currency=EUR | mismatch (-629957.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-06-01, label=Projection 1, currency=EUR | mismatch (360475.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-06-01, label=Projection 2, currency=EUR | mismatch (-319750.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-06-01, label=Projection 3, currency=EUR | mismatch (-130298.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-06-01, label=Projection 4, currency=EUR | mismatch (143523.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-07-01, label=Projection 0, currency=EUR | mismatch (-642931.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-07-01, label=Projection 1, currency=EUR | mismatch (368305.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-07-01, label=Projection 2, currency=EUR | mismatch (-326546.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-07-01, label=Projection 3, currency=EUR | mismatch (-132668.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-07-01, label=Projection 4, currency=EUR | mismatch (146254.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-08-01, label=Projection 0, currency=EUR | mismatch (-656140.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-08-01, label=Projection 1, currency=EUR | mismatch (376285.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-08-01, label=Projection 2, currency=EUR | mismatch (-333473.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-08-01, label=Projection 3, currency=EUR | mismatch (-135076.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-08-01, label=Projection 4, currency=EUR | mismatch (149032.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-09-01, label=Projection 0, currency=EUR | mismatch (-669579.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-09-01, label=Projection 1, currency=EUR | mismatch (384415.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-09-01, label=Projection 2, currency=EUR | mismatch (-340527.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-09-01, label=Projection 3, currency=EUR | mismatch (-137519.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-09-01, label=Projection 4, currency=EUR | mismatch (151853.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-10-01, label=Projection 0, currency=EUR | mismatch (-683258.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-10-01, label=Projection 1, currency=EUR | mismatch (392699.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-10-01, label=Projection 2, currency=EUR | mismatch (-347712.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-10-01, label=Projection 3, currency=EUR | mismatch (-139998.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-10-01, label=Projection 4, currency=EUR | mismatch (154721.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-11-01, label=Projection 0, currency=EUR | mismatch (-697176.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-11-01, label=Projection 1, currency=EUR | mismatch (401139.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-11-01, label=Projection 2, currency=EUR | mismatch (-355030.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-11-01, label=Projection 3, currency=EUR | mismatch (-142515.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-11-01, label=Projection 4, currency=EUR | mismatch (157635.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-12-01, label=Projection 0, currency=EUR | mismatch (-711346.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-12-01, label=Projection 1, currency=EUR | mismatch (409741.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-12-01, label=Projection 2, currency=EUR | mismatch (-362487.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-12-01, label=Projection 3, currency=EUR | mismatch (-145072.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2035-12-01, label=Projection 4, currency=EUR | mismatch (160603.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-01-01, label=Projection 0, currency=EUR | mismatch (-725765.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-01-01, label=Projection 1, currency=EUR | mismatch (418505.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-01-01, label=Projection 2, currency=EUR | mismatch (-370079.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-01-01, label=Projection 3, currency=EUR | mismatch (-147665.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-01-01, label=Projection 4, currency=EUR | mismatch (163617.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-02-01, label=Projection 0, currency=EUR | mismatch (-740417.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-02-01, label=Projection 1, currency=EUR | mismatch (427424.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-02-01, label=Projection 2, currency=EUR | mismatch (-377802.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-02-01, label=Projection 3, currency=EUR | mismatch (-150290.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-02-01, label=Projection 4, currency=EUR | mismatch (166673.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-03-01, label=Projection 0, currency=EUR | mismatch (-755331.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-03-01, label=Projection 1, currency=EUR | mismatch (436513.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-03-01, label=Projection 2, currency=EUR | mismatch (-385670.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-03-01, label=Projection 3, currency=EUR | mismatch (-152956.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-03-01, label=Projection 4, currency=EUR | mismatch (169781.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-04-01, label=Projection 0, currency=EUR | mismatch (-770521.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-04-01, label=Projection 1, currency=EUR | mismatch (445778.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-04-01, label=Projection 2, currency=EUR | mismatch (-393689.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-04-01, label=Projection 3, currency=EUR | mismatch (-155666.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-04-01, label=Projection 4, currency=EUR | mismatch (172942.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-05-01, label=Projection 0, currency=EUR | mismatch (-785983.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-05-01, label=Projection 1, currency=EUR | mismatch (455220.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-05-01, label=Projection 2, currency=EUR | mismatch (-401859.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-05-01, label=Projection 3, currency=EUR | mismatch (-158418.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-05-01, label=Projection 4, currency=EUR | mismatch (176155.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-06-01, label=Projection 0, currency=EUR | mismatch (-801707.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-06-01, label=Projection 1, currency=EUR | mismatch (464840.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-06-01, label=Projection 2, currency=EUR | mismatch (-410179.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-06-01, label=Projection 3, currency=EUR | mismatch (-161211.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-06-01, label=Projection 4, currency=EUR | mismatch (179422.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-07-01, label=Projection 0, currency=EUR | mismatch (-817719.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-07-01, label=Projection 1, currency=EUR | mismatch (474645.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-07-01, label=Projection 2, currency=EUR | mismatch (-418658.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-07-01, label=Projection 3, currency=EUR | mismatch (-164048.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-07-01, label=Projection 4, currency=EUR | mismatch (182749.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-08-01, label=Projection 0, currency=EUR | mismatch (-834017.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-08-01, label=Projection 1, currency=EUR | mismatch (484637.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-08-01, label=Projection 2, currency=EUR | mismatch (-427296.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-08-01, label=Projection 3, currency=EUR | mismatch (-166930.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-08-01, label=Projection 4, currency=EUR | mismatch (186132.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-09-01, label=Projection 0, currency=EUR | mismatch (-850583.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-09-01, label=Projection 1, currency=EUR | mismatch (494807.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-09-01, label=Projection 2, currency=EUR | mismatch (-436085.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-09-01, label=Projection 3, currency=EUR | mismatch (-169849.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-09-01, label=Projection 4, currency=EUR | mismatch (189565.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-10-01, label=Projection 0, currency=EUR | mismatch (-867448.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-10-01, label=Projection 1, currency=EUR | mismatch (505170.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-10-01, label=Projection 2, currency=EUR | mismatch (-445038.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-10-01, label=Projection 3, currency=EUR | mismatch (-172814.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-10-01, label=Projection 4, currency=EUR | mismatch (193055.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-11-01, label=Projection 0, currency=EUR | mismatch (-884607.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-11-01, label=Projection 1, currency=EUR | mismatch (515728.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-11-01, label=Projection 2, currency=EUR | mismatch (-454156.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-11-01, label=Projection 3, currency=EUR | mismatch (-175823.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-11-01, label=Projection 4, currency=EUR | mismatch (196602.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-12-01, label=Projection 0, currency=EUR | mismatch (-902070.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-12-01, label=Projection 1, currency=EUR | mismatch (526484.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-12-01, label=Projection 2, currency=EUR | mismatch (-463445.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-12-01, label=Projection 3, currency=EUR | mismatch (-178879.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2036-12-01, label=Projection 4, currency=EUR | mismatch (200212.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-01-01, label=Projection 0, currency=EUR | mismatch (-919838.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-01-01, label=Projection 1, currency=EUR | mismatch (537440.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-01-01, label=Projection 2, currency=EUR | mismatch (-472901.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-01-01, label=Projection 3, currency=EUR | mismatch (-181978.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-01-01, label=Projection 4, currency=EUR | mismatch (203880.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-02-01, label=Projection 0, currency=EUR | mismatch (-937866.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-02-01, label=Projection 1, currency=EUR | mismatch (548577.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-02-01, label=Projection 2, currency=EUR | mismatch (-482506.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-02-01, label=Projection 3, currency=EUR | mismatch (-185108.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-02-01, label=Projection 4, currency=EUR | mismatch (207592.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-03-01, label=Projection 0, currency=EUR | mismatch (-956212.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-03-01, label=Projection 1, currency=EUR | mismatch (559921.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-03-01, label=Projection 2, currency=EUR | mismatch (-492289.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-03-01, label=Projection 3, currency=EUR | mismatch (-188287.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-03-01, label=Projection 4, currency=EUR | mismatch (211365.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-04-01, label=Projection 0, currency=EUR | mismatch (-974889.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-04-01, label=Projection 1, currency=EUR | mismatch (571482.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-04-01, label=Projection 2, currency=EUR | mismatch (-502255.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-04-01, label=Projection 3, currency=EUR | mismatch (-191515.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-04-01, label=Projection 4, currency=EUR | mismatch (215202.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-05-01, label=Projection 0, currency=EUR | mismatch (-993895.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-05-01, label=Projection 1, currency=EUR | mismatch (583260.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-05-01, label=Projection 2, currency=EUR | mismatch (-512407.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-05-01, label=Projection 3, currency=EUR | mismatch (-194793.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-05-01, label=Projection 4, currency=EUR | mismatch (219102.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-06-01, label=Projection 0, currency=EUR | mismatch (-1013234.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-06-01, label=Projection 1, currency=EUR | mismatch (595256.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-06-01, label=Projection 2, currency=EUR | mismatch (-522746.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-06-01, label=Projection 3, currency=EUR | mismatch (-198121.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-06-01, label=Projection 4, currency=EUR | mismatch (223067.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-07-01, label=Projection 0, currency=EUR | mismatch (-1032914.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-07-01, label=Projection 1, currency=EUR | mismatch (607478.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-07-01, label=Projection 2, currency=EUR | mismatch (-533276.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-07-01, label=Projection 3, currency=EUR | mismatch (-201500.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-07-01, label=Projection 4, currency=EUR | mismatch (227103.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-08-01, label=Projection 0, currency=EUR | mismatch (-1052939.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-08-01, label=Projection 1, currency=EUR | mismatch (619927.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-08-01, label=Projection 2, currency=EUR | mismatch (-544001.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-08-01, label=Projection 3, currency=EUR | mismatch (-204930.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-08-01, label=Projection 4, currency=EUR | mismatch (231205.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-09-01, label=Projection 0, currency=EUR | mismatch (-1073304.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-09-01, label=Projection 1, currency=EUR | mismatch (632603.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-09-01, label=Projection 2, currency=EUR | mismatch (-554918.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-09-01, label=Projection 3, currency=EUR | mismatch (-208409.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-09-01, label=Projection 4, currency=EUR | mismatch (235371.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-10-01, label=Projection 0, currency=EUR | mismatch (-1094028.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-10-01, label=Projection 1, currency=EUR | mismatch (645515.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-10-01, label=Projection 2, currency=EUR | mismatch (-566036.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-10-01, label=Projection 3, currency=EUR | mismatch (-211940.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-10-01, label=Projection 4, currency=EUR | mismatch (239607.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-11-01, label=Projection 0, currency=EUR | mismatch (-1115107.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-11-01, label=Projection 1, currency=EUR | mismatch (658664.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-11-01, label=Projection 2, currency=EUR | mismatch (-577353.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-11-01, label=Projection 3, currency=EUR | mismatch (-215523.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-11-01, label=Projection 4, currency=EUR | mismatch (243908.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-12-01, label=Projection 0, currency=EUR | mismatch (-1136553.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-12-01, label=Projection 1, currency=EUR | mismatch (672056.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-12-01, label=Projection 2, currency=EUR | mismatch (-588879.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-12-01, label=Projection 3, currency=EUR | mismatch (-219159.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2037-12-01, label=Projection 4, currency=EUR | mismatch (248286.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-01-01, label=Projection 0, currency=EUR | mismatch (-1158368.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-01-01, label=Projection 1, currency=EUR | mismatch (685694.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-01-01, label=Projection 2, currency=EUR | mismatch (-600610.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-01-01, label=Projection 3, currency=EUR | mismatch (-222847.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-01-01, label=Projection 4, currency=EUR | mismatch (252732.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-02-01, label=Projection 0, currency=EUR | mismatch (-1180546.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-02-01, label=Projection 1, currency=EUR | mismatch (699575.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-02-01, label=Projection 2, currency=EUR | mismatch (-612546.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-02-01, label=Projection 3, currency=EUR | mismatch (-226584.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-02-01, label=Projection 4, currency=EUR | mismatch (257245.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-03-01, label=Projection 0, currency=EUR | mismatch (-1203109.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-03-01, label=Projection 1, currency=EUR | mismatch (713713.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-03-01, label=Projection 2, currency=EUR | mismatch (-624701.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-03-01, label=Projection 3, currency=EUR | mismatch (-230378.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-03-01, label=Projection 4, currency=EUR | mismatch (261832.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-04-01, label=Projection 0, currency=EUR | mismatch (-1226073.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-04-01, label=Projection 1, currency=EUR | mismatch (728116.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-04-01, label=Projection 2, currency=EUR | mismatch (-637081.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-04-01, label=Projection 3, currency=EUR | mismatch (-234230.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-04-01, label=Projection 4, currency=EUR | mismatch (266495.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-05-01, label=Projection 0, currency=EUR | mismatch (-1249435.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-05-01, label=Projection 1, currency=EUR | mismatch (742784.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-05-01, label=Projection 2, currency=EUR | mismatch (-649687.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-05-01, label=Projection 3, currency=EUR | mismatch (-238141.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-05-01, label=Projection 4, currency=EUR | mismatch (271235.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-06-01, label=Projection 0, currency=EUR | mismatch (-1273199.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-06-01, label=Projection 1, currency=EUR | mismatch (757721.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-06-01, label=Projection 2, currency=EUR | mismatch (-662520.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-06-01, label=Projection 3, currency=EUR | mismatch (-242108.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-06-01, label=Projection 4, currency=EUR | mismatch (276051.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-07-01, label=Projection 0, currency=EUR | mismatch (-1297382.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-07-01, label=Projection 1, currency=EUR | mismatch (772936.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-07-01, label=Projection 2, currency=EUR | mismatch (-675589.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-07-01, label=Projection 3, currency=EUR | mismatch (-246135.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-07-01, label=Projection 4, currency=EUR | mismatch (280953.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-08-01, label=Projection 0, currency=EUR | mismatch (-1321984.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-08-01, label=Projection 1, currency=EUR | mismatch (788431.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-08-01, label=Projection 2, currency=EUR | mismatch (-688896.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-08-01, label=Projection 3, currency=EUR | mismatch (-250224.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-08-01, label=Projection 4, currency=EUR | mismatch (285935.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-09-01, label=Projection 0, currency=EUR | mismatch (-1346990.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-09-01, label=Projection 1, currency=EUR | mismatch (804199.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-09-01, label=Projection 2, currency=EUR | mismatch (-702434.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-09-01, label=Projection 3, currency=EUR | mismatch (-254366.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-09-01, label=Projection 4, currency=EUR | mismatch (290991.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-10-01, label=Projection 0, currency=EUR | mismatch (-1372432.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-10-01, label=Projection 1, currency=EUR | mismatch (820259.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-10-01, label=Projection 2, currency=EUR | mismatch (-716218.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-10-01, label=Projection 3, currency=EUR | mismatch (-258571.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-10-01, label=Projection 4, currency=EUR | mismatch (296129.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-11-01, label=Projection 0, currency=EUR | mismatch (-1398310.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-11-01, label=Projection 1, currency=EUR | mismatch (836612.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-11-01, label=Projection 2, currency=EUR | mismatch (-730252.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-11-01, label=Projection 3, currency=EUR | mismatch (-262837.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-11-01, label=Projection 4, currency=EUR | mismatch (301351.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-12-01, label=Projection 0, currency=EUR | mismatch (-1424633.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-12-01, label=Projection 1, currency=EUR | mismatch (853262.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-12-01, label=Projection 2, currency=EUR | mismatch (-744538.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-12-01, label=Projection 3, currency=EUR | mismatch (-267166.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2038-12-01, label=Projection 4, currency=EUR | mismatch (306662.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-01-01, label=Projection 0, currency=EUR | mismatch (-1451404.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-01-01, label=Projection 1, currency=EUR | mismatch (870215.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-01-01, label=Projection 2, currency=EUR | mismatch (-759079.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-01-01, label=Projection 3, currency=EUR | mismatch (-271557.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-01-01, label=Projection 4, currency=EUR | mismatch (312057.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-02-01, label=Projection 0, currency=EUR | mismatch (-1478595.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-02-01, label=Projection 1, currency=EUR | mismatch (887458.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-02-01, label=Projection 2, currency=EUR | mismatch (-773859.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-02-01, label=Projection 3, currency=EUR | mismatch (-275999.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-02-01, label=Projection 4, currency=EUR | mismatch (317526.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-03-01, label=Projection 0, currency=EUR | mismatch (-1506252.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-03-01, label=Projection 1, currency=EUR | mismatch (905014.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-03-01, label=Projection 2, currency=EUR | mismatch (-788908.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-03-01, label=Projection 3, currency=EUR | mismatch (-280507.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-03-01, label=Projection 4, currency=EUR | mismatch (323083.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-04-01, label=Projection 0, currency=EUR | mismatch (-1534393.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-04-01, label=Projection 1, currency=EUR | mismatch (922894.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-04-01, label=Projection 2, currency=EUR | mismatch (-804230.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-04-01, label=Projection 3, currency=EUR | mismatch (-285083.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-04-01, label=Projection 4, currency=EUR | mismatch (328732.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-05-01, label=Projection 0, currency=EUR | mismatch (-1563015.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-05-01, label=Projection 1, currency=EUR | mismatch (941099.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-05-01, label=Projection 2, currency=EUR | mismatch (-819829.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-05-01, label=Projection 3, currency=EUR | mismatch (-289727.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-05-01, label=Projection 4, currency=EUR | mismatch (334473.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-06-01, label=Projection 0, currency=EUR | mismatch (-1592128.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-06-01, label=Projection 1, currency=EUR | mismatch (959631.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-06-01, label=Projection 2, currency=EUR | mismatch (-835702.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-06-01, label=Projection 3, currency=EUR | mismatch (-294436.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-06-01, label=Projection 4, currency=EUR | mismatch (340304.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-07-01, label=Projection 0, currency=EUR | mismatch (-1621747.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-07-01, label=Projection 1, currency=EUR | mismatch (978502.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-07-01, label=Projection 2, currency=EUR | mismatch (-851862.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-07-01, label=Projection 3, currency=EUR | mismatch (-299215.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-07-01, label=Projection 4, currency=EUR | mismatch (346236.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-08-01, label=Projection 0, currency=EUR | mismatch (-1651873.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-08-01, label=Projection 1, currency=EUR | mismatch (997716.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-08-01, label=Projection 2, currency=EUR | mismatch (-868314.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-08-01, label=Projection 3, currency=EUR | mismatch (-304065.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-08-01, label=Projection 4, currency=EUR | mismatch (352265.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-09-01, label=Projection 0, currency=EUR | mismatch (-1682503.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-09-01, label=Projection 1, currency=EUR | mismatch (1017273.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-09-01, label=Projection 2, currency=EUR | mismatch (-885056.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-09-01, label=Projection 3, currency=EUR | mismatch (-308983.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-09-01, label=Projection 4, currency=EUR | mismatch (358387.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-10-01, label=Projection 0, currency=EUR | mismatch (-1713660.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-10-01, label=Projection 1, currency=EUR | mismatch (1037186.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-10-01, label=Projection 2, currency=EUR | mismatch (-902098.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-10-01, label=Projection 3, currency=EUR | mismatch (-313973.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-10-01, label=Projection 4, currency=EUR | mismatch (364609.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-11-01, label=Projection 0, currency=EUR | mismatch (-1745347.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-11-01, label=Projection 1, currency=EUR | mismatch (1057458.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-11-01, label=Projection 2, currency=EUR | mismatch (-919445.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-11-01, label=Projection 3, currency=EUR | mismatch (-319035.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-11-01, label=Projection 4, currency=EUR | mismatch (370930.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-12-01, label=Projection 0, currency=EUR | mismatch (-1777568.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-12-01, label=Projection 1, currency=EUR | mismatch (1078093.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-12-01, label=Projection 2, currency=EUR | mismatch (-937100.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-12-01, label=Projection 3, currency=EUR | mismatch (-324171.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2039-12-01, label=Projection 4, currency=EUR | mismatch (377358.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-01-01, label=Projection 0, currency=EUR | mismatch (-1810332.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-01-01, label=Projection 1, currency=EUR | mismatch (1099098.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-01-01, label=Projection 2, currency=EUR | mismatch (-955065.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-01-01, label=Projection 3, currency=EUR | mismatch (-329378.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-01-01, label=Projection 4, currency=EUR | mismatch (383884.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-02-01, label=Projection 0, currency=EUR | mismatch (-1843616.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-02-01, label=Projection 1, currency=EUR | mismatch (1120463.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-02-01, label=Projection 2, currency=EUR | mismatch (-973331.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-02-01, label=Projection 3, currency=EUR | mismatch (-334648.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-02-01, label=Projection 4, currency=EUR | mismatch (390504.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-03-01, label=Projection 0, currency=EUR | mismatch (-1877465.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-03-01, label=Projection 1, currency=EUR | mismatch (1142213.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-03-01, label=Projection 2, currency=EUR | mismatch (-991923.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-03-01, label=Projection 3, currency=EUR | mismatch (-339996.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-03-01, label=Projection 4, currency=EUR | mismatch (397231.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-04-01, label=Projection 0, currency=EUR | mismatch (-1911896.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-04-01, label=Projection 1, currency=EUR | mismatch (1164359.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-04-01, label=Projection 2, currency=EUR | mismatch (-1010849.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-04-01, label=Projection 3, currency=EUR | mismatch (-345423.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-04-01, label=Projection 4, currency=EUR | mismatch (404067.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-05-01, label=Projection 0, currency=EUR | mismatch (-1946912.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-05-01, label=Projection 1, currency=EUR | mismatch (1186902.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-05-01, label=Projection 2, currency=EUR | mismatch (-1030113.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-05-01, label=Projection 3, currency=EUR | mismatch (-350930.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-05-01, label=Projection 4, currency=EUR | mismatch (411013.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-06-01, label=Projection 0, currency=EUR | mismatch (-1982508.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-06-01, label=Projection 1, currency=EUR | mismatch (1209848.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-06-01, label=Projection 2, currency=EUR | mismatch (-1049716.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-06-01, label=Projection 3, currency=EUR | mismatch (-356514.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-06-01, label=Projection 4, currency=EUR | mismatch (418069.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-07-01, label=Projection 0, currency=EUR | mismatch (-2018714.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-07-01, label=Projection 1, currency=EUR | mismatch (1233209.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-07-01, label=Projection 2, currency=EUR | mismatch (-1069671.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-07-01, label=Projection 3, currency=EUR | mismatch (-362180.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-07-01, label=Projection 4, currency=EUR | mismatch (425245.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-08-01, label=Projection 0, currency=EUR | mismatch (-2055533.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-08-01, label=Projection 1, currency=EUR | mismatch (1256990.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-08-01, label=Projection 2, currency=EUR | mismatch (-1089980.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-08-01, label=Projection 3, currency=EUR | mismatch (-367930.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-08-01, label=Projection 4, currency=EUR | mismatch (432536.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-09-01, label=Projection 0, currency=EUR | mismatch (-2092952.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-09-01, label=Projection 1, currency=EUR | mismatch (1281185.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-09-01, label=Projection 2, currency=EUR | mismatch (-1110639.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-09-01, label=Projection 3, currency=EUR | mismatch (-373755.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-09-01, label=Projection 4, currency=EUR | mismatch (439937.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-10-01, label=Projection 0, currency=EUR | mismatch (-2131007.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-10-01, label=Projection 1, currency=EUR | mismatch (1305815.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-10-01, label=Projection 2, currency=EUR | mismatch (-1131663.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-10-01, label=Projection 3, currency=EUR | mismatch (-379665.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-10-01, label=Projection 4, currency=EUR | mismatch (447457.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-11-01, label=Projection 0, currency=EUR | mismatch (-2169694.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-11-01, label=Projection 1, currency=EUR | mismatch (1330881.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-11-01, label=Projection 2, currency=EUR | mismatch (-1153056.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-11-01, label=Projection 3, currency=EUR | mismatch (-385656.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-11-01, label=Projection 4, currency=EUR | mismatch (455093.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-12-01, label=Projection 0, currency=EUR | mismatch (-2209034.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-12-01, label=Projection 1, currency=EUR | mismatch (1356394.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-12-01, label=Projection 2, currency=EUR | mismatch (-1174827.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-12-01, label=Projection 3, currency=EUR | mismatch (-391735.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2040-12-01, label=Projection 4, currency=EUR | mismatch (462857.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-01-01, label=Projection 0, currency=EUR | mismatch (-2248255.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-01-01, label=Projection 1, currency=EUR | mismatch (1382641.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-01-01, label=Projection 2, currency=EUR | mismatch (-1196390.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-01-01, label=Projection 3, currency=EUR | mismatch (-397682.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-01-01, label=Projection 4, currency=EUR | mismatch (470871.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-02-01, label=Projection 0, currency=EUR | mismatch (-2288086.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-02-01, label=Projection 1, currency=EUR | mismatch (1409337.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-02-01, label=Projection 2, currency=EUR | mismatch (-1218305.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-02-01, label=Projection 3, currency=EUR | mismatch (-403701.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-02-01, label=Projection 4, currency=EUR | mismatch (479000.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-03-01, label=Projection 0, currency=EUR | mismatch (-2328570.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-03-01, label=Projection 1, currency=EUR | mismatch (1436508.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-03-01, label=Projection 2, currency=EUR | mismatch (-1240599.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-03-01, label=Projection 3, currency=EUR | mismatch (-409803.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-03-01, label=Projection 4, currency=EUR | mismatch (487258.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-04-01, label=Projection 0, currency=EUR | mismatch (-2369732.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-04-01, label=Projection 1, currency=EUR | mismatch (1464167.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-04-01, label=Projection 2, currency=EUR | mismatch (-1263279.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-04-01, label=Projection 3, currency=EUR | mismatch (-415992.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-04-01, label=Projection 4, currency=EUR | mismatch (495650.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-05-01, label=Projection 0, currency=EUR | mismatch (-2411573.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-05-01, label=Projection 1, currency=EUR | mismatch (1492320.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-05-01, label=Projection 2, currency=EUR | mismatch (-1286352.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-05-01, label=Projection 3, currency=EUR | mismatch (-422269.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-05-01, label=Projection 4, currency=EUR | mismatch (504176.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-06-01, label=Projection 0, currency=EUR | mismatch (-2454104.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-06-01, label=Projection 1, currency=EUR | mismatch (1520975.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-06-01, label=Projection 2, currency=EUR | mismatch (-1309824.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-06-01, label=Projection 3, currency=EUR | mismatch (-428633.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-06-01, label=Projection 4, currency=EUR | mismatch (512840.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-07-01, label=Projection 0, currency=EUR | mismatch (-2497339.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-07-01, label=Projection 1, currency=EUR | mismatch (1550141.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-07-01, label=Projection 2, currency=EUR | mismatch (-1333701.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-07-01, label=Projection 3, currency=EUR | mismatch (-435086.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-07-01, label=Projection 4, currency=EUR | mismatch (521648.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-08-01, label=Projection 0, currency=EUR | mismatch (-2541286.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-08-01, label=Projection 1, currency=EUR | mismatch (1579825.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-08-01, label=Projection 2, currency=EUR | mismatch (-1357990.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-08-01, label=Projection 3, currency=EUR | mismatch (-441630.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-08-01, label=Projection 4, currency=EUR | mismatch (530597.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-09-01, label=Projection 0, currency=EUR | mismatch (-2585947.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-09-01, label=Projection 1, currency=EUR | mismatch (1610033.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-09-01, label=Projection 2, currency=EUR | mismatch (-1382692.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-09-01, label=Projection 3, currency=EUR | mismatch (-448262.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-09-01, label=Projection 4, currency=EUR | mismatch (539686.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-10-01, label=Projection 0, currency=EUR | mismatch (-2631348.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-10-01, label=Projection 1, currency=EUR | mismatch (1640778.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-10-01, label=Projection 2, currency=EUR | mismatch (-1407819.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-10-01, label=Projection 3, currency=EUR | mismatch (-454987.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-10-01, label=Projection 4, currency=EUR | mismatch (548921.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-11-01, label=Projection 0, currency=EUR | mismatch (-2677493.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-11-01, label=Projection 1, currency=EUR | mismatch (1672069.65) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-11-01, label=Projection 2, currency=EUR | mismatch (-1433379.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-11-01, label=Projection 3, currency=EUR | mismatch (-461805.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-11-01, label=Projection 4, currency=EUR | mismatch (558303.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-12-01, label=Projection 0, currency=EUR | mismatch (-2724397.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-12-01, label=Projection 1, currency=EUR | mismatch (1703915.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-12-01, label=Projection 2, currency=EUR | mismatch (-1459378.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-12-01, label=Projection 3, currency=EUR | mismatch (-468719.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2041-12-01, label=Projection 4, currency=EUR | mismatch (567840.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-01-01, label=Projection 0, currency=EUR | mismatch (-2771131.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-01-01, label=Projection 1, currency=EUR | mismatch (1736644.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-01-01, label=Projection 2, currency=EUR | mismatch (-1485113.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-01-01, label=Projection 3, currency=EUR | mismatch (-475478.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-01-01, label=Projection 4, currency=EUR | mismatch (577672.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-02-01, label=Projection 0, currency=EUR | mismatch (-2818601.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-02-01, label=Projection 1, currency=EUR | mismatch (1769945.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-02-01, label=Projection 2, currency=EUR | mismatch (-1511271.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-02-01, label=Projection 3, currency=EUR | mismatch (-482323.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-02-01, label=Projection 4, currency=EUR | mismatch (587653.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-03-01, label=Projection 0, currency=EUR | mismatch (-2866836.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-03-01, label=Projection 1, currency=EUR | mismatch (1803836.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-03-01, label=Projection 2, currency=EUR | mismatch (-1537868.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-03-01, label=Projection 3, currency=EUR | mismatch (-489261.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-03-01, label=Projection 4, currency=EUR | mismatch (597795.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-04-01, label=Projection 0, currency=EUR | mismatch (-2915857.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-04-01, label=Projection 1, currency=EUR | mismatch (1838333.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-04-01, label=Projection 2, currency=EUR | mismatch (-1564915.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-04-01, label=Projection 3, currency=EUR | mismatch (-496294.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-04-01, label=Projection 4, currency=EUR | mismatch (608101.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-05-01, label=Projection 0, currency=EUR | mismatch (-2965668.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-05-01, label=Projection 1, currency=EUR | mismatch (1873441.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-05-01, label=Projection 2, currency=EUR | mismatch (-1592416.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-05-01, label=Projection 3, currency=EUR | mismatch (-503423.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-05-01, label=Projection 4, currency=EUR | mismatch (618572.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-06-01, label=Projection 0, currency=EUR | mismatch (-3016276.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-06-01, label=Projection 1, currency=EUR | mismatch (1909143.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-06-01, label=Projection 2, currency=EUR | mismatch (-1620353.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-06-01, label=Projection 3, currency=EUR | mismatch (-510633.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-06-01, label=Projection 4, currency=EUR | mismatch (629192.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-07-01, label=Projection 0, currency=EUR | mismatch (-3067707.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-07-01, label=Projection 1, currency=EUR | mismatch (1945481.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-07-01, label=Projection 2, currency=EUR | mismatch (-1648761.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-07-01, label=Projection 3, currency=EUR | mismatch (-517943.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-07-01, label=Projection 4, currency=EUR | mismatch (639989.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-08-01, label=Projection 0, currency=EUR | mismatch (-3119964.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-08-01, label=Projection 1, currency=EUR | mismatch (1982460.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-08-01, label=Projection 2, currency=EUR | mismatch (-1677644.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-08-01, label=Projection 3, currency=EUR | mismatch (-525351.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-08-01, label=Projection 4, currency=EUR | mismatch (650959.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-09-01, label=Projection 0, currency=EUR | mismatch (-3173041.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-09-01, label=Projection 1, currency=EUR | mismatch (2020081.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-09-01, label=Projection 2, currency=EUR | mismatch (-1707001.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-09-01, label=Projection 3, currency=EUR | mismatch (-532853.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-09-01, label=Projection 4, currency=EUR | mismatch (662096.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-10-01, label=Projection 0, currency=EUR | mismatch (-3226974.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-10-01, label=Projection 1, currency=EUR | mismatch (2058367.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-10-01, label=Projection 2, currency=EUR | mismatch (-1736849.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-10-01, label=Projection 3, currency=EUR | mismatch (-540456.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-10-01, label=Projection 4, currency=EUR | mismatch (673411.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-11-01, label=Projection 0, currency=EUR | mismatch (-3281772.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-11-01, label=Projection 1, currency=EUR | mismatch (2097327.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-11-01, label=Projection 2, currency=EUR | mismatch (-1767196.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-11-01, label=Projection 3, currency=EUR | mismatch (-548161.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-11-01, label=Projection 4, currency=EUR | mismatch (684905.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-12-01, label=Projection 0, currency=EUR | mismatch (-3337447.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-12-01, label=Projection 1, currency=EUR | mismatch (2136972.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-12-01, label=Projection 2, currency=EUR | mismatch (-1798049.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-12-01, label=Projection 3, currency=EUR | mismatch (-555971.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2042-12-01, label=Projection 4, currency=EUR | mismatch (696589.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-01-01, label=Projection 0, currency=EUR | mismatch (-3392898.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-01-01, label=Projection 1, currency=EUR | mismatch (2177686.81) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-01-01, label=Projection 2, currency=EUR | mismatch (-1828575.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-01-01, label=Projection 3, currency=EUR | mismatch (-563601.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-01-01, label=Projection 4, currency=EUR | mismatch (708621.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-02-01, label=Projection 0, currency=EUR | mismatch (-3449171.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-02-01, label=Projection 1, currency=EUR | mismatch (2219086.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-02-01, label=Projection 2, currency=EUR | mismatch (-1859575.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-02-01, label=Projection 3, currency=EUR | mismatch (-571318.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-02-01, label=Projection 4, currency=EUR | mismatch (720823.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-03-01, label=Projection 0, currency=EUR | mismatch (-3506328.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-03-01, label=Projection 1, currency=EUR | mismatch (2261214.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-03-01, label=Projection 2, currency=EUR | mismatch (-1891081.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-03-01, label=Projection 3, currency=EUR | mismatch (-579137.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-03-01, label=Projection 4, currency=EUR | mismatch (733220.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-04-01, label=Projection 0, currency=EUR | mismatch (-3564392.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-04-01, label=Projection 1, currency=EUR | mismatch (2304089.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-04-01, label=Projection 2, currency=EUR | mismatch (-1923103.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-04-01, label=Projection 3, currency=EUR | mismatch (-587058.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-04-01, label=Projection 4, currency=EUR | mismatch (745816.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-05-01, label=Projection 0, currency=EUR | mismatch (-3623367.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-05-01, label=Projection 1, currency=EUR | mismatch (2347716.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-05-01, label=Projection 2, currency=EUR | mismatch (-1955647.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-05-01, label=Projection 3, currency=EUR | mismatch (-595083.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-05-01, label=Projection 4, currency=EUR | mismatch (758614.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-06-01, label=Projection 0, currency=EUR | mismatch (-3683228.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-06-01, label=Projection 1, currency=EUR | mismatch (2392105.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-06-01, label=Projection 2, currency=EUR | mismatch (-1988715.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-06-01, label=Projection 3, currency=EUR | mismatch (-603209.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-06-01, label=Projection 4, currency=EUR | mismatch (771611.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-07-01, label=Projection 0, currency=EUR | mismatch (-3744035.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-07-01, label=Projection 1, currency=EUR | mismatch (2437277.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-07-01, label=Projection 2, currency=EUR | mismatch (-2022324.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-07-01, label=Projection 3, currency=EUR | mismatch (-611442.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-07-01, label=Projection 4, currency=EUR | mismatch (784825.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-08-01, label=Projection 0, currency=EUR | mismatch (-3805796.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-08-01, label=Projection 1, currency=EUR | mismatch (2483241.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-08-01, label=Projection 2, currency=EUR | mismatch (-2056480.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-08-01, label=Projection 3, currency=EUR | mismatch (-619783.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-08-01, label=Projection 4, currency=EUR | mismatch (798250.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-09-01, label=Projection 0, currency=EUR | mismatch (-3868519.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-09-01, label=Projection 1, currency=EUR | mismatch (2530006.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-09-01, label=Projection 2, currency=EUR | mismatch (-2091188.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-09-01, label=Projection 3, currency=EUR | mismatch (-628230.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-09-01, label=Projection 4, currency=EUR | mismatch (811885.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-10-01, label=Projection 0, currency=EUR | mismatch (-3932228.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-10-01, label=Projection 1, currency=EUR | mismatch (2577592.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-10-01, label=Projection 2, currency=EUR | mismatch (-2126461.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-10-01, label=Projection 3, currency=EUR | mismatch (-636788.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-10-01, label=Projection 4, currency=EUR | mismatch (825737.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-11-01, label=Projection 0, currency=EUR | mismatch (-3996932.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-11-01, label=Projection 1, currency=EUR | mismatch (2626010.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-11-01, label=Projection 2, currency=EUR | mismatch (-2162305.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-11-01, label=Projection 3, currency=EUR | mismatch (-645456.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-11-01, label=Projection 4, currency=EUR | mismatch (839808.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-12-01, label=Projection 0, currency=EUR | mismatch (-4062650.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-12-01, label=Projection 1, currency=EUR | mismatch (2675273.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-12-01, label=Projection 2, currency=EUR | mismatch (-2198732.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-12-01, label=Projection 3, currency=EUR | mismatch (-654237.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2043-12-01, label=Projection 4, currency=EUR | mismatch (854110.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-01-01, label=Projection 0, currency=EUR | mismatch (-4128063.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-01-01, label=Projection 1, currency=EUR | mismatch (2725822.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-01-01, label=Projection 2, currency=EUR | mismatch (-2234749.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-01-01, label=Projection 3, currency=EUR | mismatch (-662810.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-01-01, label=Projection 4, currency=EUR | mismatch (868821.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-02-01, label=Projection 0, currency=EUR | mismatch (-4194452.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-02-01, label=Projection 1, currency=EUR | mismatch (2777234.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-02-01, label=Projection 2, currency=EUR | mismatch (-2271323.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-02-01, label=Projection 3, currency=EUR | mismatch (-671483.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-02-01, label=Projection 4, currency=EUR | mismatch (883751.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-03-01, label=Projection 0, currency=EUR | mismatch (-4261860.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-03-01, label=Projection 1, currency=EUR | mismatch (2829546.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-03-01, label=Projection 2, currency=EUR | mismatch (-2308478.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-03-01, label=Projection 3, currency=EUR | mismatch (-680266.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-03-01, label=Projection 4, currency=EUR | mismatch (898920.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-04-01, label=Projection 0, currency=EUR | mismatch (-4330310.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-04-01, label=Projection 1, currency=EUR | mismatch (2882776.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-04-01, label=Projection 2, currency=EUR | mismatch (-2346224.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-04-01, label=Projection 3, currency=EUR | mismatch (-689161.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-04-01, label=Projection 4, currency=EUR | mismatch (914332.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-05-01, label=Projection 0, currency=EUR | mismatch (-4399810.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-05-01, label=Projection 1, currency=EUR | mismatch (2936935.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-05-01, label=Projection 2, currency=EUR | mismatch (-2384569.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-05-01, label=Projection 3, currency=EUR | mismatch (-698168.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-05-01, label=Projection 4, currency=EUR | mismatch (929989.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-06-01, label=Projection 0, currency=EUR | mismatch (-4470363.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-06-01, label=Projection 1, currency=EUR | mismatch (2992036.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-06-01, label=Projection 2, currency=EUR | mismatch (-2423518.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-06-01, label=Projection 3, currency=EUR | mismatch (-707287.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-06-01, label=Projection 4, currency=EUR | mismatch (945893.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-07-01, label=Projection 0, currency=EUR | mismatch (-4542005.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-07-01, label=Projection 1, currency=EUR | mismatch (3048103.6) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-07-01, label=Projection 2, currency=EUR | mismatch (-2463085.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-07-01, label=Projection 3, currency=EUR | mismatch (-716523.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-07-01, label=Projection 4, currency=EUR | mismatch (962059.89) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-08-01, label=Projection 0, currency=EUR | mismatch (-4614744.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-08-01, label=Projection 1, currency=EUR | mismatch (3105146.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-08-01, label=Projection 2, currency=EUR | mismatch (-2503280.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-08-01, label=Projection 3, currency=EUR | mismatch (-725874.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-08-01, label=Projection 4, currency=EUR | mismatch (978483.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-09-01, label=Projection 0, currency=EUR | mismatch (-4688581.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-09-01, label=Projection 1, currency=EUR | mismatch (3163171.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-09-01, label=Projection 2, currency=EUR | mismatch (-2544104.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-09-01, label=Projection 3, currency=EUR | mismatch (-735340.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-09-01, label=Projection 4, currency=EUR | mismatch (995159.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-10-01, label=Projection 0, currency=EUR | mismatch (-4763552.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-10-01, label=Projection 1, currency=EUR | mismatch (3222207.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-10-01, label=Projection 2, currency=EUR | mismatch (-2585573.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-10-01, label=Projection 3, currency=EUR | mismatch (-744925.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-10-01, label=Projection 4, currency=EUR | mismatch (1012099.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-11-01, label=Projection 0, currency=EUR | mismatch (-4839667.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-11-01, label=Projection 1, currency=EUR | mismatch (3282267.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-11-01, label=Projection 2, currency=EUR | mismatch (-2627697.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-11-01, label=Projection 3, currency=EUR | mismatch (-754630.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-11-01, label=Projection 4, currency=EUR | mismatch (1029307.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-12-01, label=Projection 0, currency=EUR | mismatch (-4916946.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-12-01, label=Projection 1, currency=EUR | mismatch (3343370.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-12-01, label=Projection 2, currency=EUR | mismatch (-2670488.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-12-01, label=Projection 3, currency=EUR | mismatch (-764457.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2044-12-01, label=Projection 4, currency=EUR | mismatch (1046795.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-01-01, label=Projection 0, currency=EUR | mismatch (-4993826.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-01-01, label=Projection 1, currency=EUR | mismatch (3406020.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-01-01, label=Projection 2, currency=EUR | mismatch (-2712767.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-01-01, label=Projection 3, currency=EUR | mismatch (-774041.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-01-01, label=Projection 4, currency=EUR | mismatch (1064767.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-02-01, label=Projection 0, currency=EUR | mismatch (-5071797.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-02-01, label=Projection 1, currency=EUR | mismatch (3469713.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-02-01, label=Projection 2, currency=EUR | mismatch (-2755673.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-02-01, label=Projection 3, currency=EUR | mismatch (-783729.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-02-01, label=Projection 4, currency=EUR | mismatch (1082996.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-03-01, label=Projection 0, currency=EUR | mismatch (-5150911.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-03-01, label=Projection 1, currency=EUR | mismatch (3534492.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-03-01, label=Projection 2, currency=EUR | mismatch (-2799231.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-03-01, label=Projection 3, currency=EUR | mismatch (-793530.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-03-01, label=Projection 4, currency=EUR | mismatch (1101504.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-04-01, label=Projection 0, currency=EUR | mismatch (-5231181.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-04-01, label=Projection 1, currency=EUR | mismatch (3600373.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-04-01, label=Projection 2, currency=EUR | mismatch (-2843451.35) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-04-01, label=Projection 3, currency=EUR | mismatch (-803446.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-04-01, label=Projection 4, currency=EUR | mismatch (1120296.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-05-01, label=Projection 0, currency=EUR | mismatch (-5312628.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-05-01, label=Projection 1, currency=EUR | mismatch (3667379.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-05-01, label=Projection 2, currency=EUR | mismatch (-2888343.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-05-01, label=Projection 3, currency=EUR | mismatch (-813477.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-05-01, label=Projection 4, currency=EUR | mismatch (1139378.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-06-01, label=Projection 0, currency=EUR | mismatch (-5395270.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-06-01, label=Projection 1, currency=EUR | mismatch (3735526.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-06-01, label=Projection 2, currency=EUR | mismatch (-2933917.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-06-01, label=Projection 3, currency=EUR | mismatch (-823626.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-06-01, label=Projection 4, currency=EUR | mismatch (1158754.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-07-01, label=Projection 0, currency=EUR | mismatch (-5479118.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-07-01, label=Projection 1, currency=EUR | mismatch (3804830.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-07-01, label=Projection 2, currency=EUR | mismatch (-2980183.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-07-01, label=Projection 3, currency=EUR | mismatch (-833893.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-07-01, label=Projection 4, currency=EUR | mismatch (1178427.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-08-01, label=Projection 0, currency=EUR | mismatch (-5564195.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-08-01, label=Projection 1, currency=EUR | mismatch (3875314.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-08-01, label=Projection 2, currency=EUR | mismatch (-3027151.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-08-01, label=Projection 3, currency=EUR | mismatch (-844281.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-08-01, label=Projection 4, currency=EUR | mismatch (1198402.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-09-01, label=Projection 0, currency=EUR | mismatch (-5650513.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-09-01, label=Projection 1, currency=EUR | mismatch (3946993.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-09-01, label=Projection 2, currency=EUR | mismatch (-3074831.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-09-01, label=Projection 3, currency=EUR | mismatch (-854788.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-09-01, label=Projection 4, currency=EUR | mismatch (1218681.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-10-01, label=Projection 0, currency=EUR | mismatch (-5738092.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-10-01, label=Projection 1, currency=EUR | mismatch (4019887.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-10-01, label=Projection 2, currency=EUR | mismatch (-3123233.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-10-01, label=Projection 3, currency=EUR | mismatch (-865418.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-10-01, label=Projection 4, currency=EUR | mismatch (1239270.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-11-01, label=Projection 0, currency=EUR | mismatch (-5826947.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-11-01, label=Projection 1, currency=EUR | mismatch (4094015.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-11-01, label=Projection 2, currency=EUR | mismatch (-3172367.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-11-01, label=Projection 3, currency=EUR | mismatch (-876171.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-11-01, label=Projection 4, currency=EUR | mismatch (1260172.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-12-01, label=Projection 0, currency=EUR | mismatch (-5917102.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-12-01, label=Projection 1, currency=EUR | mismatch (4169402.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-12-01, label=Projection 2, currency=EUR | mismatch (-3222248.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-12-01, label=Projection 3, currency=EUR | mismatch (-887050.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2045-12-01, label=Projection 4, currency=EUR | mismatch (1281395.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-01-01, label=Projection 0, currency=EUR | mismatch (-6006710.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-01-01, label=Projection 1, currency=EUR | mismatch (4246606.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-01-01, label=Projection 2, currency=EUR | mismatch (-3271492.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-01-01, label=Projection 3, currency=EUR | mismatch (-897649.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-01-01, label=Projection 4, currency=EUR | mismatch (1303167.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-02-01, label=Projection 0, currency=EUR | mismatch (-6097580.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-02-01, label=Projection 1, currency=EUR | mismatch (4325099.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-02-01, label=Projection 2, currency=EUR | mismatch (-3321456.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-02-01, label=Projection 3, currency=EUR | mismatch (-908363.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-02-01, label=Projection 4, currency=EUR | mismatch (1325257.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-03-01, label=Projection 0, currency=EUR | mismatch (-6189749.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-03-01, label=Projection 1, currency=EUR | mismatch (4404921.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-03-01, label=Projection 2, currency=EUR | mismatch (-3372158.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-03-01, label=Projection 3, currency=EUR | mismatch (-919197.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-03-01, label=Projection 4, currency=EUR | mismatch (1347684.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-04-01, label=Projection 0, currency=EUR | mismatch (-6283241.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-04-01, label=Projection 1, currency=EUR | mismatch (4486096.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-04-01, label=Projection 2, currency=EUR | mismatch (-3423612.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-04-01, label=Projection 3, currency=EUR | mismatch (-930156.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-04-01, label=Projection 4, currency=EUR | mismatch (1370455.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-05-01, label=Projection 0, currency=EUR | mismatch (-6378074.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-05-01, label=Projection 1, currency=EUR | mismatch (4568647.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-05-01, label=Projection 2, currency=EUR | mismatch (-3475828.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-05-01, label=Projection 3, currency=EUR | mismatch (-941238.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-05-01, label=Projection 4, currency=EUR | mismatch (1393576.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-06-01, label=Projection 0, currency=EUR | mismatch (-6474265.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-06-01, label=Projection 1, currency=EUR | mismatch (4652593.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-06-01, label=Projection 2, currency=EUR | mismatch (-3528814.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-06-01, label=Projection 3, currency=EUR | mismatch (-952446.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-06-01, label=Projection 4, currency=EUR | mismatch (1417049.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-07-01, label=Projection 0, currency=EUR | mismatch (-6571835.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-07-01, label=Projection 1, currency=EUR | mismatch (4737959.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-07-01, label=Projection 2, currency=EUR | mismatch (-3582585.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-07-01, label=Projection 3, currency=EUR | mismatch (-963780.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-07-01, label=Projection 4, currency=EUR | mismatch (1440882.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-08-01, label=Projection 0, currency=EUR | mismatch (-6670804.47) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-08-01, label=Projection 1, currency=EUR | mismatch (4824769.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-08-01, label=Projection 2, currency=EUR | mismatch (-3637152.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-08-01, label=Projection 3, currency=EUR | mismatch (-975244.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-08-01, label=Projection 4, currency=EUR | mismatch (1465080.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-09-01, label=Projection 0, currency=EUR | mismatch (-6771177.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-09-01, label=Projection 1, currency=EUR | mismatch (4913035.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-09-01, label=Projection 2, currency=EUR | mismatch (-3692520.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-09-01, label=Projection 3, currency=EUR | mismatch (-986834.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-09-01, label=Projection 4, currency=EUR | mismatch (1489640.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-10-01, label=Projection 0, currency=EUR | mismatch (-6872984.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-10-01, label=Projection 1, currency=EUR | mismatch (5002788.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-10-01, label=Projection 2, currency=EUR | mismatch (-3748706.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-10-01, label=Projection 3, currency=EUR | mismatch (-998556.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-10-01, label=Projection 4, currency=EUR | mismatch (1514573.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-11-01, label=Projection 0, currency=EUR | mismatch (-6976248.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-11-01, label=Projection 1, currency=EUR | mismatch (5094055.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-11-01, label=Projection 2, currency=EUR | mismatch (-3805721.84) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-11-01, label=Projection 3, currency=EUR | mismatch (-1010409.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-11-01, label=Projection 4, currency=EUR | mismatch (1539884.94) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-12-01, label=Projection 0, currency=EUR | mismatch (-7080991.54) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-12-01, label=Projection 1, currency=EUR | mismatch (5186861.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-12-01, label=Projection 2, currency=EUR | mismatch (-3863580.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-12-01, label=Projection 3, currency=EUR | mismatch (-1022398.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2046-12-01, label=Projection 4, currency=EUR | mismatch (1565583.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-01-01, label=Projection 0, currency=EUR | mismatch (-7185049.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-01-01, label=Projection 1, currency=EUR | mismatch (5281837.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-01-01, label=Projection 2, currency=EUR | mismatch (-3920668.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-01-01, label=Projection 3, currency=EUR | mismatch (-1034071.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-01-01, label=Projection 4, currency=EUR | mismatch (1591920.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-02-01, label=Projection 0, currency=EUR | mismatch (-7290535.97) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-02-01, label=Projection 1, currency=EUR | mismatch (5378385.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-02-01, label=Projection 2, currency=EUR | mismatch (-3978566.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-02-01, label=Projection 3, currency=EUR | mismatch (-1045868.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-02-01, label=Projection 4, currency=EUR | mismatch (1618636.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-03-01, label=Projection 0, currency=EUR | mismatch (-7397503.67) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-03-01, label=Projection 1, currency=EUR | mismatch (5476561.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-03-01, label=Projection 2, currency=EUR | mismatch (-4037301.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-03-01, label=Projection 3, currency=EUR | mismatch (-1057794.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-03-01, label=Projection 4, currency=EUR | mismatch (1645760.66) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-04-01, label=Projection 0, currency=EUR | mismatch (-7505971.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-04-01, label=Projection 1, currency=EUR | mismatch (5576389.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-04-01, label=Projection 2, currency=EUR | mismatch (-4096882.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-04-01, label=Projection 3, currency=EUR | mismatch (-1069852.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-04-01, label=Projection 4, currency=EUR | mismatch (1673297.8) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-05-01, label=Projection 0, currency=EUR | mismatch (-7615962.3) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-05-01, label=Projection 1, currency=EUR | mismatch (5677898.71) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-05-01, label=Projection 2, currency=EUR | mismatch (-4157322.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-05-01, label=Projection 3, currency=EUR | mismatch (-1082042.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-05-01, label=Projection 4, currency=EUR | mismatch (1701255.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-06-01, label=Projection 0, currency=EUR | mismatch (-7727497.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-06-01, label=Projection 1, currency=EUR | mismatch (5781109.63) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-06-01, label=Projection 2, currency=EUR | mismatch (-4218630.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-06-01, label=Projection 3, currency=EUR | mismatch (-1094365.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-06-01, label=Projection 4, currency=EUR | mismatch (1729635.17) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-07-01, label=Projection 0, currency=EUR | mismatch (-7840597.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-07-01, label=Projection 1, currency=EUR | mismatch (5886056.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-07-01, label=Projection 2, currency=EUR | mismatch (-4280822.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-07-01, label=Projection 3, currency=EUR | mismatch (-1106823.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-07-01, label=Projection 4, currency=EUR | mismatch (1758447.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-08-01, label=Projection 0, currency=EUR | mismatch (-7955284.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-08-01, label=Projection 1, currency=EUR | mismatch (5992767.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-08-01, label=Projection 2, currency=EUR | mismatch (-4343911.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-08-01, label=Projection 3, currency=EUR | mismatch (-1119419.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-08-01, label=Projection 4, currency=EUR | mismatch (1787700.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-09-01, label=Projection 0, currency=EUR | mismatch (-8071576.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-09-01, label=Projection 1, currency=EUR | mismatch (6101268.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-09-01, label=Projection 2, currency=EUR | mismatch (-4407908.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-09-01, label=Projection 3, currency=EUR | mismatch (-1132152.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-09-01, label=Projection 4, currency=EUR | mismatch (1817396.0) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-10-01, label=Projection 0, currency=EUR | mismatch (-8189495.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-10-01, label=Projection 1, currency=EUR | mismatch (6211587.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-10-01, label=Projection 2, currency=EUR | mismatch (-4472826.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-10-01, label=Projection 3, currency=EUR | mismatch (-1145026.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-10-01, label=Projection 4, currency=EUR | mismatch (1847542.13) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-11-01, label=Projection 0, currency=EUR | mismatch (-8309067.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-11-01, label=Projection 1, currency=EUR | mismatch (6323757.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-11-01, label=Projection 2, currency=EUR | mismatch (-4538679.61) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-11-01, label=Projection 3, currency=EUR | mismatch (-1158041.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-11-01, label=Projection 4, currency=EUR | mismatch (1878146.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-12-01, label=Projection 0, currency=EUR | mismatch (-8430315.72) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-12-01, label=Projection 1, currency=EUR | mismatch (6437807.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-12-01, label=Projection 2, currency=EUR | mismatch (-4605481.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-12-01, label=Projection 3, currency=EUR | mismatch (-1171199.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2047-12-01, label=Projection 4, currency=EUR | mismatch (1909216.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-01-01, label=Projection 0, currency=EUR | mismatch (-8550706.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-01-01, label=Projection 1, currency=EUR | mismatch (6554444.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-01-01, label=Projection 2, currency=EUR | mismatch (-4671348.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-01-01, label=Projection 3, currency=EUR | mismatch (-1184002.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-01-01, label=Projection 4, currency=EUR | mismatch (1941026.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-02-01, label=Projection 0, currency=EUR | mismatch (-8672728.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-02-01, label=Projection 1, currency=EUR | mismatch (6673014.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-02-01, label=Projection 2, currency=EUR | mismatch (-4738132.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-02-01, label=Projection 3, currency=EUR | mismatch (-1196939.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-02-01, label=Projection 4, currency=EUR | mismatch (1973302.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-03-01, label=Projection 0, currency=EUR | mismatch (-8796427.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-03-01, label=Projection 1, currency=EUR | mismatch (6793570.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-03-01, label=Projection 2, currency=EUR | mismatch (-4805854.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-03-01, label=Projection 3, currency=EUR | mismatch (-1210015.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-03-01, label=Projection 4, currency=EUR | mismatch (2006069.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-04-01, label=Projection 0, currency=EUR | mismatch (-8921821.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-04-01, label=Projection 1, currency=EUR | mismatch (6916142.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-04-01, label=Projection 2, currency=EUR | mismatch (-4874527.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-04-01, label=Projection 3, currency=EUR | mismatch (-1223229.21) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-04-01, label=Projection 4, currency=EUR | mismatch (2039332.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-05-01, label=Projection 0, currency=EUR | mismatch (-9048938.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-05-01, label=Projection 1, currency=EUR | mismatch (7040766.1) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-05-01, label=Projection 2, currency=EUR | mismatch (-4944165.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-05-01, label=Projection 3, currency=EUR | mismatch (-1236584.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-05-01, label=Projection 4, currency=EUR | mismatch (2073101.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-06-01, label=Projection 0, currency=EUR | mismatch (-9177789.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-06-01, label=Projection 1, currency=EUR | mismatch (7167471.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-06-01, label=Projection 2, currency=EUR | mismatch (-5014778.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-06-01, label=Projection 3, currency=EUR | mismatch (-1250081.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-06-01, label=Projection 4, currency=EUR | mismatch (2107381.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-07-01, label=Projection 0, currency=EUR | mismatch (-9308411.06) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-07-01, label=Projection 1, currency=EUR | mismatch (7296295.28) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-07-01, label=Projection 2, currency=EUR | mismatch (-5086383.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-07-01, label=Projection 3, currency=EUR | mismatch (-1263722.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-07-01, label=Projection 4, currency=EUR | mismatch (2142181.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-08-01, label=Projection 0, currency=EUR | mismatch (-9440825.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-08-01, label=Projection 1, currency=EUR | mismatch (7427272.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-08-01, label=Projection 2, currency=EUR | mismatch (-5158994.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-08-01, label=Projection 3, currency=EUR | mismatch (-1277508.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-08-01, label=Projection 4, currency=EUR | mismatch (2177511.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-09-01, label=Projection 0, currency=EUR | mismatch (-9575044.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-09-01, label=Projection 1, currency=EUR | mismatch (7560424.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-09-01, label=Projection 2, currency=EUR | mismatch (-5232621.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-09-01, label=Projection 3, currency=EUR | mismatch (-1291440.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-09-01, label=Projection 4, currency=EUR | mismatch (2213367.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-10-01, label=Projection 0, currency=EUR | mismatch (-9711103.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-10-01, label=Projection 1, currency=EUR | mismatch (7695795.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-10-01, label=Projection 2, currency=EUR | mismatch (-5307279.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-10-01, label=Projection 3, currency=EUR | mismatch (-1305520.92) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-10-01, label=Projection 4, currency=EUR | mismatch (2249765.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-11-01, label=Projection 0, currency=EUR | mismatch (-9849026.79) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-11-01, label=Projection 1, currency=EUR | mismatch (7833424.29) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-11-01, label=Projection 2, currency=EUR | mismatch (-5382986.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-11-01, label=Projection 3, currency=EUR | mismatch (-1319751.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-11-01, label=Projection 4, currency=EUR | mismatch (2286714.03) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-12-01, label=Projection 0, currency=EUR | mismatch (-9988842.75) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-12-01, label=Projection 1, currency=EUR | mismatch (7973347.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-12-01, label=Projection 2, currency=EUR | mismatch (-5459754.9) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-12-01, label=Projection 3, currency=EUR | mismatch (-1334132.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2048-12-01, label=Projection 4, currency=EUR | mismatch (2324222.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-01-01, label=Projection 0, currency=EUR | mismatch (-10127595.43) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-01-01, label=Projection 1, currency=EUR | mismatch (8116358.02) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-01-01, label=Projection 2, currency=EUR | mismatch (-5535391.91) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-01-01, label=Projection 3, currency=EUR | mismatch (-1348115.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-01-01, label=Projection 4, currency=EUR | mismatch (2362593.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-02-01, label=Projection 0, currency=EUR | mismatch (-10268172.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-02-01, label=Projection 1, currency=EUR | mismatch (8261708.34) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-02-01, label=Projection 2, currency=EUR | mismatch (-5612051.27) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-02-01, label=Projection 3, currency=EUR | mismatch (-1362238.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-02-01, label=Projection 4, currency=EUR | mismatch (2401510.19) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-03-01, label=Projection 0, currency=EUR | mismatch (-10410638.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-03-01, label=Projection 1, currency=EUR | mismatch (8409480.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-03-01, label=Projection 2, currency=EUR | mismatch (-5689759.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-03-01, label=Projection 3, currency=EUR | mismatch (-1376507.38) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-03-01, label=Projection 4, currency=EUR | mismatch (2441016.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-04-01, label=Projection 0, currency=EUR | mismatch (-10555019.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-04-01, label=Projection 1, currency=EUR | mismatch (8559712.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-04-01, label=Projection 2, currency=EUR | mismatch (-5768529.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-04-01, label=Projection 3, currency=EUR | mismatch (-1390923.57) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-04-01, label=Projection 4, currency=EUR | mismatch (2481121.85) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-05-01, label=Projection 0, currency=EUR | mismatch (-10701336.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-05-01, label=Projection 1, currency=EUR | mismatch (8712439.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-05-01, label=Projection 2, currency=EUR | mismatch (-5848376.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-05-01, label=Projection 3, currency=EUR | mismatch (-1405488.18) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-05-01, label=Projection 4, currency=EUR | mismatch (2521830.04) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-06-01, label=Projection 0, currency=EUR | mismatch (-10849619.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-06-01, label=Projection 1, currency=EUR | mismatch (8867707.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-06-01, label=Projection 2, currency=EUR | mismatch (-5929314.49) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-06-01, label=Projection 3, currency=EUR | mismatch (-1420203.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-06-01, label=Projection 4, currency=EUR | mismatch (2563154.39) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-07-01, label=Projection 0, currency=EUR | mismatch (-10999889.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-07-01, label=Projection 1, currency=EUR | mismatch (9025551.25) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-07-01, label=Projection 2, currency=EUR | mismatch (-6011358.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-07-01, label=Projection 3, currency=EUR | mismatch (-1435069.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-07-01, label=Projection 4, currency=EUR | mismatch (2605101.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-08-01, label=Projection 0, currency=EUR | mismatch (-11152178.48) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-08-01, label=Projection 1, currency=EUR | mismatch (9186017.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-08-01, label=Projection 2, currency=EUR | mismatch (-6094524.01) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-08-01, label=Projection 3, currency=EUR | mismatch (-1450090.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-08-01, label=Projection 4, currency=EUR | mismatch (2647682.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-09-01, label=Projection 0, currency=EUR | mismatch (-11306508.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-09-01, label=Projection 1, currency=EUR | mismatch (9349144.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-09-01, label=Projection 2, currency=EUR | mismatch (-6178825.26) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-09-01, label=Projection 3, currency=EUR | mismatch (-1465265.16) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-09-01, label=Projection 4, currency=EUR | mismatch (2690903.41) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-10-01, label=Projection 0, currency=EUR | mismatch (-11462907.56) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-10-01, label=Projection 1, currency=EUR | mismatch (9514975.77) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-10-01, label=Projection 2, currency=EUR | mismatch (-6264277.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-10-01, label=Projection 3, currency=EUR | mismatch (-1480596.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-10-01, label=Projection 4, currency=EUR | mismatch (2734774.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-11-01, label=Projection 0, currency=EUR | mismatch (-11621404.15) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-11-01, label=Projection 1, currency=EUR | mismatch (9683555.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-11-01, label=Projection 2, currency=EUR | mismatch (-6350897.24) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-11-01, label=Projection 3, currency=EUR | mismatch (-1496085.78) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-11-01, label=Projection 4, currency=EUR | mismatch (2779305.42) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-12-01, label=Projection 0, currency=EUR | mismatch (-11782028.52) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-12-01, label=Projection 1, currency=EUR | mismatch (9854930.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-12-01, label=Projection 2, currency=EUR | mismatch (-6438700.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-12-01, label=Projection 3, currency=EUR | mismatch (-1511734.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2049-12-01, label=Projection 4, currency=EUR | mismatch (2824508.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-01-01, label=Projection 0, currency=EUR | mismatch (-11941337.7) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-01-01, label=Projection 1, currency=EUR | mismatch (10029984.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-01-01, label=Projection 2, currency=EUR | mismatch (-6525136.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-01-01, label=Projection 3, currency=EUR | mismatch (-1526934.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-01-01, label=Projection 4, currency=EUR | mismatch (2870711.51) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-02-01, label=Projection 0, currency=EUR | mismatch (-12102728.09) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-02-01, label=Projection 1, currency=EUR | mismatch (10207924.07) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-02-01, label=Projection 2, currency=EUR | mismatch (-6612719.37) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-02-01, label=Projection 3, currency=EUR | mismatch (-1542284.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-02-01, label=Projection 4, currency=EUR | mismatch (2917597.87) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-03-01, label=Projection 0, currency=EUR | mismatch (-12266240.86) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-03-01, label=Projection 1, currency=EUR | mismatch (10388811.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-03-01, label=Projection 2, currency=EUR | mismatch (-6701467.68) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-03-01, label=Projection 3, currency=EUR | mismatch (-1557788.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-03-01, label=Projection 4, currency=EUR | mismatch (2965191.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-04-01, label=Projection 0, currency=EUR | mismatch (-12431903.62) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-04-01, label=Projection 1, currency=EUR | mismatch (10572694.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-04-01, label=Projection 2, currency=EUR | mismatch (-6791396.98) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-04-01, label=Projection 3, currency=EUR | mismatch (-1573446.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-04-01, label=Projection 4, currency=EUR | mismatch (3013503.36) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-05-01, label=Projection 0, currency=EUR | mismatch (-12599740.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-05-01, label=Projection 1, currency=EUR | mismatch (10759615.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-05-01, label=Projection 2, currency=EUR | mismatch (-6882521.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-05-01, label=Projection 3, currency=EUR | mismatch (-1589261.2) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-05-01, label=Projection 4, currency=EUR | mismatch (3062539.74) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-06-01, label=Projection 0, currency=EUR | mismatch (-12769780.31) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-06-01, label=Projection 1, currency=EUR | mismatch (10949587.4) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-06-01, label=Projection 2, currency=EUR | mismatch (-6974849.44) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-06-01, label=Projection 3, currency=EUR | mismatch (-1605231.05) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-06-01, label=Projection 4, currency=EUR | mismatch (3112280.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-07-01, label=Projection 0, currency=EUR | mismatch (-12942055.12) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-07-01, label=Projection 1, currency=EUR | mismatch (11142699.73) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-07-01, label=Projection 2, currency=EUR | mismatch (-7068405.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-07-01, label=Projection 3, currency=EUR | mismatch (-1621360.32) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-07-01, label=Projection 4, currency=EUR | mismatch (3162769.69) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-08-01, label=Projection 0, currency=EUR | mismatch (-13116593.93) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-08-01, label=Projection 1, currency=EUR | mismatch (11339002.83) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-08-01, label=Projection 2, currency=EUR | mismatch (-7163205.55) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-08-01, label=Projection 3, currency=EUR | mismatch (-1637650.58) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-08-01, label=Projection 4, currency=EUR | mismatch (3214019.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-09-01, label=Projection 0, currency=EUR | mismatch (-13293414.5) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-09-01, label=Projection 1, currency=EUR | mismatch (11538534.46) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-09-01, label=Projection 2, currency=EUR | mismatch (-7259264.14) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-09-01, label=Projection 3, currency=EUR | mismatch (-1654102.76) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-09-01, label=Projection 4, currency=EUR | mismatch (3266029.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-10-01, label=Projection 0, currency=EUR | mismatch (-13472554.96) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-10-01, label=Projection 1, currency=EUR | mismatch (11741355.99) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-10-01, label=Projection 2, currency=EUR | mismatch (-7356599.59) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-10-01, label=Projection 3, currency=EUR | mismatch (-1670718.95) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-10-01, label=Projection 4, currency=EUR | mismatch (3318818.11) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-11-01, label=Projection 0, currency=EUR | mismatch (-13654043.08) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-11-01, label=Projection 1, currency=EUR | mismatch (11947517.33) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-11-01, label=Projection 2, currency=EUR | mismatch (-7455228.22) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-11-01, label=Projection 3, currency=EUR | mismatch (-1687500.64) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-11-01, label=Projection 4, currency=EUR | mismatch (3372395.45) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-12-01, label=Projection 0, currency=EUR | mismatch (-13837914.88) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-12-01, label=Projection 1, currency=EUR | mismatch (12157078.23) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-12-01, label=Projection 2, currency=EUR | mismatch (-7555168.53) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-12-01, label=Projection 3, currency=EUR | mismatch (-1704449.82) | first seen 2026-11-07
+- [ ] `int_balance_projections_monthly__amount_by_month_and_label` | period=2050-12-01, label=Projection 4, currency=EUR | mismatch (3426777.69) | first seen 2026-11-07

@@ -1,0 +1,53 @@
+---
+description: Apply the project's dbt model and model YAML naming conventions
+globs: dbt_/**/*.sql, dbt_/**/*.yml, dbt_/**/*.yaml
+alwaysApply: false
+---
+
+# dbt naming conventions
+
+Use these names when creating or renaming dbt models and their model YAML
+files.
+
+## Intermediate and mart models
+
+Use one of:
+
+`<layer>_<domain>__<entity>_(<descriptor>)_(<fiat>)_(<time_grain>)`
+
+For intermediate models intentionally materialized to improve query
+performance or to reuse expensive transformations, `int` is also a valid
+layer:
+
+`int_<domain>__<entity>_(<descriptor>)_(<fiat>)_(<time_grain>)`
+
+Use `int` only for that performance/reuse purpose, not merely because a model
+lives in the intermediate directory.
+
+- `layer`: `fct`, `agg`, `dim`, or qualifying `int`
+- `domain`: `blc` (balances and holdings), `trx` (transactions), `prj`
+  (projections), `inv` (investing), `mtr` (metrics), `alc` (allocation),
+  `sim` (simulations), or `com` (common/shared utilities)
+- `entity`: for example `balances`, `holdings`, `rates`, `transactions`, or
+  `categories`
+- `descriptor`: optional text that makes the model's purpose clear
+- `fiat`: include when values are in fiat currency
+- `time_grain`: `daily`, `weekly`, `monthly`, `quarterly`, `yearly`, or `eop`
+  for multiple grains
+
+## Staging models
+
+Use:
+
+`stg_<domain>__<source>_<descriptor>`
+
+The `source` is the literal source name.
+
+## Model YAML files
+
+Name model YAML files:
+
+`_<layer>_<domain>__models.yml`
+
+When renaming a model, update its SQL filename, `ref()` calls, YAML model
+name, and documentation references consistently.

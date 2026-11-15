@@ -4,4 +4,3 @@ create table if not exists silver.int_apport_projections_monthly (
     simulation_set integer not null,
     apport float not null
 );
-

@@ -1,0 +1,7 @@
+version: 2
+
+seeds:
+  - name: simulation_set_rates
+    config:
+      column_types:
+        simulation_set: bigint

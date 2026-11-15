@@ -6,4 +6,3 @@ create table if not exists gold.balance_discrepancies (
     balance_calculated float,
     delta float
 );
-

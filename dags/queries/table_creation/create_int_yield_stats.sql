@@ -6,15 +6,3 @@ create table if not exists silver.int_yield_stats (
     allocation_pos_yield float,
     allocation_neg_yield float
 );
-
-
-
-
-
-
-
-
-
-
-
-

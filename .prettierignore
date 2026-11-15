@@ -1,0 +1,5 @@
+# Prettier ignore patterns matching .yamllint.yml ignore section
+# Note: Keep this in sync with .yamllint.yml manually when making changes
+
+dbt/dbt_packages
+dbt/package-lock.yml
