@@ -2,34 +2,6 @@
 version: 2
 
 models:
-  - name: agg_blc__yield_periods
-    description: >
-      Monthly, quarterly, and yearly yield by budget levels 1, 2, and 3, plus
-      total yield. Yield is period interest divided by the average daily
-      balance for the corresponding grouping and is not annualized. Results
-      are provided by currency.
-    columns:
-      - name: calendar_date
-        data_type: date
-      - name: time_grain
-        data_type: text
-      - name: aggregation_level
-        data_type: text
-      - name: budget_level_3
-        data_type: text
-      - name: budget_level_1
-        data_type: text
-      - name: budget_level_2
-        data_type: text
-      - name: currency
-        data_type: text
-      - name: avg_balance
-        data_type: double precision
-      - name: interest
-        data_type: numeric
-      - name: yield
-        data_type: double precision
-
   - name: fct_prj__balances_projected_monthly
     description: >
       Monthly EUR actual balances excluding Nubank C, combined with projected

@@ -8,7 +8,7 @@ monthly_dates as (
     select
         generate_series(
             '2023-12-01'::date,
-            '2050-12-01'::date,
+            '2077-12-01'::date,
             interval '1 month'
         )::date as calendar_date
 ),

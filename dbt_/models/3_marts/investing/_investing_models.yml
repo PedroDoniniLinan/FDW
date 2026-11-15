@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: agg_inv__yield_periods
+    description: >
+      Monthly, quarterly, and yearly yield by budget levels 1, 2, and 3, plus
+      Portfolio yield, per currency. Every aggregation level includes a Portfolio
+      member row (the total across all budgets) with budget_level_3 = 'Portfolio'. Yield is period interest divided by the
+      Modified Dietz average balance (opening balance plus flow-weighted
+      external flows), so deposits and withdrawals do not distort it. Yield
+      is null when the average balance is below the currency floor (EUR/USD
+      100, BRL 500). yield_annualized compounds yield to 365 days using
+      days_observed, which is capped at the latest date in the data.
+    columns:
+      - name: calendar_date
+        data_type: date
+        description: "Period end (nominal, even for the current incomplete period)"
+      - name: time_grain
+        data_type: text
+      - name: aggregation_level
+        data_type: text
+      - name: budget_level_3
+        data_type: text
+      - name: budget_level_1
+        data_type: text
+      - name: budget_level_2
+        data_type: text
+      - name: currency
+        data_type: text
+      - name: days_observed
+        data_type: integer
+        description: "Observed days in the period: from the later of period start and first data date, to the earlier of period end and latest data date"
+      - name: avg_balance
+        data_type: double precision
+        description: "Modified Dietz average balance (denominator of yield)"
+      - name: interest
+        data_type: numeric
+      - name: yield
+        data_type: double precision
+      - name: yield_annualized
+        data_type: double precision
+  - name: agg_inv__yield_periods_modes
+    description: >
+      Yield by time grain, aggregation level, and currency, in two modes
+      selected by yield_mode. 'current' rows are the period yields from
+      agg_inv__yield_periods. 'cumulative' rows geometrically link the current
+      period yields of the same time grain, from the periods starting January 1
+      of start_year through each period end: (1 + y1) x (1 + y2) x ... - 1.
+      Periods with a null yield (below the currency floor or zero balance) are
+      skipped and count as a 0% return. A cumulative value is null when the
+      series has a gap in its periods or no period with a yield. Filter
+      yield_mode to choose between them. Portfolio is the total series across
+      all budget levels, and appears in every aggregation level as a member row.
+    columns:
+      - name: yield_mode
+        data_type: text
+        description: "'current' (period yield) or 'cumulative' (yield from start_year)"
+      - name: start_year
+        data_type: integer
+        description: "First calendar year of the cumulative window; null for current rows"
+      - name: calendar_date
+        data_type: date
+        description: "Period end (nominal, even for the current incomplete period)"
+      - name: time_grain
+        data_type: text
+      - name: aggregation_level
+        data_type: text
+      - name: budget_level_3
+        data_type: text
+      - name: budget_level_1
+        data_type: text
+      - name: budget_level_2
+        data_type: text
+      - name: currency
+        data_type: text
+      - name: days_observed
+        data_type: integer
+        description: "Observed days in the window: from the later of window start and first data date, to the earlier of period end and latest data date"
+      - name: avg_balance
+        data_type: double precision
+        description: "Modified Dietz average balance (denominator of yield); for cumulative rows, the days-weighted average of the period average balances"
+      - name: interest
+        data_type: numeric
+      - name: yield
+        data_type: double precision
+      - name: yield_annualized
+        data_type: double precision

@@ -22,18 +22,17 @@ projected_balances as (
 ),
 
 categories as (
-    select
+    select distinct
         transaction_type,
         financial_level_1,
         financial_level_2,
         budget_level_1,
-        max(budget_level_2) as budget_level_2
+        budget_level_1 as budget_level_2
     from {{ ref('dim_trx__categories') }}
     where transaction_type = 'Expenses'
         or budget_level_1 = 'Other sources'
-    group by 1, 2, 3, 4
     union all
-    select
+    select distinct
         transaction_type,
         financial_level_1,
         financial_level_2,
@@ -50,10 +49,9 @@ categorized_projections as (
         p.simulation_set,
         p.transaction_type,
         c.financial_level_1,
-        p.financial_level_2,
-        p.budget_level_1,
+        c.financial_level_2,
+        c.budget_level_1,
         c.budget_level_2,
-        c.budget_level_2 as budget_level_3,
         p.amount
     from projections as p
     left join categories as c
@@ -75,10 +73,9 @@ monthly_projections as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
         sum(amount) as amount
     from categorized_projections
-    group by 1, 2, 3, 4, 5, 6, 7, 8
+    group by 1, 2, 3, 4, 5, 6, 7
 ),
 
 monthly_interest as (
@@ -90,7 +87,6 @@ monthly_interest as (
         'Invested'::text as financial_level_2,
         'Invested'::text as budget_level_1,
         'Invested'::text as budget_level_2,
-        'Invested'::text as budget_level_3,
         sum(interest) as amount
     from projected_balances
     group by 1, 2
@@ -111,7 +107,6 @@ final as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
         amount
     from unioned_transactions
 )

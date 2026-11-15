@@ -2,7 +2,7 @@
     tags=['refactored', 'categories', 'main']
 ) }}
 
-{% set br_bonds = ['TD', 'CDB', 'CRA', 'LCI'] %}
+{% set br_bonds = ['TD', 'CDB', 'CRA', 'LCI', 'LCA', 'LF', 'CRI'] %}
 {% set bond_types = ['CDI', 'SELIC', 'IPCA', 'Prefix'] %}
 {% set bond_term = ['B', 'L', 'E', ''] %}
 
@@ -27,12 +27,12 @@ bonds_categorization as (
     select distinct
         case
                 {% for bb in br_bonds %}{% for bt in bond_types %}{% for btt in bond_term %}
-                when asset ~* '{{ bb }}.*{{ bt }}.*{{ btt }}' then '{{ bb }} {{ bt }}'
+                when asset ~* '{{ bb }}.*{{ bt }}.*{{ btt }}' then '{{ bt }}'
             {% endfor %}{% endfor %}{% endfor %}
         end as budget_level_3,
         asset
     from raw_assets
-    where asset ~* '(cdb|td|cra|lci)'
+    where asset ~* '({{ br_bonds | join('|') }})'
 ),
 
 all_dims as (

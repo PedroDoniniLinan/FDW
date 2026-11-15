@@ -63,8 +63,8 @@ allocation_levels as (
         round(sum(allocation_delta)::numeric, 5) as allocation_delta,
         round(sum(balance_delta)::numeric, 5) as balance_delta,
         case
-            when currency in ('EUR', 'USD') then abs(round(sum(balance_delta)::numeric, 5)) > 200
-            else abs(round(sum(balance_delta)::numeric, 5)) > 1300
+            when currency in ('EUR', 'USD') then abs(round(sum(balance_delta)::numeric, 5)) > 700
+            else abs(round(sum(balance_delta)::numeric, 5)) > 4200
         end as is_actionable
     from converted_currencies
     group by 1, 2, 3, 4, 5

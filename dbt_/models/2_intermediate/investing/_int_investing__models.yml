@@ -136,3 +136,30 @@ models:
       - name: exchange_rate
         data_type: numeric
         description: "{{ doc('exchange_rate') }}"
+
+  - name: agg_inv__yield_daily
+    description: >
+      Daily balances and qualifying investment income classified by budget
+      levels 1, 2, and 3, per currency. Only rows with all three budget levels
+      are kept. Includes the previous day's balance and the daily external
+      flow (balance change not explained by interest), used for Modified Dietz.
+    columns:
+      - name: calendar_date
+        data_type: date
+      - name: currency
+        data_type: text
+      - name: budget_level_1
+        data_type: text
+      - name: budget_level_2
+        data_type: text
+      - name: budget_level_3
+        data_type: text
+      - name: balance
+        data_type: double precision
+      - name: interest
+        data_type: numeric
+      - name: prev_balance
+        data_type: double precision
+      - name: flow
+        data_type: double precision
+        description: "balance - prev_balance - interest"

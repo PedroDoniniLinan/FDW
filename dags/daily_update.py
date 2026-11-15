@@ -104,7 +104,7 @@ def run_validation_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
     dbt = dbtRunner()
-    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--select", "+fct_blc__holdings_reconciliation_latest_daily"]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--profiles-dir", str(SCRIPT_DIR / 'dbt_'), "--select", "+fct_blc__holdings_reconciliation_latest_daily", "--threads", "4"]
     dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
@@ -128,10 +128,10 @@ def run_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
     dbt = dbtRunner()
-    cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--full-refresh"]
+    cli_args = ["seed", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--profiles-dir", str(SCRIPT_DIR / 'dbt_'), "--full-refresh"]
     dbt.invoke(cli_args)
     dbt = dbtRunner()
-    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_')]
+    cli_args = ["run", "--project-dir", str(SCRIPT_DIR / 'dbt_'), "--profiles-dir", str(SCRIPT_DIR / 'dbt_'), "--threads", "4"]
     dbt.invoke(cli_args)
     print("--------------- %.4f seconds ---------------" % (time() - start_time))
     return (time() - start_time)
@@ -141,11 +141,11 @@ if __name__ == '__main__':
     print('start')
     run_time = 0
     # print(SCRIPT_DIR / 'dbt_')
-    run_time += update_source_from_sheets('dev')
-    run_time += run_validation_dbt()
-    validated, run_time_ = validate_balances()
-    if validated:
-        run_time += run_time_
-        run_time += run_dbt()
+    run_time += update_source_from_sheets('prod')
+    # run_time += run_validation_dbt()
+    # validated, run_time_ = validate_balances()
+    # if validated:
+    #     run_time += run_time_
+    #     run_time += run_dbt()
         # run_projections()
     print('end')

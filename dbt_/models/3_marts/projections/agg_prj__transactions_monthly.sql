@@ -11,7 +11,6 @@ projected_transactions as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
         amount
     from {{ ref('fct_prj__transactions_monthly') }}
 ),
@@ -22,12 +21,21 @@ actual_transactions as (
         transaction_type,
         financial_level_1,
         financial_level_2,
-        budget_level_1,
-        budget_level_2,
-        budget_level_3,
+        case 
+            when budget_level_1 in ('Stocks & Crypto', 'Bonds') then 'Invested'
+            else budget_level_1
+        end as budget_level_1,
+        case 
+            when budget_level_1 = 'Other sources' then 'Other sources'
+            when budget_level_2 not in ('Salary', 'Taxes', 'Teaching') and transaction_type = 'Income' then 'Invested'
+            when transaction_type = 'Expenses' then budget_level_1
+            else budget_level_2
+        end as budget_level_2,
         amount
     from {{ ref('fct_trx__transactions_enriched_daily') }}
     where transaction_type in ('Income', 'Expenses')
+        and currency = 'EUR'
+        and account != 'Nubank C'
 ),
 
 transaction_rows as (
@@ -40,10 +48,9 @@ transaction_rows as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
         sum(amount) as amount
     from projected_transactions
-    group by 1, 2, 3, 4, 5, 6, 7, 8, 9
+    group by 1, 2, 3, 4, 5, 6, 7, 8
 
     union all
 
@@ -56,10 +63,9 @@ transaction_rows as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
         sum(amount) as amount
     from actual_transactions
-    group by 1, 4, 5, 6, 7, 8, 9
+    group by 1, 4, 5, 6, 7, 8
 ),
 
 final as (
@@ -72,8 +78,8 @@ final as (
         financial_level_2,
         budget_level_1,
         budget_level_2,
-        budget_level_3,
-        amount
+        amount,
+        case when transaction_type = 'Expenses' then -amount else amount end as abs_amount
     from transaction_rows
 )
 

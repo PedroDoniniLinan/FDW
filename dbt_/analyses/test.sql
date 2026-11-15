@@ -1,11 +1,9 @@
-select distinct
-    transaction_type,
-    financial_level_1,
-    financial_level_2,
-    budget_level_1,
-    budget_level_2,
-    budget_level_3
-from {{ ref("fct_trx__transactions_enriched_daily") }}
-{# where transaction_type in ('Expenses') #}
-where transaction_type in ('Income')
-order by 1, 2, 4
+select *
+from {{ ref("agg_inv__yield_periods") }}
+where currency = 'EUR'
+{# and aggregation_level = 'budget_level_3' #}
+and aggregation_level = 'Budget 3'
+and budget_level_3 = 'Portfolio'
+and time_grain = 'year'
+{# and budget_level_2 = 'Bonds BR' #}
+{# order by budget_level_3, calendar_date #}

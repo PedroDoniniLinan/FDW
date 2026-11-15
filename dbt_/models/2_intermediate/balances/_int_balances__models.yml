@@ -2,26 +2,6 @@
 version: 2
 
 models:
-  - name: agg_blc__yield_daily
-    description: >
-      Daily balances and qualifying investment income classified by budget
-      levels 1, 2, and 3, per currency.
-    columns:
-      - name: calendar_date
-        data_type: date
-      - name: currency
-        data_type: text
-      - name: budget_level_1
-        data_type: text
-      - name: budget_level_2
-        data_type: text
-      - name: budget_level_3
-        data_type: text
-      - name: balance
-        data_type: double precision
-      - name: interest
-        data_type: numeric
-
   - name: dim_blc__allocation_targets
     description: >
       Target allocation by income category for simulation set 7, combining

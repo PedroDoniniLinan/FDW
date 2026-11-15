@@ -101,16 +101,16 @@ Discretionary,Discretionary,Products & Services,Gifts (famiy & friends),Family,O
 Discretionary,Discretionary,Products & Services,Gifts (famiy & friends),Family,Family
 Discretionary,Discretionary,Products & Services,Gifts (famiy & friends),Friends,Friends
 Discretionary,Discretionary,Products & Services,Gifts (famiy & friends),Friends,Others
-Discretionary D,Discretionary D,Products & Services,Gifts (famiy & friends),Parents,Parents D
-Discretionary D,Discretionary D,Products & Services,Gifts (famiy & friends),Family,Other people D
-Discretionary D,Discretionary D,Products & Services,Gifts (famiy & friends),Family,Family D
-Discretionary D,Discretionary D,Products & Services,Gifts (famiy & friends),Friends,Friends D
-Discretionary D,Discretionary D,Products & Services,Gifts (famiy & friends),Friends,Others D
-Discretionary P,Discretionary P,Products & Services,Gifts (famiy & friends),Parents,Parents P
-Discretionary P,Discretionary P,Products & Services,Gifts (famiy & friends),Family,Other people P
-Discretionary P,Discretionary P,Products & Services,Gifts (famiy & friends),Family,Family P
-Discretionary P,Discretionary P,Products & Services,Gifts (famiy & friends),Friends,Friends P
-Discretionary P,Discretionary P,Products & Services,Gifts (famiy & friends),Friends,Others P
+Discretionary,Discretionary D,Products & Services,Gifts (famiy & friends),Parents,Parents D
+Discretionary,Discretionary D,Products & Services,Gifts (famiy & friends),Family,Other people D
+Discretionary,Discretionary D,Products & Services,Gifts (famiy & friends),Family,Family D
+Discretionary,Discretionary D,Products & Services,Gifts (famiy & friends),Friends,Friends D
+Discretionary,Discretionary D,Products & Services,Gifts (famiy & friends),Friends,Others D
+Discretionary,Discretionary P,Products & Services,Gifts (famiy & friends),Parents,Parents P
+Discretionary,Discretionary P,Products & Services,Gifts (famiy & friends),Family,Other people P
+Discretionary,Discretionary P,Products & Services,Gifts (famiy & friends),Family,Family P
+Discretionary,Discretionary P,Products & Services,Gifts (famiy & friends),Friends,Friends P
+Discretionary,Discretionary P,Products & Services,Gifts (famiy & friends),Friends,Others P
 Discretionary,Discretionary,Products & Services,Work related,Office supplies,Office materials
 Discretionary,Discretionary,Products & Services,Work related,Office supplies,Printing
 Discretionary,Discretionary,Products & Services,Work related,Education,Education
@@ -130,14 +130,14 @@ Essentials,Essentials,Health,Unexpected,Doctor (issue),Doctor (issue)
 Essentials,Essentials,Health,Unexpected,Gynecologist issue,Gynecologist issue
 Essentials,Essentials,Health,Unexpected,Dentist ops & exams,Dentist ops
 Essentials,Essentials,Self-care,Variable care,Pharmacy,Pharmacy
-Discretionary D,Discretionary D,Self-care,Variable care,Pharmacy,Pharmacy D
-Discretionary D,Discretionary D,Self-care,Variable care,Pharmacy,Health D
-Discretionary D,Discretionary D,Self-care,Regular care,Grooming,Estetic D
-Discretionary D,Discretionary D,Self-care,Regular care,Grooming,Grooming D
-Discretionary P,Discretionary P,Self-care,Variable care,Pharmacy,Pharmacy P
-Discretionary P,Discretionary P,Self-care,Variable care,Pharmacy,Health P
-Discretionary P,Discretionary P,Self-care,Regular care,Grooming,Estetic P
-Discretionary P,Discretionary P,Self-care,Regular care,Grooming,Grooming P
+Discretionary,Discretionary D,Self-care,Variable care,Pharmacy,Pharmacy D
+Discretionary,Discretionary D,Self-care,Variable care,Pharmacy,Health D
+Discretionary,Discretionary D,Self-care,Regular care,Grooming,Estetic D
+Discretionary,Discretionary D,Self-care,Regular care,Grooming,Grooming D
+Discretionary,Discretionary P,Self-care,Variable care,Pharmacy,Pharmacy P
+Discretionary,Discretionary P,Self-care,Variable care,Pharmacy,Health P
+Discretionary,Discretionary P,Self-care,Regular care,Grooming,Estetic P
+Discretionary,Discretionary P,Self-care,Regular care,Grooming,Grooming P
 Essentials,Essentials,Self-care,Regular care,Physical activity,Physical activity
 Discretionary,Discretionary,Transport,Uber,Uber,Uber
 Discretionary,Discretionary,Transport,Car,Parking,Parking

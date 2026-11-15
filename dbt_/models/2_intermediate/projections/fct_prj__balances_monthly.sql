@@ -31,7 +31,22 @@ simulation_set_rates as (
 simulation_months as (
     select
         calendar_date,
-        simulation_set
+        simulation_set,
+        case
+            when extract(year from calendar_date) between 2030 and 2077
+                then 1 - 0.77 * (extract(year from calendar_date) - 2030) / 47.0
+            else 1
+        end::double precision as interest_factor,
+        case
+            when extract(year from calendar_date) between 2045 and 2077
+                then 1 - 0.63 * (extract(year from calendar_date) - 2045) / 32.0
+            else 1
+        end::double precision as interest_factor_2,
+        case
+            when extract(year from calendar_date) between 2055 and 2077
+                then 1 - 0.42 * (extract(year from calendar_date) - 2055) / 22.0
+            else 1
+        end::double precision as interest_factor_3
     from apports
     group by calendar_date, simulation_set
 ),
@@ -40,6 +55,7 @@ monthly_balance (
     calendar_date,
     simulation_set,
     monthly_rate,
+    adjusted_rate,
     apport,
     prev_balance,
     interest,
@@ -49,6 +65,7 @@ monthly_balance (
         m.calendar_date,
         m.simulation_set,
         r.monthly_rate,
+        r.monthly_rate as adjusted_rate,
         a.apport,
         s.balance::double precision as prev_balance,
         0::double precision as interest,
@@ -67,11 +84,30 @@ monthly_balance (
     select
         m.calendar_date,
         m.simulation_set,
-        previous.monthly_rate,
+        previous.monthly_rate as monthly_rate,
+        case
+            when previous.monthly_rate > 0.011
+                then previous.monthly_rate * m.interest_factor 
+            when previous.monthly_rate > 0.007
+                then previous.monthly_rate * m.interest_factor_2
+            else previous.monthly_rate * m.interest_factor_3
+        end as adjusted_rate,
         a.apport,
         previous.balance as prev_balance,
-        previous.balance * previous.monthly_rate as interest,
-        previous.balance * (1 + previous.monthly_rate) + a.apport as balance
+        case
+            when previous.monthly_rate > 0.011
+                then previous.balance * previous.monthly_rate * m.interest_factor 
+            when previous.monthly_rate > 0.007
+                then previous.balance * previous.monthly_rate * m.interest_factor_2
+            else previous.balance * previous.monthly_rate * m.interest_factor_3
+        end as interest,
+        case 
+            when previous.monthly_rate > 0.011
+                then previous.balance * (1 + previous.monthly_rate * m.interest_factor) + a.apport        
+            when previous.monthly_rate > 0.007
+                then previous.balance * (1 + previous.monthly_rate * m.interest_factor_2) + a.apport
+            else previous.balance * (1 + previous.monthly_rate * m.interest_factor_3) + a.apport
+        end as balance
     from monthly_balance as previous
     inner join simulation_months as m
         on m.simulation_set = previous.simulation_set
@@ -86,6 +122,7 @@ final as (
         calendar_date,
         simulation_set,
         monthly_rate,
+        adjusted_rate,
         apport,
         prev_balance,
         interest,

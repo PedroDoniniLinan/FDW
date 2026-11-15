@@ -1,0 +1,46 @@
+# Validation spec: legacy 3_marts/transactions_mart -> fct_trx__transactions_enriched_daily
+# status: draft. Dimension pairs marked `confirmed: false` were inferred from column names;
+# confirm them against int_transactions_star (legacy) before trusting the results.
+name: transactions_mart
+legacy:
+  relation: gold.transactions_mart
+  filter: null
+current:
+  relation: gold.fct_trx__transactions_enriched_daily
+  filter: null
+periods: [year, month]
+date_column:
+  legacy: calendar_date
+  current: calendar_date
+key:
+  legacy: [transaction_id]
+  current: [transaction_id]
+measures:
+  - name: amount
+    legacy: amount
+    current: amount
+    tolerance: 0.01
+  # original_amount and price have no direct current column, so they are not compared.
+dimensions:
+  - name: transaction_type
+    legacy: transaction_type
+    current: transaction_type
+  - name: currency
+    legacy: currency
+    current: currency
+  - name: account
+    legacy: account
+    current: account
+  - name: account_country
+    legacy: account_country
+    current: account_country
+  - name: level_1
+    legacy: level_1
+    current: financial_level_1
+    confirmed: false
+    value_map: {}
+  - name: budget_level
+    legacy: budget_level
+    current: account_budget_level
+    confirmed: false
+    value_map: {}

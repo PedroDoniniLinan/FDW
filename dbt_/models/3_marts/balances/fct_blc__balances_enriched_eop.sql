@@ -53,7 +53,7 @@ unioned as (
     from balances
     where is_end_of_period ~* '{{ t }}'
     and balance > 0
-    {%- if not loop.last %}union all{% endif %}{% endfor %}
+    {% if not loop.last %}union all{% endif %}{% endfor %}
 ),
 
 final as (

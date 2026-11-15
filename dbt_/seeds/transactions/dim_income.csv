@@ -34,10 +34,10 @@ Invested,Bonds,Bonds,Bonds BR,Prefix,TD Prefix B
 Invested,Bonds,Bonds,Bonds BR,SELIC,TD SELIC B
 Invested,Bonds,Bonds,Bonds BR,SELIC,TD SELIC E
 Invested,Bonds,Bonds,Bonds BR,SELIC,SELIC
-Invested,Cash,Bonds,Bonds EU,EUR212,EUR212
-Invested,Cash,Bonds,Bonds EU,EUR K,EUR K
-Invested,Cash,Bonds,Bonds EU,EUR W,EUR W
-Invested,Cash,Bonds,Bonds EU,USD W,USD W
+Uninvested,Cash,Bonds,Bonds EU,EUR212,EUR212
+Uninvested,Cash,Bonds,Bonds EU,EUR K,EUR K
+Uninvested,Cash,Bonds,Bonds EU,EUR W,EUR W
+Invested,Cash,Bonds,Bonds US,USD W,USD W
 Uninvested,Cash,Cash,Stable (Cash),EUR,EUR
 Uninvested,Cash,Cash,Stable (Cash),USD,USD
 Uninvested,Cash,Cash,Volatile (Cash),BRL,Rivalry
