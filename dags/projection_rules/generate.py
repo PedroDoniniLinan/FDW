@@ -1,11 +1,12 @@
-"""Generate projected monthly transactions for one or more scenarios.
+"""Generate projected monthly transactions for the scenarios in model.SCENARIOS.
 
 Run from dags/:
-    python -m projection_rules.generate --sets 27004032361 --end-date 2077-12-01 --csv out.csv
-    python -m projection_rules.generate --sets all --end-date 2077-12-01 --write --target dev
+    python -m projection_rules.generate --sets all --end-date 2077-12-01 --csv out.csv
+    python -m projection_rules.generate --sets 32634029620,27004032361 --write --target prod
 
---write replaces each scenario's rows in bronze.projections_generated (delete, then insert).
-Writing defaults to the dev database; prod needs --target prod.
+--sets takes simulation_set ids (comma-separated), or 'all'.
+--write replaces each selected scenario's rows in bronze.projections_generated (delete, then insert).
+Writing defaults to the dev database; prod needs --target prod. Nothing reads Google Sheets or Excel.
 """
 import argparse
 import datetime as dt
@@ -15,12 +16,15 @@ from pathlib import Path
 import pandas as pd
 
 from lib import postgresql_lib
-from projection_rules import engine
+from projection_rules.model import BASELINE, MODEL, SCENARIOS
+from projection_rules.projector import build_params, month_date, months_between, project, scenario_id
 
 TABLE = 'bronze.projections_generated'
 CREATE_SQL = Path(__file__).resolve().parent.parent / 'queries' / 'table_creation' / 'create_projections_generated.sql'
 NAMESPACE = uuid.UUID('12345678-1234-5678-1234-567812345678')   # same namespace as daily_update.py
 KEY_COLUMNS = ['calendar_date', 'simulation_set', 'transaction_type', 'budget_level', 'level_2']
+OUTPUT_COLUMNS = ['calendar_date', 'simulation_set', 'transaction_type', 'budget_level', 'level_2', 'amount']
+DEFAULT_END_DATE = dt.date(2077, 12, 1)
 
 
 def generate_ids(df):
@@ -37,23 +41,39 @@ def generate_ids(df):
     return df[['id'] + [c for c in df.columns if c != 'id']]
 
 
-def build(simulation_sets, end_date):
-    scenarios = engine.load_scenarios()
-    categories = engine.load_categories()
-    baseline = engine.load_baseline()
+def rows_for(sim, end_date):
+    """Output rows for one simulation_set: every modelled category for every month, plus baseline rows."""
+    params = build_params(SCENARIOS[sim])
+    if str(scenario_id(params)) != str(sim):
+        raise SystemExit(f'SCENARIOS[{sim}] computes simulation_set {scenario_id(params)}')
+    n = months_between(end_date)
+    series = project(n, params)
+    rows = []
+    for cat, amounts in series.items():
+        for k, amount in enumerate(amounts):
+            rows.append({'calendar_date': month_date(k), 'simulation_set': int(sim),
+                         'transaction_type': cat[0], 'budget_level': cat[1], 'level_2': cat[2],
+                         'amount': float(amount)})
+    for cat, date, amount in BASELINE:
+        rows.append({'calendar_date': dt.date.fromisoformat(date), 'simulation_set': int(sim),
+                     'transaction_type': cat[0], 'budget_level': cat[1], 'level_2': cat[2],
+                     'amount': amount})
+    return rows
+
+
+def build(sims, end_date):
     frames = []
-    for sim in simulation_sets:
+    for sim in sims:
         print(f'Projecting simulation_set {sim} to {end_date} ...', flush=True)
-        rows = engine.project(sim, end_date, scenarios, categories, baseline)
-        frames.append(pd.DataFrame(rows, columns=engine.OUTPUT_COLUMNS))
+        frames.append(pd.DataFrame(rows_for(sim, end_date), columns=OUTPUT_COLUMNS))
     df = pd.concat(frames, ignore_index=True)
     df['calendar_date'] = pd.to_datetime(df['calendar_date'])
     return generate_ids(df)
 
 
-def write_db(df, simulation_sets, target):
+def write_db(df, sims, target):
     postgresql_lib.execute_query(str(CREATE_SQL), code=False, mode='write', target_db=target)
-    for sim in simulation_sets:
+    for sim in sims:
         postgresql_lib.execute_query(
             f"DELETE FROM {TABLE} WHERE simulation_set = {int(sim)}",
             code=True, mode='write', target_db=target)
@@ -64,34 +84,31 @@ def write_db(df, simulation_sets, target):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--sets', required=True,
-                        help="comma-separated simulation_set ids, or 'all' for every scenario in seeds/scenarios.csv")
-    parser.add_argument('--end-date', default='2077-12-01', help='last month to project (YYYY-MM-DD)')
+    parser.add_argument('--sets', default='all',
+                        help="comma-separated simulation_set ids, or 'all'")
+    parser.add_argument('--end-date', default=DEFAULT_END_DATE.isoformat(),
+                        help='last month to project (YYYY-MM-DD)')
     parser.add_argument('--csv', help='write the result to this CSV file')
     parser.add_argument('--write', action='store_true', help=f'write to {TABLE}')
     parser.add_argument('--target', choices=['dev', 'prod'], default='dev')
     args = parser.parse_args()
 
     end_date = dt.date.fromisoformat(args.end_date)
-    scenarios = engine.load_scenarios()
     if args.sets == 'all':
-        sets = list(scenarios)
+        sims = sorted(SCENARIOS)
     else:
-        sets = [s.strip() for s in args.sets.split(',') if s.strip()]
-    unknown = [s for s in sets if s not in scenarios]
-    if unknown:
-        raise SystemExit(f'Unknown simulation_set(s): {unknown}')
-    if engine.extended(end_date):
-        print(f'WARNING: {end_date} is past 2077-12. Months after 2077-12 are extrapolated and are not '
-              f'validated against the sheet.')
+        sims = [s.strip() for s in args.sets.split(',') if s.strip()]
+        unknown = [s for s in sims if s not in SCENARIOS]
+        if unknown:
+            raise SystemExit(f'Not in model.SCENARIOS: {", ".join(unknown)}')
 
-    df = build(sets, end_date)
-    print(f'Built {len(df)} rows for {len(sets)} scenario(s).')
+    df = build(sims, end_date)
+    print(f'Built {len(df)} rows for {len(sims)} scenario(s).')
     if args.csv:
         df.to_csv(args.csv, index=False)
         print(f'Wrote CSV {args.csv}')
     if args.write:
-        write_db(df, sets, args.target)
+        write_db(df, sims, args.target)
     if not args.csv and not args.write:
         print('Nothing written. Use --csv and/or --write.')
 
