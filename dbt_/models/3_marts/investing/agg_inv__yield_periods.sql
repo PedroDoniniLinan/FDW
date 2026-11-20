@@ -1,4 +1,21 @@
-{{ config(schema='gold', materialized='table') }}
+{{
+    config(
+        schema='gold',
+        materialized='incremental',
+        incremental_strategy='microbatch',
+        unique_key='period_key',
+        event_time='calendar_date',
+        begin='2019-01-01',
+        batch_size='year',
+        lookback=0
+    )
+}}
+ 
+{#
+    Microbatch by calendar year. Year is the coarsest grain, so every month, quarter and year period
+    falls entirely inside one batch. Each run rebuilds the current year and the one before it (lookback=1).
+    Older batches are not recomputed; restated history older than that needs a --full-refresh.
+#}
 
 {%- set time_grains = ['month', 'quarter', 'year'] -%}
 {%- set min_avg_balance = {'BRL': 500, 'EUR': 100, 'USD': 100} -%}
@@ -71,8 +88,8 @@ daily_total_rows as (
 ),
 
 observed_dates as (
-    select min(calendar_date) as first_date, max(calendar_date) as last_date
-    from daily_level_3_rows
+    select first_date, last_date
+    from {{ ref('agg_inv__yield_date_bounds') }}
 ),
 
 period_yield_rows as (
@@ -192,7 +209,10 @@ final as (
         yield,
         case
             when yield > -1 then power(1 + yield, 365.0 / days_observed) - 1
-        end as yield_annualized
+        end as yield_annualized,
+        -- unique_key for the microbatch merge; the budget columns are nullable, so they are coalesced
+        md5(concat_ws('|', calendar_date, time_grain, aggregation_level,
+            coalesce(budget_level_3, ''), coalesce(budget_level_1, ''), coalesce(budget_level_2, ''), currency)) as period_key
     from yield_metrics
 )
 

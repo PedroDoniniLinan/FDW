@@ -1,6 +1,7 @@
 {{ config(
     materialized='table',
-    tags=['refactored', 'main', 'rated']
+    tags=['refactored', 'main', 'rated'],
+    event_time='calendar_date'
 ) }}
 
 {%- set currencies = ['BRL', 'USD', 'EUR', 'Original'] -%}
