@@ -76,7 +76,7 @@ SCENARIOS = {
     '27004032361': {'car_year': 2027, 'downpayment': 0.0, 'expense_inflation': 0.02, 'house_value': 625991.0, 'ir_inflation': 0.1, 'land_year': 2032, 'monthly_payment': 1304.0, 'rent_inflation': 0.0216, 'retirement_year': 2036, 'salary_inflation': 0.025},
     '27004032381': {'car_year': 2027, 'downpayment': 0.0, 'expense_inflation': 0.02, 'house_value': 625991.0, 'ir_inflation': 0.1, 'land_year': 2032, 'monthly_payment': 1304.0, 'rent_inflation': 0.0216, 'retirement_year': 2038, 'salary_inflation': 0.025},
     '27004029560': {'downpayment': 0.0, 'house_value': 625991.0, 'monthly_payment': 1304.0, 'retirement_year': 2056},
-    '27004029600': {'downpayment': 0.0, 'house_value': 625991.0, 'monthly_payment': 1304.0, 'retirement_year': 2060},
+    '27004029650': {'downpayment': 0.0, 'house_value': 625991.0, 'monthly_payment': 1304.0, 'retirement_year': 2065},
     '27534032381': {'car_year': 2027, 'downpayment': 53000.0, 'expense_inflation': 0.02, 'house_value': 581064.0, 'ir_inflation': 0.1, 'land_year': 2032, 'monthly_payment': 1100.0, 'rent_inflation': 0.0216, 'retirement_year': 2038, 'salary_inflation': 0.025},
     '27534032401': {'car_year': 2027, 'downpayment': 53000.0, 'expense_inflation': 0.02, 'house_value': 581064.0, 'ir_inflation': 0.1, 'land_year': 2032, 'monthly_payment': 1100.0, 'rent_inflation': 0.0216, 'retirement_year': 2040, 'salary_inflation': 0.025},
     '27534029580': {'downpayment': 53000.0, 'house_value': 581064.0, 'monthly_payment': 1100.0, 'retirement_year': 2058},

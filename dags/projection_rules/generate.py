@@ -2,10 +2,10 @@
 
 Run from dags/:
     python -m projection_rules.generate --sets all --end-date 2077-12-01 --csv out.csv
-    python -m projection_rules.generate --sets 32634029620,27004032361 --write --target prod
+    python -m projection_rules.generate --sets all --write --target prod
 
 --sets takes simulation_set ids (comma-separated), or 'all'.
---write replaces each selected scenario's rows in bronze.projections_generated (delete, then insert).
+--write truncates bronze.projections and inserts the full output. It requires --sets all.
 Writing defaults to the dev database; prod needs --target prod. Nothing reads Google Sheets or Excel.
 """
 import argparse
@@ -19,8 +19,8 @@ from lib import postgresql_lib
 from projection_rules.model import BASELINE, MODEL, SCENARIOS
 from projection_rules.projector import build_params, month_date, months_between, project, scenario_id
 
-TABLE = 'bronze.projections_generated'
-CREATE_SQL = Path(__file__).resolve().parent.parent / 'queries' / 'table_creation' / 'create_projections_generated.sql'
+TABLE = 'bronze.projections'
+CREATE_SQL = Path(__file__).resolve().parent.parent / 'queries' / 'table_creation' / 'create_projections.sql'
 NAMESPACE = uuid.UUID('12345678-1234-5678-1234-567812345678')   # same namespace as daily_update.py
 KEY_COLUMNS = ['calendar_date', 'simulation_set', 'transaction_type', 'budget_level', 'level_2']
 OUTPUT_COLUMNS = ['calendar_date', 'simulation_set', 'transaction_type', 'budget_level', 'level_2', 'amount']
@@ -72,14 +72,13 @@ def build(sims, end_date):
 
 
 def write_db(df, sims, target):
+    """Replace the whole table with df. sims must be every scenario, or the other sets would be lost."""
+    if sorted(str(s) for s in sims) != sorted(str(s) for s in SCENARIOS):
+        raise SystemExit('write_db needs every scenario in model.SCENARIOS (a full overwrite)')
     postgresql_lib.execute_query(str(CREATE_SQL), code=False, mode='write', target_db=target)
-    for sim in sims:
-        postgresql_lib.execute_query(
-            f"DELETE FROM {TABLE} WHERE simulation_set = {int(sim)}",
-            code=True, mode='write', target_db=target)
-        part = df[df['simulation_set'] == int(sim)]
-        postgresql_lib.insert_df(part, TABLE, merge=False, target_db=target)
-        print(f'Wrote {len(part)} rows for simulation_set {sim} to {target}.{TABLE}')
+    postgresql_lib.execute_query(f"TRUNCATE TABLE {TABLE}", code=True, mode='write', target_db=target)
+    postgresql_lib.insert_df(df, TABLE, merge=False, target_db=target)
+    print(f'Wrote {len(df)} rows for {len(sims)} simulation_set(s) to {target}.{TABLE} (table replaced)')
 
 
 def main():
