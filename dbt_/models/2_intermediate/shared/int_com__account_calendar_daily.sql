@@ -13,7 +13,9 @@ raw_daily_grid as (
 ),
 
 raw_transactions as (
-    select account, asset
+    select
+        account,
+        asset
     from {{ ref("fct_trx__cashflow_daily") }}
 ),
 
@@ -35,7 +37,11 @@ grid_accounts as (
 ),
 
 final as (
-    select account, asset, calendar_date, is_end_of_period
+    select
+        account,
+        asset,
+        calendar_date,
+        is_end_of_period
     from grid_accounts
 )
 

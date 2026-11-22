@@ -2,7 +2,7 @@ minimum_pre_commit_version: 3.0.2
 default_install_hook_types: [pre-commit, pre-push]
 
 repos:
-  # ── General ────────────────────────────────────────────────────────────────
+  # --- General ------------------------------------------------------
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
@@ -10,7 +10,16 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
 
-  # ── Markdown ───────────────────────────────────────────────────────────────
+  # --- SQL ----------------------------------------------------------
+
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 4.2.1
+    hooks:
+      - id: sqlfluff-lint
+        files: ^dbt_/models/
+        additional_dependencies: ["dbt-postgres==1.11.0", "sqlfluff-templater-dbt==4.2.1"]
+
+  # --- Markdown -----------------------------------------------------
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.17.2
@@ -18,7 +27,7 @@ repos:
       - id: markdownlint-cli2
         types: [markdown]
 
-  # ── YAML ───────────────────────────────────────────────────────────────────
+  # --- YAML ---------------------------------------------------------
 
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1

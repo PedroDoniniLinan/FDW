@@ -1,89 +1,72 @@
-{{ config(tags=['refactored', 'main', 'rated']) }}
+{{
+    config(
+        tags=['refactored', 'main', 'rated'],
+        materialized='incremental',
+        incremental_strategy='microbatch',
+        unique_key=['calendar_date', 'currency', 'budget_level_1', 'budget_level_2', 'budget_level_3'],
+        event_time='calendar_date',
+        begin='2019-01-01',
+        batch_size='year',
+        lookback=1
+    )
+}}
+
+{#
+    Microbatch by calendar year. Each batch covers every key (int_inv__yield_keys, full history) on every day of
+    its year. prev_balance on the first day of a batch comes from the last day of the previous year, read from
+    the existing table (the carry-over seed). The seed day is not written.
+#}
 
 with
 
-balances as (
-    select calendar_date, asset, currency, balance
-    from {{ ref('fct_blc__balances_daily') }}
-    where currency != 'Original'
-),
-
-transactions as (
-    select calendar_date, asset, currency, transaction_type, category, amount
-    from {{ ref('fct_trx__transactions_fiat_daily') }}
-    where currency != 'Original'
-),
-
-categories as (
-    select category, transaction_type, financial_level_2, budget_level_1, budget_level_2, budget_level_3
-    from {{ ref('dim_trx__categories') }}
-),
-
-balance_aggregates as (
-    select
-        b.calendar_date,
-        b.currency,
-        c.budget_level_1,
-        c.budget_level_2,
-        c.budget_level_3,
-        sum(b.balance) as balance
-    from balances as b
-    left join categories as c
-        on b.asset = c.category
-        and c.transaction_type = 'Income'
-    where c.budget_level_1 is not null
-        and c.budget_level_2 is not null
-        and c.budget_level_3 is not null
-    group by 1, 2, 3, 4, 5
-),
-
-interest_aggregates as (
-    select
-        t.calendar_date,
-        t.currency,
-        c.budget_level_1,
-        c.budget_level_2,
-        c.budget_level_3,
-        sum(t.amount) as interest
-    from transactions as t
-    left join categories as c
-        on t.category = c.category
-        and t.transaction_type = c.transaction_type
-    where t.transaction_type = 'Income'
-        and coalesce(c.financial_level_2, '') not in ('Work', 'Other sources')
-        and coalesce(c.budget_level_2, '') <> 'Internal'
-        and c.budget_level_1 is not null
-        and c.budget_level_2 is not null
-        and c.budget_level_3 is not null
-    group by 1, 2, 3, 4, 5
-),
-
 daily_aggregates as (
-    select
-        coalesce(b.calendar_date, i.calendar_date) as calendar_date,
-        coalesce(b.currency, i.currency) as currency,
-        coalesce(b.budget_level_1, i.budget_level_1) as budget_level_1,
-        coalesce(b.budget_level_2, i.budget_level_2) as budget_level_2,
-        coalesce(b.budget_level_3, i.budget_level_3) as budget_level_3,
-        coalesce(b.balance, 0)::double precision as balance,
-        coalesce(i.interest, 0)::numeric as interest
-    from balance_aggregates as b
-    full outer join interest_aggregates as i
-        on b.calendar_date = i.calendar_date
-        and b.currency = i.currency
-        and b.budget_level_1 = i.budget_level_1
-        and b.budget_level_2 = i.budget_level_2
-        and b.budget_level_3 = i.budget_level_3
+    select * from {{ ref('int_inv__yield_daily_aggregates') }}
 ),
 
 keys as (
-    select distinct currency, budget_level_1, budget_level_2, budget_level_3
+    select
+        currency,
+        budget_level_1,
+        budget_level_2,
+        budget_level_3
+    from {{ ref('int_inv__yield_keys') }}
+),
+
+first_day as (
+    select min(calendar_date) as first_day
     from daily_aggregates
 ),
 
+{% if is_incremental() %}
+-- last day of the previous batch, from the existing table (not written to the output)
+seed_balances as (
+    select
+        t.calendar_date,
+        t.currency,
+        t.budget_level_1,
+        t.budget_level_2,
+        t.budget_level_3,
+        t.balance,
+        0::numeric as interest
+    from {{ this }} as t
+    cross join first_day as f
+    where t.calendar_date = f.first_day - 1
+),
+
+aggregates_with_seed as (
+    select * from daily_aggregates
+    union all
+    select * from seed_balances
+),
+{% else %}
+aggregates_with_seed as (
+    select * from daily_aggregates
+),
+{% endif %}
+
 calendar as (
     select generate_series(min(calendar_date), max(calendar_date), interval '1 day')::date as calendar_date
-    from daily_aggregates
+    from aggregates_with_seed
 ),
 
 daily_spine as (
@@ -97,12 +80,12 @@ daily_spine as (
         coalesce(a.interest, 0) as interest
     from keys as k
     cross join calendar as c
-    left join daily_aggregates as a
-        on a.calendar_date = c.calendar_date
-        and a.currency = k.currency
-        and a.budget_level_1 = k.budget_level_1
-        and a.budget_level_2 = k.budget_level_2
-        and a.budget_level_3 = k.budget_level_3
+    left join aggregates_with_seed as a
+        on c.calendar_date = a.calendar_date
+        and k.currency = a.currency
+        and k.budget_level_1 = a.budget_level_1
+        and k.budget_level_2 = a.budget_level_2
+        and k.budget_level_3 = a.budget_level_3
 ),
 
 daily_with_previous as (
@@ -133,6 +116,7 @@ final as (
         prev_balance,
         balance - prev_balance - interest as flow
     from daily_with_previous
+    where calendar_date >= (select f.first_day from first_day as f)
 )
 
 select * from final

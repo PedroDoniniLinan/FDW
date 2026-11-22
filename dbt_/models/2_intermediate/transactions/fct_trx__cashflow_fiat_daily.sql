@@ -20,7 +20,11 @@ with raw_transactions as (
 ),
 
 raw_rates as (
-    select calendar_date, asset, currency, exchange_rate
+    select
+        calendar_date,
+        asset,
+        currency,
+        exchange_rate
     from {{ ref("fct_inv__rates_fiat_daily") }}
 ),
 

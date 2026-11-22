@@ -1,6 +1,7 @@
 {{ config(
     materialized='table',
-    tags=['refactored', 'main', 'rated']
+    tags=['refactored', 'main', 'rated'],
+    event_time='calendar_date'
 ) }}
 
 with
@@ -23,12 +24,24 @@ raw_fiat_converted_transactions as (
 ),
 
 raw_dod_gains as (
-    select fiat_transaction_id, calendar_date, account, asset, currency, amount
+    select
+        fiat_transaction_id,
+        calendar_date,
+        account,
+        asset,
+        currency,
+        amount
     from {{ ref("int_trx__gains_dod", event_time='calendar_date') }}
 ),
 
 raw_intraday_gains as (
-    select fiat_transaction_id, calendar_date, account, asset, currency, amount
+    select
+        fiat_transaction_id,
+        calendar_date,
+        account,
+        asset,
+        currency,
+        amount
     from {{ ref("int_trx__gains_intraday") }}
 ),
 

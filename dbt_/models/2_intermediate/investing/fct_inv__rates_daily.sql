@@ -25,9 +25,21 @@ raw_investing_rates as (
 ),
 
 unioned_rates as (
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate from raw_fiat_rates
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
+    from raw_fiat_rates
     union all
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate from raw_investing_rates
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
+    from raw_investing_rates
 ),
 
 aggregated_rates as (
@@ -43,7 +55,12 @@ aggregated_rates as (
 ),
 
 final as (
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
     from aggregated_rates
 )
 

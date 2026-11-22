@@ -50,7 +50,9 @@ raw_external_transactions as (
 ),
 
 raw_asset_rounding as (
-    select rounding_asset, round_num
+    select
+        rounding_asset,
+        round_num
     from {{ ref('int_com__asset_rounding') }}
 ),
 

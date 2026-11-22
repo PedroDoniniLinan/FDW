@@ -27,16 +27,16 @@ final as (
         s.calendar_date,
         s.simulation_set,
         s.transaction_type,
-        case 
+        case
             when s.level_2 = 'House' then 'Home'
             when s.level_2 = 'Other' then 'Other sources'
-            else s.level_2 
+            else s.level_2
         end as budget_level_1,
-        case 
-            when m.financial_level_1 = 'Essentials' 
-                and s.level_2 in ('Travel', 'Products & Services', 'Clothes', 'Domestic Goods & Services') 
+        case
+            when m.financial_level_1 = 'Essentials'
+                and s.level_2 in ('Travel', 'Products & Services', 'Clothes', 'Domestic Goods & Services')
                 then 'Discretionary'
-            else m.financial_level_1 
+            else m.financial_level_1
         end as financial_level_2,
         case when s.transaction_type = 'Expenses' then -1 * s.amount else s.amount end as amount
     from projections s

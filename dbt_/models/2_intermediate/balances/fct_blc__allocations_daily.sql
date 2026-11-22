@@ -51,9 +51,9 @@ latest_allocation_balances as (
         on b.asset = c.category
         and c.transaction_type = 'Income'
     where b.calendar_date = (
-        select max(calendar_date)
-        from raw_balances
-        where balance > 0 and currency != 'Original'
+        select max(rb.calendar_date) as last_calendar_date
+        from raw_balances as rb
+        where rb.balance > 0 and rb.currency != 'Original'
     )
         and b.currency = 'EUR'
     group by 1, 2, 3, 4, 5
@@ -72,7 +72,7 @@ allocation_positions as (
         round(
             (
                 (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                / sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over ()
+                / nullif(sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over (), 0)
             )::numeric,
             7
         ) as allocation,
@@ -80,7 +80,7 @@ allocation_positions as (
         t.target_allocation - round(
             (
                 (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                / sum(a.balance - coalesce(e.emergency_reserves, 0)) over ()
+                / nullif(sum(a.balance - coalesce(e.emergency_reserves, 0)) over (), 0)
             )::numeric,
             7
         ) as allocation_delta,
@@ -89,7 +89,7 @@ allocation_positions as (
                 t.target_allocation - round(
                     (
                         (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                        / sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over ()
+                        / nullif(sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over (), 0)
                     )::numeric,
                     7
                 )

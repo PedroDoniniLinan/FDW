@@ -7,7 +7,8 @@ import pandas as pd
 from dbt.cli.main import dbtRunner
 from lib import google_lib, postgresql_lib
 from lib.constants import db, sheets
-from projections import run_projections
+from projection_rules import generate
+from projection_rules.model import SCENARIOS
 
 SCRIPT_DIR = Path(__file__).resolve().parent.parent
 NAMESPACE = uuid.UUID('12345678-1234-5678-1234-567812345678')
@@ -124,6 +125,17 @@ def validate_balances():
     return validated, (time() - start_time)
 
 
+def run_projections(target_db):
+    """Project every scenario in model.SCENARIOS and replace its rows in bronze.projections."""
+    print('\n-------------- Projections block ----------------')
+    start_time = time()
+    sims = sorted(SCENARIOS)
+    df = generate.build(sims, generate.DEFAULT_END_DATE)
+    generate.write_db(df, sims, target_db)
+    print("--------------- %.4f seconds ---------------" % (time() - start_time))
+    return (time() - start_time)
+
+
 def run_dbt():
     print('\n-------------- DBT block ----------------')
     start_time = time()
@@ -146,6 +158,6 @@ if __name__ == '__main__':
     validated, run_time_ = validate_balances()
     if validated:
         run_time += run_time_
+        run_time += run_projections('prod')
         run_time += run_dbt()
-        # run_projections()
     print('end')
