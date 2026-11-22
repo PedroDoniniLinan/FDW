@@ -72,7 +72,7 @@ allocation_positions as (
         round(
             (
                 (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                / sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over ()
+                / nullif(sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over (), 0)
             )::numeric,
             7
         ) as allocation,
@@ -80,7 +80,7 @@ allocation_positions as (
         t.target_allocation - round(
             (
                 (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                / sum(a.balance - coalesce(e.emergency_reserves, 0)) over ()
+                / nullif(sum(a.balance - coalesce(e.emergency_reserves, 0)) over (), 0)
             )::numeric,
             7
         ) as allocation_delta,
@@ -89,7 +89,7 @@ allocation_positions as (
                 t.target_allocation - round(
                     (
                         (coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0))
-                        / sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over ()
+                        / nullif(sum(coalesce(a.balance, 0) - coalesce(e.emergency_reserves, 0)) over (), 0)
                     )::numeric,
                     7
                 )
