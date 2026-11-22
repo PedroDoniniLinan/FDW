@@ -25,7 +25,11 @@ raw_allocation_positions as (
 ),
 
 raw_prices as (
-    select asset, currency, calendar_date, exchange_rate
+    select
+        asset,
+        currency,
+        calendar_date,
+        exchange_rate
     from {{ ref("fct_inv__rates_fiat_daily") }}
 ),
 
@@ -46,7 +50,7 @@ converted_currencies as (
     from raw_allocation_positions as a
     left join raw_prices as p
         on a.currency = p.asset
-        and p.calendar_date = a.calendar_date
+        and a.calendar_date = p.calendar_date
 ),
 
 allocation_levels as (

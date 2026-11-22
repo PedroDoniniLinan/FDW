@@ -51,9 +51,15 @@ excluded_balance as (
 ),
 
 unioned_reserves as (
-    select budget_level_3, emergency_reserves from excluded_balance
+    select
+        budget_level_3,
+        emergency_reserves
+    from excluded_balance
     union all
-    select budget_level_3, emergency_reserves from targets
+    select
+        budget_level_3,
+        emergency_reserves
+    from targets
 ),
 
 aggregated_reserves as (

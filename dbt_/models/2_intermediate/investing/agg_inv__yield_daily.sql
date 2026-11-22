@@ -24,7 +24,11 @@ daily_aggregates as (
 ),
 
 keys as (
-    select currency, budget_level_1, budget_level_2, budget_level_3
+    select
+        currency,
+        budget_level_1,
+        budget_level_2,
+        budget_level_3
     from {{ ref('int_inv__yield_keys') }}
 ),
 
@@ -77,11 +81,11 @@ daily_spine as (
     from keys as k
     cross join calendar as c
     left join aggregates_with_seed as a
-        on a.calendar_date = c.calendar_date
-        and a.currency = k.currency
-        and a.budget_level_1 = k.budget_level_1
-        and a.budget_level_2 = k.budget_level_2
-        and a.budget_level_3 = k.budget_level_3
+        on c.calendar_date = a.calendar_date
+        and k.currency = a.currency
+        and k.budget_level_1 = a.budget_level_1
+        and k.budget_level_2 = a.budget_level_2
+        and k.budget_level_3 = a.budget_level_3
 ),
 
 daily_with_previous as (
@@ -112,7 +116,7 @@ final as (
         prev_balance,
         balance - prev_balance - interest as flow
     from daily_with_previous
-    where calendar_date >= (select first_day from first_day)
+    where calendar_date >= (select f.first_day from first_day as f)
 )
 
 select * from final

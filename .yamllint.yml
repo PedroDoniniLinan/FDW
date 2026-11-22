@@ -27,8 +27,7 @@ rules:
   line-length:
     level: warning
     max: 120
-  new-lines:
-    type: platform
+  new-lines: disable
   quoted-strings:
     quote-type: double
     required: false

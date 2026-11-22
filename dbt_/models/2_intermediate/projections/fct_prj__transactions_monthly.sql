@@ -58,7 +58,7 @@ categorized_projections as (
         on p.transaction_type = c.transaction_type
         and p.financial_level_2 = c.financial_level_2
         and (
-            p.budget_level_1 = c.budget_level_1 
+            p.budget_level_1 = c.budget_level_1
                 and (p.transaction_type = 'Expenses' or p.budget_level_1 = 'Other sources')
             or p.budget_level_1 = c.budget_level_2 and p.transaction_type = 'Income'
         )

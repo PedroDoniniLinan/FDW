@@ -10,7 +10,7 @@
         lookback=0
     )
 }}
- 
+
 {#
     Microbatch by calendar year. Year is the coarsest grain, so every month, quarter and year period
     falls entirely inside one batch. Each run rebuilds the current year and the one before it (lookback=1).
@@ -88,7 +88,9 @@ daily_total_rows as (
 ),
 
 observed_dates as (
-    select first_date, last_date
+    select
+        first_date,
+        last_date
     from {{ ref('agg_inv__yield_date_bounds') }}
 ),
 
@@ -98,9 +100,10 @@ period_yield_rows as (
         period_end as calendar_date,
         '{{ period_group.grain }}' as time_grain,
         '{{ period_group.level.name }}' as aggregation_level,
-        {% if period_group.level.dimensions %}{{ period_group.level.dimensions[-1] }}{% else %}null::text{% endif %} as budget_level_3,
-        {% if 'budget_level_1' in period_group.level.dimensions %}budget_level_1{% else %}null::text{% endif %} as budget_level_1,
-        {% if 'budget_level_2' in period_group.level.dimensions %}budget_level_2{% else %}null::text{% endif %} as budget_level_2,
+        {% if period_group.level.dimensions %}{{ period_group.level.dimensions[-1] }}
+        {%- else %}null::text{% endif %} as budget_level_3,
+        {% if 'budget_level_1' in period_group.level.dimensions %}budget_level_1{% else %}null::text as budget_level_1{% endif %},
+        {% if 'budget_level_2' in period_group.level.dimensions %}budget_level_2{% else %}null::text as budget_level_2{% endif %},
         currency,
         max(observed_end - period_start + 1) as days_observed,
         sum(case when calendar_date = period_start then prev_balance end) as opening_balance,
@@ -127,7 +130,7 @@ period_yield_rows as (
         cross join observed_dates as o
     ) as dated_rows
     group by
-        1, 2, 3{% for position in period_group.level.group_by_positions %}, {{ position }}{% endfor %}
+        {{ ([1, 2, 3] + period_group.level.group_by_positions) | join(', ') }}
     {% if not loop.last %}union all{% endif %}
     {% endfor %}
 ),
@@ -170,7 +173,8 @@ yield_inputs as (
             {% endfor %}
         end as min_avg_balance
     from (
-        select * from period_yield_rows where aggregation_level != 'Portfolio'
+        select * from period_yield_rows
+        where aggregation_level != 'Portfolio'
         union all
         select * from portfolio_member_rows
     ) as all_period_rows
@@ -212,7 +216,8 @@ final as (
         end as yield_annualized,
         -- unique_key for the microbatch merge; the budget columns are nullable, so they are coalesced
         md5(concat_ws('|', calendar_date, time_grain, aggregation_level,
-            coalesce(budget_level_3, ''), coalesce(budget_level_1, ''), coalesce(budget_level_2, ''), currency)) as period_key
+            coalesce(budget_level_3, ''), coalesce(budget_level_1, ''),
+            coalesce(budget_level_2, ''), currency)) as period_key
     from yield_metrics
 )
 

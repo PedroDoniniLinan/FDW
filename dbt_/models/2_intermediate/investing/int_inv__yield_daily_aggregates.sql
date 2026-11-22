@@ -6,19 +6,35 @@
 with
 
 balances as (
-    select calendar_date, asset, currency, balance
+    select
+        calendar_date,
+        asset,
+        currency,
+        balance
     from {{ ref('fct_blc__balances_daily') }}
     where currency != 'Original'
 ),
 
 transactions as (
-    select calendar_date, asset, currency, transaction_type, category, amount
+    select
+        calendar_date,
+        asset,
+        currency,
+        transaction_type,
+        category,
+        amount
     from {{ ref('fct_trx__transactions_fiat_daily') }}
     where currency != 'Original'
 ),
 
 categories as (
-    select category, transaction_type, financial_level_2, budget_level_1, budget_level_2, budget_level_3
+    select
+        category,
+        transaction_type,
+        financial_level_2,
+        budget_level_1,
+        budget_level_2,
+        budget_level_3
     from {{ ref('dim_trx__categories') }}
 ),
 
@@ -54,7 +70,7 @@ interest_aggregates as (
         and t.transaction_type = c.transaction_type
     where t.transaction_type = 'Income'
         and coalesce(c.financial_level_2, '') not in ('Work', 'Other sources')
-        and coalesce(c.budget_level_2, '') <> 'Internal'
+        and coalesce(c.budget_level_2, '') != 'Internal'
         and c.budget_level_1 is not null
         and c.budget_level_2 is not null
         and c.budget_level_3 is not null

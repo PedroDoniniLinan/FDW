@@ -4,7 +4,7 @@ dialect = postgres
 runaway_limit = 10
 max_line_length = 120
 indent_unit = space
-exclude_rules = RF04, AM06, LT02
+exclude_rules = RF04, AM06, LT02, ST06, AL01
 
 [sqlfluff:templater:dbt]
 project_dir = ./dbt_

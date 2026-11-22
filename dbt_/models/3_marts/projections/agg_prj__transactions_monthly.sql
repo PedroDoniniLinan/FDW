@@ -21,11 +21,11 @@ actual_transactions as (
         transaction_type,
         financial_level_1,
         financial_level_2,
-        case 
+        case
             when budget_level_1 in ('Stocks & Crypto', 'Bonds') then 'Invested'
             else budget_level_1
         end as budget_level_1,
-        case 
+        case
             when budget_level_1 = 'Other sources' then 'Other sources'
             when budget_level_2 not in ('Salary', 'Taxes', 'Teaching') and transaction_type = 'Income' then 'Invested'
             when transaction_type = 'Expenses' then budget_level_1

@@ -3,7 +3,9 @@
 with
 
 period_ends as (
-    select distinct time_grain, calendar_date as period_end
+    select distinct
+        time_grain,
+        calendar_date as period_end
     from {{ ref('agg_inv__yield_periods') }}
 ),
 
@@ -50,14 +52,14 @@ cumulative_links as (
         sum(r.avg_balance * r.days_observed) / sum(r.days_observed) as avg_balance
     from cumulative_windows as w
     inner join period_index as pe
-        on pe.time_grain = w.time_grain
-        and pe.period_end = w.period_end
+        on w.time_grain = pe.time_grain
+        and w.period_end = pe.period_end
     inner join {{ ref('agg_inv__yield_periods') }} as r
-        on r.time_grain = w.time_grain
+        on w.time_grain = r.time_grain
         and r.calendar_date between w.window_start and w.period_end
     inner join period_index as pr
-        on pr.time_grain = r.time_grain
-        and pr.period_end = r.calendar_date
+        on r.time_grain = pr.time_grain
+        and r.calendar_date = pr.period_end
     group by 1, 2, 3, 4, 5, 6, 7, 8
 ),
 

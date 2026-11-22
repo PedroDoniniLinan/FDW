@@ -47,11 +47,29 @@ identity_rates as (
 ),
 
 final as (
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate from direct_rates
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
+    from direct_rates
     union all
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate from inverse_rates
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
+    from inverse_rates
     union all
-    select rate_id, asset, exchange_asset, calendar_date, exchange_rate from identity_rates
+    select
+        rate_id,
+        asset,
+        exchange_asset,
+        calendar_date,
+        exchange_rate
+    from identity_rates
 )
 
 select * from final

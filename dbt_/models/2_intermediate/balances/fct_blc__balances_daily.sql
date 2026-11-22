@@ -28,6 +28,9 @@ raw_rates as (
 
 balance_legs as (
     {%- for c in currencies %}
+        {%- if not loop.first %}
+        union all
+        {%- endif %}
         select
             md5(h.holding_id || '{{ c }}')::uuid as balance_id,
             h.account,
@@ -48,7 +51,6 @@ balance_legs as (
                 and h.asset = r.asset
                 and r.currency = '{{ c }}'
             )
-        {%- if not loop.last %}union all{% endif -%}
     {% endfor %}
 ),
 

@@ -66,9 +66,9 @@ jobs:
           DB_HOST: localhost
           SQLFLUFF_TEMPLATER_DBT_TARGET: ci
         run: |
-          sqlfluff lint models/1__staging --format github-annotation
-          sqlfluff lint models/2__intermediate --format github-annotation
-          sqlfluff lint models/3__marts --format github-annotation
+          sqlfluff lint models/1_staging --format github-annotation
+          sqlfluff lint models/2_intermediate --format github-annotation
+          sqlfluff lint models/3_marts --format github-annotation
 
   build:
     runs-on: ubuntu-latest

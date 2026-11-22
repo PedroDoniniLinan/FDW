@@ -51,9 +51,9 @@ latest_allocation_balances as (
         on b.asset = c.category
         and c.transaction_type = 'Income'
     where b.calendar_date = (
-        select max(calendar_date)
-        from raw_balances
-        where balance > 0 and currency != 'Original'
+        select max(rb.calendar_date) as last_calendar_date
+        from raw_balances as rb
+        where rb.balance > 0 and rb.currency != 'Original'
     )
         and b.currency = 'EUR'
     group by 1, 2, 3, 4, 5

@@ -35,7 +35,10 @@ categories as (
 ),
 
 accounts as (
-    select account, account_country, budget_level
+    select
+        account,
+        account_country,
+        budget_level
     from {{ ref("dim_account") }}
 ),
 
