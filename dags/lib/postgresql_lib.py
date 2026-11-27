@@ -122,7 +122,7 @@ def insert_df(df, table, keys=None, merge=True, target_db='prod'):
     query = generate_insert_query(df, table, keys, merge)
     query_dir = Path('queries')
     query_dir.mkdir(exist_ok=True)
-    with open(query_dir / 'debug_query.sql', 'w+') as f:
+    with open(query_dir / 'debug_query.sql', 'w+', encoding='utf-8') as f:
         f.write(query)
     execute_query(query, code=True, mode='write', target_db=target_db)
 

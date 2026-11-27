@@ -1,54 +1,35 @@
 import os
 import re
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from dotenv.main import load_dotenv
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 
-
-def get_refresh_token():
-    """Get refresh token for Google OAuth2 authentication.
-
-    Returns:
-        str: The refresh token obtained from running local OAuth2 flow
-    """
-    script_dir = Path(__file__).resolve().parent
-    json_path = script_dir / 'client_secret_619439483398-j65rb51rmvlrvkm6rlrtfim7ecu3qa38.apps.googleusercontent.com.json'
-    SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/spreadsheets.readonly']
-
-    flow = InstalledAppFlow.from_client_secrets_file(str(json_path), SCOPES)
-    creds = flow.run_local_server(port=0)
-
-    print("Your refresh token:", creds.refresh_token)
-    return creds.refresh_token
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 
 def get_credentials():
-    """Get credentials to connect to Google API.
+    """Get service account credentials to connect to Google API.
+
+    The key file path is read from the GOOGLE_SERVICE_ACCOUNT_FILE environment variable.
+    The service account must have Viewer access to each spreadsheet it reads.
 
     Returns:
-        Credentials: Google OAuth2 credentials object using client credentials
-        from the JSON file.
+        Credentials: Google service account credentials object.
 
     Raises:
-        Exception: If credentials file cannot be loaded or is invalid.
+        Exception: If the key file path is not set or the key cannot be loaded.
     """
     load_dotenv()
+    key_path = os.getenv('GOOGLE_SERVICE_ACCOUNT_FILE')
+    if not key_path:
+        raise Exception('GOOGLE_SERVICE_ACCOUNT_FILE is not set in the environment')
     try:
-        creds = Credentials(
-            None,
-            refresh_token=os.getenv('REFRESH_TOKEN'),
-            client_id=os.getenv('GCLOUD_CLIENT_ID'),
-            client_secret=os.getenv('GCLOUD_CLIENT_SECRET'),
-            token_uri="https://oauth2.googleapis.com/token"
-        )
-        return creds
+        return Credentials.from_service_account_file(key_path, scopes=SCOPES)
     except Exception as e:
-        raise Exception(f'Failed to load Google API credentials from JSON file: {str(e)}') from e
+        raise Exception(f'Failed to load Google service account key from {key_path}: {str(e)}') from e
 
 
 def create_service(api_name, creds):
@@ -202,6 +183,4 @@ def write_spreadsheet(spreadsheet_id, range_name, df, header=True):
 
 
 if __name__ == '__main__':
-    print(1)
-    get_refresh_token()
-    # get_credentials()
+    print(get_credentials().service_account_email)
